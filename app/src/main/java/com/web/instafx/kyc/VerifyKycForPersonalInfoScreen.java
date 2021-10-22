@@ -95,6 +95,14 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
     private String panCardImage="",adharCardFrontImage="",adharCardBackImage="",selfiImage="";
     private String docType="adhaar";
     private int mYear,mMonth,mDay;
+
+    private EditText new_adharNoET,new_reDocET;
+    private ImageView new_docImageadhar_front,new_docadharBackImage,new_img_passbook_front;
+    private RelativeLayout new_browsedocUploadRL,rr_browse_adharbackimage,rr_browse_passbokimg;
+
+    private EditText ed_bank_account_holder_name,ed_bank_name,ed_bank_account_number,ed_bank_confirm_account,ed_bank_ifsc_code;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -144,6 +152,29 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
         uploadFrontDocTitleTV=findViewById(R.id.uploadFrontDocTitleTV);
         uploadBackDocTitleTV=findViewById(R.id.uploadBackDocTitleTV);
 
+        new_adharNoET=findViewById(R.id.new_adharNoET);
+        new_reDocET=findViewById(R.id.new_reDocET);
+
+        new_docImageadhar_front=findViewById(R.id.new_docImageadhar_front);
+        new_docadharBackImage=findViewById(R.id.new_docadharBackImage);
+
+        new_browsedocUploadRL=findViewById(R.id.new_browsedocUploadRL);
+        rr_browse_adharbackimage=findViewById(R.id.rr_browse_adharbackimage);
+
+
+
+        ed_bank_account_holder_name=findViewById(R.id.ed_bank_account_holder_name);
+        ed_bank_name=findViewById(R.id.ed_bank_name);
+        ed_bank_account_number=findViewById(R.id.ed_bank_account_number);
+        ed_bank_ifsc_code=findViewById(R.id.ed_bank_ifsc_code);
+        ed_bank_confirm_account=findViewById(R.id.ed_bank_confirm_account);
+
+        new_img_passbook_front=findViewById(R.id.new_img_passbook_front);
+        rr_browse_passbokimg=findViewById(R.id.rr_browse_passbokimg);
+
+
+
+
         adharNoTV.setText("National ID Number*");
         reDocTV.setText("Re-Enter National ID Number*");
         adharNumberET.setHint("Enter National ID number");
@@ -152,6 +183,11 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
         uploadBackDocTitleTV.setText("Upload back of National ID Card");
         docImage.setImageDrawable(getDrawable(R.drawable.sample_aadhaar_card_front_1));
         docBackImage.setImageDrawable(getDrawable(R.drawable.sample_aadhaar_card_back_1));
+
+
+
+
+
 
 
 
@@ -446,6 +482,38 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
                 datePickerDialog.show();
             }
         });
+
+
+        new_browsedocUploadRL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imageType="address_front";
+                commonImage=new_docImageadhar_front;
+                browseImage();
+
+            }
+        });
+
+        rr_browse_adharbackimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imageType="address_back";
+                commonImage=new_docadharBackImage;
+                browseImage();
+            }
+        });
+
+
+        rr_browse_passbokimg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imageType="passbook";
+                commonImage=new_img_passbook_front;
+                browseImage();
+            }
+        });
+
+
     }
 
     private void actions() {

@@ -964,6 +964,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/uploadPanCardImageRL" />
 
                 <fontspackageForTextView.Regular
+                    android:visibility="gone"
                     android:id="@+id/doc_info_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -976,6 +977,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/doc_type_line" />
 
                 <fontspackageForTextView.Regular
+                    android:visibility="gone"
                     android:id="@+id/docTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -988,6 +990,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/doc_info_tv" />
 
                 <RelativeLayout
+                    android:visibility="gone"
                     android:id="@+id/docRL"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -1032,8 +1035,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="40dp"
                     android:text="@string/enter_aadha"
                     android:textColor="@color/text_hint_color"
                     app:layout_constraintStart_toStartOf="parent"
@@ -1279,6 +1281,25 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/ll_upload_adhar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="10dp"
+
+
+                    android:orientation="vertical"
+                    android:padding="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/uploadDocBackImageRL">
+
+                    <include layout="@layout/adhar_image_layout"/>
+                    <include layout="@layout/bank_detail_layout"/>
+                </LinearLayout>
+
+
+                <LinearLayout
                     android:id="@+id/uploadDocSelfiImageRL"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -1292,7 +1313,12 @@
                     android:padding="4dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/uploadDocBackImageRL">
+                    app:layout_constraintTop_toBottomOf="@+id/ll_upload_adhar">
+
+
+
+
+
 
                     <ImageView
                         android:id="@+id/docSelfiImage"

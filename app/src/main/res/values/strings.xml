@@ -250,4 +250,22 @@
     <string name="destination_tag_txt">Destination Tag</string>
     <string name="enter_destination_tag_txt">Enter Destination Tag</string>
 
+
+    <string name="bank_name">Bank Name</string>
+    <string name="bank_ifsc">IFSC</string>
+    <string name="bank_account_number">Account Number</string>
+    <string name="bank_account_holdername">Account Holder Name</string>
+    <string name="bankpassbook">Bank Passbook/Cheque Book</string>
+    <string name="btranch_number">Branch Number</string>
+    <string name="confirm_acount">Confirm Account Number</string>
+
+
+    <string name="bank_enter_name">Enter Bank Name</string>
+    <string name="bank_enter_ifsc">Enter IFSC Code</string>
+    <string name="bank_enter_account_number">Enter Account Number</string>
+    <string name="bank_confirm_account_number">Confirm Account Number</string>
+    <string name="bank_enter_account_holdername">Enter Account Holder Name</string>
+    <string name="btranch_enter_number">Enter Branch Number</string>
+
+
 </resources>

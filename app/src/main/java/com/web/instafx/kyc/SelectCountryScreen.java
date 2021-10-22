@@ -103,12 +103,12 @@ public class SelectCountryScreen extends BaseActivity {
                 try {
                     Log.e(TAG,"Response Data:"+dta);
 
+                    setAdapterData();
                   //  allDataAr=dta;
                     JSONObject obj = new JSONObject(dta);
 
                     if (obj.getBoolean("status")) {
                         JSONArray openAr = obj.getJSONArray("countries");
-                        Log.e(TAG,"Response Data openAr.length:"+openAr.length());
                         for(int x=0;x<openAr.length();x++)
                         {
                             allDataAr.add(openAr.getJSONObject(x));
@@ -127,7 +127,7 @@ public class SelectCountryScreen extends BaseActivity {
                     }
 
 
-                setAdapterData();
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -142,6 +142,10 @@ public class SelectCountryScreen extends BaseActivity {
     {
         try
         {
+            JSONObject data=new JSONObject();
+            data.put("id","1");
+            data.put("name","India");
+            filteredAr.add(data);
             mAdapter = new SelectCountryAdapter(SelectCountryScreen.this, filteredAr);
             LinearLayoutManager horizontalLayoutManager
                     = new LinearLayoutManager(SelectCountryScreen.this, LinearLayoutManager.VERTICAL, false);

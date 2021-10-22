@@ -204,7 +204,7 @@ private ArrayList<JSONObject> cryptoeAr=new ArrayList<>();
                             }
 
                             txt_totalbalance.setText((obj.getString("sum_available_bal")));
-                            txt_total_fund_value.setText(obj.getString("sum_available_bal")+"USDT");
+                            txt_total_fund_value.setText(obj.getString("sum_available_bal")+"INR");
                             JSONArray balances=obj.getJSONArray("balances");
 
                             for(int x=0;x<balances.length();x++)
