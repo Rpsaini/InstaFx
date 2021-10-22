@@ -26,6 +26,8 @@ import com.web.instafx.two_factor_auth.TwoFactorAuthScreen;
 
 import org.json.JSONObject;
 
+import invite_earn.InviteEarnScreen;
+
 public class SettingProfileScreen extends BaseActivity {
     private ImageView backIC=null;
     private RelativeLayout verify_kyc_layout=null;
@@ -87,6 +89,13 @@ public class SettingProfileScreen extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(SettingProfileScreen.this, ActivityLogScreens.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.invite_earn_layout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(SettingProfileScreen.this, InviteEarnScreen.class);
                 startActivity(intent);
             }
         });

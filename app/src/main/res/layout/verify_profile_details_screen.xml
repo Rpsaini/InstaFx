@@ -1316,12 +1316,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/ll_upload_adhar">
 
-
-
-
-
-
-
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -25,8 +25,14 @@
         <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/bank_detail_layout.xml" value="0.5" />
         <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/fragment_fund.xml" value="0.1" />
         <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/fragment_quick_buy.xml" value="0.25" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/invite_earn_screen.xml" value="0.22" />
         <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/login_screen.xml" value="0.22" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/mobile_reg_otp_successfully_dialog.xml" value="0.1816123188405797" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/payment_option_screen.xml" value="0.1816123188405797" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/setting_profile_screen.xml" value="0.33" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/verify_complete_kyc_screen.xml" value="0.1816123188405797" />
         <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/verify_profile_details_screen.xml" value="0.1" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/withdraw_coin_screen.xml" value="0.1816123188405797" />
       </map>
     </option>
   </component>
