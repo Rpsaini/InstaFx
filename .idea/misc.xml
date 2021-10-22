@@ -21,11 +21,15 @@
         <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/activity_splash_screen.xml" value="0.11096014492753623" />
         <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/activity_upload_kyc_documents.xml" value="0.11096014492753623" />
         <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/activity_verify_captcha.xml" value="0.11096014492753623" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/adhar_image_layout.xml" value="0.2" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/bank_detail_layout.xml" value="0.5" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/fragment_fund.xml" value="0.1" />
         <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/fragment_quick_buy.xml" value="0.25" />
         <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/login_screen.xml" value="0.22" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/verify_profile_details_screen.xml" value="0.1" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>

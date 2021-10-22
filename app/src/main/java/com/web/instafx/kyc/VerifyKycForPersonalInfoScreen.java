@@ -45,6 +45,7 @@ import com.web.instafx.BaseActivity;
 import com.web.instafx.BuildConfig;
 import com.web.instafx.DefaultConstants;
 import com.web.instafx.R;
+import com.web.instafx.RegisterActivity;
 import com.web.instafx.fileupload.AddEventInterface;
 import com.web.instafx.fileupload.ApiProduction;
 import com.web.instafx.fileupload.RxAPICallHelper;
@@ -86,21 +87,21 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
     private ImageView img_one;
     private TextView dobET,lbl_one,btn_browse,selectCountryTV,select_typeTV,select_stateTV,select_DocTypeTV,adharNoTV,reDocTV,uploadFrontDocTitleTV,uploadBackDocTitleTV;
     RecyclerView select_category_recycle;
-    private ImageView pancardImage,docImage,docBackImage,docSelfiImage;
-    private RelativeLayout panUploadRL,docUploadRL,docBackUploadRL,docSelfiUploadRL;
+    private ImageView pancardImage,docImage,docBackImage;
+    private RelativeLayout panUploadRL,nationalFronUploadRL,nationalBackUploadRL;
     String imageType="pan";
     private ImageView commonImage;
     private String countryID;
-    private EditText firstNameET,middleNameET,lastNameET,addressET,cityET,pinCodeET,panNumberET,rePanNumberET,adharNumberET,reAdharNumberET;
-    private String panCardImage="",adharCardFrontImage="",adharCardBackImage="",selfiImage="";
+    private EditText firstNameET,middleNameET,lastNameET,addressET,cityET,pinCodeET,panNumberET,rePanNumberET,nationalIDNumberET,reNationalIDNumberET;
+    private String panCardImage="",nationIDFrontImage="",nationIDBackImage="",passbook="",addressFrontImage="",addressBackImage="";
     private String docType="adhaar";
     private int mYear,mMonth,mDay;
 
     private EditText new_adharNoET,new_reDocET;
     private ImageView new_docImageadhar_front,new_docadharBackImage,new_img_passbook_front;
-    private RelativeLayout new_browsedocUploadRL,rr_browse_adharbackimage,rr_browse_passbokimg;
+    private RelativeLayout browseAddressFrontUploadRL,browseAddressBackimageRL,rr_browse_passbokimg;
 
-    private EditText ed_bank_account_holder_name,ed_bank_name,ed_bank_account_number,ed_bank_confirm_account,ed_bank_ifsc_code;
+    private EditText ed_bank_account_holder_name,ed_bank_name,ed_bank_account_number,ed_bank_confirm_account,ed_bank_ifsc_code,ed_bank_branch;
 
 
     @Override
@@ -134,18 +135,18 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
         panNumberET=findViewById(R.id.panNumberET);
         rePanNumberET=findViewById(R.id.rePanNumberET);
 
-        adharNumberET=findViewById(R.id.adharNoET);
-        reAdharNumberET=findViewById(R.id.reDocET);
+        nationalIDNumberET=findViewById(R.id.adharNoET);
+        reNationalIDNumberET=findViewById(R.id.reDocET);
 
         pancardImage=findViewById(R.id.pancardImage);
         docImage=findViewById(R.id.docImage);
         docBackImage=findViewById(R.id.docBackImage);
-        docSelfiImage=findViewById(R.id.docSelfiImage);
+
 
         panUploadRL=findViewById(R.id.panUploadRL);
-        docUploadRL=findViewById(R.id.docUploadRL);
-        docBackUploadRL=findViewById(R.id.docBackUploadRL);
-        docSelfiUploadRL=findViewById(R.id.docSelfiUploadRL);
+        nationalFronUploadRL=findViewById(R.id.docUploadRL);
+        nationalBackUploadRL=findViewById(R.id.docBackUploadRL);
+
 
         adharNoTV=findViewById(R.id.adharNoTV);
         reDocTV=findViewById(R.id.reDocTV);
@@ -158,8 +159,8 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
         new_docImageadhar_front=findViewById(R.id.new_docImageadhar_front);
         new_docadharBackImage=findViewById(R.id.new_docadharBackImage);
 
-        new_browsedocUploadRL=findViewById(R.id.new_browsedocUploadRL);
-        rr_browse_adharbackimage=findViewById(R.id.rr_browse_adharbackimage);
+        browseAddressFrontUploadRL=findViewById(R.id.browseAddressFrontUploadRL);
+        browseAddressBackimageRL=findViewById(R.id.browseAddressBackimage);
 
 
 
@@ -168,6 +169,7 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
         ed_bank_account_number=findViewById(R.id.ed_bank_account_number);
         ed_bank_ifsc_code=findViewById(R.id.ed_bank_ifsc_code);
         ed_bank_confirm_account=findViewById(R.id.ed_bank_confirm_account);
+        ed_bank_branch=findViewById(R.id.ed_branch_name);
 
         new_img_passbook_front=findViewById(R.id.new_img_passbook_front);
         rr_browse_passbokimg=findViewById(R.id.rr_browse_passbokimg);
@@ -177,8 +179,8 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
 
         adharNoTV.setText("National ID Number*");
         reDocTV.setText("Re-Enter National ID Number*");
-        adharNumberET.setHint("Enter National ID number");
-        reAdharNumberET.setHint("Enter National ID number");
+        nationalIDNumberET.setHint("Enter National ID number");
+        reNationalIDNumberET.setHint("Enter National ID number");
         uploadFrontDocTitleTV.setText("Upload front of National ID Card");
         uploadBackDocTitleTV.setText("Upload back of National ID Card");
         docImage.setImageDrawable(getDrawable(R.drawable.sample_aadhaar_card_front_1));
@@ -296,59 +298,12 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
                     });
                     return;
                 }
-               /* if (panNumberET.getText().toString().length() == 0) {
-                    alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.Required), getResources().getString(R.string.pan_number_warning), getResources().getString(R.string.ok), "", new DialogCallBacks() {
-                        @Override
-                        public void getDialogEvent(String buttonPressed) {
 
-                        }
-                    });
-                    return;
-                }*/
-              /*  if (rePanNumberET.getText().toString().length() == 0) {
-                    alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.Required), getResources().getString(R.string.pan_number_warning), getResources().getString(R.string.ok), "", new DialogCallBacks() {
-                        @Override
-                        public void getDialogEvent(String buttonPressed) {
-
-                        }
-                    });
-                    return;
-                }
-                if (!panNumberET.getText().toString().equals(rePanNumberET.getText().toString())){
-                    alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.Required), getResources().getString(R.string.pan_number_match_warning), getResources().getString(R.string.ok), "", new DialogCallBacks() {
-                        @Override
-                        public void getDialogEvent(String buttonPressed) {
-
-                        }
-                    });
-                    return;
-                }*/
-
-           /*     if (panCardImage.length() == 0) {
-                    alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.Required), getResources().getString(R.string.pan_image_warning), getResources().getString(R.string.ok), "", new DialogCallBacks() {
-                        @Override
-                        public void getDialogEvent(String buttonPressed) {
-
-                        }
-                    });
-                    return;
-                }
-*/
-
-                if (adharNumberET.getText().toString().length() == 0) {
+                if (nationalIDNumberET.getText().toString().length() == 0) {
                     String msg="";
                     if(docType.equals("adhaar")){
                         msg="Enter National ID number";
                     }
-                /*    else if(docType.equals("passport")){
-                        msg="Enter Passport number";
-                    }
-                    else if(docType.equals("driving-license")){
-                        msg="Enter Driving-License number";
-                    }
-                    else if(docType.equals("voter-id")){
-                        msg="Enter Voter-ID number";
-                    }*/
                     alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.Required),msg, getResources().getString(R.string.ok), "", new DialogCallBacks() {
                         @Override
                         public void getDialogEvent(String buttonPressed) {
@@ -357,43 +312,12 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
                     });
                     return;
                 }
-              /*  if (reAdharNumberET.getText().toString().length() == 0) {
-                    String msg="";
-                    if(docType.equals("adhaar")){
-                        msg="Enter Aadhaar number";
-                    }
-                    else if(docType.equals("passport")){
-                        msg="Enter Passport number";
-                    }
-                    else if(docType.equals("driving-license")){
-                        msg="Enter Driving-License number";
-                    }
-                    else if(docType.equals("voter-id")){
-                        msg="Enter Voter-ID number";
-                    }
-                    alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.Required),msg, getResources().getString(R.string.ok), "", new DialogCallBacks() {
-                        @Override
-                        public void getDialogEvent(String buttonPressed) {
-
-                        }
-                    });
-                    return;
-                }*/
-                if (!adharNumberET.getText().toString().equals(reAdharNumberET.getText().toString())){
+                if (!nationalIDNumberET.getText().toString().equals(reNationalIDNumberET.getText().toString())){
 
                     String msg="";
                     if(docType.equals("adhaar")){
                         msg="National ID Number must be match.";
                     }
-                  /*  else if(docType.equals("passport")){
-                        msg="Passport Number must be match.";
-                    }
-                    else if(docType.equals("driving-license")){
-                        msg="Driving-License Number must be match.";
-                    }
-                    else if(docType.equals("voter-id")){
-                        msg="Voter-ID Number must be match.";
-                    }*/
                     alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.Required),msg, getResources().getString(R.string.ok), "", new DialogCallBacks() {
                         @Override
                         public void getDialogEvent(String buttonPressed) {
@@ -404,7 +328,7 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
                     return;
                 }
 
-                if (adharCardFrontImage.length() == 0) {
+                if (nationIDFrontImage.length() == 0) {
                     alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.Required), getResources().getString(R.string.national_id_front_image_warning), getResources().getString(R.string.ok), "", new DialogCallBacks() {
                         @Override
                         public void getDialogEvent(String buttonPressed) {
@@ -414,7 +338,7 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
                     return;
                 }
 
-                if (adharCardBackImage.length() == 0) {
+                if (nationIDBackImage.length() == 0) {
                     alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.Required), getResources().getString(R.string.national_id_back_image_warning), getResources().getString(R.string.ok), "", new DialogCallBacks() {
                         @Override
                         public void getDialogEvent(String buttonPressed) {
@@ -423,9 +347,80 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
                     });
                     return;
                 }
+                if (addressFrontImage.length() == 0) {
+                    alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.Required), getResources().getString(R.string.address_front_image_warning), getResources().getString(R.string.ok), "", new DialogCallBacks() {
+                        @Override
+                        public void getDialogEvent(String buttonPressed) {
 
-                if (selfiImage.length() == 0) {
-                    alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.Required), getResources().getString(R.string.selfie_image_warning), getResources().getString(R.string.ok), "", new DialogCallBacks() {
+                        }
+                    });
+                    return;
+                }
+
+                if (addressBackImage.length() == 0) {
+                    alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.Required), getResources().getString(R.string.address_back_image_warning), getResources().getString(R.string.ok), "", new DialogCallBacks() {
+                        @Override
+                        public void getDialogEvent(String buttonPressed) {
+
+                        }
+                    });
+                    return;
+                }
+                if (ed_bank_account_holder_name.getText().toString().length() == 0) {
+                    alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.Required), getResources().getString(R.string.account_hoder_name_warning), getResources().getString(R.string.ok), "", new DialogCallBacks() {
+                        @Override
+                        public void getDialogEvent(String buttonPressed) {
+
+                        }
+                    });
+                    return;
+                }
+                if (ed_bank_name.getText().toString().length() == 0) {
+                    alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.Required), getResources().getString(R.string.bank_name_warning), getResources().getString(R.string.ok), "", new DialogCallBacks() {
+                        @Override
+                        public void getDialogEvent(String buttonPressed) {
+
+                        }
+                    });
+                    return;
+                }
+                if (ed_bank_branch.getText().toString().length() == 0) {
+                    alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.Required), getResources().getString(R.string.branch_name_warning), getResources().getString(R.string.ok), "", new DialogCallBacks() {
+                        @Override
+                        public void getDialogEvent(String buttonPressed) {
+
+                        }
+                    });
+                    return;
+                }
+                if (ed_bank_account_number.getText().toString().length() == 0) {
+                    alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.Required), getResources().getString(R.string.account_number_warning), getResources().getString(R.string.ok), "", new DialogCallBacks() {
+                        @Override
+                        public void getDialogEvent(String buttonPressed) {
+
+                        }
+                    });
+                    return;
+                }
+                if (!ed_bank_account_number.getText().toString().equalsIgnoreCase(ed_bank_confirm_account.getText().toString())) {
+                    alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.app_name),  getResources().getString(R.string.account_number_match_warning), "Ok", "", new DialogCallBacks() {
+                        @Override
+                        public void getDialogEvent(String buttonPressed) {
+                        }
+                    });
+                    return;
+                }
+                if (ed_bank_ifsc_code.getText().toString().length() == 0) {
+                    alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.Required), getResources().getString(R.string.ifsc_code_warning), getResources().getString(R.string.ok), "", new DialogCallBacks() {
+                        @Override
+                        public void getDialogEvent(String buttonPressed) {
+
+                        }
+                    });
+                    return;
+                }
+                if (passbook.length() == 0) {
+                    alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.Required), getResources().getString(R.string.passbook_image_warning), getResources().getString(R.string.ok), "", new DialogCallBacks() {
                         @Override
                         public void getDialogEvent(String buttonPressed) {
 
@@ -484,7 +479,7 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
         });
 
 
-        new_browsedocUploadRL.setOnClickListener(new View.OnClickListener() {
+        browseAddressFrontUploadRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 imageType="address_front";
@@ -494,7 +489,7 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
             }
         });
 
-        rr_browse_adharbackimage.setOnClickListener(new View.OnClickListener() {
+        browseAddressBackimageRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 imageType="address_back";
@@ -525,27 +520,19 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
                 browseImage();
             }
         });
-        docUploadRL.setOnClickListener(new View.OnClickListener() {
+        nationalFronUploadRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imageType="documnt_front";
+                imageType="national_front";
                 commonImage=docImage;
                 browseImage();
             }
         });
-        docBackUploadRL.setOnClickListener(new View.OnClickListener() {
+        nationalBackUploadRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                imageType="document_back";
+                imageType="national_back";
                 commonImage=docBackImage;
-                browseImage();
-            }
-        });
-        docSelfiUploadRL.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                imageType="selfie";
-                commonImage=docSelfiImage;
                 browseImage();
             }
         });
@@ -775,14 +762,20 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
                         if (imageType.equals("pan")){
                            panCardImage="pan";
                         }
-                        else if (imageType.equals("documnt_front")){
-                          adharCardFrontImage="documnt_front";
+                        else if (imageType.equals("national_front")){
+                            nationIDFrontImage="national_front";
                         }
-                        else if (imageType.equals("document_back")){
-                            adharCardBackImage="document_back";
+                        else if (imageType.equals("national_back")){
+                            nationIDBackImage="national_back";
                         }
-                        else if (imageType.equals("selfie")){
-                             selfiImage="selfie";
+                        else if (imageType.equals("address_front")){
+                            addressFrontImage="address_front";
+                        }
+                        else if (imageType.equals("address_back")){
+                            addressBackImage="address_back";
+                        }
+                        else if (imageType.equals("passbook")){
+                            passbook="selfie";
                         }
 
 
@@ -915,7 +908,14 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
         m.put("postal_code", pinCodeET.getText().toString());
         //m.put("pan_number", "pan");
         m.put("document_type", docType);
-        m.put("id_number", adharNumberET.getText().toString());
+        m.put("id_number", nationalIDNumberET.getText().toString());
+
+        m.put("accountholdername", ed_bank_account_holder_name.getText().toString());
+        m.put("bank_account_number", ed_bank_account_number.getText().toString());
+        m.put("bank_name", ed_bank_account_number.getText().toString());
+        m.put("branch", ed_bank_branch.getText().toString());
+        m.put("iban", ed_bank_ifsc_code.getText().toString());
+
 
         m.put("token",savePreferences.reterivePreference(this, DefaultConstants.token)+"");
         m.put("DeviceToken",getDeviceToken()+"");
@@ -1050,58 +1050,19 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
         if(!s.isEmpty()) {
             select_DocTypeTV.setText(s);
 
-          /*  adhaar
-                    passport
-            driving-license
-            voter-id*/
+
             if(s.equals("National ID")){
                 docType="adhaar";
                 adharNoTV.setText("National ID Number*");
                 reDocTV.setText("Re-Enter National ID Number*");
-                adharNumberET.setHint("Enter National ID number");
-                reAdharNumberET.setHint("Enter National ID number");
+                nationalIDNumberET.setHint("Enter National ID number");
+                reNationalIDNumberET.setHint("Enter National ID number");
                 uploadFrontDocTitleTV.setText("Upload front of National ID Card");
                 uploadBackDocTitleTV.setText("Upload back of National ID Card");
                 docImage.setImageDrawable(getDrawable(R.drawable.sample_aadhaar_card_front_1));
                 docBackImage.setImageDrawable(getDrawable(R.drawable.sample_aadhaar_card_back_1));
 
             }
-         /*   if(s.equals("passport")){
-                adharNoTV.setText("Passport Number*");
-                reDocTV.setText("Re-Enter Passport Number*");
-                adharNumberET.setHint("Enter Passport number");
-                reAdharNumberET.setHint("Enter Passport number");
-                uploadFrontDocTitleTV.setText("Upload front of Passport Card");
-                uploadBackDocTitleTV.setText("Upload back of Passport Card");
-
-                docImage.setImageDrawable(getDrawable(R.drawable.sample_passport_front_1));
-                docBackImage.setImageDrawable(getDrawable(R.drawable.sample_passport_baclk_1));
-
-            }
-            if(s.equals("driving-license")){
-                adharNoTV.setText("Driving-License Number*");
-                reDocTV.setText("Re-Enter Driving-License Number*");
-                adharNumberET.setHint("Enter Driving-License number");
-                reAdharNumberET.setHint("Enter Driving-License number");
-                uploadFrontDocTitleTV.setText("Upload front of Driving-License Card");
-                uploadBackDocTitleTV.setText("Upload back of Driving-License Card");
-
-                docImage.setImageDrawable(getDrawable(R.drawable.sample_driving_licence_front_1));
-                docBackImage.setImageDrawable(getDrawable(R.drawable.sample_driving_licence_back_1));
-
-            }
-            if(s.equals("voter-id")){
-                adharNoTV.setText("Voter-ID Number*");
-                reDocTV.setText("Re-Enter Voter-ID Number*");
-                adharNumberET.setHint("Enter Voter-ID number");
-                reAdharNumberET.setHint("Enter Voter-ID number");
-                uploadFrontDocTitleTV.setText("Upload front of Voter-ID Card");
-                uploadBackDocTitleTV.setText("Upload back of Voter-ID Card");
-
-                docImage.setImageDrawable(getDrawable(R.drawable.sample_voter_card_front_1));
-                docBackImage.setImageDrawable(getDrawable(R.drawable.sample_voter_card_back_1));
-
-            }*/
         }
         else {
             docType="adhaar";

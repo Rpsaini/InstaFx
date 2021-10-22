@@ -142,10 +142,6 @@ public class SelectCountryScreen extends BaseActivity {
     {
         try
         {
-            JSONObject data=new JSONObject();
-            data.put("id","1");
-            data.put("name","India");
-            filteredAr.add(data);
             mAdapter = new SelectCountryAdapter(SelectCountryScreen.this, filteredAr);
             LinearLayoutManager horizontalLayoutManager
                     = new LinearLayoutManager(SelectCountryScreen.this, LinearLayoutManager.VERTICAL, false);

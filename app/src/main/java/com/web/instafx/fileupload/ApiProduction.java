@@ -13,7 +13,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiProduction {
-    private static String BASE_URL = "https://whatashot.io/";
+    public static String BASE_URL = "https://instfx.com/";
 
     private final Context context;
     private ApiProduction(Context context) {
