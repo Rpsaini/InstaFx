@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="0dp"
+    android:id="@+id/commissionHistoryRootLayout"
+    android:orientation="vertical">
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+          <fontspackageForTextView.Regular
+            android:id="@+id/dateTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:text="Date"
+            android:textAllCaps="true"
+            android:textColor="@color/hintTextColor"
+            android:textSize="@dimen/text_size"
+            android:gravity="center|start" />
+          <fontspackageForTextView.Regular
+              android:id="@+id/emailTV"
+              android:layout_width="0dp"
+              android:paddingStart="10dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:layout_alignParentStart="true"
+              android:layout_centerInParent="true"
+              android:text="Email"
+              android:textAllCaps="true"
+              android:textColor="@color/hintTextColor"
+              android:textSize="@dimen/text_size"
+              android:gravity="start|center"  />
+          <fontspackageForTextView.Regular
+              android:id="@+id/commissionTV"
+              android:layout_width="0dp"
+              android:paddingStart="10dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              android:layout_alignParentStart="true"
+              android:layout_centerInParent="true"
+              android:text="Commission"
+              android:textAllCaps="true"
+              android:textColor="@color/hintTextColor"
+              android:textSize="@dimen/text_size"
+              android:gravity="start|center"  />
+
+
+      </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commissionHistoryRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>
