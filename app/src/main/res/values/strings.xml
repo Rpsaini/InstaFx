@@ -86,9 +86,19 @@
     <string name="national_id_front_image_warning">Select National ID Front Image.</string>
     <string name="national_id_back_image_warning">Select National ID Back Image.</string>
 
+    <string name="address_front_image_warning">Select Address Front Image.</string>
+    <string name="address_back_image_warning">Select Address Back Image.</string>
+
+    <string name="account_hoder_name_warning">Enter Account Holder Name.</string>
+    <string name="bank_name_warning">Enter Bank Name.</string>
+
+    <string name="branch_name_warning">Enter Bank Branch Name.</string>
+    <string name="account_number_warning">Enter Account Number.</string>
+    <string name="ifsc_code_warning">Enter IFSC Code.</string>
+    <string name="account_number_match_warning">Account Number must be match.</string>
 
     <string name="selfie_image_warning">Select Selfie Image.</string>
-
+    <string name="passbook_image_warning">Select Passbook Image.</string>
     <string name="required">Required</string>
     <string name="select_any_two">Select any two </string>
     <string name="select_any_one">Select any one </string>
@@ -127,8 +137,8 @@
     <string name="aadhaar_num">Aadhaar Number*</string>
     <string name="enter_aadha">Enter Aadhaar number</string>
     <string name="re_enter_aa">Re-Enter Aadhaar Number*</string>
-    <string name="upload_fron">Upload front of Aadhaar Card</string>
-    <string name="upload_back">Upload back of Aadhaar Card</string>
+    <string name="upload_fron">Upload Address Proof(Front)</string>
+    <string name="upload_back">Upload Address Proof(Back)</string>
     <string name="upload_self">Upload selfie while holding your Aadhaar Card</string>
     <string name="ready_to_su">Ready to submit your application?</string>
     <string name="please_veri">Please verify the details you\'re submitting. Once submitted, you won\'t be able to change it unless you</string>
@@ -249,8 +259,8 @@
     <string name="destinationtag">Destination Tag</string>
     <string name="destination_tag_txt">Destination Tag</string>
     <string name="enter_destination_tag_txt">Enter Destination Tag</string>
-
-
+    <string name="bank_branch">Branch Name</string>
+    <string name="bank_branch_name">Branch Name</string>
     <string name="bank_name">Bank Name</string>
     <string name="bank_ifsc">IFSC</string>
     <string name="bank_account_number">Account Number</string>
@@ -265,7 +275,10 @@
     <string name="bank_enter_account_number">Enter Account Number</string>
     <string name="bank_confirm_account_number">Confirm Account Number</string>
     <string name="bank_enter_account_holdername">Enter Account Holder Name</string>
-    <string name="btranch_enter_number">Enter Branch Number</string>
-
-
+    <string name="btranch_enter_number">Enter Branch Name</string>
+    <string name="share_">Share</string>
+    <string name="share_your_link">Share your link &amp; earn more!</string>
+    <string name="invite_earns">Invite &amp; Earn</string>
+    <string name="instafx_referral_program">InstaFX Referral Program</string>
+    <string name="refer_and_earn_50_percent_commision_of_every_trading_fee_be_an_own_boss">Refer and earn 50% commission of every trading fee. Be your own Boss!</string>
 </resources>

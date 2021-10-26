@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <fontspackageForTextView.Regular
+            android:id="@+id/emailTV"
+            android:layout_width="0dp"
+            android:paddingStart="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:text="dr***@****.com"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/hintTextColor"
+            android:textSize="@dimen/small_text_size"
+            android:gravity="start|center"  />
+        <fontspackageForTextView.Regular
+            android:id="@+id/dateTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:text="Sat,Oct 23"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/hintTextColor"
+            android:textSize="@dimen/small_text_size"
+            android:gravity="center|start" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="1dp"
+        android:background="@color/line_color"/>
+</LinearLayout>

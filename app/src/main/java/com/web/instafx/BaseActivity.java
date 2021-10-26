@@ -35,6 +35,7 @@ import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
+import com.web.instafx.fileupload.ApiProduction;
 import com.web.instafx.utilpackage.UtilClass;
 
 import org.json.JSONObject;
@@ -138,7 +139,7 @@ public class BaseActivity extends AppCompatActivity {
 
     //Also change qr code validation url
     public String getApiUrl() {
-        return "https://instfx.com/";
+        return ApiProduction.BASE_URL;
     }
 
     public String getXapiKey() {

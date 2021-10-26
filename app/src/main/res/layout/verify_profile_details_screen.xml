@@ -1038,7 +1038,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="40dp"
-                    android:text="@string/enter_aadha"
+                    android:text="National ID Number*"
                     android:textColor="@color/text_hint_color"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/docRL" />
@@ -1062,7 +1062,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:hint="@string/enter_aadha"
+                        android:hint="Enter National ID number"
                         android:inputType="text"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
@@ -1079,7 +1079,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
-                    android:text="@string/re_enter_aa"
+                    android:text="Re-Enter National ID Number*"
                     android:textColor="@color/text_hint_color"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/adharNoRL" />
@@ -1103,7 +1103,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:hint="@string/enter_aadha"
+                        android:hint="Enter National ID number"
                         android:inputType="text"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
@@ -1313,82 +1313,11 @@
                     android:background="@drawable/ic_rectangle_dotted"
                     android:orientation="vertical"
                     android:padding="4dp"
+                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/ll_upload_adhar">
 
-
-
-
-
-
-                    <ImageView
-                        android:id="@+id/docSelfiImage"
-                        android:layout_width="match_parent"
-                        android:layout_height="220dp"
-                        android:layout_marginTop="-18dp"
-                        android:scaleType="centerInside"
-                        android:src="@drawable/document_selfie" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:orientation="horizontal"
-                        android:weightSum="1">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.85"
-                            android:orientation="vertical">
-
-                            <fontspackageForTextView.Regular
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="0dp"
-                                android:text="@string/upload_self"
-                                android:textColor="@color/text_black_color"
-                                android:textSize="@dimen/title_text_size"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/type_line" />
-
-                            <fontspackageForTextView.Regular
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginTop="10dp"
-                                android:text="@string/on_desktop_"
-                                android:textColor="@color/text_hint_color"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/personal_info_tv" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.15">
-
-                            <RelativeLayout
-                                android:id="@+id/docSelfiUploadRL"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="0dp"
-                                android:background="@drawable/ic_rectangle_81">
-
-                                <ImageView
-                                    android:id="@+id/docSelfiUploadIC"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    app:srcCompat="@drawable/ic_upload" />
-                            </RelativeLayout>
-
-                        </LinearLayout>
-                    </LinearLayout>
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
