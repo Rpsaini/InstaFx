@@ -8,7 +8,9 @@
     android:background="@color/white"
     tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+
+   <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/app_header_bar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
