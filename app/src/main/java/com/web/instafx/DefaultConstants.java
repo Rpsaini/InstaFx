@@ -24,5 +24,6 @@ import java.util.ArrayList;
     public static String home="home";
     public static String quick="quick";
     public static String destinationtag="destinationtag";
+    public static String currency_id="currency_id";
     public static  ArrayList<JSONObject> open_orders=new ArrayList<>(),orders_history=new ArrayList<>();
 }

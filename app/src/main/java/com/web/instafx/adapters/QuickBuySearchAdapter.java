@@ -60,7 +60,7 @@ public class QuickBuySearchAdapter extends RecyclerView.Adapter<QuickBuySearchAd
 
             JSONObject dataObj = quickAr.get(position);
             holder.txt_currency_name.setText(dataObj.getString("base"));
-            holder.txt_currency_price.setText(dataObj.getString("buy_price")+" USDT");
+            holder.txt_currency_price.setText(dataObj.getString("buy_price")+" "+dataObj.getString("term"));
             holder.txt_currency_fullname.setText(dataObj.getString("base_name"));
             showImage(dataObj.getString("icon"), holder.img_currencyicon);
 

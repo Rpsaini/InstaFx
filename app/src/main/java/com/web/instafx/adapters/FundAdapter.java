@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
+import com.web.instafx.FundHistoryActivity;
 import com.web.instafx.MainActivity;
 import com.web.instafx.R;
 import com.web.instafx.fragments.FundFragment;
@@ -101,6 +102,17 @@ public class FundAdapter extends RecyclerView.Adapter<FundAdapter.MyViewHolder> 
                 }
             });
 
+            holder.ll_fund_list_row.setTag(dataObj);
+            holder.ll_fund_list_row.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent=new Intent(ira1, FundHistoryActivity.class);
+                    intent.putExtra("data",v.getTag()+"");
+                    ira1.startActivity(intent);
+                }
+            });
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -138,22 +150,17 @@ public class FundAdapter extends RecyclerView.Adapter<FundAdapter.MyViewHolder> 
     {
 
         final PopupWindow popupWindow = new PopupWindow(ira1);
-
-        // inflate your layout or dynamically add view
         LayoutInflater inflater = (LayoutInflater) ira1.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
         View view = inflater.inflate(R.layout.fund_item_popup_menu, null);
-
         LinearLayout depositLLItem = view.findViewById(R.id.depositLL);
         LinearLayout withdrawalLLItem = view.findViewById(R.id.withdrawalLL);
 
         popupWindow.setFocusable(true);
         popupWindow.setWidth(WindowManager.LayoutParams.WRAP_CONTENT);
         popupWindow.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
-
         popupWindow.setContentView(view);
-
-        withdrawalLLItem.setOnClickListener(new View.OnClickListener() {
+        withdrawalLLItem.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
                 Intent intent =new Intent(ira1, WithdrawalFundScreen.class);
@@ -165,7 +172,8 @@ public class FundAdapter extends RecyclerView.Adapter<FundAdapter.MyViewHolder> 
 
         depositLLItem.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 Intent intent = new Intent(ira1, BalanceFulledetails.class);
                 intent.putExtra("data", data);
                 ira1.startActivity(intent);

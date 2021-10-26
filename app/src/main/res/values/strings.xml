@@ -188,6 +188,9 @@
     <string name="fund">FUND</string>
     <string name="transfer_hi">TRANSFER HISTORY</string>
 
+    <string name="deposit_history">DEPOSIT HISTORY</string>
+    <string name="withdrawal_history">WITHDRAW HISTORY</string>
+
     <!-- strings.xml -->
     <string name="setting_pro">Setting/Profile</string>
     <string name="name">Name</string>
