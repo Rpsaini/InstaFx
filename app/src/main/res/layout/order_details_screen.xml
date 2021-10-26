@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/app_bg_color"
+    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/app_header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/header_bar_color"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backIC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="?attr/actionModeCloseDrawable"
+            app:tint="@color/white" />
+
+        <fontspackageForTextView.Regular
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_details"
+            android:textColor="@color/white"
+            android:textSize="@dimen/action_bar_title_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_header_bar"
+        tools:ignore="SpeakableTextPresentCheck">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_bg_color">
+
+            <LinearLayout
+                android:id="@+id/confirm_details_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/setting_profile_rect_drawable"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <fontspackageForTextView.BoldMedium
+                        android:id="@+id/currencySymbolTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="WRX/INR"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/title_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <fontspackageForTextView.Regular
+                        android:id="@+id/buyTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="@string/buy_txt"
+                        android:textAllCaps="false"
+                        android:textColor="@color/green_color"
+                        android:textSize="@dimen/title_text_size"
+                        android:drawablePadding="5dp"
+                        android:drawableEnd="@drawable/ic_baseline_compare_arrows_24"
+                        android:drawableTint="@color/green_color"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <fontspackageForTextView.Regular
+                        android:id="@+id/typeTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/type">
+
+                    </fontspackageForTextView.Regular>
+
+
+                    <fontspackageForTextView.Regular
+                        android:id="@+id/limitTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="right"
+                        android:text="@string/limit"
+                        android:textColor="@color/hintTextColor"></fontspackageForTextView.Regular>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <fontspackageForTextView.Regular
+                        android:id="@+id/placedOnTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/placed_on">
+
+                    </fontspackageForTextView.Regular>
+
+
+                    <fontspackageForTextView.Regular
+                        android:id="@+id/placedDateTimeTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="right"
+                        android:text="07 May, 04:55"
+                        android:textColor="@color/hintTextColor"></fontspackageForTextView.Regular>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <fontspackageForTextView.Regular
+                        android:id="@+id/filledAmmountTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/filled_amount">
+
+                    </fontspackageForTextView.Regular>
+
+
+                    <fontspackageForTextView.Regular
+                        android:id="@+id/filledAmmountValueTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="right"
+                        android:text="8.9QRX/8.9WRX"
+                        android:textColor="@color/hintTextColor"></fontspackageForTextView.Regular>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <fontspackageForTextView.Regular
+                        android:id="@+id/averagePriceTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/filled_amount">
+
+                    </fontspackageForTextView.Regular>
+
+
+                    <fontspackageForTextView.Regular
+                        android:id="@+id/average_priceValueTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="right"
+                        android:text="₹178.00/₹178.00"
+                        android:textColor="@color/hintTextColor"></fontspackageForTextView.Regular>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <fontspackageForTextView.Regular
+                        android:id="@+id/totalTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total">
+
+                    </fontspackageForTextView.Regular>
+
+
+                    <fontspackageForTextView.Regular
+                        android:id="@+id/totalValueTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="right"
+                        android:text="₹1584.00"
+                        android:textColor="@color/black"></fontspackageForTextView.Regular>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/line_color"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <fontspackageForTextView.Regular
+                        android:id="@+id/feesTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fee">
+
+                    </fontspackageForTextView.Regular>
+
+
+                    <fontspackageForTextView.Regular
+                        android:id="@+id/feesValueTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="right"
+                        android:text="₹3,1684"
+                        android:textColor="@color/hintTextColor"></fontspackageForTextView.Regular>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/trade_details_layout"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/setting_profile_rect_drawable"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <fontspackageForTextView.BoldMedium
+                        android:id="@+id/tradeDetailsTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/trade_details"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/title_text_size"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3">
+                        <fontspackageForTextView.Regular
+                            android:id="@+id/dateTimeTitleTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/date_time"
+                            android:textColor="@color/hintTextColor"
+                            android:layout_weight="1">
+
+                        </fontspackageForTextView.Regular>
+                        <fontspackageForTextView.Regular
+                            android:id="@+id/filledTitleTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/filled"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/hintTextColor"></fontspackageForTextView.Regular>
+                        <fontspackageForTextView.Regular
+                            android:id="@+id/priceTitleTV"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/price"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@color/hintTextColor"></fontspackageForTextView.Regular>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3">
+                    <fontspackageForTextView.Regular
+                        android:id="@+id/dateTimeTitleValueTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="07 May,04:55:29"
+                        android:textColor="@color/hintTextColor"
+                        android:layout_weight="1">
+
+                    </fontspackageForTextView.Regular>
+                    <fontspackageForTextView.Regular
+                        android:id="@+id/filledTitleValueTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="8.9 WRX"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/hintTextColor"></fontspackageForTextView.Regular>
+                    <fontspackageForTextView.Regular
+                        android:id="@+id/priceTitleValueTV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="₹1584.00"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:textColor="@color/hintTextColor"></fontspackageForTextView.Regular>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

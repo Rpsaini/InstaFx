@@ -143,6 +143,7 @@
     <string name="ready_to_su">Ready to submit your application?</string>
     <string name="please_veri">Please verify the details you\'re submitting. Once submitted, you won\'t be able to change it unless you</string>
     <string name="submit_for_">SUBMIT FOR VERIFICATION</string>
+    <string name="buy_txt">Buy</string>
     <string name="buy">BUY</string>
     <string name="sell">SELL</string>
     <string name="inr_symbol">₹</string>
@@ -281,4 +282,14 @@
     <string name="invite_earns">Invite &amp; Earn</string>
     <string name="instafx_referral_program">InstaFX Referral Program</string>
     <string name="refer_and_earn_50_percent_commision_of_every_trading_fee_be_an_own_boss">Refer and earn 50% commission of every trading fee. Be your own Boss!</string>
+    <string name="order_details">Order Details</string>
+    <string name="limit">Limit</string>
+    <string name="placed_on">Placed on</string>
+    <string name="filled_amount">Filled/Amount</string>
+    <string name="average_price">Average/Price</string>
+    <string name="total">Total</string>
+    <string name="fee">Fee</string>
+    <string name="trade_details">Trade Details</string>
+    <string name="date_time">Date/Time</string>
+    <string name="filled">Filled</string>
 </resources>

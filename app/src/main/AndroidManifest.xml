@@ -32,6 +32,10 @@
         android:theme="@style/Theme.UnitedExchange"
         android:usesCleartextTraffic="true">
         <activity
+            android:name="com.web.instafx.order_details.OrderDetailsScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.WhatAShot"/>
+        <activity
             android:name="com.web.instafx.kyc.SelectStateScreen"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.WhatAShot"/>

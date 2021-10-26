@@ -10,7 +10,6 @@ import com.app.dialogsnpickers.DialogCallBacks;
 import com.app.vollycommunicationlib.CallBack;
 import com.app.vollycommunicationlib.ServerHandler;
 import com.web.instafx.utilpackage.UtilClass;
-
 import org.json.JSONObject;
 
 import java.util.ArrayList;
