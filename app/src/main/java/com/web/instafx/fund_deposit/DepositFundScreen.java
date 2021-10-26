@@ -1,7 +1,6 @@
 package com.web.instafx.fund_deposit;
 
 import android.os.Bundle;
-
 import com.web.instafx.BaseActivity;
 import com.web.instafx.R;
 

@@ -11,9 +11,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-feature android:name="android.hardware.camera" />
-
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -21,111 +19,108 @@
         <intent>
             <action android:name="android.media.action.IMAGE_CAPTURE" />
         </intent>
-    </queries>
+     </queries>
 
     <application
-        android:name=".MyApplication"
+        android:name="com.web.instafx.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
         android:theme="@style/Theme.UnitedExchange"
         android:usesCleartextTraffic="true">
-        <activity android:name=".FundHistoryActivity"
+        <activity
+            android:name="com.web.instafx.kyc.SelectStateScreen"
             android:screenOrientation="portrait"
-            ></activity>
+            android:theme="@style/Theme.WhatAShot"/>
         <activity
-            android:name=".kyc.SelectStateScreen"
+            android:name="com.web.instafx.kyc.SelectCountryScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.WhatAShot"/>
         <activity
-            android:name=".kyc.SelectCountryScreen"
+            android:name="com.web.instafx.search_currency.SearchCurrencyScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.WhatAShot"/>
         <activity
-            android:name=".search_currency.SearchCurrencyScreen"
+            android:name="com.web.instafx.payment_option.PaymentOptionsScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.WhatAShot"/>
         <activity
-            android:name=".payment_option.PaymentOptionsScreen"
+            android:name="com.web.instafx.activity_log.ActivityLogScreens"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.WhatAShot"/>
         <activity
-            android:name=".activity_log.ActivityLogScreens"
+            android:name="com.web.instafx.two_factor_auth.TwoFactorAuthScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.WhatAShot"/>
         <activity
-            android:name=".two_factor_auth.TwoFactorAuthScreen"
+            android:name="com.web.instafx.currency_preferences.CurrencyPreferencesScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.WhatAShot"/>
         <activity
-            android:name=".currency_preferences.CurrencyPreferencesScreen"
+            android:name="com.web.instafx.setting_profile.SettingProfileScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.WhatAShot"/>
         <activity
-            android:name=".setting_profile.SettingProfileScreen"
+            android:name="com.web.instafx.fund_withdrawal.WithdrawalFundScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.WhatAShot"/>
         <activity
-            android:name=".fund_withdrawal.WithdrawalFundScreen"
+            android:name="com.web.instafx.fund_withdrawal.ConfirmWithdrawalFundScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.WhatAShot"/>
         <activity
-            android:name=".fund_withdrawal.ConfirmWithdrawalFundScreen"
+            android:name="com.web.instafx.kyc.VerifyKycForPersonalInfoScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.WhatAShot"/>
         <activity
-            android:name=".kyc.VerifyKycForPersonalInfoScreen"
+            android:name="com.web.instafx.kyc.VerifyCompleteSubmitKycScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.WhatAShot"/>
         <activity
-            android:name=".kyc.VerifyCompleteSubmitKycScreen"
+            android:name="com.web.instafx.kyc.VerifyKycAccountDetailsScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.WhatAShot"/>
+        <activity android:name="com.web.instafx.GetKeysActivity"
+            android:screenOrientation="portrait">
+        </activity>
         <activity
-            android:name=".kyc.VerifyKycAccountDetailsScreen"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
-        <activity
-            android:name=".GetKeysActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".fiatdepositwithdraw.WithdrawInrActivity"
+            android:name="com.web.instafx.fiatdepositwithdraw.WithdrawInrActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".fiatdepositwithdraw.ShowFiatCurrencyDepositWithdraw"
+            android:name="com.web.instafx.fiatdepositwithdraw.ShowFiatCurrencyDepositWithdraw"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".fiatdepositwithdraw.DepositeInrActivity"
+            android:name="com.web.instafx.fiatdepositwithdraw.DepositeInrActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".captcha.VerifyCaptchaJava"
+            android:name="com.web.instafx.captcha.VerifyCaptchaJava"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".captcha.VerifyCaptcha"
+            android:name="com.web.instafx.captcha.VerifyCaptcha"
             android:screenOrientation="portrait" />
         <activity
             android:name="invite_earn.InviteEarnScreen"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".AccountScreen"
+            android:name="com.web.instafx.AccountScreen"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".VerifyOtp"
+            android:name="com.web.instafx.VerifyOtp"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".RegisterActivity"
+            android:name="com.web.instafx.RegisterActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".kyc.GoogleAuthentication"
+            android:name="com.web.instafx.kyc.GoogleAuthentication"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".kyc.BalanceFulledetails"
+            android:name="com.web.instafx.kyc.BalanceFulledetails"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".kyc.WithdrawMoney"
+            android:name="com.web.instafx.kyc.WithdrawMoney"
             android:screenOrientation="portrait" /> <!-- <activity -->
         <!-- android:name=".kyc.UploadKycDocuments" -->
         <!-- android:screenOrientation="portrait" /> -->
@@ -133,37 +128,39 @@
         <!-- android:name=".kyc.PersonalDetails" -->
         <!-- android:screenOrientation="portrait" /> -->
         <activity
-            android:name=".ScanQrCode"
+            android:name="com.web.instafx.ScanQrCode"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".LoginActivity"
+            android:name="com.web.instafx.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".pairdetailfragments.PairDetailView"
+            android:name="com.web.instafx.pairdetailfragments.PairDetailView"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".BaseActivity"
+            android:name="com.web.instafx.BaseActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SplashScreen"
+            android:name="com.web.instafx.SplashScreen"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:screenOrientation="portrait" /> <!-- <provider -->
-        <!-- android:name="androidx.core.content.FileProvider" -->
-        <!-- android:authorities="${applicationId}.provider" -->
-        <!-- android:exported="false" -->
-        <!-- android:grantUriPermissions="true"> -->
-        <!-- <meta-data -->
-        <!-- android:name="android.support.FILE_PROVIDER_PATHS" -->
-        <!-- android:resource="@xml/provider_paths" /> -->
-        <!-- </provider> -->
+            android:name="com.web.instafx.MainActivity"
+            android:screenOrientation="portrait" />
+
+<!--        <provider-->
+<!--            android:name="androidx.core.content.FileProvider"-->
+<!--            android:authorities="${applicationId}.provider"-->
+<!--            android:exported="false"-->
+<!--            android:grantUriPermissions="true">-->
+<!--            <meta-data-->
+<!--                android:name="android.support.FILE_PROVIDER_PATHS"-->
+<!--                android:resource="@xml/provider_paths" />-->
+<!--        </provider>-->
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
@@ -175,12 +172,18 @@
         </provider>
 
         <service
-            android:name=".fcm.MessagingService"
+            android:name="com.web.instafx.fcm.MessagingService"
             android:stopWithTask="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
     </application>
 
 </manifest>
+
+
+
+
+

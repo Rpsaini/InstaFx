@@ -1,6 +1,7 @@
 package com.web.instafx.adapters;
 
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.web.instafx.R;
+import com.web.instafx.order_details.OrderDetailsScreen;
 import com.web.instafx.orderpackage.OpenOrderFragment;
 import com.web.instafx.pairdetailfragments.PairOpenOrderFragment;
 
@@ -132,7 +134,13 @@ public class OrderDetailsAdapter extends RecyclerView.Adapter<OrderDetailsAdapte
 
                }
            });
-
+           holder.ll_open_order_list_row.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+                   Intent intent=new Intent(ira1, OrderDetailsScreen.class);
+                   ira1.startActivity(intent);
+               }
+           });
 
 
         }

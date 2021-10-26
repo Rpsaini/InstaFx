@@ -19,7 +19,8 @@
         android:padding="5dp">
 
 
-        <RelativeLayout
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp">
@@ -32,17 +33,18 @@
 
             <fontspackageForTextView.Regular
                 android:id="@+id/txt_account_holder_name"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:gravity="right"
                 android:text=""
                 android:textColor="@color/black"></fontspackageForTextView.Regular>
 
-        </RelativeLayout>
+        </LinearLayout>
 
 
-        <RelativeLayout
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
@@ -55,17 +57,18 @@
 
             <fontspackageForTextView.Regular
                 android:id="@+id/txt_bank_name"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:gravity="right"
                 android:text=""
                 android:textColor="@color/black"></fontspackageForTextView.Regular>
 
-        </RelativeLayout>
+        </LinearLayout>
 
 
-        <RelativeLayout
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
@@ -78,17 +81,18 @@
 
             <fontspackageForTextView.Regular
                 android:id="@+id/txt_account_number"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:gravity="right"
                 android:text=""
                 android:textColor="@color/black"></fontspackageForTextView.Regular>
 
-        </RelativeLayout>
+        </LinearLayout>
 
 
-        <RelativeLayout
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
@@ -101,14 +105,14 @@
 
             <fontspackageForTextView.Regular
                 android:id="@+id/txt_ifsc"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:gravity="right"
                 android:text=""
                 android:textColor="@color/black"></fontspackageForTextView.Regular>
 
-        </RelativeLayout>
+        </LinearLayout>
 
     </LinearLayout>
 </LinearLayout>
