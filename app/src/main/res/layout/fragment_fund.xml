@@ -88,7 +88,7 @@
             android:drawablePadding="5dp"
             android:gravity="center|left"
             android:paddingLeft="10dp"
-            android:text="Total Balance : "
+            android:text="Portfolio Value : "
             android:textColor="@color/textcolor"
             android:textSize="@dimen/text_size"></fontspackageForTextView.Regular>
 

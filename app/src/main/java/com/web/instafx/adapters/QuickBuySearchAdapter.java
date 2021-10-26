@@ -15,23 +15,23 @@ import com.bumptech.glide.request.RequestOptions;
 import com.web.instafx.MainActivity;
 import com.web.instafx.R;
 import com.web.instafx.fragments.QuickBuyFragment;
+import com.web.instafx.search_currency.SearchCurrencyScreen;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class QuickBuyAdapter extends RecyclerView.Adapter<QuickBuyAdapter.MyViewHolder> {
-    private MainActivity ira1;
-    private JSONArray quickAr;
-    private QuickBuyFragment fundFragment;
+import java.util.ArrayList;
+
+public class QuickBuySearchAdapter extends RecyclerView.Adapter<QuickBuySearchAdapter.MyViewHolder> {
+    private SearchCurrencyScreen ira1;
+    private ArrayList<JSONObject> quickAr;
+
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView txt_currency_name, tv_buy,txt_currency_price,txt_currency_fullname;
-
         LinearLayout ll_fund_list_row;
         ImageView img_currencyicon;
-
-
         public MyViewHolder(View view) {
             super(view);
             txt_currency_name = view.findViewById(R.id.txt_currency_name);
@@ -40,24 +40,17 @@ public class QuickBuyAdapter extends RecyclerView.Adapter<QuickBuyAdapter.MyView
             img_currencyicon = view.findViewById(R.id.img_currencyicon);
             txt_currency_price = view.findViewById(R.id.txt_currency_price);
             txt_currency_fullname = view.findViewById(R.id.txt_currency_fullname);
-
-
         }
     }
-
-
-    public QuickBuyAdapter(JSONArray quickAr, MainActivity mainActivity, QuickBuyFragment fundFragment)
+    public QuickBuySearchAdapter(ArrayList<JSONObject> quickAr, SearchCurrencyScreen mainActivity)
     {
         this.quickAr = quickAr;
         this.ira1 = mainActivity;
-        this.fundFragment = fundFragment;
     }
-
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.quick_buy_list_row, parent, false);
-
         return new MyViewHolder(itemView);
     }
 
@@ -65,15 +58,15 @@ public class QuickBuyAdapter extends RecyclerView.Adapter<QuickBuyAdapter.MyView
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
         try {
 
-            JSONObject dataObj = quickAr.getJSONObject(position);
+            JSONObject dataObj = quickAr.get(position);
             holder.txt_currency_name.setText(dataObj.getString("base"));
-            holder.txt_currency_price.setText(dataObj.getString("buy_price")+" "+dataObj.getString("term"));
+            holder.txt_currency_price.setText(dataObj.getString("buy_price")+" USDT");
             holder.txt_currency_fullname.setText(dataObj.getString("base_name"));
             showImage(dataObj.getString("icon"), holder.img_currencyicon);
 
 
 
-//                    "pair_id": "62",
+//                   "pair_id": "62",
 //                    "base": "BTC",
 //                    "term": "USDT",
 //                    "pair_name": "BTC\/USDT",
@@ -89,10 +82,9 @@ public class QuickBuyAdapter extends RecyclerView.Adapter<QuickBuyAdapter.MyView
                 @Override
                 public void onClick(View v) {
                     try {
-                        JSONObject data = new JSONObject(v.getTag().toString());
-                        fundFragment.buysellDialog(data);
-                       }
-                      catch (Exception e) {
+                        ira1.sendBack(new JSONObject(v.getTag().toString()));
+                    }
+                    catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
@@ -107,7 +99,7 @@ public class QuickBuyAdapter extends RecyclerView.Adapter<QuickBuyAdapter.MyView
 
     @Override
     public int getItemCount() {
-        return quickAr.length();
+        return quickAr.size();
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.web.instafx;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -19,10 +20,13 @@ import com.web.instafx.search_currency.SearchCurrencyScreen;
 import com.web.instafx.setting_profile.SettingProfileScreen;
 import com.web.instafx.utilpackage.UtilClass;
 
+import org.json.JSONObject;
+
 public class MainActivity extends BaseActivity
 {
 
-
+    private String quickBuy="quick",fundFrg="fund",home="home",order="order";
+    private QuickBuyFragment activefragment;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -47,15 +51,6 @@ public class MainActivity extends BaseActivity
 
 
 
-        findViewById(R.id.img_search).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                Intent intent=new Intent(MainActivity.this, SearchCurrencyScreen.class);
-                intent.putExtra(DefaultConstants.callfrom,DefaultConstants.home);
-                startActivity(intent);
-            }
-        });
 
 
         findViewById(R.id.profileIC).setOnClickListener(new View.OnClickListener() {
@@ -75,7 +70,7 @@ public class MainActivity extends BaseActivity
         HomeFragment homeFragment = new HomeFragment();
         Bundle args = new Bundle();
         homeFragment.setArguments(args);
-        replaceMainFragment(homeFragment,"home");
+        replaceMainFragment(homeFragment,home);
     }
 
     private void orderFragment()
@@ -84,7 +79,7 @@ public class MainActivity extends BaseActivity
         Bundle args = new Bundle();
         args.putString(DefaultConstants.CurrencyName,"");
         myOrderFrg.setArguments(args);
-        replaceMainFragment(myOrderFrg,"order");
+        replaceMainFragment(myOrderFrg,order);
     }
 
     private void fundFragment()
@@ -92,7 +87,7 @@ public class MainActivity extends BaseActivity
         MainFundFragment fundFragment = new MainFundFragment();
         Bundle args = new Bundle();
         fundFragment.setArguments(args);
-        replaceMainFragment(fundFragment,"fundfrg");
+        replaceMainFragment(fundFragment,fundFrg);
     }
 
     private void loadQuickBuyFragment()
@@ -100,20 +95,45 @@ public class MainActivity extends BaseActivity
         QuickBuyFragment fundFragment = new QuickBuyFragment();
         Bundle args = new Bundle();
         fundFragment.setArguments(args);
-        replaceMainFragment(fundFragment,"quick");
+        replaceMainFragment(fundFragment,quickBuy);
     }
 
 
-    private void replaceMainFragment(Fragment upcoming, String tag)
+    private void replaceMainFragment(Fragment fragment, String tag)
     {
+
         FragmentTransaction ft_main = getSupportFragmentManager().beginTransaction();
-        ft_main.replace(R.id.fragment_container, upcoming);
+        ft_main.replace(R.id.fragment_container, fragment);
         //ft_main.addToBackStack(tag);
         ft_main.commit();
 
-        if(tag.equalsIgnoreCase("home"))
+        if(tag.equalsIgnoreCase(home))
         {
             findViewById(R.id.img_search).setVisibility(View.VISIBLE);
+            findViewById(R.id.img_search).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v)
+                {
+                    Intent intent=new Intent(MainActivity.this, SearchCurrencyScreen.class);
+                    intent.putExtra(DefaultConstants.callfrom,home);
+                    startActivity(intent);
+                }
+            });
+        }
+        else if(tag.equalsIgnoreCase(quickBuy))
+        {
+            findViewById(R.id.img_search).setVisibility(View.VISIBLE);
+            activefragment=(QuickBuyFragment) fragment;
+            findViewById(R.id.img_search).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v)
+                {
+                    Intent intent=new Intent(MainActivity.this, SearchCurrencyScreen.class);
+                    intent.putExtra(DefaultConstants.callfrom,DefaultConstants.quick);
+                    intent.putExtra(DefaultConstants.pair_data,((QuickBuyFragment)fragment).pairs_info+"");
+                    startActivityForResult(intent,1001);
+                }
+            });
         }
         else
         {
@@ -213,6 +233,29 @@ public class MainActivity extends BaseActivity
     }
 
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode==1001)//Return from Search Fragment
+        {
+            if(data!=null)
+            {
+                try {
+
+                    JSONObject data1=new JSONObject(data.getStringExtra("data"));
+                    if(activefragment !=null)
+                    {
+                        activefragment.buysellDialog(data1);
+                    }
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+
+        }
 
 
+    }
 }

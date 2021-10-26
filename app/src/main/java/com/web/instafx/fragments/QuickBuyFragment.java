@@ -45,6 +45,7 @@ import java.util.Map;
 public class QuickBuyFragment extends Fragment {
    private View view;
    private MainActivity mainActivity;
+   public  JSONArray pairs_info;
    public QuickBuyFragment() {
    }
     public static QuickBuyFragment newInstance(String param1, String param2)
@@ -116,7 +117,7 @@ public class QuickBuyFragment extends Fragment {
                                 mainActivity.savePreferences.savePreferencesData(mainActivity, obj.getString("token"), DefaultConstants.token);
                                 mainActivity.savePreferences.savePreferencesData(mainActivity, obj.getString("r_token"), DefaultConstants.r_token);
                             }
-                            JSONArray pairs_info=obj.getJSONArray("pairs_info");
+                            pairs_info=obj.getJSONArray("pairs_info");
                             showQuickBuyCurrency(pairs_info);
                         }
                         catch(Exception e) {
@@ -157,7 +158,7 @@ public class QuickBuyFragment extends Fragment {
     public void buysellDialog(JSONObject data) {
         try
         {
-            buy_fiat="USDT";
+            buy_fiat=data.getString("term");
             str_side = "buy";
             mainPair=data.getString("base");
             sub_pair=data.getString("term");
@@ -168,9 +169,6 @@ public class QuickBuyFragment extends Fragment {
 
             buy_price=data.getString("buy_price");
             sell_price=data.getString("sell_price");
-
-
-
 
             SimpleDialog simpleDialog = new SimpleDialog();
             buySellDialog = simpleDialog.simpleDailog(mainActivity, R.layout.quick_buy_sell, new ColorDrawable(getResources().getColor(R.color.translucent_black)), WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT, false);
@@ -393,20 +391,31 @@ public class QuickBuyFragment extends Fragment {
 
 
     private void calculateOrderPrice() {
-        if (mainActivity.validationRule.checkEmptyString(ed_amount) == 0) {
+        if(mainActivity.validationRule.checkEmptyString(ed_amount) == 0)
+         {
             mainActivity.alertDialogs.alertDialog(mainActivity, getResources().getString(R.string.Response), "Enter " + mainPair + " amount.", getResources().getString(R.string.ok), "", new DialogCallBacks() {
                 @Override
                 public void getDialogEvent(String buttonPressed) {
-                    //placeorder_slider.resetSlider();
                 }
             });
             return;
         }
+
+        if(Double.parseDouble(ed_amount.getText().toString()) == 0)
+        {
+            mainActivity.alertDialogs.alertDialog(mainActivity, getResources().getString(R.string.Response), "Enter " + mainPair + " amount.", getResources().getString(R.string.ok), "", new DialogCallBacks() {
+                @Override
+                public void getDialogEvent(String buttonPressed)
+                {
+                }
+            });
+            return;
+        }
+
+
         Map<String, String> m = new HashMap<>();
         if(str_side.equalsIgnoreCase("buy"))
         {
-
-
             String buy=formatter.format(Double.parseDouble(ed_amount.getText().toString())/Double.parseDouble(sell_price));
             System.out.println("Buy at=="+buy);
             m.put("price", buy_price);
@@ -417,11 +426,11 @@ public class QuickBuyFragment extends Fragment {
             m.put("price", sell_price);
             m.put("amount", ed_amount.getText().toString());
         }
+
         m.put("isherder", "true");
         m.put("order_type", "market");
         m.put("pair_id", pair_id);
         m.put("side", str_side);
-
         m.put("market_type", "exchange");
         m.put("Version", mainActivity.getAppVersion());
         m.put("PlatForm", "android");
@@ -461,7 +470,7 @@ public class QuickBuyFragment extends Fragment {
                         }
 
                     } else {
-                        //    placeorder_slider.resetSlider();
+
                         mainActivity.alertDialogs.alertDialog( mainActivity, getResources().getString(R.string.Response), obj.getString("msg"), getResources().getString(R.string.ok), "", new DialogCallBacks() {
                             @Override
                             public void getDialogEvent(String buttonPressed)
@@ -588,7 +597,6 @@ public class QuickBuyFragment extends Fragment {
             JSONObject map = new JSONObject();
             map.put("pair_id", pairId);
             map.put("type", "app");
-            System.out.println("Pair id===" + map);
             new SocketHandlers().socket.emit("broadcast_sent_server", map + "");
         } catch (Exception e) {
             e.printStackTrace();
