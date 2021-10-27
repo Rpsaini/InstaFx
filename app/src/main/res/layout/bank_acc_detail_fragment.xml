@@ -104,9 +104,9 @@
                 android:inputType="number"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:textSize="@dimen/text_size"
                 android:textColor="@color/text_black_color"
-                android:textColorHint="@color/text_hint_color" />
+                android:textColorHint="@color/text_hint_color"
+                android:textSize="@dimen/text_size" />
 
         </RelativeLayout>
 
@@ -146,9 +146,9 @@
                 android:inputType="number"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:textSize="@dimen/text_size"
                 android:textColor="@color/text_black_color"
-                android:textColorHint="@color/text_hint_color" />
+                android:textColorHint="@color/text_hint_color"
+                android:textSize="@dimen/text_size" />
 
         </RelativeLayout>
 
@@ -188,9 +188,9 @@
                 android:inputType="text"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:textSize="@dimen/text_size"
                 android:textColor="@color/text_black_color"
-                android:textColorHint="@color/text_hint_color" />
+                android:textColorHint="@color/text_hint_color"
+                android:textSize="@dimen/text_size" />
 
         </RelativeLayout>
 
@@ -229,8 +229,8 @@
                 android:layout_marginEnd="10dp"
                 android:drawableEnd="@drawable/ic_dropdown"
                 android:text="@string/savings"
-                android:textSize="@dimen/text_size"
-                android:textColor="@color/text_black_color" />
+                android:textColor="@color/text_black_color"
+                android:textSize="@dimen/text_size" />
 
         </RelativeLayout>
 

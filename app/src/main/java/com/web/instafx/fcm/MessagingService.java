@@ -65,7 +65,6 @@ public class MessagingService extends FirebaseMessagingService {
                     .setChannelId(CHANNEL_ID)
                     .setSound(defaultSoundUri)
                     .setSmallIcon(R.mipmap.ic_launcher)
-
                     .setContentText(message).build();
 
             nm.createNotificationChannel(mChannel);

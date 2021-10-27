@@ -38,7 +38,7 @@
           android:layout_height="wrap_content"
           android:layout_marginTop="50dp"
           android:gravity="center"
-          android:text="Login"
+          android:text="@string/loin_txt"
           android:textColor="@color/dark_blue"
           android:textSize="22dp"></fontspackageForTextView.BoldMedium>
 
@@ -53,7 +53,7 @@
          <fontspackageForTextView.Regular
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:text="User Name"
+             android:text="@string/userName"
              android:textColor="@color/grey_dark"
              android:textSize="12dp"></fontspackageForTextView.Regular>
 
@@ -70,7 +70,7 @@
                 android:layout_height="45dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/edittext_drawable"
-                android:hint="User name"
+                android:hint="@string/userName"
                 android:imeOptions="actionDone"
                 android:maxLines="1"
                 android:paddingLeft="5dp"
@@ -97,7 +97,7 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_marginTop="25dp"
-             android:text="Password"
+             android:text="@string/password"
              android:textColor="@color/grey_dark"
              android:textSize="12dp"></fontspackageForTextView.Regular>
 
@@ -107,7 +107,7 @@
              android:layout_height="45dp"
              android:layout_marginTop="5dp"
              android:background="@drawable/edittext_drawable"
-             android:hint="Password"
+             android:hint="@string/password"
              android:imeOptions="actionDone"
              android:inputType="textPassword"
              android:maxLines="1"
@@ -125,7 +125,7 @@
              android:layout_marginTop="20dp"
              android:background="@drawable/orrange_drawable"
              android:gravity="center"
-             android:text="Login"
+             android:text="@string/loin_txt"
              android:textColor="@color/white"
              android:textSize="16dp"></TextView>
 

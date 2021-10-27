@@ -30,7 +30,7 @@
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="PLEASE PAY ATTENTION! THE COIN YOU SELECTED IS:"></fontspackageForTextView.BoldMedium>
+        android:text="@string/please_pay_attention"></fontspackageForTextView.BoldMedium>
 
 
     <LinearLayout
@@ -179,7 +179,7 @@
             android:layout_weight="2"
             android:layout_height="match_parent"
             android:background="@drawable/share_button_drawable"
-            android:text="Share Deposit Address"
+            android:text="@string/share_deposit_address"
             android:textColor="@color/black"
             android:gravity="center"
             android:textSize="@dimen/text_size"
@@ -195,7 +195,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/orrange_drawable"
-        android:text="Withdraw"
+        android:text="@string/withdraw"
         android:textColor="@color/white"
         android:gravity="center"
         android:textSize="@dimen/text_size"

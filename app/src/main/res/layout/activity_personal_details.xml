@@ -31,14 +31,13 @@
         android:layout_width="match_parent"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <fontspackageForTextView.BoldMedium
             android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Personal Details"
+            android:text="@string/personal_details"
             android:textColor="@color/dark_blue"
             android:textSize="22dp"
             android:gravity="center"
@@ -48,7 +47,7 @@
         <fontspackageForTextView.Regular
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name"
+            android:text="@string/name"
             android:textColor="@color/grey_dark"
             android:textSize="12dp"
             ></fontspackageForTextView.Regular>
@@ -60,22 +59,22 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             >
+
             <fontpackageforEdittext.Regular
                 android:id="@+id/txt_name"
-                android:paddingLeft="5dp"
-                android:maxLines="1"
-                android:imeOptions="actionDone"
-                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/edittext_drawable"
-                android:hint="Name"
-                android:singleLine="true"
-                android:textColorHint="@color/grey_dark"
-                android:textColor="@color/black"
-                android:textSize="14dp"
+                android:hint="@string/name"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:paddingLeft="5dp"
                 android:paddingRight="30dp"
-                ></fontpackageforEdittext.Regular>
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey_dark"
+                android:textSize="14dp"></fontpackageforEdittext.Regular>
 
 
         </RelativeLayout>
@@ -84,7 +83,7 @@
             android:layout_marginTop="25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Last Name"
+            android:text="@string/last_name"
             android:textColor="@color/grey_dark"
             android:textSize="12dp"
             ></fontspackageForTextView.Regular>
@@ -96,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="@drawable/edittext_drawable"
-            android:hint="Last Name"
+            android:hint="@string/last_name"
             android:maxLines="1"
             android:singleLine="true"
             android:imeOptions="actionDone"
@@ -111,7 +110,7 @@
             android:layout_marginTop="25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nationality"
+            android:text="@string/nationality"
             android:textColor="@color/grey_dark"
             android:textSize="12dp"
             ></fontspackageForTextView.Regular>
@@ -123,7 +122,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="@drawable/edittext_drawable"
-            android:hint="Nationality"
+            android:hint="@string/nationality"
             android:maxLines="1"
             android:singleLine="true"
             android:imeOptions="actionDone"
@@ -137,7 +136,7 @@
             android:layout_marginTop="25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Marital status"
+            android:text="@string/marital_status"
             android:textColor="@color/grey_dark"
             android:textSize="12dp"
             ></fontspackageForTextView.Regular>
@@ -154,7 +153,7 @@
                     android:layout_height="wrap_content"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:text="Married"
+                    android:text="@string/married"
                     ></RadioButton>
 
 
@@ -163,7 +162,7 @@
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:text="Un-married"
+                android:text="@string/un_married"
                 ></RadioButton>
 
         </LinearLayout>
@@ -174,7 +173,7 @@
             android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Address Details"
+            android:text="@string/address_details"
             android:textColor="@color/dark_blue"
             android:textSize="22dp"
             android:gravity="center"
@@ -187,7 +186,7 @@
             android:layout_marginTop="25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nationality"
+            android:text="@string/nationality"
             android:textColor="@color/grey_dark"
             android:textSize="12dp"
             ></fontspackageForTextView.Regular>
@@ -199,7 +198,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="@drawable/edittext_drawable"
-            android:hint="Residence Address"
+            android:hint="@string/residence_address"
             android:maxLines="1"
             android:singleLine="true"
             android:imeOptions="actionDone"
@@ -213,7 +212,7 @@
             android:layout_marginTop="25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="City"
+            android:text="@string/city"
             android:textColor="@color/grey_dark"
             android:textSize="12dp"
             ></fontspackageForTextView.Regular>
@@ -225,7 +224,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="@drawable/edittext_drawable"
-            android:hint="City"
+            android:hint="@string/city"
             android:maxLines="1"
             android:singleLine="true"
             android:imeOptions="actionDone"
@@ -239,7 +238,7 @@
             android:layout_marginTop="25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="State"
+            android:text="@string/state"
             android:textColor="@color/grey_dark"
             android:textSize="12dp"
             ></fontspackageForTextView.Regular>
@@ -251,7 +250,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="@drawable/edittext_drawable"
-            android:hint="State"
+            android:hint="@string/state"
             android:maxLines="1"
             android:singleLine="true"
             android:imeOptions="actionDone"
@@ -266,7 +265,7 @@
             android:layout_marginTop="25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Postal Code"
+            android:text="@string/postal_code"
             android:textColor="@color/grey_dark"
             android:textSize="12dp"
             ></fontspackageForTextView.Regular>
@@ -278,7 +277,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="@drawable/edittext_drawable"
-            android:hint="State"
+            android:hint="@string/postal_code"
             android:maxLines="1"
             android:singleLine="true"
             android:imeOptions="actionDone"
@@ -308,7 +307,7 @@
             android:layout_marginTop="25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bank Name"
+            android:text="@string/bank_name"
             android:textColor="@color/grey_dark"
             android:textSize="12dp"
             ></fontspackageForTextView.Regular>
@@ -320,7 +319,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="@drawable/edittext_drawable"
-            android:hint="Bank Name"
+            android:hint="@string/bank_name"
             android:maxLines="1"
             android:singleLine="true"
             android:imeOptions="actionDone"
@@ -336,7 +335,7 @@
             android:layout_marginTop="25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Account holder name"
+            android:text="@string/account_hol"
             android:textColor="@color/grey_dark"
             android:textSize="12dp"
             ></fontspackageForTextView.Regular>
@@ -348,7 +347,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="@drawable/edittext_drawable"
-            android:hint="Account holder name"
+            android:hint="@string/account_hol"
             android:maxLines="1"
             android:singleLine="true"
             android:imeOptions="actionDone"
@@ -364,7 +363,7 @@
             android:layout_marginTop="25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Account number"
+            android:text="@string/account_num"
             android:textColor="@color/grey_dark"
             android:textSize="12dp"
             ></fontspackageForTextView.Regular>
@@ -376,7 +375,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="@drawable/edittext_drawable"
-            android:hint="Account number"
+            android:hint="@string/account_num"
             android:maxLines="1"
             android:singleLine="true"
             android:imeOptions="actionDone"
@@ -391,7 +390,7 @@
             android:layout_marginTop="25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Branch number"
+            android:text="@string/bank_branch"
             android:textColor="@color/grey_dark"
             android:textSize="12dp"
             ></fontspackageForTextView.Regular>
@@ -403,7 +402,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="@drawable/edittext_drawable"
-            android:hint="Branch number"
+            android:hint="@string/bank_branch"
             android:maxLines="1"
             android:singleLine="true"
             android:imeOptions="actionDone"
@@ -418,7 +417,7 @@
             android:layout_marginTop="25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="IBAN number"
+            android:text="@string/iban_number"
             android:textColor="@color/grey_dark"
             android:textSize="12dp"
             ></fontspackageForTextView.Regular>
@@ -430,7 +429,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="@drawable/edittext_drawable"
-            android:hint="Branch number"
+            android:hint="@string/iban_number"
             android:maxLines="1"
             android:singleLine="true"
             android:imeOptions="actionDone"
@@ -445,7 +444,7 @@
             android:id="@+id/login_btn"
             android:textSize="16dp"
             android:textColor="@color/white"
-            android:text="Submit"
+            android:text="@string/submit"
             android:gravity="center"
             android:layout_marginTop="20dp"
             android:layout_height="45dp"

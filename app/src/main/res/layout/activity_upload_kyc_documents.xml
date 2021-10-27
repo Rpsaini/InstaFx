@@ -30,8 +30,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="22sp"
-            android:text="Confirm Your Identity"
-            />
+            android:text="@string/confirm_your_identity" />
 
 
         <ScrollView
@@ -53,7 +52,7 @@
                 android:paddingLeft="20dp"
                 android:paddingTop="20dp"
                 android:paddingBottom="20dp"
-                android:text="Upload a Photo or Scan of your National ID"
+                android:text="@string/upload_a_photo_scan_of_"
                 />
 
             <RelativeLayout
@@ -74,16 +73,15 @@
 
 
                 <TextView
-                    android:layout_centerInParent="true"
-                    android:layout_below="@+id/iv_nationid_front"
-                    android:translationY="-10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_nationid_front"
+                    android:layout_centerInParent="true"
                     android:gravity="center"
+                    android:text="@string/national_id_front"
                     android:textColor="@color/black"
                     android:textSize="14dp"
-                    android:text="Nation Id Proof(Front)"
-                    />
+                    android:translationY="-10dp" />
             </RelativeLayout>
 
 
@@ -102,18 +100,18 @@
                     android:layout_margin="20dp"
                     android:src="@drawable/photo"
                     />
+
                 <TextView
                     android:id="@+id/backidentitymessage"
-                    android:layout_centerInParent="true"
-                    android:layout_below="@+id/iv_nationalid_back"
-                    android:translationY="-10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_nationalid_back"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="National id proof(Back)"
                     android:textColor="@color/black"
                     android:textSize="14dp"
-                    android:text="National id proof(Back)"
-                    android:gravity="center"
-                    />
+                    android:translationY="-10dp" />
             </RelativeLayout>
 
 
@@ -125,7 +123,7 @@
                 android:paddingLeft="20dp"
                 android:paddingTop="20dp"
                 android:paddingBottom="20dp"
-                android:text="Upload a Photo or Scan of your Address Proof"
+                android:text="@string/upload_a_photo_scan_of_address_"
                 />
 
 
@@ -144,18 +142,18 @@
                     android:layout_margin="20dp"
                     android:src="@drawable/photo"
                     />
+
                 <TextView
                     android:id="@+id/txt_address_proof_front"
-                    android:layout_centerInParent="true"
-                    android:layout_below="@+id/iv_address_proof_front"
-                    android:translationY="-10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_address_proof_front"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/address_proof_front"
                     android:textColor="@color/black"
                     android:textSize="14dp"
-                    android:text="Address proof front"
-                    android:gravity="center"
-                    />
+                    android:translationY="-10dp" />
             </RelativeLayout>
 
 
@@ -167,15 +165,18 @@
                 android:layout_height="200dp"
                 android:background="@drawable/border_five"
                 >
+
                 <ImageView
-                    android:layout_centerInParent="true"
                     android:id="@+id/iv_address_proof_back"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
+                    android:layout_centerInParent="true"
                     android:layout_gravity="center"
-                    android:layout_margin="20dp"
-                    android:src="@drawable/photo"
-                    />
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/photo" />
                 <TextView
                     android:id="@+id/txt_address_proof_back"
                     android:layout_centerInParent="true"
@@ -185,7 +186,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="14dp"
-                    android:text="Address proof back"
+                    android:text="@string/address_proof_back"
                     android:gravity="center"
                     />
             </RelativeLayout>
@@ -196,7 +197,7 @@
                 android:id="@+id/login_btn"
                 android:textSize="16dp"
                 android:textColor="@color/white"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:gravity="center"
                 android:layout_marginTop="20dp"
                 android:layout_height="45dp"

@@ -31,7 +31,7 @@
             android:id="@+id/tab_buy"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="BUY"
+            android:text="@string/buy"
             android:textColor="@color/greencolor"
             android:layout_weight="1"
             android:gravity="center"
@@ -50,7 +50,7 @@
             android:id="@+id/tab_sell"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="SELL"
+            android:text="@string/sell"
             android:textColor="@color/darkRed"
             android:layout_weight="1"
             android:gravity="center"
@@ -147,7 +147,7 @@
             <fontpackageforEdittext.Regular
                 android:textCursorDrawable="@drawable/cursur_drawable"
                 android:id="@+id/ed_quantity"
-                android:hint="Quantity"
+                android:hint="@string/quantity"
                 android:textColorHint="@color/grey_dark"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -181,7 +181,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@android:color/transparent"
-                android:hint="Price"
+                android:hint="@string/price"
                 android:inputType="numberDecimal"
                 android:padding="5dp"
                 android:textColor="@color/dark_blue"
@@ -202,7 +202,7 @@
             android:layout_margin="20dp"
             android:elevation="6dp"
             app:slider_height="65dp"
-            app:text="Place Order" />
+            app:text="@string/place_order" />
 
 
 <!--    <fontspackageForTextView.BoldMedium-->

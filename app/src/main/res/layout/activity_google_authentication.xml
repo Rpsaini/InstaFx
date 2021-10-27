@@ -49,7 +49,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Enter Google-Authentication code"
+                android:text="@string/enter_google_auth_code"
                 android:textColor="@color/dark_blue"
                 android:textSize="18dp"
                 android:gravity="center"
@@ -62,22 +62,22 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 >
+
                 <fontpackageforEdittext.Regular
                     android:id="@+id/ed_google_code"
-                    android:paddingLeft="5dp"
-                    android:maxLines="1"
-                    android:imeOptions="actionDone"
-                    android:layout_marginTop="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
+                    android:layout_marginTop="5dp"
                     android:background="@drawable/edittext_drawable"
                     android:hint="Google 2-FA code"
-                    android:singleLine="true"
-                    android:textColorHint="@color/grey_dark"
-                    android:textColor="@color/black"
-                    android:textSize="14dp"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
                     android:paddingRight="30dp"
-                    ></fontpackageforEdittext.Regular>
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey_dark"
+                    android:textSize="14dp"></fontpackageforEdittext.Regular>
             </RelativeLayout>
 
 

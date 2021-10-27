@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white_20"
-
     tools:context=".LoginActivity">
 
     <ImageView
@@ -53,7 +52,7 @@
             android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Get Keys"
+            android:text="@string/get_keys"
             android:textColor="@color/dark_blue"
             android:textSize="@dimen/title_text_size"
             android:gravity="center"
@@ -73,7 +72,7 @@
                 android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Enter Registered Email to get keys"
+                android:text="@string/enter_reg_email_to_get_keys"
                 android:textColor="@color/black"
                 android:alpha="0.6"
                 android:textSize="@dimen/small_text_size"
@@ -86,7 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:background="@drawable/edittext_drawable"
-                android:hint="Email"
+                android:hint="@string/email"
                 android:maxLines="1"
                 android:singleLine="true"
                 android:imeOptions="actionDone"
@@ -100,7 +99,7 @@
                 android:id="@+id/btn_getkeys"
                 android:textSize="@dimen/text_size"
                 android:textColor="@color/white"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:gravity="center"
                 android:layout_marginTop="20dp"
                 android:layout_height="45dp"

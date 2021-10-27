@@ -33,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
-                android:text="Withdrawal"
+                android:text="@string/withdrawal"
                 android:textColor="@color/text_black_color"
                 android:textSize="@dimen/text_size"
                 tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></TextView>
@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
                 android:gravity="center"
-                android:text="Request Submitted"
+                android:text="@string/request_submitted"
                 android:textColor="@color/text_black_color"
                 android:textSize="@dimen/text_size"
                 tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></TextView>
@@ -58,7 +58,8 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/round_rect_green_shape_drawable"
                 android:gravity="center"
-                android:text="OK"
+                android:textAllCaps="true"
+                android:text="@string/ok"
                 android:textColor="@color/white"
                 android:textSize="@dimen/button_text_size"
                 tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></TextView>

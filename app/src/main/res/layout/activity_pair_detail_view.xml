@@ -175,7 +175,7 @@
                     android:drawablePadding="5dp"
                     android:drawableTint="@color/textcolor"
                     android:gravity="center"
-                    android:text="Charts"
+                    android:text="@string/order"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size"></fontspackageForTextView.Regular>
 
@@ -188,7 +188,7 @@
                     android:drawableTop="@drawable/ic_orders"
                     android:drawablePadding="5dp"
                     android:gravity="center"
-                    android:text="Orders"
+                    android:text="@string/orders"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size"></fontspackageForTextView.Regular>
 
@@ -203,7 +203,7 @@
                     android:drawableTop="@drawable/ic_buy_sell"
                     android:drawablePadding="5dp"
                     android:gravity="center"
-                    android:text="Buy/Sell"
+                    android:text="@string/buy_sell"
                     android:textColor="@color/black"
                     android:textSize="12dp"></fontspackageForTextView.Regular>
 
@@ -216,7 +216,7 @@
                     android:drawableTop="@drawable/ic_trades"
                     android:drawablePadding="5dp"
                     android:gravity="center"
-                    android:text="Trades"
+                    android:text="@string/trades"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size"></fontspackageForTextView.Regular>
 
@@ -230,7 +230,7 @@
                     android:drawableTop="@drawable/ic_my_"
                     android:drawablePadding="5dp"
                     android:gravity="center"
-                    android:text="My"
+                    android:text="@string/my"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size"></fontspackageForTextView.Regular>
 

@@ -20,7 +20,7 @@
         android:layout_below="@+id/img_nodata"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:text="No Data Found"
+        android:text="@string/no_data_found"
         android:gravity="center"
         android:textColor="@color/hintTextColor"
         ></fontspackageForTextView.Regular>

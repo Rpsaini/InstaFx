@@ -113,7 +113,7 @@
                             android:layout_marginTop="20dp"
                             android:layout_alignParentStart="true"
                             android:layout_centerInParent="true"
-                            android:text="Total Referred Friends"
+                            android:text="@string/total_referred_friends_"
                             android:textAllCaps="true"
                             android:textColor="@color/text_hint_color"
                             android:textSize="@dimen/text_size"
@@ -147,7 +147,7 @@
                             android:layout_marginTop="20dp"
                             android:layout_alignParentStart="true"
                             android:layout_centerInParent="true"
-                            android:text="Total Commission Earned"
+                            android:text="@string/total_commisions_earned"
                             android:textAllCaps="true"
                             android:textColor="@color/text_hint_color"
                             android:textSize="@dimen/text_size"
@@ -181,7 +181,7 @@
                             android:layout_marginTop="20dp"
                             android:layout_alignParentStart="true"
                             android:layout_centerInParent="true"
-                            android:text="Total Commission Rate"
+                            android:text="@string/total_commisions_rate"
                             android:textAllCaps="true"
                             android:textColor="@color/text_hint_color"
                             android:textSize="@dimen/text_size"
@@ -297,7 +297,7 @@
                              android:layout_alignParentStart="true"
                              android:layout_centerInParent="true"
                              android:gravity="center"
-                             android:text="Commission History"
+                             android:text="@string/commissions_history"
                              android:textColor="@color/white"
                              android:textSize="@dimen/button_text_size" />
                          <View
@@ -324,7 +324,7 @@
                              android:layout_centerInParent="true"
                              android:alpha="0.8"
                              android:gravity="center"
-                             android:text="Referred Friends"
+                             android:text="@string/referred_friends"
                              android:textColor="@color/white"
                              android:textSize="@dimen/button_text_size" />
                          <View

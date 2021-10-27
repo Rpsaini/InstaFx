@@ -95,7 +95,7 @@
             android:alpha="0.6"
             android:textColor="@color/text_black_color"
             android:textSize="@dimen/text_size"
-            android:text="Login Success"
+            android:text="@string/login_success"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ipValueTV" />
 

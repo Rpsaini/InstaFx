@@ -28,7 +28,7 @@
             <fontspackageForTextView.Regular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Account Holder Name: "></fontspackageForTextView.Regular>
+                android:text="@string/account_holder_name_"></fontspackageForTextView.Regular>
 
 
             <fontspackageForTextView.Regular
@@ -52,7 +52,7 @@
             <fontspackageForTextView.Regular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bank Name : "></fontspackageForTextView.Regular>
+                android:text="@string/bank_name_"></fontspackageForTextView.Regular>
 
 
             <fontspackageForTextView.Regular
@@ -76,7 +76,7 @@
             <fontspackageForTextView.Regular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Account Number : "></fontspackageForTextView.Regular>
+                android:text="@string/account_num_"></fontspackageForTextView.Regular>
 
 
             <fontspackageForTextView.Regular
@@ -100,7 +100,7 @@
             <fontspackageForTextView.Regular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="IFSC : "></fontspackageForTextView.Regular>
+                android:text="@string/ifsc_code_"></fontspackageForTextView.Regular>
 
 
             <fontspackageForTextView.Regular

@@ -23,14 +23,13 @@
         </ImageView>
 
         <fontspackageForTextView.Regular
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="INR Deposit"
-            android:textColor="@color/dark_blue"
-            android:textSize="@dimen/action_bar_title_text_size"
+            android:layout_marginTop="10dp"
             android:gravity="center"
-            ></fontspackageForTextView.Regular>
+            android:text="@string/inr_deposit_"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/action_bar_title_text_size"></fontspackageForTextView.Regular>
 
     </RelativeLayout>
 
@@ -53,7 +52,7 @@
         android:orientation="vertical">
 
        <fontspackageForTextView.Regular
-            android:text="Bank Details"
+            android:text="@string/bandk_detals"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center|left"
@@ -65,7 +64,7 @@
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Deposit Amount"
+        android:text="@string/deposit_amount"
         android:textColor="@color/grey_dark"
         android:textSize="@dimen/small_text_size"
         ></fontspackageForTextView.Regular>
@@ -77,7 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="@drawable/edittext_drawable"
-            android:hint="Amount"
+            android:hint="@string/amount_hint_txt"
             android:maxLines="1"
             android:singleLine="true"
             android:inputType="numberDecimal"
@@ -91,7 +90,7 @@
             android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Remarks"
+            android:text="@string/remarks_txt"
             android:textColor="@color/grey_dark"
             android:textSize="@dimen/small_text_size"
             ></fontspackageForTextView.Regular>
@@ -103,7 +102,7 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:background="@drawable/edittext_drawable"
-            android:hint="Remarks"
+            android:hint="@string/remarks_txt"
             android:maxLines="1"
             android:singleLine="true"
             android:gravity="top|left"
@@ -119,7 +118,7 @@
             android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Your Deposit Code"
+            android:text="@string/your_deposit_code"
             android:textColor="@color/grey_dark"
             android:textSize="@dimen/text_size"
             ></fontspackageForTextView.Regular>
@@ -140,7 +139,7 @@
             android:id="@+id/submit"
             android:textSize="@dimen/title_text_size"
             android:textColor="@color/white"
-            android:text="Submit"
+            android:text="@string/submit"
             android:gravity="center"
             android:layout_marginTop="20dp"
             android:layout_height="45dp"

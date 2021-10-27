@@ -45,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-15dp"
-                android:text="Deposit Bitcoin"
+                android:text="@string/deposit_bitcoin"
                 android:textColor="@color/text_black_color"
                 android:textSize="20dp"
                 tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></TextView>
@@ -55,7 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
-                android:text="By scanning this QR code"
+                android:text="@string/by_sannnign_this_"
                 android:textColor="@color/text_hint_color"
                 android:textSize="@dimen/text_size"
                 tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></TextView>
@@ -71,7 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="or use this address below"
+                android:text="@string/or_use_this_add_"
                 android:textColor="@color/text_hint_color"
                 android:textSize="@dimen/text_size"
                 tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></TextView>

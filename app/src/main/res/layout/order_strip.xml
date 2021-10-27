@@ -21,7 +21,7 @@
                 android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Currency"
+                android:text="@string/currency"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size"
                 ></fontspackageForTextView.Regular>
@@ -49,7 +49,7 @@
                     android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Volume"
+                    android:text="@string/volume_"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size"
                     ></fontspackageForTextView.Regular>
@@ -58,7 +58,7 @@
                     android:gravity="center|right"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="(Price)"
+                    android:text="@string/price_"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size"
                     ></fontspackageForTextView.Regular>

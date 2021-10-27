@@ -38,7 +38,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Submit withdraw request"
+                android:text="@string/submit_withdraw_req_"
                 android:textColor="@color/dark_blue"
                 android:textSize="17dp"
                 android:gravity="center"
@@ -80,7 +80,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Address"
+                android:text="@string/address"
                 android:textColor="@color/grey_dark"
                 android:textSize="12dp"
                 ></fontspackageForTextView.Regular>
@@ -92,22 +92,22 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 >
+
                 <fontpackageforEdittext.Regular
                     android:id="@+id/txt_address"
-                    android:paddingLeft="5dp"
-                    android:maxLines="1"
-                    android:imeOptions="actionDone"
-                    android:layout_marginTop="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
+                    android:layout_marginTop="5dp"
                     android:background="@drawable/edittext_drawable"
-                    android:hint="Address"
-                    android:singleLine="true"
-                    android:textColorHint="@color/grey_dark"
-                    android:textColor="@color/black"
-                    android:textSize="14dp"
+                    android:hint="@string/address"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
                     android:paddingRight="30dp"
-                    ></fontpackageforEdittext.Regular>
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey_dark"
+                    android:textSize="14dp"></fontpackageforEdittext.Regular>
 
                 <ImageView
                     android:id="@+id/scanqrcode"
@@ -126,7 +126,7 @@
                 android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Amount"
+                android:text="@string/amount_hint_txt"
                 android:textColor="@color/grey_dark"
                 android:textSize="12dp"
                 ></fontspackageForTextView.Regular>
@@ -139,7 +139,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:background="@drawable/edittext_drawable"
-                android:hint="Amount"
+                android:hint="@string/amount_hint_txt"
                 android:maxLines="1"
                 android:singleLine="true"
                 android:imeOptions="actionDone"
@@ -187,7 +187,7 @@
                 android:id="@+id/submit"
                 android:textSize="16dp"
                 android:textColor="@color/white"
-                android:text="Confirm"
+                android:text="@string/confirm_txt"
                 android:gravity="center"
                 android:layout_marginTop="20dp"
                 android:layout_height="45dp"
