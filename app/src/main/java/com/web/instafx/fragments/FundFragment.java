@@ -193,7 +193,7 @@ private ArrayList<JSONObject> cryptoeAr=new ArrayList<>();
                 try {
 
                     JSONObject obj = new JSONObject(dta);
-                    Log.d("Fait",obj+"");
+
                     if (obj.getBoolean("status")) {
                         try
                         {
@@ -247,17 +247,6 @@ private ArrayList<JSONObject> cryptoeAr=new ArrayList<>();
 
     }
 
-
-
-
-
-//    private void showImage(final String url, final ImageView header_img) {
-//
-//        Glide.with(mainActivity)
-//                .load(url)
-//                .apply(RequestOptions.bitmapTransform(new RoundedCorners(3)))
-//                .into(header_img);
-//    }
 
 
 }

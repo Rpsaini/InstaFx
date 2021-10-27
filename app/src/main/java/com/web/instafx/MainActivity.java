@@ -12,8 +12,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.web.instafx.fragments.FundFragment;
 import com.web.instafx.fragments.HomeFragment;
-import com.web.instafx.fragments.MainFundFragment;
 import com.web.instafx.fragments.QuickBuyFragment;
 import com.web.instafx.orderpackage.MyOrderFragment;
 import com.web.instafx.search_currency.SearchCurrencyScreen;
@@ -84,7 +84,7 @@ public class MainActivity extends BaseActivity
 
     private void fundFragment()
     {
-        MainFundFragment fundFragment = new MainFundFragment();
+        FundFragment fundFragment = new FundFragment();
         Bundle args = new Bundle();
         fundFragment.setArguments(args);
         replaceMainFragment(fundFragment,fundFrg);
