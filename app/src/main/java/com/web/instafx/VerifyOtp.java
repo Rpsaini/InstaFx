@@ -211,11 +211,12 @@ public class VerifyOtp extends BaseActivity {
                 counter--;
                 if (counter > 0) {
                     resendOTp.setTag("1");
-                    resendOTp.setText("Resend OTP in : " + counter + " Seconds");
+                   // resendOTp.setText("Resend OTP in : " + counter + " Seconds");
+                    resendOTp.setText(getString(R.string.resend_otp_)+ counter +" " +getString(R.string.seconds));
                     handler.postDelayed(this, 1000);
                 } else {
                     counter = 60;
-                    resendOTp.setText("Resend");
+                    resendOTp.setText(getString(R.string.resend));
                     resendOTp.setTag("0");
                     handler.removeCallbacks(this);
 

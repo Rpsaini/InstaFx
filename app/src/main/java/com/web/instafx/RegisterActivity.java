@@ -120,7 +120,7 @@ public class RegisterActivity extends BaseActivity {
              {
                 check_captcha.setChecked(true);
                 if (validationRule.checkEmptyString(txt_fname) == 0) {
-                    alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), "Enter First Name", "Ok", "", new DialogCallBacks() {
+                    alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), getString(R.string.firstname_warning), getString(R.string.ok), "", new DialogCallBacks() {
                         @Override
                         public void getDialogEvent(String buttonPressed) {
 
@@ -129,7 +129,7 @@ public class RegisterActivity extends BaseActivity {
                     return;
                 }
                 if (validationRule.checkEmptyString(txt_lastname) == 0) {
-                    alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), "Enter Last Name", "Ok", "", new DialogCallBacks() {
+                    alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), getString(R.string.lastname_warning), getString(R.string.ok), "", new DialogCallBacks() {
                         @Override
                         public void getDialogEvent(String buttonPressed) {
 
@@ -138,7 +138,7 @@ public class RegisterActivity extends BaseActivity {
                     return;
                 }
                 if (validationRule.checkEmptyString(txt_email) == 0) {
-                    alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), "Enter Email Address", "Ok", "", new DialogCallBacks() {
+                    alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), getString(R.string.email_warning), getString(R.string.ok), "", new DialogCallBacks() {
                         @Override
                         public void getDialogEvent(String buttonPressed) {
 
@@ -148,7 +148,7 @@ public class RegisterActivity extends BaseActivity {
                 }
                 if(validationRule.checkEmail(txt_email) == 0)
                 {
-                    alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), "Enter Valid Email Address", "Ok", "", new DialogCallBacks() {
+                    alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), getString(R.string.valid_email_warning), getString(R.string.ok), "", new DialogCallBacks() {
                         @Override
                         public void getDialogEvent(String buttonPressed) {
 
@@ -156,7 +156,7 @@ public class RegisterActivity extends BaseActivity {
                     });
                 }
                 if (validationRule.checkEmptyString(txt_phonenumber) == 0) {
-                    alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), "Enter Phone Number", "Ok", "", new DialogCallBacks() {
+                    alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), getString(R.string.phone_warning), getString(R.string.ok), "", new DialogCallBacks() {
                         @Override
                         public void getDialogEvent(String buttonPressed) {
 
@@ -165,7 +165,7 @@ public class RegisterActivity extends BaseActivity {
                     return;
                 }
                 if (validationRule.checkEmptyString(txt_username) == 0) {
-                    alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), "Enter Username", "Ok", "", new DialogCallBacks() {
+                    alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), getString(R.string.user_name_warning), getString(R.string.ok), "", new DialogCallBacks() {
                         @Override
                         public void getDialogEvent(String buttonPressed) {
 
@@ -174,7 +174,7 @@ public class RegisterActivity extends BaseActivity {
                     return;
                 }
                 if (validationRule.checkEmptyString(txt_password) == 0) {
-                    alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), "Enter Password", "Ok", "", new DialogCallBacks() {
+                    alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), getString(R.string.password_warning), getString(R.string.ok), "", new DialogCallBacks() {
                         @Override
                         public void getDialogEvent(String buttonPressed) {
 
@@ -183,7 +183,7 @@ public class RegisterActivity extends BaseActivity {
                     return;
                 }
                 if (!validatePassword(txt_password.getText().toString())) {
-                    alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), "Use atleast 1 uppercase, 1 lowercase 1 numeric & atleast upto 8 characters", "Ok", "", new DialogCallBacks() {
+                    alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), getString(R.string.passwordrule),  getString(R.string.ok), "", new DialogCallBacks() {
                         @Override
                         public void getDialogEvent(String buttonPressed) {
 
@@ -192,7 +192,7 @@ public class RegisterActivity extends BaseActivity {
                     return;
                 }
                 if (!txt_password.getText().toString().equalsIgnoreCase(txt_conf_password.getText().toString())) {
-                    alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), "Confirm password is not valid.", "Ok", "", new DialogCallBacks() {
+                    alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), getString(R.string.cofirm_pwd_warning), getString(R.string.ok), "", new DialogCallBacks() {
                         @Override
                         public void getDialogEvent(String buttonPressed) {
                         }
@@ -201,7 +201,7 @@ public class RegisterActivity extends BaseActivity {
                 }
 
                 if (!checkbox_tems.isChecked()) {
-                    alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), "Please accept terms and privacy policy.", "Ok", "", new DialogCallBacks() {
+                    alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), getString(R.string.privacy_policy_warning), getString(R.string.ok), "", new DialogCallBacks() {
                         @Override
                         public void getDialogEvent(String buttonPressed) {
                         }

@@ -18,6 +18,7 @@ import com.app.dialogsnpickers.SimpleDialog;
 import com.web.instafx.BaseActivity;
 import com.web.instafx.DefaultConstants;
 import com.web.instafx.R;
+import com.web.instafx.SettingLanguage;
 import com.web.instafx.activity_log.ActivityLogScreens;
 import com.web.instafx.currency_preferences.CurrencyPreferencesScreen;
 import com.web.instafx.kyc.VerifyKycAccountDetailsScreen;
@@ -76,6 +77,13 @@ public class SettingProfileScreen extends BaseActivity {
             public void onClick(View v) {
                Intent intent=new Intent(SettingProfileScreen.this, CurrencyPreferencesScreen.class);
                startActivity(intent);
+            }
+        });
+        findViewById(R.id.language_layout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(SettingProfileScreen.this, SettingLanguage.class);
+                startActivity(intent);
             }
         });
         findViewById(R.id.two_factor_layout).setOnClickListener(new View.OnClickListener() {

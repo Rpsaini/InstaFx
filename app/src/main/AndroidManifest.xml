@@ -33,6 +33,11 @@
         android:usesCleartextTraffic="true">
 
         <activity
+            android:name=".SettingLanguage"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.WhatAShot"/>
+
+        <activity
             android:name=".FundHistoryActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.WhatAShot"/>
