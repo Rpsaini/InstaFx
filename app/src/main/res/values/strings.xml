@@ -317,7 +317,7 @@
     <string name="confirm_acount">Confirm Account Number</string>
     <string name="scan_qr_code_to_login">Scan Qr Code To Login</string>
 
-
+    <string name="click_for_captcha">Click for CAPTCHA</string>
     <string name="bank_enter_name">Enter Bank Name</string>
     <string name="bank_enter_ifsc">Enter IFSC Code</string>
     <string name="bank_enter_account_number">Enter Account Number</string>
@@ -338,9 +338,11 @@
     <string name="total_commisions_rate">Total Commission Rate</string>
     <string name="commissions_history">Commission History</string>
 
-    Sponsor Code
+    <string name="side">SIDE</string>
+    <string name="order_type">ORDER TYPE</string>
     <string name="place_order">Place Order</string>
     <string name="placed_on">Placed on</string>
+    <string name="order_amount">ORDER AMOUNT</string>
     <string name="filled_amount">Filled/Amount</string>
     <string name="average_price">Average/Price</string>
     <string name="total">Total</string>
