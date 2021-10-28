@@ -31,8 +31,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
-
 public class FundFragment extends Fragment {
 private View view;
 private MainActivity mainActivity;

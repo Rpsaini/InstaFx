@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".deposit.DepositByRazorPayFrg">
+
+
+
+    <ScrollView
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:src="@drawable/razorpay"
+                ></ImageView>
+            <LinearLayout
+                android:padding="10dp"
+                android:background="@color/white_20"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+
+
+                <fontspackageForTextView.Regular
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/deposit_amount"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="@dimen/small_text_size"
+                    ></fontspackageForTextView.Regular>
+
+                <fontpackageforEdittext.Regular
+                    android:id="@+id/ed_amount"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/edittext_drawable"
+                    android:hint="@string/amount_hint_txt"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:textColorHint="@color/grey_dark"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size"
+                    ></fontpackageforEdittext.Regular>
+
+                <fontspackageForTextView.Regular
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/remarks_txt"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="@dimen/small_text_size"
+                    ></fontspackageForTextView.Regular>
+
+                <fontpackageforEdittext.Regular
+                    android:id="@+id/ed_remarks"
+                    android:paddingLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/edittext_drawable"
+                    android:hint="@string/remarks_txt"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:gravity="top|left"
+                    android:padding="5dp"
+                    android:inputType="textMultiLine"
+                    android:imeOptions="actionDone"
+                    android:textColorHint="@color/grey_dark"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size"
+                    ></fontpackageforEdittext.Regular>
+
+
+
+
+                <fontspackageForTextView.Regular
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/submit"
+                    android:textSize="@dimen/title_text_size"
+                    android:textColor="@color/white"
+                    android:text="@string/deposit"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="45dp"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/orrange_drawable"
+                    ></fontspackageForTextView.Regular>
+
+            </LinearLayout>
+            <fontspackageForTextView.Regular
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:id="@+id/txt_important_note"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size">
+            </fontspackageForTextView.Regular>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

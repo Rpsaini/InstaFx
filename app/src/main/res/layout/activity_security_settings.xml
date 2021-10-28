@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".security.SecuritySettings">
+
+    <RelativeLayout
+
+        android:layout_height="50dp"
+        android:layout_width="match_parent">
+        <ImageView
+            android:id="@+id/img_back"
+            android:padding="10dp"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:src="@drawable/arrow"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp">
+        </ImageView>
+
+        <fontspackageForTextView.Regular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/security_settings"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/action_bar_title_text_size"></fontspackageForTextView.Regular>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_marginTop="50dp"
+        android:id="@+id/rr_security"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/setting_profile_rectangle_1"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <fontspackageForTextView.Regular
+            android:textAllCaps="true"
+            android:id="@+id/security_kycTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="20dp"
+            android:text="@string/app_pass_code"
+            android:textColor="@color/text_black_color"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Switch
+            android:id="@+id/switch_apppasscode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            ></Switch>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rr_two_factor_auth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/setting_profile_rectangle_1"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    <fontspackageForTextView.Regular
+        android:id="@+id/twofactor_kycTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:text="@string/two_factor_"
+        android:textColor="@color/text_black_color"
+        android:textSize="@dimen/title_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

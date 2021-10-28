@@ -288,7 +288,7 @@
     <string name="enter_ifsc_">Enter IFSC code</string>
 
     <string name="account">Account</string>
-    <string name="privacy_policy">Privacy Policy</string>
+
     <string name="contact_us">Contact Us</string>
     <string name="logout">Logout</string>
     <string name="login_success">Login Success</string>
@@ -352,18 +352,18 @@
     <string name="time">Time</string>
     <string name="inr_deposit_">INR Deposit</string>
     <string name="filled">Filled</string>
-<!--    <a href="https://instfx.com/change-language/en">English</a>-->
+    <!--    <a href="https://instfx.com/change-language/en">English</a>-->
     <string name="english">English</string>
-<!--    <a href="https://instfx.com/change-language/tk">Türkçe</a>-->
+    <!--    <a href="https://instfx.com/change-language/tk">Türkçe</a>-->
     <string name="turkish">Türkçe</string>
-<!--    <a href="https://instfx.com/change-language/ara">Arabic</a>-->
+    <!--    <a href="https://instfx.com/change-language/ara">Arabic</a>-->
     <string name="arabic">Arabic</string>
-<!--    <a href="https://instfx.com/change-language/cht">Chinese (Traditional)</a>-->
+    <!--    <a href="https://instfx.com/change-language/cht">Chinese (Traditional)</a>-->
     <string name="chinese_traditional">Chinese (Traditional)</string>
-<!--    <a href="https://instfx.com/change-language/chc">Chinese (Contonese)</a>-->
+    <!--    <a href="https://instfx.com/change-language/chc">Chinese (Contonese)</a>-->
     <string name="chinese_contonese">Chinese (Contonese)</string>
-<!--    <a href="https://instfx.com/change-language/per">Persian</a>-->
-   <string name="persian">Persian</string>
+    <!--    <a href="https://instfx.com/change-language/per">Persian</a>-->
+    <string name="persian">Persian</string>
     <string name="languagesetting">Language </string>
     <string name="settings">Settings</string>
 
@@ -401,4 +401,11 @@
     <string name="amount_hint_txt">Amount</string>
     <string name="share_deposit_address">Share Deposit Address</string>
     <string name="save_secrete_and">Save Secret and Public Key somewhere safe with you to login again.</string>
+    <string name="Razorpay">RazorPay</string>
+    <string name="bankdeposit">Bank Deposit</string>
+    <string name="security_settings">Security Settings</string>
+    <string name="app_pass_code">App Pass Code</string>
+    <string name="set_passcode">Set Passcode</string>
+
+
 </resources>

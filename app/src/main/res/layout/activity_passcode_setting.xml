@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/rr_setPin"
+    >
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_marginTop="5dp"
+        android:padding="12dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/arrow"
+        android:tint="@color/black_color"
+        ></ImageView>
+
+
+<!--    <ImageView-->
+<!--        android:tint="@color/textcolor"-->
+<!--        android:alpha=".8"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:id="@+id/resetPin"-->
+<!--        android:padding="0dp"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:rotation="90"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:src="@drawable/threedots"-->
+<!--        ></ImageView>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        >
+        <TextView
+            android:layout_marginBottom="20dp"
+            android:id="@+id/createpin"
+            android:gravity="center"
+            android:textStyle="bold"
+             android:textSize="25dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/set_passcode"
+            ></TextView>
+        <TextView
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:id="@+id/txt_securely"
+            android:layout_below="@+id/createpin"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/usepin"
+            ></TextView>
+
+
+        <LinearLayout
+            android:layout_marginBottom="70dp"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txt_securely"
+            android:layout_width="300dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:background="@drawable/edittext_border_drawable"
+                android:inputType="numberPassword"
+                android:id="@+id/txt_pinone"
+                android:layout_marginEnd="5dp"
+                android:layout_height="match_parent"
+                android:layout_width="70dp"
+                android:text=""
+                android:gravity="center"
+                ></TextView>
+            <TextView
+                android:background="@drawable/edittext_border_drawable"
+                android:inputType="numberPassword"
+                android:id="@+id/txt_pintwo"
+                android:layout_marginEnd="5dp"
+                android:layout_height="match_parent"
+                android:layout_width="70dp"
+                android:text=""
+                android:gravity="center"
+                ></TextView>
+            <TextView
+                android:background="@drawable/edittext_border_drawable"
+                android:inputType="numberPassword"
+                android:id="@+id/txt_pinthree"
+                android:layout_marginEnd="5dp"
+                android:layout_height="match_parent"
+                android:layout_width="70dp"
+                android:text=""
+                android:gravity="center"
+                ></TextView>
+            <TextView
+                android:background="@drawable/edittext_border_drawable"
+                android:inputType="numberPassword"
+                android:id="@+id/txt_pinfour"
+                android:layout_marginEnd="5dp"
+                android:layout_height="match_parent"
+                android:layout_width="70dp"
+                android:text=""
+                android:gravity="center"
+                ></TextView>
+
+        </LinearLayout>
+
+
+
+        <GridView
+            android:verticalSpacing="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:horizontalSpacing="10dp"
+            android:nestedScrollingEnabled="true"
+            android:scrollbarThumbVertical="@android:color/transparent"
+            android:id="@+id/grid_restaurantimages"
+            android:numColumns="4"
+            android:gravity="center"
+            android:stretchMode="columnWidth"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+        </GridView>
+
+
+    </LinearLayout>
+</RelativeLayout>
