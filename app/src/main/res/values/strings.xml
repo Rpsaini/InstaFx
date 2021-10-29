@@ -402,7 +402,7 @@
     <string name="amount_hint_txt">Amount</string>
     <string name="share_deposit_address">Share Deposit Address</string>
     <string name="save_secrete_and">Save Secret and Public Key somewhere safe with you to login again.</string>
-    <string name="Razorpay">RazorPay</string>
+    <string name="Razorpay">Quick Deposit</string>
     <string name="bankdeposit">Bank Deposit</string>
     <string name="security_settings">Security Settings</string>
     <string name="app_pass_code">App Pass Code</string>

@@ -51,10 +51,21 @@ public class DepositeInrActivity extends BaseActivity  implements PaymentResultL
     }
 
 
-    void tablayout() {
+    void tablayout()
+    {
         tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.Razorpay)));
-        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.bankdeposit)));
+        if(getIntent().getStringExtra(DefaultConstants.symbol).equalsIgnoreCase("INR"))
+        {
+            tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.bankdeposit)));
+            tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.Razorpay)));
+
+        }
+        else
+        {
+            tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.bankdeposit)));
+        }
+
+
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         viewPager = (ViewPager) findViewById(R.id.pager);
        }
@@ -98,7 +109,10 @@ public class DepositeInrActivity extends BaseActivity  implements PaymentResultL
     @SuppressWarnings("unused")
     @Override
     public void onPaymentError(int code, String response) {
+
+        //{"error":{"code":"BAD_REQUEST_ERROR","description":"Payment processing cancelled by user","source":"customer","step":"payment_authentication","reason":"payment_cancelled"}}
         System.out.println("Faild====" + code + "===" + response);
+
         DepositByRazorPayFrg frag1 = (DepositByRazorPayFrg)viewPager
                 .getAdapter()
                 .instantiateItem(viewPager, viewPager.getCurrentItem());

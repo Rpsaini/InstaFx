@@ -116,14 +116,17 @@ public class SettingProfileScreen extends BaseActivity {
         });
         findViewById(R.id.privacyPolicy_layout).setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View v) {
-                openExternalUrls(getApiUrl()+"privacy-policy");
+                openExternalUrls(getApiUrl()+"terms");
             }
         });
+
+
         findViewById(R.id.contactUs_layout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openExternalUrls(getApiUrl()+"contactus");
+                openExternalUrls(getApiUrl()+"contact-us");
             }
         });
 

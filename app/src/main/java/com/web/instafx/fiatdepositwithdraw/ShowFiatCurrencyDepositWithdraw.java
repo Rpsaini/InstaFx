@@ -34,7 +34,8 @@ public class ShowFiatCurrencyDepositWithdraw extends BaseActivity {
     private String isKycStatus = "";
     private boolean authenticator = false;
     private RecyclerView recycler_view_bankaddress;
-
+   private String symbol="";
+   TextView txt_withdrawinr,txt_deposit_inr;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,11 +50,13 @@ public class ShowFiatCurrencyDepositWithdraw extends BaseActivity {
     private void init() {
         try {
             JSONObject dataObj = new JSONObject(getIntent().getStringExtra("data"));
-            String symbol = dataObj.getString("symbol");
+             symbol = dataObj.getString("symbol");
             String availableBalance = dataObj.getString("available_balance");
             final String icon = dataObj.getString("icon");
 
             ImageView txt_currency_image = findViewById(R.id.txt_currency_image);
+            txt_withdrawinr =findViewById(R.id.txt_withdrawinr);
+            txt_deposit_inr = findViewById(R.id.txt_deposit_inr);
             // TextView txt_withdraw = findViewById(R.id.txt_withdraw);
             TextView txt_title = findViewById(R.id.txt_title);
 
@@ -63,6 +66,8 @@ public class ShowFiatCurrencyDepositWithdraw extends BaseActivity {
             total_balance.setText(availableBalance);
 
             txt_title.setText("PLEASE PAY ATTENTION! THE COIN YOU SELECTED IS : " + symbol);
+            txt_withdrawinr.setText("Withdraw "+symbol);
+            txt_deposit_inr.setText("Deposit "+symbol);
             showImage(icon, txt_currency_image);
 
             findViewById(R.id.img_back).setOnClickListener(new View.OnClickListener() {
@@ -73,15 +78,16 @@ public class ShowFiatCurrencyDepositWithdraw extends BaseActivity {
             });
 
 
-            findViewById(R.id.txt_deposit_inr).setOnClickListener(new View.OnClickListener() {
+            txt_deposit_inr.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(ShowFiatCurrencyDepositWithdraw.this, DepositeInrActivity.class);
+                    intent.putExtra(DefaultConstants.symbol,symbol);
                     startActivityForResult(intent, 1001);
                 }
             });
 
-            findViewById(R.id.txt_withdrawinr).setOnClickListener(new View.OnClickListener() {
+            txt_withdrawinr.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(ShowFiatCurrencyDepositWithdraw.this, WithdrawInrActivity.class);
@@ -121,6 +127,7 @@ public class ShowFiatCurrencyDepositWithdraw extends BaseActivity {
             m.put("PlatForm", "android");
             m.put("Timestamp", System.currentTimeMillis() + "");
             m.put("DeviceToken", getDeviceToken() + "");
+            m.put("currency", symbol);
 
             final Map<String, String> obj = new HashMap<>();
             obj.put("X-API-KEY", getXapiKey());

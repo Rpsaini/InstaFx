@@ -25,15 +25,16 @@ public class DepositPagerAdapter extends FragmentStatePagerAdapter {
 
         if(position==0)
         {
-            DepositByRazorPayFrg tab1 = new DepositByRazorPayFrg();
+            DepositINRFrg tab1 = new DepositINRFrg();
             Bundle bundle=new Bundle();
             bundle.putString("pos",position+"");
             tab1.setArguments(bundle);
             return tab1;
+
         }
         else
         {
-            DepositINRFrg tab1 = new DepositINRFrg();
+            DepositByRazorPayFrg tab1 = new DepositByRazorPayFrg();
             Bundle bundle=new Bundle();
             bundle.putString("pos",position+"");
             tab1.setArguments(bundle);

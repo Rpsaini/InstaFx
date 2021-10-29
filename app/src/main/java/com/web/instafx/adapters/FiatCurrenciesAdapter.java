@@ -200,11 +200,14 @@ public class FiatCurrenciesAdapter extends RecyclerView.Adapter<FiatCurrenciesAd
                         ira1.startActivity(intent);
                     } else
                         {
-                        ira1.alertDialogs.alertDialog(ira1, ira1.getResources().getString(R.string.Response), "Currently "+symbol+" Deposit and Withdraw is disabled. ", ira1.getResources().getString(R.string.ok), "", new DialogCallBacks() {
-                            @Override
-                            public void getDialogEvent(String buttonPressed) {
-                            }
-                        });
+                            Intent intent = new Intent(ira1, ShowFiatCurrencyDepositWithdraw.class);
+                            intent.putExtra("data", data + "");
+                            ira1.startActivity(intent);
+//                        ira1.alertDialogs.alertDialog(ira1, ira1.getResources().getString(R.string.Response), "Currently "+symbol+" Deposit and Withdraw is disabled. ", ira1.getResources().getString(R.string.ok), "", new DialogCallBacks() {
+//                            @Override
+//                            public void getDialogEvent(String buttonPressed) {
+//                            }
+//                        });
                     }
                 } catch (Exception e) {
                     e.printStackTrace();

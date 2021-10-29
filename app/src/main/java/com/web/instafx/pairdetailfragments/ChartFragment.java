@@ -65,6 +65,7 @@ public class ChartFragment extends Fragment {
         String url = pairDetailView.getApiUrl() + "chart-data?pair=" + pairDetailView.joinedPair+"&height="+(height-150)+"&width="+width;
 
 
+        System.out.println("Chart url=="+url);
 
         WebView mywebview = (WebView) view.findViewById(R.id.webview);
         WebSettings webSettings = mywebview.getSettings();
