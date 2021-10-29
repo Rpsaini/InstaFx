@@ -1,11 +1,17 @@
 package com.web.instafx.invite_earn;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -32,12 +38,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class InviteEarnScreen extends BaseActivity {
+    private ImageView backIC=null;
     private LinearLayout level_referralsRoot,direct_referralsRoot,copyLinkLL;
     private RelativeLayout level_referralsRL,direct_referralsRL;
     private TextView shareYourLinkTV,level_referralsTV,direct_referralsTV,totalReferredFriendValueTV,totalCommisionEarnedValueTV,totalCommisionRateValueTV,inviteEarnLinkTV;
     private View level_referralsLine,direct_referralsLine;
     private RecyclerView level_referralsRV,direct_referralsRV;
     private JSONArray level_referralsArray,direct_referralsArray;
+    private String referralsLink="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +57,7 @@ public class InviteEarnScreen extends BaseActivity {
         getMyReferralsDetails();
     }
     private void initView(){
+        backIC =findViewById(R.id.backIC);
         copyLinkLL=findViewById(R.id.copyLinkLL);
         totalReferredFriendValueTV=findViewById(R.id.totalReferredFriendValueTV);
         totalCommisionEarnedValueTV=findViewById(R.id.totalCommisionEarnedValueTV);
@@ -70,6 +79,12 @@ public class InviteEarnScreen extends BaseActivity {
     }
 
     private void setOnClickListener(){
+         backIC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         level_referralsRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,10 +109,56 @@ public class InviteEarnScreen extends BaseActivity {
                 showDirectReferralsDetails(direct_referralsArray);
             }
         });
-    }
+        shareYourLinkTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!inviteEarnLinkTV.getText().toString().isEmpty()){
+                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                    shareIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    shareIntent.setType("text/plain");
+                    shareIntent.putExtra(android.content.Intent.EXTRA_TEXT,
+                            inviteEarnLinkTV.getText().toString());
+                    startActivity(shareIntent);
+                }
 
+            }
+        });
+        copyLinkLL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String getstring = inviteEarnLinkTV.getText().toString();
+                setClipboard(InviteEarnScreen.this, getstring);
+            }
+        });
+    }
+    private void setClipboard(Context context, String text) {
+        if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.HONEYCOMB) {
+            android.text.ClipboardManager clipboard = (android.text.ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+            clipboard.setText(text);
+        } else {
+            android.content.ClipboardManager clipboard = (android.content.ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+            android.content.ClipData clip = android.content.ClipData.newPlainText("Copied Text", text);
+            clipboard.setPrimaryClip(clip);
+        }
+        Toast.makeText(InviteEarnScreen.this, "Link Copied Successfully", Toast.LENGTH_SHORT).show();
+    }
     private void showLevelReferralsDetails(JSONArray jsonArray)
     {
+        RelativeLayout relativeLayout =findViewById(R.id.rr_nodata_view);
+        if(jsonArray.length()==0)
+        {
+            relativeLayout.setVisibility(View.VISIBLE);
+            level_referralsRoot.setVisibility(View.GONE);
+            direct_referralsRoot.setVisibility(View.GONE);
+        }
+        else
+        {
+            relativeLayout.setVisibility(View.GONE);
+            direct_referralsRoot.setVisibility(View.GONE);
+            level_referralsRoot.setVisibility(View.VISIBLE);
+        }
+
+
         CommissionHistoryAdapter mAdapter = new CommissionHistoryAdapter(this,jsonArray);
         LinearLayoutManager horizontalLayoutManagaer
                 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
@@ -108,6 +169,20 @@ public class InviteEarnScreen extends BaseActivity {
 
     private void showDirectReferralsDetails(JSONArray jsonArray)
     {
+        RelativeLayout relativeLayout =findViewById(R.id.rr_nodata_view);
+        if(jsonArray.length()==0)
+        {
+            relativeLayout.setVisibility(View.VISIBLE);
+            level_referralsRoot.setVisibility(View.GONE);
+            direct_referralsRoot.setVisibility(View.GONE);
+        }
+        else
+        {
+            relativeLayout.setVisibility(View.GONE);
+            level_referralsRoot.setVisibility(View.GONE);
+            direct_referralsRoot.setVisibility(View.VISIBLE);
+        }
+
         ReferredFriendsAdapter mAdapter = new ReferredFriendsAdapter(this,jsonArray);
         LinearLayoutManager horizontalLayoutManagaer
                 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
