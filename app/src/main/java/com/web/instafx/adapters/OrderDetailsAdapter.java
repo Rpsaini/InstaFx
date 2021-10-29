@@ -103,6 +103,7 @@ public class OrderDetailsAdapter extends RecyclerView.Adapter<OrderDetailsAdapte
             holder.txt_price.setText("("+jsonData.getString("price")+")");
             holder.txt_date.setText(jsonData.getString("placed_on"));
             holder.txt_side.setText(jsonData.getString("side"));
+            String order_id=jsonData.getString("order_id");
 
 
             if(jsonData.getString("side").equalsIgnoreCase("buy"))
@@ -138,6 +139,7 @@ public class OrderDetailsAdapter extends RecyclerView.Adapter<OrderDetailsAdapte
                @Override
                public void onClick(View v) {
                    Intent intent=new Intent(ira1, OrderDetailsScreen.class);
+                   intent.putExtra("order_id",order_id);
                    ira1.startActivity(intent);
                }
            });

@@ -177,12 +177,12 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
 
 
 
-        adharNoTV.setText("National ID Number*");
-        reDocTV.setText("Re-Enter National ID Number*");
-        nationalIDNumberET.setHint("Enter National ID number");
-        reNationalIDNumberET.setHint("Enter National ID number");
-        uploadFrontDocTitleTV.setText("Upload front of National ID Card");
-        uploadBackDocTitleTV.setText("Upload back of National ID Card");
+        adharNoTV.setText(getString(R.string.national_id_));
+        reDocTV.setText(getString(R.string.re_enter_national_id_));
+        nationalIDNumberET.setHint(getString(R.string.enter_national_));
+        reNationalIDNumberET.setHint(getString(R.string.enter_national_));
+        uploadFrontDocTitleTV.setText(getString(R.string.upload_national_id_front_));
+        uploadBackDocTitleTV.setText(getString(R.string.upload_national_id_back_));
         docImage.setImageDrawable(getDrawable(R.drawable.sample_aadhaar_card_front_1));
         docBackImage.setImageDrawable(getDrawable(R.drawable.sample_aadhaar_card_back_1));
 
@@ -302,7 +302,7 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
                 if (nationalIDNumberET.getText().toString().length() == 0) {
                     String msg="";
                     if(docType.equals("adhaar")){
-                        msg="Enter National ID number";
+                        msg=getString(R.string.enter_national_);
                     }
                     alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.Required),msg, getResources().getString(R.string.ok), "", new DialogCallBacks() {
                         @Override
@@ -316,7 +316,7 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
 
                     String msg="";
                     if(docType.equals("adhaar")){
-                        msg="National ID Number must be match.";
+                        msg=getString(R.string.natinal_id_must_match_);
                     }
                     alertDialogs.alertDialog(VerifyKycForPersonalInfoScreen.this, getResources().getString(R.string.Required),msg, getResources().getString(R.string.ok), "", new DialogCallBacks() {
                         @Override
