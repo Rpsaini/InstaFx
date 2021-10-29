@@ -133,34 +133,20 @@ public class InviteEarnScreen extends BaseActivity {
                 @Override
                 public void getRespone(String dta, ArrayList<Object> respons) {
                     try {
-                      //  Log.e("OrderDetails","OrderDetails::"+dta);
 
-
- /*
-  {"status":true,"commission":{"res":true,
-  "rows":{"total":"25"}},
-  "level_referrals":[{"email":"dhillonn********@gmail.com","joined_on":"18
-Oct, 2021 05:51 pm","level":"1"}],
-"direct_referrals":[{"email":"dhillonn********@gmail.com","joined_on":"18 Oct, 2021
-05:51 pm"}],"total_referred":"1","code":200} */
 
                         JSONObject obj = new JSONObject(dta);
                         if (obj.getBoolean("status")) {
                             totalReferredFriendValueTV.setText(obj.getString("total_referred"));
                             totalCommisionEarnedValueTV.setText(getString(R.string.inr_symbol)+obj.getString("commission"));
                             inviteEarnLinkTV.setText(obj.getString("referral_link"));
-                           // level_referralsArray=obj.getJSONArray("level_referrals");
-                           // direct_referralsArray=obj.getJSONArray("direct_referrals");
-                           // showLevelReferralsDetails(level_referralsArray);
-                          /*  try {
 
-                               // ;
-                                //;
+                           // for(int x=0;)
+                            //System.out.println("length===="+obj.getJSONArray("level_referrals").length());
 
-
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }*/
+                            level_referralsArray=obj.getJSONArray("level_referrals");
+                            direct_referralsArray=obj.getJSONArray("direct_referrals");
+                            showLevelReferralsDetails(level_referralsArray);
 
                         } else {
                             alertDialogs.alertDialog(InviteEarnScreen.this, getResources().getString(R.string.Response), obj.getString("msg"), getResources().getString(R.string.ok), "", new DialogCallBacks() {

@@ -40,10 +40,7 @@ public class CommissionHistoryAdapter extends RecyclerView.Adapter<CommissionHis
         this.ira1 = inviteEarnScreen;
 
     }
-    public CommissionHistoryAdapter(InviteEarnScreen inviteEarnScreen) {
-        this.ira1 = inviteEarnScreen;
 
-    }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
@@ -56,13 +53,7 @@ public class CommissionHistoryAdapter extends RecyclerView.Adapter<CommissionHis
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
         try
          {
-              /*
-  {"status":true,"commission":{"res":true,
-  "rows":{"total":"25"}},
-  "level_referrals":[{"email":"dhillonn********@gmail.com","joined_on":"18
-Oct, 2021 05:51 pm","level":"1"}],
-"direct_referrals":[{"email":"dhillonn********@gmail.com","joined_on":"18 Oct, 2021
-05:51 pm"}],"total_referred":"1","code":200} */
+
             JSONObject dataObj = moviesList.getJSONObject(position);
             holder.emailTV.setText(dataObj.getString("email"));
             holder.dateTV.setText(dataObj.getString("joined_on"));
