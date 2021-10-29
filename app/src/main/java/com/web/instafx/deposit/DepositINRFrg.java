@@ -1,9 +1,14 @@
-package com.web.instafx.fiatdepositwithdraw;
+package com.web.instafx.deposit;
 
 import android.os.Build;
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
 import android.text.Html;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -11,7 +16,6 @@ import android.widget.TextView;
 import com.app.dialogsnpickers.DialogCallBacks;
 import com.app.vollycommunicationlib.CallBack;
 import com.app.vollycommunicationlib.ServerHandler;
-import com.web.instafx.BaseActivity;
 import com.web.instafx.DefaultConstants;
 import com.web.instafx.R;
 
@@ -22,33 +26,49 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class DepositeInrActivity extends BaseActivity {
 
+public class DepositINRFrg extends Fragment {
+
+ private View view;
     private TextView txt_important_note, txt_deposit_code, submit;
-    private ImageView img_back;
+
     private EditText ed_amount, ed_remarks;
+    DepositeInrActivity depositeInrActivity;
+    public DepositINRFrg() {
+        // Required empty public constructor
+    }
+
+
+    public static DepositINRFrg newInstance(String param1, String param2) {
+        DepositINRFrg fragment = new DepositINRFrg();
+
+        return fragment;
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_deposite_inr);
-        getSupportActionBar().hide();
-        initiateObj();
+
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        view=inflater.inflate(R.layout.fragment_deposit_i_n_r_frg, container, false);
+        depositeInrActivity=(DepositeInrActivity)getActivity();
         init();
         actions();
         setData();
         generateSixDigitRandomNumber();
-
+        return view;
     }
 
     private void init() {
-        txt_important_note = findViewById(R.id.txt_important_note);
-
-        txt_deposit_code = findViewById(R.id.txt_deposite_code);
-        submit = findViewById(R.id.submit);
-        img_back = findViewById(R.id.img_back);
-        ed_remarks = findViewById(R.id.ed_remarks);
-        ed_amount = findViewById(R.id.ed_amount);
+        txt_important_note = view.findViewById(R.id.txt_important_note);
+        txt_deposit_code = view.findViewById(R.id.txt_deposite_code);
+        submit = view.findViewById(R.id.submit);
+        ed_remarks = view.findViewById(R.id.ed_remarks);
+        ed_amount = view.findViewById(R.id.ed_amount);
 
 
     }
@@ -58,8 +78,8 @@ public class DepositeInrActivity extends BaseActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (validationRule.checkEmptyString(ed_amount) == 0) {
-                    alertDialogs.alertDialog(DepositeInrActivity.this, getResources().getString(R.string.app_name), "Enter Deposit Amount.", "Ok", "", new DialogCallBacks() {
+                if (depositeInrActivity.validationRule.checkEmptyString(ed_amount) == 0) {
+                    depositeInrActivity.alertDialogs.alertDialog(depositeInrActivity, getResources().getString(R.string.app_name), "Enter Deposit Amount.", "Ok", "", new DialogCallBacks() {
                         @Override
                         public void getDialogEvent(String buttonPressed) {
 
@@ -67,8 +87,8 @@ public class DepositeInrActivity extends BaseActivity {
                     });
                     return;
                 }
-                if (validationRule.checkEmptyString(ed_remarks) == 0) {
-                    alertDialogs.alertDialog(DepositeInrActivity.this, getResources().getString(R.string.app_name), "Enter Remark.", "Ok", "", new DialogCallBacks() {
+                if (depositeInrActivity.validationRule.checkEmptyString(ed_remarks) == 0) {
+                    depositeInrActivity.alertDialogs.alertDialog(depositeInrActivity, getResources().getString(R.string.app_name), "Enter Remark.", "Ok", "", new DialogCallBacks() {
                         @Override
                         public void getDialogEvent(String buttonPressed) {
                         }
@@ -79,17 +99,12 @@ public class DepositeInrActivity extends BaseActivity {
 
             }
         });
-        img_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+
 
         txt_deposit_code.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                copyCode(txt_deposit_code.getText().toString());
+                depositeInrActivity.copyCode(txt_deposit_code.getText().toString());
             }
         });
 
@@ -121,8 +136,8 @@ public class DepositeInrActivity extends BaseActivity {
     private void sendForDeposit() {
         try {
             final Map<String, String> m = new HashMap<>();
-            m.put("token", savePreferences.reterivePreference(DepositeInrActivity.this, DefaultConstants.token) + "");
-            m.put("DeviceToken", getDeviceToken() + "");
+            m.put("token", depositeInrActivity.savePreferences.reterivePreference(depositeInrActivity, DefaultConstants.token) + "");
+            m.put("DeviceToken", depositeInrActivity.getDeviceToken() + "");
             m.put("currency", "INR");
             m.put("amount", ed_amount.getText().toString());
             m.put("reference", txt_deposit_code.getText().toString());
@@ -130,27 +145,28 @@ public class DepositeInrActivity extends BaseActivity {
 
 
             final Map<String, String> obj = new HashMap<>();
-            obj.put("X-API-KEY", getXapiKey());
-            obj.put("Rtoken", getNewRToken() + "");
+            obj.put("X-API-KEY", depositeInrActivity.getXapiKey());
+            obj.put("Rtoken", depositeInrActivity.getNewRToken() + "");
 
+            System.out.println("Data==="+depositeInrActivity.getApiUrl() + "fiat-deposit");
 
-            new ServerHandler().sendToServer(DepositeInrActivity.this, getApiUrl() + "fiat-deposit", m, 0, obj, 20000, R.layout.progressbar, new CallBack() {
+            new ServerHandler().sendToServer(depositeInrActivity, depositeInrActivity.getApiUrl() + "fiat-deposit", m, 0, obj, 20000, R.layout.progressbar, new CallBack() {
                 @Override
                 public void getRespone(String dta, ArrayList<Object> respons) {
                     try {
                         JSONObject jsonObject = new JSONObject(dta);
                         if (jsonObject.getBoolean("status")) {
-                            alertDialogs.alertDialog(DepositeInrActivity.this, getResources().getString(R.string.Response), jsonObject.getString("msg"), getResources().getString(R.string.ok), "", new DialogCallBacks() {
+                            depositeInrActivity.alertDialogs.alertDialog(depositeInrActivity, getResources().getString(R.string.Response), jsonObject.getString("msg"), getResources().getString(R.string.ok), "", new DialogCallBacks() {
                                 @Override
                                 public void getDialogEvent(String buttonPressed) {
-                                    finish();
+//                                    depositeInrActivity.finish();
                                 }
                             });
                         } else {
-                            alertDialogs.alertDialog(DepositeInrActivity.this, getResources().getString(R.string.Response), jsonObject.getString("msg"), getResources().getString(R.string.ok), "", new DialogCallBacks() {
+                            depositeInrActivity.alertDialogs.alertDialog(depositeInrActivity, getResources().getString(R.string.Response), jsonObject.getString("msg"), getResources().getString(R.string.ok), "", new DialogCallBacks() {
                                 @Override
                                 public void getDialogEvent(String buttonPressed) {
-                                    unauthorizedAccess(jsonObject);
+                                    depositeInrActivity.unauthorizedAccess(jsonObject);
                                 }
                             });
 
@@ -167,6 +183,4 @@ public class DepositeInrActivity extends BaseActivity {
             e.printStackTrace();
         }
     }
-
-
 }

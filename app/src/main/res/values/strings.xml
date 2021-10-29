@@ -12,7 +12,6 @@
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome !"</string>
-    <string name="user_name_warning">Enter The Username.</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
@@ -70,8 +69,6 @@
     <string name="request_submitted">Request Submitted</string>
     <string name="submit_withdraw_req_">Submit withdraw request</string>
     <string name="dont_recieve_otp">Don`t receive OTP</string>
-    <string name="resend_otp_">Resend OTP in : </string>
-    <string name="seconds">Seconds</string>
     <string name="resend">Resend</string>
     <string name="verify">Verify</string>
     <string name="please_enter_otp">Please enter OTP</string>
@@ -88,11 +85,7 @@
     <string name="country_warning">Select the country field.</string>
     <string name="firstname_warning">Enter The First Name.</string>
     <string name="lastname_warning">Enter The Last Name.</string>
-    <string name="email_warning">Enter The Password.</string>
-    <string name="cofirm_pwd_warning">Confirm password is not valid.</string>
-    <string name="password_warning">Enter The Email.</string>
-    <string name="phone_warning">Enter The Phone Number.</string>
-    <string name="valid_email_warning">Enter Valid Email.</string>
+    <string name="email_warning">Enter The Email.</string>
     <string name="dob_warning">Enter The Date Of Birth(DD-MM-YYYY).</string>
     <string name="address_warning">Enter The Address.</string>
     <string name="state_warning">Select The State.</string>
@@ -163,12 +156,6 @@
     <string name="aadhaar">Aadhaar</string>
     <string name="national_id_back">Nation Id Proof(Back)</string>
     <string name="national_id_front">Nation Id Proof(Front)</string>
-    <string name="national_id_">"National ID Number*"</string>
-    <string name="upload_national_id_front_">Upload front of National ID Card</string>
-    <string name="upload_national_id_back_">Upload back of National ID Card</string>
-    <string name="re_enter_national_id_">Re-Enter National ID Number*</string>
-    <string name="enter_national_">Enter National ID number</string>
-    <string name="natinal_id_must_match_">National ID Number must be match.</string>
     <string name="national_id">National ID</string>
     <string name="aadhaar_num">Aadhaar Number*</string>
     <string name="enter_aadha">Enter Aadhaar number</string>
@@ -180,7 +167,7 @@
     <string name="please_veri">Please verify the details you\'re submitting. Once submitted, you won\'t be able to change it unless you</string>
     <string name="submit_for_">SUBMIT FOR VERIFICATION</string>
     <string name="by_continuing_">By continuing, you agree to our Term of Service </string>
-    <string name="sell_txt">SELL</string>
+    <string name="privacy_policy">Privacy Policy</string>
     <string name="buy_txt">Buy</string>
     <string name="buy">BUY</string>
     <string name="sell">SELL</string>
@@ -301,13 +288,12 @@
     <string name="enter_ifsc_">Enter IFSC code</string>
 
     <string name="account">Account</string>
-    <string name="privacy_policy">Privacy Policy</string>
-    <string name="privacy_policy_warning">Please accept terms and privacy policy.</string>
+
     <string name="contact_us">Contact Us</string>
     <string name="logout">Logout</string>
     <string name="login_success">Login Success</string>
     <string name="market_vol">Market / vol</string>
-    <string name="price">Price</string>
+    <string name="price">price</string>
     <string name="change">Change</string>
     <string name="fiat">Fiat</string>
     <string name="crypto">Crypto</string>
@@ -366,18 +352,18 @@
     <string name="time">Time</string>
     <string name="inr_deposit_">INR Deposit</string>
     <string name="filled">Filled</string>
-<!--    <a href="https://instfx.com/change-language/en">English</a>-->
+    <!--    <a href="https://instfx.com/change-language/en">English</a>-->
     <string name="english">English</string>
-<!--    <a href="https://instfx.com/change-language/tk">Türkçe</a>-->
+    <!--    <a href="https://instfx.com/change-language/tk">Türkçe</a>-->
     <string name="turkish">Türkçe</string>
-<!--    <a href="https://instfx.com/change-language/ara">Arabic</a>-->
+    <!--    <a href="https://instfx.com/change-language/ara">Arabic</a>-->
     <string name="arabic">Arabic</string>
-<!--    <a href="https://instfx.com/change-language/cht">Chinese (Traditional)</a>-->
+    <!--    <a href="https://instfx.com/change-language/cht">Chinese (Traditional)</a>-->
     <string name="chinese_traditional">Chinese (Traditional)</string>
-<!--    <a href="https://instfx.com/change-language/chc">Chinese (Contonese)</a>-->
+    <!--    <a href="https://instfx.com/change-language/chc">Chinese (Contonese)</a>-->
     <string name="chinese_contonese">Chinese (Contonese)</string>
-<!--    <a href="https://instfx.com/change-language/per">Persian</a>-->
-   <string name="persian">Persian</string>
+    <!--    <a href="https://instfx.com/change-language/per">Persian</a>-->
+    <string name="persian">Persian</string>
     <string name="languagesetting">Language </string>
     <string name="settings">Settings</string>
 
@@ -415,4 +401,11 @@
     <string name="amount_hint_txt">Amount</string>
     <string name="share_deposit_address">Share Deposit Address</string>
     <string name="save_secrete_and">Save Secret and Public Key somewhere safe with you to login again.</string>
+    <string name="Razorpay">RazorPay</string>
+    <string name="bankdeposit">Bank Deposit</string>
+    <string name="security_settings">Security Settings</string>
+    <string name="app_pass_code">App Pass Code</string>
+    <string name="set_passcode">Set Passcode</string>
+
+
 </resources>

@@ -23,6 +23,7 @@ import com.web.instafx.activity_log.ActivityLogScreens;
 import com.web.instafx.currency_preferences.CurrencyPreferencesScreen;
 import com.web.instafx.kyc.VerifyKycAccountDetailsScreen;
 import com.web.instafx.payment_option.PaymentOptionsScreen;
+import com.web.instafx.security.SecuritySettings;
 import com.web.instafx.two_factor_auth.TwoFactorAuthScreen;
 
 import org.json.JSONObject;
@@ -31,7 +32,7 @@ import invite_earn.InviteEarnScreen;
 
 public class SettingProfileScreen extends BaseActivity {
     private ImageView backIC=null;
-    private RelativeLayout verify_kyc_layout=null;
+    private RelativeLayout verify_kyc_layout=null,rr_security;
     private Dialog mobRegDialog;
     private Dialog mobRegOtpDialog;
     private Dialog mobRegSuccessDialog;
@@ -49,6 +50,7 @@ public class SettingProfileScreen extends BaseActivity {
     private void initView(){
         backIC =findViewById(R.id.backIC);
         verify_kyc_layout=findViewById(R.id.verify_kyc_layout);
+        rr_security=findViewById(R.id.rr_security);
     }
 
     private void setOnClickListener(){
@@ -126,6 +128,19 @@ public class SettingProfileScreen extends BaseActivity {
                 openExternalUrls(getApiUrl()+"contactus");
             }
         });
+
+        rr_security.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(SettingProfileScreen.this, SecuritySettings.class);
+                startActivity(intent);
+
+
+            }
+        });
+
+
         findViewById(R.id.logout_layout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

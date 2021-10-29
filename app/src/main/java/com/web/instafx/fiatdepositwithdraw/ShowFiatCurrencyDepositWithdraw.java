@@ -21,6 +21,7 @@ import com.web.instafx.BaseActivity;
 import com.web.instafx.DefaultConstants;
 import com.web.instafx.R;
 import com.web.instafx.adapters.BankDetailsAdapters;
+import com.web.instafx.deposit.DepositeInrActivity;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
