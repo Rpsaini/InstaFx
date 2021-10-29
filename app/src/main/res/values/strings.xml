@@ -412,6 +412,8 @@
     <string name="resend_otp_">Resend OTP in : </string>
     <string name="seconds">Seconds</string>
 
+    
+
 
     <string name="cofirm_pwd_warning">Confirm password is not valid.</string>
     <string name="password_warning">Enter The Email.</string>
