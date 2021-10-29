@@ -175,8 +175,6 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
         rr_browse_passbokimg=findViewById(R.id.rr_browse_passbokimg);
 
 
-
-
         adharNoTV.setText(getString(R.string.national_id_));
         reDocTV.setText(getString(R.string.re_enter_national_id_));
         nationalIDNumberET.setHint(getString(R.string.enter_national_));

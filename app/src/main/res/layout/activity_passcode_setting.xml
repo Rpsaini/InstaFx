@@ -48,6 +48,9 @@
             android:layout_width="match_parent"
             android:text="@string/set_passcode"
             ></TextView>
+
+
+
         <TextView
             android:visibility="gone"
             android:layout_marginTop="5dp"
@@ -58,7 +61,7 @@
             android:textColor="@color/black"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:text="@string/usepin"
+            android:text="Use PIN"
             ></TextView>
 
 

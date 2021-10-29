@@ -407,5 +407,27 @@
     <string name="app_pass_code">App Pass Code</string>
     <string name="set_passcode">Set Passcode</string>
 
+    <string name="user_name_warning">Enter The Username.</string>
+    <string name="resend_otp_">Resend OTP in : </string>
+    <string name="seconds">Seconds</string>
+
+
+    <string name="cofirm_pwd_warning">Confirm password is not valid.</string>
+    <string name="password_warning">Enter The Email.</string>
+    <string name="phone_warning">Enter The Phone Number.</string>
+    <string name="valid_email_warning">Enter Valid Email.</string>
+
+
+    <string name="national_id_">"National ID Number*"</string>
+    <string name="upload_national_id_front_">Upload front of National ID Card</string>
+    <string name="upload_national_id_back_">Upload back of National ID Card</string>
+    <string name="re_enter_national_id_">Re-Enter National ID Number*</string>
+    <string name="enter_national_">Enter National ID number</string>
+    <string name="natinal_id_must_match_">National ID Number must be match.</string>
+
+
+    <string name="sell_txt">SELL</string>
+   <string name="privacy_policy_warning">Please accept terms and privacy policy.</string>
+
 
 </resources>
