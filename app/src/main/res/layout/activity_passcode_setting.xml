@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:id="@+id/rr_setPin"
-    >
+    android:id="@+id/rr_setPin">
 
     <ImageView
         android:id="@+id/iv_back"
@@ -15,8 +13,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/arrow"
-        android:tint="@color/black"
-        ></ImageView>
+        app:tint="@color/black"></ImageView>
 
 
 <!--    <ImageView-->
@@ -48,9 +45,6 @@
             android:layout_width="match_parent"
             android:text="@string/set_passcode"
             ></TextView>
-
-
-
         <TextView
             android:visibility="gone"
             android:layout_marginTop="5dp"
@@ -61,7 +55,6 @@
             android:textColor="@color/black"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:text="Use PIN"
             ></TextView>
 
 

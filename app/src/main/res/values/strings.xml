@@ -336,8 +336,9 @@
     <string name="total_referred_friends_">Total Referred Friends</string>
     <string name="total_commisions_earned">Total Commission Earned</string>
     <string name="total_commisions_rate">Total Commission Rate</string>
-    <string name="commissions_history">Commission History</string>
-
+    <string name="level_referrals">Level Referrals</string>
+    <string name="level_">Level</string>
+    <string name="direct_referrals">Direct Referrals</string>
     <string name="side">SIDE</string>
     <string name="order_type">ORDER TYPE</string>
     <string name="place_order">Place Order</string>

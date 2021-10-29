@@ -41,7 +41,7 @@ public class OrderDetailsScreen extends BaseActivity {
         currencySymbolTV =findViewById(R.id.currencySymbolTV);
         placeOnDateTV =findViewById(R.id.placedDateTimeTV);
         buyTV =findViewById(R.id.buyTV);
-        filledAmtTV =findViewById(R.id.filledAmmountTV);
+        filledAmtTV =findViewById(R.id.filledAmmountValueTV);
         average_priceValueTV =findViewById(R.id.average_priceValueTV);
         totalTV =findViewById(R.id.totalValueTV);
         feeTV =findViewById(R.id.feesValueTV);

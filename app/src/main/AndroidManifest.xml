@@ -119,7 +119,7 @@
             android:name=".captcha.VerifyCaptcha"
             android:screenOrientation="portrait" />
         <activity
-            android:name="invite_earn.InviteEarnScreen"
+            android:name="com.web.instafx.invite_earn.InviteEarnScreen"
             android:screenOrientation="portrait" />
         <activity
             android:name=".AccountScreen"
