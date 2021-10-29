@@ -1,26 +1,17 @@
 package com.web.instafx.order_details;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.app.dialogsnpickers.AlertDialogs;
 import com.app.dialogsnpickers.DialogCallBacks;
 import com.app.vollycommunicationlib.CallBack;
 import com.app.vollycommunicationlib.ServerHandler;
 import com.web.instafx.BaseActivity;
 import com.web.instafx.DefaultConstants;
-import com.web.instafx.GetKeysActivity;
 import com.web.instafx.R;
-import com.web.instafx.activity_log.ActivityLogScreens;
-import com.web.instafx.currency_preferences.CurrencyPreferencesScreen;
-import com.web.instafx.kyc.VerifyKycAccountDetailsScreen;
-import com.web.instafx.payment_option.PaymentOptionsScreen;
-import com.web.instafx.setting_profile.SettingProfileScreen;
-import com.web.instafx.two_factor_auth.TwoFactorAuthScreen;
 import com.web.instafx.utilpackage.UtilClass;
 
 import org.json.JSONObject;
@@ -29,8 +20,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-
-import invite_earn.InviteEarnScreen;
 
 public class OrderDetailsScreen extends BaseActivity {
     private ImageView backIC=null;
@@ -52,7 +41,7 @@ public class OrderDetailsScreen extends BaseActivity {
         currencySymbolTV =findViewById(R.id.currencySymbolTV);
         placeOnDateTV =findViewById(R.id.placedDateTimeTV);
         buyTV =findViewById(R.id.buyTV);
-        filledAmtTV =findViewById(R.id.filledAmmountTV);
+        filledAmtTV =findViewById(R.id.filledAmmountValueTV);
         average_priceValueTV =findViewById(R.id.average_priceValueTV);
         totalTV =findViewById(R.id.totalValueTV);
         feeTV =findViewById(R.id.feesValueTV);

@@ -66,7 +66,7 @@
                 android:orientation="horizontal">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="370dp"
+                    android:layout_height="270dp"
                     android:background="@color/orragne"/>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -118,19 +118,20 @@
                             android:textColor="@color/text_hint_color"
                             android:textSize="@dimen/text_size"
                             android:gravity="center" />
+
                         <fontspackageForTextView.Regular
                             android:id="@+id/totalReferredFriendValueTV"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
                             android:layout_centerInParent="true"
-                            android:layout_marginTop="5dp"
                             android:layout_marginStart="50dp"
+                            android:layout_marginTop="5dp"
                             android:layout_marginEnd="50dp"
+                            android:gravity="center"
                             android:text="0"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/large_title_text_size"
-                            android:gravity="center" />
+                            android:textSize="@dimen/large_title_text_size" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -173,6 +174,7 @@
                         android:layout_marginEnd="20dp"
                         android:layout_marginTop="20dp"
                         android:orientation="vertical"
+                       android:visibility="gone"
                         android:background="@drawable/round_rect_white_shape_drawable">
                         <fontspackageForTextView.Regular
                             android:id="@+id/totalCommissionRateTitelTV"
@@ -284,20 +286,20 @@
                      android:background="@color/purple_700"
                      android:weightSum="2">
                      <RelativeLayout
-                         android:id="@+id/commissionHistoryRL"
+                         android:id="@+id/level_referralsRL"
                          android:layout_width="0dp"
                          android:layout_height="match_parent"
                          android:orientation="vertical"
                          android:layout_weight="1">
 
                          <fontspackageForTextView.Regular
-                             android:id="@+id/commissionHistoryTV"
+                             android:id="@+id/level_referralsTV"
                              android:layout_width="match_parent"
                              android:layout_height="wrap_content"
                              android:layout_alignParentStart="true"
                              android:layout_centerInParent="true"
                              android:gravity="center"
-                             android:text="@string/commissions_history"
+                             android:text="@string/level_referrals"
                              android:textColor="@color/white"
                              android:textSize="@dimen/button_text_size" />
                          <View
@@ -310,21 +312,21 @@
 
                      </RelativeLayout>
                      <RelativeLayout
-                         android:id="@+id/referredFriendsRL"
+                         android:id="@+id/direct_referralsRL"
                          android:layout_width="0dp"
                          android:layout_height="match_parent"
                          android:orientation="vertical"
                          android:layout_weight="1">
 
                          <fontspackageForTextView.Regular
-                             android:id="@+id/referredFriendsTV"
+                             android:id="@+id/direct_referralsTV"
                              android:layout_width="match_parent"
                              android:layout_height="wrap_content"
                              android:layout_alignParentStart="true"
                              android:layout_centerInParent="true"
                              android:alpha="0.8"
                              android:gravity="center"
-                             android:text="@string/referred_friends"
+                             android:text="@string/direct_referrals"
                              android:textColor="@color/white"
                              android:textSize="@dimen/button_text_size" />
                          <View
@@ -349,7 +351,7 @@
                         android:id="@+id/referred_friends_layout"
                         android:layout_width="match_parent"
                         android:visibility="gone"
-                        android:layout_height="wrap_content">
+                        android:layout_height="match_parent">
                         <include layout="@layout/referred_friends_layout"/>
                     </LinearLayout>
 

@@ -294,7 +294,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
                         android:layout_centerInParent="true"
-                        android:layout_marginStart="20dp"
+                        android:layout_marginStart="5dp"
                         android:layout_marginTop="10dp"
                         android:text="@string/trade_details"
                         android:textColor="@color/black"
@@ -307,8 +307,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="bottom"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
                     android:layout_marginTop="0dp">
 
                     <LinearLayout
@@ -331,7 +331,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
-                            android:text="@string/filled"
+                            android:text="@string/volume_"
                             android:layout_weight="1"
                             android:gravity="center"
                             android:textColor="@color/hintTextColor"></fontspackageForTextView.Regular>
@@ -352,8 +352,8 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="20dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="10dp">
 
                 <LinearLayout

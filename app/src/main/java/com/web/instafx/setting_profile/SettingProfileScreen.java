@@ -28,7 +28,7 @@ import com.web.instafx.two_factor_auth.TwoFactorAuthScreen;
 
 import org.json.JSONObject;
 
-import invite_earn.InviteEarnScreen;
+import com.web.instafx.invite_earn.InviteEarnScreen;
 
 public class SettingProfileScreen extends BaseActivity {
     private ImageView backIC=null;
