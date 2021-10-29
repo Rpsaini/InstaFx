@@ -37,7 +37,7 @@
             android:ellipsize="end"
             android:textColor="@color/hintTextColor"
             android:textSize="@dimen/small_text_size"
-            android:gravity="start|center"  />
+            android:gravity="center"  />
         <fontspackageForTextView.Regular
             android:id="@+id/commissionTV"
             android:layout_width="0dp"
@@ -53,7 +53,7 @@
             android:textAllCaps="true"
             android:textColor="@color/hintTextColor"
             android:textSize="@dimen/text_size"
-            android:gravity="start|center"  />
+            android:gravity="center"  />
     </LinearLayout>
     <View
         android:layout_width="match_parent"

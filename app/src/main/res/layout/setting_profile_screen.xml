@@ -456,6 +456,7 @@
                 android:layout_marginEnd="0dp"
                 android:background="@drawable/setting_profile_rectangle_1"
                 android:orientation="vertical"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">

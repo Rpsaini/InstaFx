@@ -35,7 +35,7 @@
               android:textAllCaps="true"
               android:textColor="@color/hintTextColor"
               android:textSize="@dimen/text_size"
-              android:gravity="start|center"  />
+              android:gravity="center"  />
           <fontspackageForTextView.Regular
               android:id="@+id/commissionTV"
               android:layout_width="0dp"
@@ -48,7 +48,7 @@
               android:textAllCaps="true"
               android:textColor="@color/hintTextColor"
               android:textSize="@dimen/text_size"
-              android:gravity="start|center"  />
+              android:gravity="center"  />
 
 
       </LinearLayout>
@@ -60,7 +60,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/commissionHistoryRV"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="300dp"
         />
 
 </LinearLayout>

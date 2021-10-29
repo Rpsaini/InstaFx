@@ -354,6 +354,15 @@
                         android:layout_height="match_parent">
                         <include layout="@layout/referred_friends_layout"/>
                     </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="-40dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <include
+                            layout="@layout/no_data_found"/>
+
+                    </LinearLayout>
 
 
                 </LinearLayout>

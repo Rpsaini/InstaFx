@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/activity_log_screen.xml" value="0.1308876811594203" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/commission_history_row_items.xml" value="0.1308876811594203" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/commissions_history_layout.xml" value="0.33" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/fragment_fund.xml" value="0.1308876811594203" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/invite_earn_screen.xml" value="0.33" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/referred_friends_layout.xml" value="0.1308876811594203" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/setting_profile_screen.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>
