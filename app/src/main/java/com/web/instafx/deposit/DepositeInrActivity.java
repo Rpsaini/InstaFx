@@ -15,6 +15,7 @@ import com.app.dialogsnpickers.DialogCallBacks;
 import com.app.vollycommunicationlib.CallBack;
 import com.app.vollycommunicationlib.ServerHandler;
 import com.google.android.material.tabs.TabLayout;
+import com.razorpay.PaymentResultListener;
 import com.web.instafx.BaseActivity;
 import com.web.instafx.DefaultConstants;
 import com.web.instafx.R;
@@ -28,7 +29,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class DepositeInrActivity extends BaseActivity {
+public class DepositeInrActivity extends BaseActivity  implements PaymentResultListener  {
     private ViewPager viewPager;
     private TabLayout tabLayout;
 
@@ -79,6 +80,31 @@ public class DepositeInrActivity extends BaseActivity {
         });
 
     }
+    @SuppressWarnings("unused")
+    @Override
+    public void onPaymentSuccess(String razorpayPaymentID) {
 
+
+        System.out.println("Razor pay id==="+razorpayPaymentID);
+
+        DepositByRazorPayFrg frag1 = (DepositByRazorPayFrg)viewPager
+                .getAdapter()
+                .instantiateItem(viewPager, viewPager.getCurrentItem());
+
+        frag1.paymentSuccessFailure("1", razorpayPaymentID);
+    }
+
+
+    @SuppressWarnings("unused")
+    @Override
+    public void onPaymentError(int code, String response) {
+        System.out.println("Faild====" + code + "===" + response);
+        DepositByRazorPayFrg frag1 = (DepositByRazorPayFrg)viewPager
+                .getAdapter()
+                .instantiateItem(viewPager, viewPager.getCurrentItem());
+
+        frag1. paymentSuccessFailure("0","");
+
+    }
 
 }

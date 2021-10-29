@@ -29,6 +29,7 @@ import com.app.vollycommunicationlib.ServerHandler;
 import com.razorpay.Checkout;
 import com.razorpay.PaymentResultListener;
 import com.web.instafx.DefaultConstants;
+import com.web.instafx.LoginActivity;
 import com.web.instafx.R;
 import com.web.instafx.kyc.GoogleAuthentication;
 import com.web.instafx.utilpackage.UtilClass;
@@ -40,7 +41,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class DepositByRazorPayFrg extends Fragment implements PaymentResultListener {
+public class DepositByRazorPayFrg extends Fragment  {
 
 
     private View view;
@@ -75,7 +76,6 @@ public class DepositByRazorPayFrg extends Fragment implements PaymentResultListe
         Checkout.preload(getActivity());
         depositeInrActivity = (DepositeInrActivity) getActivity();
         init();
-        paymentSuccessFailure("1","0");
         return view;
     }
 
@@ -126,8 +126,6 @@ public class DepositByRazorPayFrg extends Fragment implements PaymentResultListe
         try {
 
             JSONObject data = new JSONObject(depositeInrActivity.savePreferences.reterivePreference(depositeInrActivity, DefaultConstants.login_detail).toString());
-
-
             JSONObject options = new JSONObject();
             options.put("name", data.getString("name"));
             options.put("description", ed_remarks.getText().toString());
@@ -140,32 +138,20 @@ public class DepositByRazorPayFrg extends Fragment implements PaymentResultListe
             JSONObject preFill = new JSONObject();
             preFill.put("email", data.getString("email"));
             preFill.put("contact", data.getString("mobile"));//9876543210
-            preFill.put("order_id", data.getString("email") + System.currentTimeMillis());//9876543210
+
             options.put("prefill", preFill);
 
             co.open(getActivity(), options);
-        } catch (Exception e) {
-            Toast.makeText(getActivity(), "Error in payment: " + e.getMessage(), Toast.LENGTH_SHORT)
-                    .show();
-            e.printStackTrace();
+        } catch (Exception e)
+        {
+
+            System.out.println("Payment==="+e.getMessage());
+
         }
     }
 
 
-    @SuppressWarnings("unused")
-    @Override
-    public void onPaymentSuccess(String razorpayPaymentID) {
-        paymentSuccessFailure("1", razorpayPaymentID);
-    }
 
-
-    @SuppressWarnings("unused")
-    @Override
-    public void onPaymentError(int code, String response) {
-        System.out.println("Faild====" + code + "===" + response);
-        paymentSuccessFailure("0","");
-
-    }
 
 
     private Dialog paymentDialog;
@@ -174,7 +160,7 @@ public class DepositByRazorPayFrg extends Fragment implements PaymentResultListe
     TextView btn_done;
     ProgressBar progressbar;
 
-    private void paymentSuccessFailure(String type, String paymentId)
+    public void paymentSuccessFailure(String type, String paymentId)
     {
         SimpleDialog simpleDialog = new SimpleDialog();
         paymentDialog = simpleDialog.simpleDailog(depositeInrActivity, R.layout.payment_success_failure, new ColorDrawable(getResources().getColor(R.color.translucent_black)), WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT, false);
@@ -231,35 +217,48 @@ public class DepositByRazorPayFrg extends Fragment implements PaymentResultListe
     {
         Map<String, String> map = new HashMap<>();
         map.put("token", depositeInrActivity.savePreferences.reterivePreference(getActivity(), DefaultConstants.token) + "");
-        map.put("amount", ed_amount.getText().toString());
-        map.put("type", type);
         map.put("paymentID", paymentID);
         map.put("DeviceToken", depositeInrActivity.getDeviceToken());
+        map.put("Version", depositeInrActivity.getAppVersion());
+        map.put("PlatForm", "Android");
+        map.put("Timestamp", System.currentTimeMillis()+"");
+        map.put("payment_id", paymentID+"");
+        map.put("amount", ed_amount.getText().toString());
+        map.put("status", type);
+        map.put("currency", "INR");
 
         Map<String, String> headerMap = new HashMap<>();
         headerMap.put("X-API-KEY", UtilClass.xApiKey);
         headerMap.put("Rtoken", depositeInrActivity.getNewRToken() + "");
 
+        System.out.println("Before to sendddd==="+map);
 
-        new ServerHandler().sendToServer(depositeInrActivity, depositeInrActivity.getApiUrl() + "proceed-withdraw", map, 1, headerMap, 20000, R.layout.progressbar, new CallBack() {
+
+        new ServerHandler().sendToServer(depositeInrActivity, depositeInrActivity.getApiUrl() + "fiat-payment-status", map, 1, headerMap, 20000, R.layout.progressbar, new CallBack() {
             @Override
-            public void getRespone(String dta, ArrayList<Object> respons) {
+            public void getRespone(String dta, ArrayList<Object> respons)
+            {
+                System.out.println("Response ==="+dta);
                 try {
-
                     JSONObject obj = new JSONObject(dta);
-                    if (obj.getBoolean("status"))
-                    {
-                      progress=0;
-                      img_rocketfly.setImageResource(R.drawable.check);
-                      payment_main_titile.setText(getResources().getString(R.string.success));
-                      payment_sub_title.setText(getResources().getString(R.string.depositdone));
+                    if (obj.getBoolean("status")) {
+                        progress = 0;
+                        img_rocketfly.setImageResource(R.drawable.check);
+                        payment_main_titile.setText(getResources().getString(R.string.success));
+                        payment_sub_title.setText(obj.getString("msg"));
+                        btn_done.setVisibility(View.VISIBLE);
+
+                        if (obj.has("token")) {
+                            depositeInrActivity.savePreferences.savePreferencesData(getActivity(), obj.getString("token"), DefaultConstants.token);
+                            depositeInrActivity.savePreferences.savePreferencesData(getActivity(), obj.getString("r_token"), DefaultConstants.r_token);
+                        }
                     }
                     else {
-
                         progress=0;
                         img_rocketfly.setImageResource(R.drawable.failed);
                         payment_main_titile.setText(getResources().getString(R.string.failed));
                         payment_sub_title.setText(getResources().getString(R.string.depositfailed));
+                        btn_done.setVisibility(View.VISIBLE);
                     }
                 } catch (Exception e) {
                     progress=0;
