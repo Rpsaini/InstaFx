@@ -17,7 +17,7 @@ import com.web.instafx.fragments.HomeFragment;
 import com.web.instafx.fragments.QuickBuyFragment;
 import com.web.instafx.orderpackage.MyOrderFragment;
 import com.web.instafx.search_currency.SearchCurrencyScreen;
-import com.web.instafx.setting_profile.SettingProfileScreen;
+import com.web.instafx.settings.SettingProfileScreen;
 import com.web.instafx.utilpackage.UtilClass;
 
 import org.json.JSONObject;

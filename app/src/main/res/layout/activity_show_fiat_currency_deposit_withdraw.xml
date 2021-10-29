@@ -8,16 +8,22 @@
     android:layout_height="match_parent">
 
 
+    <RelativeLayout
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:background="@color/purple_700"
+        >
     <ImageView
         android:id="@+id/img_back"
         android:padding="10dp"
         android:layout_width="40dp"
         android:layout_height="35dp"
         android:src="@drawable/arrow"
+        android:tint="@color/white"
         android:layout_centerVertical="true"
         android:paddingLeft="10dp">
     </ImageView>
-
+    </RelativeLayout>
 
     <fontspackageForTextView.BoldMedium
         android:textColor="@color/black"

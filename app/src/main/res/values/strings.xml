@@ -411,7 +411,7 @@
     <string name="resend_otp_">Resend OTP in : </string>
     <string name="seconds">Seconds</string>
 
-    
+
 
 
     <string name="cofirm_pwd_warning">Confirm password is not valid.</string>
@@ -430,6 +430,11 @@
 
     <string name="sell_txt">SELL</string>
    <string name="privacy_policy_warning">Please accept terms and privacy policy.</string>
+   <string name="transfer_in_progress">Transfer in Progress...!</string>
+   <string name="success">Success...!</string>
+   <string name="depositdone">Your Payment has been deposited successfully.</string>
+   <string name="depositfailed">Deposit Failed. Please try again.</string>
+   <string name="failed">Failed...!</string>
 
 
 </resources>

@@ -9,6 +9,7 @@
     tools:context=".fragments.HomeFragment">
 
     <RelativeLayout
+        android:background="@color/purple_700"
         android:layout_height="40dp"
         android:layout_width="match_parent">
         <ImageView
@@ -18,6 +19,7 @@
             android:layout_height="35dp"
             android:src="@drawable/arrow"
             android:layout_centerVertical="true"
+            android:tint="@color/white"
             android:paddingLeft="10dp">
         </ImageView>
 
@@ -26,7 +28,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/deposit"
-            android:textColor="@color/dark_blue"
+            android:textColor="@color/white"
             android:textSize="@dimen/action_bar_title_text_size"></fontspackageForTextView.Regular>
 
     </RelativeLayout>

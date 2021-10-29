@@ -29,6 +29,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e4a2020-da1d-419e-a422-0ca47c6282b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__pl_droidsonroids_gif_android_gif_drawable_1_2_22_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/InstaFX.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/InstaFX.app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/SettingLanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/settings/SettingLanguage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/deposit/DepositByRazorPayFrg.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/deposit/DepositByRazorPayFrg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/fragments/QuickBuyFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/fragments/QuickBuyFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/order_details/OrderDetailsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/order_details/OrderDetailsScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/pairdetailfragments/BuySellFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/security/PasscodeSetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/settings/PasscodeSetting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/security/SecuritySettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/settings/SecuritySettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/setting_profile/SettingProfileScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/settings/SettingProfileScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_deposite_inr.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_deposite_inr.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_pair_detail_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_pair_detail_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_security_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_security_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_show_fiat_currency_deposit_withdraw.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_show_fiat_currency_deposit_withdraw.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/quick_buy_sell.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/quick_buy_sell.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/setting_profile_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/setting_profile_screen.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,9 +89,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="layoutResourceFile" />
         <option value="Class" />
         <option value="resourceFile" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -78,11 +110,11 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="android.template.-1808726235">
-      <recent name="com.web.instafx.security" />
-    </key>
     <key name="android.template.1885313756">
       <recent name="com.web.instafx" />
+    </key>
+    <key name="android.template.-1808726235">
+      <recent name="com.web.instafx.security" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\InstaFx\app\src\main\res\drawable" />
@@ -184,30 +216,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1635416679437" />
-    <state x="263" y="118" key="AndroidCreateResourceFileDialog" timestamp="1635426528052">
+    <state x="263" y="118" key="AndroidCreateResourceFileDialog" timestamp="1635489281603">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="263" y="118" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1635426528052" />
+    <state x="263" y="118" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1635489281603" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1635233135538">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1635233135538" />
-    <state width="1323" height="390" key="GridCell.Tab.0.bottom" timestamp="1635416576220">
+    <state width="1306" height="384" key="GridCell.Tab.0.bottom" timestamp="1635494760617">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="390" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1635416576220" />
-    <state width="1323" height="390" key="GridCell.Tab.0.center" timestamp="1635416576220">
+    <state width="1306" height="384" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1635494760617" />
+    <state width="1306" height="384" key="GridCell.Tab.0.center" timestamp="1635494760617">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="390" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1635416576220" />
-    <state width="1323" height="390" key="GridCell.Tab.0.left" timestamp="1635416576220">
+    <state width="1306" height="384" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1635494760617" />
+    <state width="1306" height="384" key="GridCell.Tab.0.left" timestamp="1635494760617">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="390" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1635416576220" />
-    <state width="1323" height="390" key="GridCell.Tab.0.right" timestamp="1635416576220">
+    <state width="1306" height="384" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1635494760617" />
+    <state width="1306" height="384" key="GridCell.Tab.0.right" timestamp="1635494760617">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="390" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1635416576220" />
+    <state width="1306" height="384" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1635494760617" />
     <state x="129" y="55" key="MergeDialog" timestamp="1635255754448">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -216,18 +248,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="321" y="125" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1635255777782" />
-    <state x="499" y="141" key="chooseDestDirectoryDialog" timestamp="1635417508017">
+    <state x="499" y="141" key="chooseDestDirectoryDialog" timestamp="1635492315535">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="499" y="141" key="chooseDestDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1635417508017" />
+    <state x="499" y="141" key="chooseDestDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1635492315535" />
     <state x="492" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1635255728310">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="492" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1635255728310" />
-    <state x="389" y="97" width="587" height="534" key="find.popup" timestamp="1635254839594">
+    <state x="389" y="97" width="587" height="534" key="find.popup" timestamp="1635491436939">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="389" y="97" width="587" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1635254839594" />
+    <state x="389" y="97" width="587" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1635491436939" />
+    <state x="339" y="164" key="run.anything.popup" timestamp="1635490007900">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1635490007900" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1635248169986">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

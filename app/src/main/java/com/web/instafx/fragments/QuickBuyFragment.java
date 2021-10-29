@@ -188,17 +188,21 @@ public class QuickBuyFragment extends Fragment {
             TextView coinTV = buySellDialog.findViewById(R.id.coinTV);
             TextView txt_currencyname = buySellDialog.findViewById(R.id.txt_currencyname);
             TextView txt_longname = buySellDialog.findViewById(R.id.txt_longname);
+            TextView txt_liveprice = buySellDialog.findViewById(R.id.txt_liveprice);
             coinTV.setText(buy_fiat);
             ed_amount.setText(buyBalancefiat+"");
             buyBTCBT.setText("Buy "+mainPair);
             txt_currencyname.setText(mainPair);
             txt_longname.setText("("+data.getString("base_name")+")");
 
+            txt_liveprice.setText(buy_price+buy_fiat);
+
 
             bindingbuyLL.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v)
                 {
+                    txt_liveprice.setText(buy_price+buy_fiat);
                     str_side = "buy";
                     ed_amount.setHint("0");
                     ed_amount.setText(buyBalancefiat+"");
@@ -219,6 +223,7 @@ public class QuickBuyFragment extends Fragment {
             sell_LL.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    txt_liveprice.setText(sell_price+buy_fiat);
                     str_side = "sell";
                     ed_amount.setHint("0");
                     ed_amount.setText(sellBalanceMainPair+"");

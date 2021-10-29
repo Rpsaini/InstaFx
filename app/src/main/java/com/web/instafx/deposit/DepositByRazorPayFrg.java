@@ -1,33 +1,56 @@
 package com.web.instafx.deposit;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.app.dialogsnpickers.DialogCallBacks;
+import com.app.dialogsnpickers.SimpleDialog;
+import com.app.vollycommunicationlib.CallBack;
+import com.app.vollycommunicationlib.ServerHandler;
 import com.razorpay.Checkout;
 import com.razorpay.PaymentResultListener;
 import com.web.instafx.DefaultConstants;
 import com.web.instafx.R;
+import com.web.instafx.kyc.GoogleAuthentication;
+import com.web.instafx.utilpackage.UtilClass;
 
 import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class DepositByRazorPayFrg extends Fragment implements PaymentResultListener {
 
 
     private View view;
-    private EditText ed_remarks,ed_amount;
-    private  DepositeInrActivity depositeInrActivity;
+    private EditText ed_remarks, ed_amount;
+    private DepositeInrActivity depositeInrActivity;
+
+    private Dialog paymentWaitingDialog;
+    private RelativeLayout rr_payment_sucess, rr_rocket_fly;
+    private TextView txt_seconds;
+
     public DepositByRazorPayFrg() {
         // Required empty public constructor
     }
@@ -50,8 +73,9 @@ public class DepositByRazorPayFrg extends Fragment implements PaymentResultListe
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_deposit_by_razor_pay_frg, container, false);
         Checkout.preload(getActivity());
-        depositeInrActivity=(DepositeInrActivity)getActivity();
+        depositeInrActivity = (DepositeInrActivity) getActivity();
         init();
+        paymentSuccessFailure("1","0");
         return view;
     }
 
@@ -87,7 +111,10 @@ public class DepositByRazorPayFrg extends Fragment implements PaymentResultListe
 
 
     }
+
     public void startPayment() {
+
+
         /*
           You need to pass current activity in order to let Razorpay create CheckoutActivity
          */
@@ -98,26 +125,22 @@ public class DepositByRazorPayFrg extends Fragment implements PaymentResultListe
 
         try {
 
-            JSONObject data=new JSONObject(depositeInrActivity.savePreferences.reterivePreference(depositeInrActivity, DefaultConstants.login_detail).toString());
-
-
+            JSONObject data = new JSONObject(depositeInrActivity.savePreferences.reterivePreference(depositeInrActivity, DefaultConstants.login_detail).toString());
 
 
             JSONObject options = new JSONObject();
             options.put("name", data.getString("name"));
             options.put("description", ed_remarks.getText().toString());
-            options.put("send_sms_hash",true);
+            options.put("send_sms_hash", true);
             options.put("allow_rotation", true);
             //You can omit the image option to fetch the image from dashboard
             options.put("image", "https://s3.amazonaws.com/rzp-mobile/images/rzp.png");
             options.put("currency", "INR");
-            options.put("amount", Double.parseDouble(ed_amount.getText().toString())*100);
-
+            options.put("amount", Double.parseDouble(ed_amount.getText().toString()) * 100);
             JSONObject preFill = new JSONObject();
             preFill.put("email", data.getString("email"));
             preFill.put("contact", data.getString("mobile"));//9876543210
-            preFill.put("order_id", data.getString("email")+System.currentTimeMillis());//9876543210
-
+            preFill.put("order_id", data.getString("email") + System.currentTimeMillis());//9876543210
             options.put("prefill", preFill);
 
             co.open(getActivity(), options);
@@ -131,26 +154,122 @@ public class DepositByRazorPayFrg extends Fragment implements PaymentResultListe
 
     @SuppressWarnings("unused")
     @Override
-    public void onPaymentSuccess(String razorpayPaymentID)
-    {
-        try {
-            Toast.makeText(getActivity(), "Payment Successful: " + razorpayPaymentID, Toast.LENGTH_SHORT).show();
-        } catch (Exception e) {
-          System.out.println("Exception==="+e.getMessage());
-
-        }
+    public void onPaymentSuccess(String razorpayPaymentID) {
+        paymentSuccessFailure("1", razorpayPaymentID);
     }
 
 
     @SuppressWarnings("unused")
     @Override
     public void onPaymentError(int code, String response) {
-        try {
-            Toast.makeText(getActivity(), "Payment failed: " + code + " " + response, Toast.LENGTH_SHORT).show();
-        } catch (Exception e) {
-            System.out.println("Exception==="+e.getMessage());
-        }
+        System.out.println("Faild====" + code + "===" + response);
+        paymentSuccessFailure("0","");
+
     }
+
+
+    private Dialog paymentDialog;
+    ImageView img_rocketfly;
+    TextView payment_main_titile, payment_sub_title;
+    TextView btn_done;
+    ProgressBar progressbar;
+
+    private void paymentSuccessFailure(String type, String paymentId)
+    {
+        SimpleDialog simpleDialog = new SimpleDialog();
+        paymentDialog = simpleDialog.simpleDailog(depositeInrActivity, R.layout.payment_success_failure, new ColorDrawable(getResources().getColor(R.color.translucent_black)), WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT, false);
+        paymentDialog.setCancelable(true);
+
+
+        txt_seconds = paymentDialog.findViewById(R.id.txt_seconds);
+        img_rocketfly = paymentDialog.findViewById(R.id.img_rocketfly);
+        payment_main_titile = paymentDialog.findViewById(R.id.payment_main_titile);
+        payment_sub_title = paymentDialog.findViewById(R.id.payment_sub_title);
+        btn_done = paymentDialog.findViewById(R.id.btn_done);
+        progressbar = paymentDialog.findViewById(R.id.progressbar);
+
+        btn_done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                paymentDialog.dismiss();
+                depositeInrActivity.finish();
+            }
+        });
+
+        txt_seconds.setText("00:30");
+        changeLoader();
+        updatePaymentStatus(type,paymentId);
+    }
+
+
+    int progress = 30;
+    private void changeLoader() {
+        progress--;
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (progress > 0)
+                {
+                    if (progress <= 9) {
+                        txt_seconds.setText("00:0" + progress);
+                    } else {
+                        txt_seconds.setText("00:" + progress);
+                    }
+                    changeLoader();
+                }
+                else {
+                    txt_seconds.setText("00:00" );
+                    progressbar.setVisibility(View.GONE);
+                }
+            }
+        }, 1000);
+    }
+
+
+    private void updatePaymentStatus(String type,String paymentID)
+    {
+        Map<String, String> map = new HashMap<>();
+        map.put("token", depositeInrActivity.savePreferences.reterivePreference(getActivity(), DefaultConstants.token) + "");
+        map.put("amount", ed_amount.getText().toString());
+        map.put("type", type);
+        map.put("paymentID", paymentID);
+        map.put("DeviceToken", depositeInrActivity.getDeviceToken());
+
+        Map<String, String> headerMap = new HashMap<>();
+        headerMap.put("X-API-KEY", UtilClass.xApiKey);
+        headerMap.put("Rtoken", depositeInrActivity.getNewRToken() + "");
+
+
+        new ServerHandler().sendToServer(depositeInrActivity, depositeInrActivity.getApiUrl() + "proceed-withdraw", map, 1, headerMap, 20000, R.layout.progressbar, new CallBack() {
+            @Override
+            public void getRespone(String dta, ArrayList<Object> respons) {
+                try {
+
+                    JSONObject obj = new JSONObject(dta);
+                    if (obj.getBoolean("status"))
+                    {
+                      progress=0;
+                      img_rocketfly.setImageResource(R.drawable.check);
+                      payment_main_titile.setText(getResources().getString(R.string.success));
+                      payment_sub_title.setText(getResources().getString(R.string.depositdone));
+                    }
+                    else {
+
+                        progress=0;
+                        img_rocketfly.setImageResource(R.drawable.failed);
+                        payment_main_titile.setText(getResources().getString(R.string.failed));
+                        payment_sub_title.setText(getResources().getString(R.string.depositfailed));
+                    }
+                } catch (Exception e) {
+                    progress=0;
+                    e.printStackTrace();
+                }
+
+            }
+        });
+    }
+
 
 
 }

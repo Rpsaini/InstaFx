@@ -33,10 +33,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UnitedExchange"
         android:usesCleartextTraffic="true">
-        <activity android:name=".security.PasscodeSetting"></activity>
-        <activity android:name=".security.SecuritySettings" />
+        <activity android:name=".settings.PasscodeSetting"></activity>
+        <activity android:name=".settings.SecuritySettings" />
         <activity
-            android:name=".SettingLanguage"
+            android:name=".settings.SettingLanguage"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.WhatAShot"/>
 
@@ -77,7 +77,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.WhatAShot" />
         <activity
-            android:name=".setting_profile.SettingProfileScreen"
+            android:name=".settings.SettingProfileScreen"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.WhatAShot" />
         <activity
