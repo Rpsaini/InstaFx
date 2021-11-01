@@ -3,13 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/activity_account_screen.xml" value="0.12092391304347826" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/activity_deposite_inr.xml" value="0.18" />
         <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/activity_log_screen.xml" value="0.1308876811594203" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/activity_login2.xml" value="0.11730072463768115" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/activity_scan_qr_code.xml" value="0.11730072463768115" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/bank_detail_layout.xml" value="0.25" />
         <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/commission_history_row_items.xml" value="0.1308876811594203" />
         <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/commissions_history_layout.xml" value="0.33" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/fragment_deposit_by_razor_pay_frg.xml" value="0.22" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/fragment_deposit_i_n_r_frg.xml" value="0.22" />
         <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/fragment_fund.xml" value="0.1308876811594203" />
         <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/invite_earn_screen.xml" value="0.33" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/mobile_reg_dialog.xml" value="0.12092391304347826" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/mobile_reg_otp_dialog.xml" value="0.25" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/payment_upi_fragment.xml" value="0.22" />
         <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/referred_friends_layout.xml" value="0.1308876811594203" />
         <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/setting_profile_screen.xml" value="0.33" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/two_fact_auth_mobile_sms_dialog.xml" value="0.16" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/two_fact_auth_screen.xml" value="0.22" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/verify_complete_kyc_screen.xml" value="0.12092391304347826" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/verify_profile_details_screen.xml" value="0.31792376317923765" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/verify_submit_account_screen.xml" value="0.18" />
       </map>
     </option>
   </component>

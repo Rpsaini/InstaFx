@@ -233,6 +233,7 @@
     <string name="verify_kyc">VERIFY KYC</string>
     <string name="payment_opt">PAYMENT OPTIONS</string>
     <string name="two_factor_">TWO FACTOR AUTHENTICATION</string>
+    <string name="two_factor_txt">Two-Factor Authentication</string>
     <string name="activity_lo">ACTIVITY LOGS</string>
     <string name="mobile">Mobile</string>
     <string name="register_ph">Register Phone</string>
@@ -240,13 +241,13 @@
     <string name="fa">2FA</string>
     <string name="email_verif">Email Verification</string>
     <string name="your_phone_enter_otp_s">Enter OTP sent to your mobile</string>
-
+    <string name="next">Next</string>
     <string name="authenticat">Authenticate</string>
     <string name="dob_t_recei">Don\'t receive  OTP yet?\nResend in 60 Seconds</string>
     <string name="your_phone_">Your phone number is registered\nsuccessfully.</string>
     <string name="continuee">Continue</string>
     <string name="enter_otp_s">Enter OTP sent to your mobile</string>
-
+    <string name="enter_the_code_">Enter the code generated in your Authenticator App</string>
     <string name="select_your_preference">Select your preferred display currency for all market</string>
     <string name="reset">Reset</string>
     <string name="authenticat_app">Authenticator App</string>

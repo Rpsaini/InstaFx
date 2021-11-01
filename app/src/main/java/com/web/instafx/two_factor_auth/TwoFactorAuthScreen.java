@@ -13,7 +13,6 @@ public class TwoFactorAuthScreen extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.two_fact_auth_screen);
-//, m
         initView();
         setOnClickListener();
     }
