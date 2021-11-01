@@ -26,4 +26,22 @@ import java.util.ArrayList;
     public static String destinationtag="destinationtag";
     public static String currency_id="currency_id";
     public static  ArrayList<JSONObject> open_orders=new ArrayList<>(),orders_history=new ArrayList<>();
+
+
+
+
+
+
+    public  static  String amount="amount";
+    public  static  String google_sceret_code="google_secret_key";
+    public  static  String ga_active="ga_active";
+    public  static  String status="status";
+    public static String pinSetup="pinSetup";
+    public static String pinreset="pinreset";
+    public static String pinVerify="pinVerify";
+    public static String pinKey="pinKey";
+    public static String Pin="Pin";
+    public static  String isPasscodeActive="isPasscodeActive";
+    public static  String isLockScreen="";
+    public static String IsShowPin="IsShowPin";
 }

@@ -33,8 +33,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UnitedExchange"
         android:usesCleartextTraffic="true">
-        <activity android:name=".settings.PasscodeSetting"></activity>
-        <activity android:name=".settings.SecuritySettings" />
+        <activity android:name=".settings.PasscodeSetting"
+            android:screenOrientation="portrait"
+            ></activity>
+        <activity android:name=".settings.SecuritySettings"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".settings.SettingLanguage"
             android:screenOrientation="portrait"
@@ -167,15 +171,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait" /> <!-- <provider -->
-        <!-- android:name="androidx.core.content.FileProvider" -->
-        <!-- android:authorities="${applicationId}.provider" -->
-        <!-- android:exported="false" -->
-        <!-- android:grantUriPermissions="true"> -->
-        <!-- <meta-data -->
-        <!-- android:name="android.support.FILE_PROVIDER_PATHS" -->
-        <!-- android:resource="@xml/provider_paths" /> -->
-        <!-- </provider> -->
+            android:screenOrientation="portrait" />
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
@@ -193,6 +189,30 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+
+        <activity
+            android:name=".googleauthentication.Verification"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".googleauthentication.SetUpKey"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".googleauthentication.PasteBackupKey"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".googleauthentication.BackUpKey"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".googleauthentication.DownloadAndInstall"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".googleauthentication.EnableGoogleAuth"
+            android:screenOrientation="portrait" />
+
+
+
     </application>
 
 </manifest>

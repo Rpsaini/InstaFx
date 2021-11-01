@@ -89,7 +89,7 @@ public class SettingProfileScreen extends BaseActivity {
         findViewById(R.id.two_factor_layout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(SettingProfileScreen.this, TwoFactorAuthScreen.class);
+                Intent intent=new Intent(SettingProfileScreen.this, SecuritySettings.class);
                 startActivity(intent);
             }
         });

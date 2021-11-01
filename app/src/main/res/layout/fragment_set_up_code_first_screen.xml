@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/white_drawable"
+    >
+
+
+
+    <RelativeLayout
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        >
+        <fontspackageForTextView.BoldMedium
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="Setup Code"
+            ></fontspackageForTextView.BoldMedium>
+
+        <ImageView
+
+            android:padding="6dp"
+            android:id="@+id/back"
+            android:layout_marginLeft="10dp"
+            android:layout_height="25dp"
+            android:layout_width="25dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow"
+            android:tint="@color/black"
+            ></ImageView>
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <fontspackageForTextView.Regular
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/greyColor"
+            android:gravity="center|left"
+            android:text="You need to add Satwallet Account in Google Authenticator app and manually enter the 16-digit key. "
+            ></fontspackageForTextView.Regular>
+
+        <ImageView
+
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/first_screen_g_auth"
+            ></ImageView>
+
+        <fontspackageForTextView.Regular
+            android:visibility="gone"
+            android:id="@+id/txt_next"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/white"
+            android:text="Next"
+            android:gravity="center"
+            ></fontspackageForTextView.Regular>
+    </LinearLayout>
+
+
+</RelativeLayout>

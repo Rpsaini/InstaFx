@@ -436,6 +436,7 @@
    <string name="depositdone">Your Payment has been deposited successfully.</string>
    <string name="depositfailed">Deposit Failed. Please try again.</string>
    <string name="failed">Failed...!</string>
+   <string name="forgot_passcode">Forgot Passcode</string>
 
 
 </resources>

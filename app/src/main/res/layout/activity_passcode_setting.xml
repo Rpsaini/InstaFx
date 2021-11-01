@@ -7,7 +7,7 @@
     android:id="@+id/rr_setPin">
 
     <ImageView
-        android:id="@+id/iv_back"
+        android:id="@+id/img_back"
         android:layout_marginTop="5dp"
         android:padding="12dp"
         android:layout_width="40dp"
@@ -40,10 +40,11 @@
             android:id="@+id/createpin"
             android:gravity="center"
             android:textStyle="bold"
-             android:textSize="25dp"
+            android:textSize="25dp"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:text="@string/set_passcode"
+            android:textColor="@color/black"
             ></TextView>
         <TextView
             android:visibility="gone"
@@ -59,9 +60,10 @@
 
 
         <LinearLayout
-            android:layout_marginBottom="70dp"
+
             android:layout_gravity="center"
             android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
             android:layout_below="@+id/txt_securely"
             android:layout_width="300dp"
             android:orientation="horizontal"
@@ -75,9 +77,12 @@
                 android:layout_height="match_parent"
                 android:layout_width="70dp"
                 android:text=""
+                android:textSize="30dp"
                 android:gravity="center"
                 ></TextView>
+
             <TextView
+                android:textSize="30dp"
                 android:background="@drawable/edittext_border_drawable"
                 android:inputType="numberPassword"
                 android:id="@+id/txt_pintwo"
@@ -87,7 +92,9 @@
                 android:text=""
                 android:gravity="center"
                 ></TextView>
+
             <TextView
+                android:textSize="30dp"
                 android:background="@drawable/edittext_border_drawable"
                 android:inputType="numberPassword"
                 android:id="@+id/txt_pinthree"
@@ -97,7 +104,9 @@
                 android:text=""
                 android:gravity="center"
                 ></TextView>
+
             <TextView
+                android:textSize="30dp"
                 android:background="@drawable/edittext_border_drawable"
                 android:inputType="numberPassword"
                 android:id="@+id/txt_pinfour"
@@ -111,6 +120,19 @@
         </LinearLayout>
 
 
+
+        <TextView
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/forgotpasscode"
+            android:gravity="center"
+            android:textColor="@color/skyblue"
+            android:textSize="15dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/forgot_passcode"
+            ></TextView>
 
         <GridView
             android:verticalSpacing="10dp"
