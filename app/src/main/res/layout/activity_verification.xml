@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_20"
+    >
+
+    <RelativeLayout
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        >
+        <fontspackageForTextView.BoldMedium
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:text="Verification"
+            ></fontspackageForTextView.BoldMedium>
+
+        <ImageView
+            android:padding="6dp"
+            android:id="@+id/back"
+            android:layout_marginLeft="10dp"
+            android:layout_height="25dp"
+            android:layout_width="25dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow"
+            app:tint="@color/black"
+            ></ImageView>
+    </RelativeLayout>
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <fontspackageForTextView.Regular
+                android:id="@+id/txt_email"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="70dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center|left"
+                android:text="Code will send to an email "
+                ></fontspackageForTextView.Regular>
+
+
+
+
+
+            <RelativeLayout
+
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/white_drawable"
+                android:orientation="vertical"
+                >
+
+                <fontpackageforEdittext.Regular
+                    android:id="@+id/ed_emailverificationcode"
+                    android:background="@android:color/transparent"
+                    android:singleLine="true"
+                    android:paddingRight="50dp"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="14dp"
+                    android:textColor="@color/black"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:hint="Email Verification Code"
+                    ></fontpackageforEdittext.Regular>
+
+
+
+                <fontspackageForTextView.BoldExtra
+                    android:id="@+id/txt_send_email_code"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:gravity="center|left"
+                    android:text="Send Code"
+                    android:layout_marginRight="10dp"
+                    ></fontspackageForTextView.BoldExtra>
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+            <fontspackageForTextView.Regular
+
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:text="Enter Google Verification Code "
+                ></fontspackageForTextView.Regular>
+
+
+
+
+
+            <RelativeLayout
+
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/white_drawable"
+                android:orientation="vertical"
+                >
+
+                <fontpackageforEdittext.Regular
+                    android:id="@+id/ed_googlecode"
+                    android:background="@android:color/transparent"
+                    android:singleLine="true"
+                    android:paddingRight="50dp"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|left"
+                    android:paddingLeft="5dp"
+                    android:textColorHint="@color/black"
+                    android:hint="Google Authenticator Code"
+                    ></fontpackageforEdittext.Regular>
+
+
+
+                <fontspackageForTextView.BoldExtra
+                    android:id="@+id/txt_pastekey"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center|left"
+                    android:text="Paste Code"
+                    android:layout_marginRight="10dp"
+                    ></fontspackageForTextView.BoldExtra>
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+            <fontspackageForTextView.Regular
+                android:id="@+id/txt_submit"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/orrange_drawable"
+                android:text="Submit"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                ></fontspackageForTextView.Regular>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

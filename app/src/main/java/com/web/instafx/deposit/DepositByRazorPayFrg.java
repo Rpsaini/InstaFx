@@ -242,23 +242,23 @@ public class DepositByRazorPayFrg extends Fragment  {
                 try {
                     JSONObject obj = new JSONObject(dta);
                     if (obj.getBoolean("status")) {
-                        progress = 0;
-                        img_rocketfly.setImageResource(R.drawable.check);
-                        payment_main_titile.setText(getResources().getString(R.string.success));
-                        payment_sub_title.setText(obj.getString("msg"));
-                        btn_done.setVisibility(View.VISIBLE);
+                        if(type.equalsIgnoreCase("1"))
+                        {
+                            showErrorDialog(type,obj.getString("msg"));
+                        }
+                        else
+                        {
+                            showErrorDialog("0","");
+                        }
 
-                        if (obj.has("token")) {
+                        if (obj.has("token"))
+                        {
                             depositeInrActivity.savePreferences.savePreferencesData(getActivity(), obj.getString("token"), DefaultConstants.token);
                             depositeInrActivity.savePreferences.savePreferencesData(getActivity(), obj.getString("r_token"), DefaultConstants.r_token);
                         }
                     }
                     else {
-                        progress=0;
-                        img_rocketfly.setImageResource(R.drawable.failed);
-                        payment_main_titile.setText(getResources().getString(R.string.failed));
-                        payment_sub_title.setText(getResources().getString(R.string.depositfailed));
-                        btn_done.setVisibility(View.VISIBLE);
+                        showErrorDialog(type, "");
                     }
                 } catch (Exception e) {
                     progress=0;
@@ -267,6 +267,27 @@ public class DepositByRazorPayFrg extends Fragment  {
 
             }
         });
+    }
+
+    private void showErrorDialog(String code,String msg)
+    {
+        if(code.equalsIgnoreCase("1"))
+        {
+            progress = 0;
+            img_rocketfly.setImageResource(R.drawable.check);
+            payment_main_titile.setText(getResources().getString(R.string.success));
+            payment_sub_title.setText(msg);
+            btn_done.setVisibility(View.VISIBLE);
+        }
+        else if(code.equalsIgnoreCase("0"))
+           {
+            progress=0;
+            img_rocketfly.setImageResource(R.drawable.failed);
+            payment_main_titile.setText(getResources().getString(R.string.failed));
+            payment_sub_title.setText(getResources().getString(R.string.depositfailed));
+            btn_done.setVisibility(View.VISIBLE);
+           }
+
     }
 
 

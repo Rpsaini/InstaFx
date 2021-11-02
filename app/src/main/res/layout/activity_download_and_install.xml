@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/white_drawable"
+    >
+
+    <RelativeLayout
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        >
+        <fontspackageForTextView.BoldMedium
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="Download And Install"
+            ></fontspackageForTextView.BoldMedium>
+
+        <ImageView
+            android:padding="6dp"
+            android:id="@+id/back"
+            android:layout_marginLeft="10dp"
+            android:layout_height="25dp"
+            android:layout_width="25dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow"
+            android:tint="@color/black"
+            ></ImageView>
+    </RelativeLayout>
+
+
+
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:src="@drawable/download_icon"
+        android:layout_height="wrap_content"
+        ></ImageView>
+
+
+    <fontspackageForTextView.Regular
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/greyColor"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:text="To begin you need to install the Google Authenticator app on your phone "
+        ></fontspackageForTextView.Regular>
+
+
+
+
+
+    <LinearLayout
+
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/ic_gray_border"
+        android:orientation="vertical"
+        >
+
+        <fontspackageForTextView.BoldExtra
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="Google Authenticator For Android"
+            ></fontspackageForTextView.BoldExtra>
+
+
+        <fontspackageForTextView.Regular
+            android:id="@+id/txt_download"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/share_button_drawable"
+            android:text="Download"
+            android:gravity="center"
+            android:textColor="@color/white"
+            ></fontspackageForTextView.Regular>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

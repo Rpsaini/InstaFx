@@ -148,18 +148,21 @@ public class DepositINRFrg extends Fragment {
             obj.put("X-API-KEY", depositeInrActivity.getXapiKey());
             obj.put("Rtoken", depositeInrActivity.getNewRToken() + "");
 
-            System.out.println("Data==="+depositeInrActivity.getApiUrl() + "fiat-deposit");
+            System.out.println("Deposit==="+m);
 
-            new ServerHandler().sendToServer(depositeInrActivity, depositeInrActivity.getApiUrl() + "fiat-deposit", m, 0, obj, 20000, R.layout.progressbar, new CallBack() {
+
+            new ServerHandler().sendToServer(depositeInrActivity, depositeInrActivity.getApiUrl() + "app-fiat-deposit", m, 0, obj, 20000, R.layout.progressbar, new CallBack() {
                 @Override
                 public void getRespone(String dta, ArrayList<Object> respons) {
                     try {
+
+                        System.out.println("Data==="+depositeInrActivity.getApiUrl() + "app-fiat-deposit");
                         JSONObject jsonObject = new JSONObject(dta);
                         if (jsonObject.getBoolean("status")) {
                             depositeInrActivity.alertDialogs.alertDialog(depositeInrActivity, getResources().getString(R.string.Response), jsonObject.getString("msg"), getResources().getString(R.string.ok), "", new DialogCallBacks() {
                                 @Override
                                 public void getDialogEvent(String buttonPressed) {
-//                                    depositeInrActivity.finish();
+                                    depositeInrActivity.finish();
                                 }
                             });
                         } else {

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/white_drawable"
+    >
+
+    <RelativeLayout
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        >
+        <fontspackageForTextView.BoldMedium
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:text="Backup Key"
+            ></fontspackageForTextView.BoldMedium>
+
+        <ImageView
+            android:padding="6dp"
+            android:id="@+id/back"
+            android:layout_marginLeft="10dp"
+            android:layout_height="25dp"
+            android:layout_width="25dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow"
+            android:tint="@color/black"
+            ></ImageView>
+    </RelativeLayout>
+
+
+
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:src="@drawable/backup_key"
+        android:layout_height="wrap_content"
+        ></ImageView>
+
+
+    <fontspackageForTextView.Regular
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/greyColor"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:text="Please save this key on paper.This key will allow you to recover your Google Authenticator in case of phone loss. "
+        ></fontspackageForTextView.Regular>
+
+
+
+
+
+    <RelativeLayout
+
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/share_button_drawable"
+        android:orientation="vertical"
+        >
+
+        <fontspackageForTextView.Regular
+            android:id="@+id/txt_backupkey"
+            android:singleLine="true"
+            android:paddingRight="50dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="12dp"
+            android:gravity="center|left"
+            android:paddingLeft="5dp"
+            android:textColorHint="@color/white"
+            android:hint="Google Authenticator key"
+            ></fontspackageForTextView.Regular>
+
+
+
+        <fontspackageForTextView.BoldExtra
+            android:id="@+id/txt_copy"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:gravity="center|left"
+            android:text="Copy"
+            android:layout_marginRight="10dp"
+            ></fontspackageForTextView.BoldExtra>
+
+
+
+
+
+
+    </RelativeLayout>
+
+    <fontspackageForTextView.Regular
+        android:id="@+id/txt_next"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/round_corner_drawable"
+        android:text="Next"
+        android:gravity="center"
+        android:textColor="@color/white"
+        ></fontspackageForTextView.Regular>
+
+</LinearLayout>

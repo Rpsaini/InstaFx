@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/white_drawable"
+    >
+
+
+    <fontspackageForTextView.BoldMedium
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:text="Setup Code"
+        ></fontspackageForTextView.BoldMedium>
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <fontspackageForTextView.Regular
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:gravity="center|left"
+            android:text="You need to add Satwallet Account in Google Authenticator app and manually enter the 16-digit key. "
+            ></fontspackageForTextView.Regular>
+
+        <ImageView
+            android:layout_marginTop="30dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/fourth_g_auth_screen"
+            ></ImageView>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -93,7 +93,13 @@ public class BaseActivity extends AppCompatActivity {
 
         return "0";
     }
-
+    public String pasteClipboardData()
+    {
+        ClipboardManager manager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+        ClipData pasteData = manager.getPrimaryClip();
+        ClipData.Item item = pasteData.getItemAt(0);
+        return item.getText().toString();
+    }
     public String getDeviceToken()
     {
 //       return savePreferences.reterivePreference(BaseActivity.this, UtilClass.device_Token) + "";

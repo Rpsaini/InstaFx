@@ -3,6 +3,7 @@ package com.web.instafx.fiatdepositwithdraw;
 import androidx.annotation.Nullable;
 
 import android.content.Intent;
+import android.net.http.SslCertificate;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -30,6 +31,8 @@ import java.util.Map;
 public class WithdrawInrActivity extends BaseActivity {
     private EditText  txt_amount;
     private double availableBal=0;
+
+    private EditText txt_destinationtag;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,11 +47,28 @@ public class WithdrawInrActivity extends BaseActivity {
         ImageView txt_currency_image1 = findViewById(R.id.txt_currency_image1);
         TextView total_balance1 = findViewById(R.id.total_balance1);
 
+        TextView txt_label_destinationtag = findViewById(R.id.txt_label_destinationtag);
+         txt_destinationtag = findViewById(R.id.txt_destinationtag);
+
         availableBal = Double.parseDouble(getIntent().getStringExtra("balance"));
         total_balance1.setText(availableBal + "");
         showImage(getIntent().getStringExtra("icon"), txt_currency_image1);
 
         String symbol = getIntent().getStringExtra("currency");
+        if(symbol.equalsIgnoreCase("INR"))
+        {
+            txt_destinationtag.setVisibility(View.GONE);
+            txt_label_destinationtag.setVisibility(View.GONE);
+
+        }
+        else
+        {
+            txt_destinationtag.setVisibility(View.VISIBLE);
+            txt_label_destinationtag.setVisibility(View.VISIBLE);
+
+        }
+
+
         findViewById(R.id.img_back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,20 +105,33 @@ public class WithdrawInrActivity extends BaseActivity {
                     });
                     return;
                 }
+                if(txt_destinationtag.getVisibility()==View.VISIBLE)
+                {
+                    if(txt_destinationtag.getText().toString().length()<=0)
+                    {
+                        alertDialogs.alertDialog(WithdrawInrActivity.this, getResources().getString(R.string.Response), "Enter destination address", getResources().getString(R.string.ok), "", new DialogCallBacks() {
+                            @Override
+                            public void getDialogEvent(String buttonPressed) {
+                            }
+                        });
+                        return;
+                    }
+                }
+
 
                 if (getIntent().getBooleanExtra("isGoogleAuth", false))
                 {
                     Intent intent = new Intent(WithdrawInrActivity.this, GoogleAuthentication.class);
                     intent.putExtra("currency", symbol);
                     intent.putExtra("amount", txt_amount.getText().toString());
-                    intent.putExtra("destination_tag", "");
+                    intent.putExtra("destination_tag", txt_destinationtag.getText().toString());
                     intent.putExtra("address", "");
                     startActivityForResult(intent, 1002);
 
                 }
                 else
                 {
-                    withdrawWithoutAuth(symbol, txt_amount.getText().toString());
+                    withdrawWithoutAuth(symbol, txt_amount.getText().toString(),txt_destinationtag.getText().toString());
                 }
             }
         });
@@ -125,14 +158,15 @@ public class WithdrawInrActivity extends BaseActivity {
     }
 
 
-    private void withdrawWithoutAuth(String symbol, String amount)
+    private void withdrawWithoutAuth(String symbol, String amount,String address)
     {
         Map<String, String> map = new HashMap<>();
         map.put("token", savePreferences.reterivePreference(WithdrawInrActivity.this, DefaultConstants.token) + "");
         map.put("currency", symbol);
         map.put("amount", amount);
-        map.put("address", "");
+        map.put("address", address);
         map.put("DeviceToken", getDeviceToken());
+        System.out.println("Withdraw==="+map);
 
         Map<String, String> headerMap = new HashMap<>();
         headerMap.put("X-API-KEY", UtilClass.xApiKey);
@@ -145,6 +179,7 @@ public class WithdrawInrActivity extends BaseActivity {
                 try {
 
                     JSONObject obj = new JSONObject(dta);
+                    System.out.println("Return ==="+dta);
                     if (obj.getBoolean("status")) {
                         alertDialogs.alertDialog(WithdrawInrActivity.this, getResources().getString(R.string.Response), obj.getString("msg"), getResources().getString(R.string.ok), "", new DialogCallBacks() {
                             @Override

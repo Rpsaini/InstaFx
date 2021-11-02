@@ -115,7 +115,7 @@
                 android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Destination Tag"
+                android:text="Address"
                 android:textColor="@color/grey_dark"
                 android:textSize="12dp"
                 ></fontspackageForTextView.Regular>
@@ -128,7 +128,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:background="@drawable/edittext_drawable"
-                android:hint="Destination tag"
+                android:hint="Enter Address"
                 android:maxLines="1"
                 android:singleLine="true"
                 android:imeOptions="actionDone"

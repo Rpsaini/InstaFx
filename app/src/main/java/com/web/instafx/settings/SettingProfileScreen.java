@@ -89,7 +89,7 @@ public class SettingProfileScreen extends BaseActivity {
         findViewById(R.id.two_factor_layout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(SettingProfileScreen.this, TwoFactorAuthScreen.class);
+                Intent intent=new Intent(SettingProfileScreen.this, SecuritySettings.class);
                 startActivity(intent);
             }
         });
@@ -116,14 +116,17 @@ public class SettingProfileScreen extends BaseActivity {
         });
         findViewById(R.id.privacyPolicy_layout).setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View v) {
-                openExternalUrls(getApiUrl()+"privacy-policy");
+                openExternalUrls(getApiUrl()+"terms");
             }
         });
+
+
         findViewById(R.id.contactUs_layout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openExternalUrls(getApiUrl()+"contactus");
+                openExternalUrls(getApiUrl()+"contact-us");
             }
         });
 
