@@ -87,6 +87,7 @@
                     android:background="@drawable/rectangle_gray_shape_border"
                     android:orientation="horizontal">
                     <RelativeLayout
+                        android:id="@+id/rr_startdate"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight=".5">
@@ -116,13 +117,14 @@
                                  android:textColor="@color/text_black_color"
                                  android:textSize="12dp"
                                  tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></fontspackageForTextView.Regular>
+
                              <fontspackageForTextView.Regular
                                  android:id="@+id/from_dateTime_tv"
                                  android:layout_width="match_parent"
                                  android:layout_height="wrap_content"
                                  android:layout_marginStart="5dp"
                                  android:layout_marginEnd="5dp"
-                                 android:text="Aug 21,2021"
+                                 android:text="dd-mm-yyyy"
                                  android:textColor="@color/text_black_color"
                                  android:textSize="12dp"
                                  android:textStyle="bold"
@@ -137,6 +139,7 @@
 
                     </RelativeLayout>
                     <RelativeLayout
+                        android:id="@+id/rr_ldate"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight=".5">
@@ -172,7 +175,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="5dp"
                                 android:layout_marginEnd="5dp"
-                                android:text="Aug 21,2021"
+                                android:text="dd-mm-yyyy"
                                 android:textColor="@color/text_black_color"
                                 android:textSize="12dp"
                                 android:textStyle="bold"
@@ -185,7 +188,7 @@
 
                 </LinearLayout>
 
-            <fontspackageForTextView.Regular
+            <RadioButton
                 android:id="@+id/_exchange_trade_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -196,9 +199,9 @@
                 android:text="@string/_exchange_trade"
                 android:textColor="@color/text_black_color"
                 android:textSize="14dp"
-                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></fontspackageForTextView.Regular>
+                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></RadioButton>
 
-            <fontspackageForTextView.Regular
+            <RadioButton
                 android:id="@+id/_p2p_trade_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -209,8 +212,8 @@
                 android:text="@string/_p2p_trade"
                 android:textColor="@color/text_black_color"
                 android:textSize="14dp"
-                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></fontspackageForTextView.Regular>
-            <fontspackageForTextView.Regular
+                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></RadioButton>
+            <RadioButton
                 android:id="@+id/_stf_trade_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -221,56 +224,8 @@
                 android:text="@string/_stf_trade"
                 android:textColor="@color/text_black_color"
                 android:textSize="14dp"
-                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></fontspackageForTextView.Regular>
-            <fontspackageForTextView.Regular
-                android:id="@+id/_current_coin_balance_tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/_current_coin_balance"
-                android:textColor="@color/text_black_color"
-                android:textSize="14dp"
-                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></fontspackageForTextView.Regular>
-            <fontspackageForTextView.Regular
-                android:id="@+id/_deposit_withdrawals_Tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/_deposit_withdrawals"
-                android:textColor="@color/text_black_color"
-                android:textSize="14dp"
-                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></fontspackageForTextView.Regular>
-            <fontspackageForTextView.Regular
-                android:id="@+id/_ledger_history_Tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/_ledger_history"
-                android:textColor="@color/text_black_color"
-                android:textSize="14dp"
-                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></fontspackageForTextView.Regular>
+                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></RadioButton>
 
-            <fontspackageForTextView.Regular
-                android:id="@+id/_airdrops_and_Tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/_airdrops_and_"
-                android:textColor="@color/text_black_color"
-                android:textSize="14dp"
-                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></fontspackageForTextView.Regular>
             <fontspackageForTextView.Regular
                 android:id="@+id/request_trading_reportBT"
                 android:layout_width="match_parent"
