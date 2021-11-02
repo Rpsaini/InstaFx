@@ -20,6 +20,7 @@ import com.web.instafx.DefaultConstants;
 import com.web.instafx.R;
 import com.web.instafx.activity_log.ActivityLogScreens;
 import com.web.instafx.currency_preferences.CurrencyPreferencesScreen;
+import com.web.instafx.download_trade_reports.DownloadTradeReport;
 import com.web.instafx.kyc.VerifyKycAccountDetailsScreen;
 import com.web.instafx.payment_option.PaymentOptionsScreen;
 import com.web.instafx.two_factor_auth.TwoFactorAuthScreen;
@@ -70,6 +71,13 @@ public class SettingProfileScreen extends BaseActivity {
             @Override
             public void onClick(View v) {
                // showMobileRegDialog();
+            }
+        });
+        findViewById(R.id.download_trade_report_layout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(SettingProfileScreen.this, DownloadTradeReport.class);
+                startActivity(intent);
             }
         });
         findViewById(R.id.currency_pr_layout).setOnClickListener(new View.OnClickListener() {

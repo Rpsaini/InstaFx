@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/app_header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/header_bar_color"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backIC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="?attr/actionModeCloseDrawable"
+            app:tint="@color/white" />
+
+        <fontspackageForTextView.Regular
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/download_trade_report"
+            android:textColor="@color/white"
+            android:textSize="@dimen/action_bar_title_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_header_bar"
+        tools:ignore="SpeakableTextPresentCheck">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_bg_color">
+
+            <fontspackageForTextView.Regular
+                android:id="@+id/get_your_trading_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/get_your_trading_report_"
+                android:textColor="@color/text_black_color"
+                android:textSize="16dp"
+                android:fontFamily="@font/aeonik_regular"
+                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></fontspackageForTextView.Regular>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/line_color"></View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:weightSum="1"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rectangle_gray_shape_border"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5">
+                        <ImageView
+                            android:id="@+id/formDateIC"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/ic_baseline_calendar_today_24" />
+
+                         <LinearLayout
+                             android:orientation="vertical"
+                             android:layout_centerInParent="true"
+                             android:layout_toRightOf="@+id/formDateIC"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content">
+                             <fontspackageForTextView.Regular
+                                 android:id="@+id/from_date_tv"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:layout_centerInParent="true"
+                                 android:layout_marginStart="5dp"
+                                 android:layout_marginEnd="5dp"
+                                 android:text="@string/from_date_"
+                                 android:textColor="@color/text_black_color"
+                                 android:textSize="12dp"
+                                 tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></fontspackageForTextView.Regular>
+                             <fontspackageForTextView.Regular
+                                 android:id="@+id/from_dateTime_tv"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:layout_marginStart="5dp"
+                                 android:layout_marginEnd="5dp"
+                                 android:text="Aug 21,2021"
+                                 android:textColor="@color/text_black_color"
+                                 android:textSize="12dp"
+                                 android:textStyle="bold"
+                                 tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></fontspackageForTextView.Regular>
+
+                         </LinearLayout>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/line_color"
+                            android:layout_alignParentEnd="true"/>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5">
+                        <ImageView
+                            android:id="@+id/toDateIC"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/ic_baseline_calendar_today_24" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_centerInParent="true"
+                            android:layout_toRightOf="@+id/toDateIC"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <fontspackageForTextView.Regular
+                                android:id="@+id/to_date_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:text="@string/to_date_"
+                                android:textColor="@color/text_black_color"
+                                android:textSize="12dp"
+                                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></fontspackageForTextView.Regular>
+                            <fontspackageForTextView.Regular
+                                android:id="@+id/to_dateTime_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:text="Aug 21,2021"
+                                android:textColor="@color/text_black_color"
+                                android:textSize="12dp"
+                                android:textStyle="bold"
+                                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></fontspackageForTextView.Regular>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            <fontspackageForTextView.Regular
+                android:id="@+id/_exchange_trade_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/_exchange_trade"
+                android:textColor="@color/text_black_color"
+                android:textSize="14dp"
+                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></fontspackageForTextView.Regular>
+
+            <fontspackageForTextView.Regular
+                android:id="@+id/_p2p_trade_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/_p2p_trade"
+                android:textColor="@color/text_black_color"
+                android:textSize="14dp"
+                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></fontspackageForTextView.Regular>
+            <fontspackageForTextView.Regular
+                android:id="@+id/_stf_trade_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/_stf_trade"
+                android:textColor="@color/text_black_color"
+                android:textSize="14dp"
+                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></fontspackageForTextView.Regular>
+            <fontspackageForTextView.Regular
+                android:id="@+id/_current_coin_balance_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/_current_coin_balance"
+                android:textColor="@color/text_black_color"
+                android:textSize="14dp"
+                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></fontspackageForTextView.Regular>
+            <fontspackageForTextView.Regular
+                android:id="@+id/_deposit_withdrawals_Tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/_deposit_withdrawals"
+                android:textColor="@color/text_black_color"
+                android:textSize="14dp"
+                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></fontspackageForTextView.Regular>
+            <fontspackageForTextView.Regular
+                android:id="@+id/_ledger_history_Tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/_ledger_history"
+                android:textColor="@color/text_black_color"
+                android:textSize="14dp"
+                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></fontspackageForTextView.Regular>
+
+            <fontspackageForTextView.Regular
+                android:id="@+id/_airdrops_and_Tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/_airdrops_and_"
+                android:textColor="@color/text_black_color"
+                android:textSize="14dp"
+                tools:ignore="HardcodedText,RtlHardcoded,SpUsage"></fontspackageForTextView.Regular>
+            <fontspackageForTextView.Regular
+                android:id="@+id/request_trading_reportBT"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/orrange_drawable"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:text="@string/request_trading_report"
+                android:textColor="@color/white"
+                android:textSize="@dimen/button_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

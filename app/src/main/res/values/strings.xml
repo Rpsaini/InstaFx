@@ -439,5 +439,20 @@
    <string name="failed">Failed...!</string>
    <string name="forgot_passcode">Forgot Passcode</string>
 
+    <string name="download_trade_report">Download Trade Report</string>
+    <string name="get_your_trading_report_">Get your trading report on your email.</string>
+    <string name="from_date_">From Date</string>
+    <string name="to_date_">To Date</string>
+
+    <string name="the_report_will_">The report will include:</string>
+    <string name="_exchange_trade">-Exchange Trades</string>
+    <string name="_current_coin_balance">-Current Coin Balance</string>
+
+    <string name="_deposit_withdrawals">-Deposit and Withdrawals</string>
+    <string name="_p2p_trade">-P2P Trades</string>
+    <string name="_stf_trade">-STF Trades</string>
+    <string name="_ledger_history">-Ledger History</string>
+    <string name="_airdrops_and_">-Airdrops and other distribution</string>
+    <string name="request_trading_report">Request Trading Report</string>
 
 </resources>

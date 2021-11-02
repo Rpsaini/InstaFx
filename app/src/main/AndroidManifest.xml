@@ -33,6 +33,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UnitedExchange"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".download_trade_reports.DownloadTradeReport"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.WhatAShot" />
         <activity android:name=".settings.PasscodeSetting"
             android:screenOrientation="portrait"
             ></activity>
