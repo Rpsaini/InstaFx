@@ -27,13 +27,14 @@ import java.util.Map;
 public class DownloadTradeReport extends BaseActivity {
     private ImageView backIC;
     TextView from_dateTime_tv, to_dateTime_tv;
-    private String reportType="";
+    private String reportType = "exchange";
+    String startDate = "", endDate = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.download_trade_report);
-
+        initiateObj();
         initView();
         setOnClickListener();
     }
@@ -50,7 +51,7 @@ public class DownloadTradeReport extends BaseActivity {
         withdrawrepport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                reportType="1";
+                reportType = "exchange";
                 depositreport.setChecked(false);
                 orderHistory.setChecked(false);
             }
@@ -58,7 +59,7 @@ public class DownloadTradeReport extends BaseActivity {
         depositreport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                reportType="2";
+                reportType = "exchange";
                 withdrawrepport.setChecked(false);
                 orderHistory.setChecked(false);
             }
@@ -67,7 +68,7 @@ public class DownloadTradeReport extends BaseActivity {
         orderHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                reportType="3";
+                reportType = "exchange";
                 depositreport.setChecked(false);
                 withdrawrepport.setChecked(false);
             }
@@ -128,20 +129,29 @@ public class DownloadTradeReport extends BaseActivity {
                                           int monthOfYear, int dayOfMonth) {
 //bjb
                         try {
-                            if (monthOfYear < 10 && dayOfMonth < 10) {
 
+                            if (monthOfYear<=9) {
                                 fmonth = "0" + monthOfYear;
-                                month = Integer.parseInt(fmonth) + 1;
-                                fDate = "0" + dayOfMonth;
-                                String paddedMonth = String.format("%02d", month);
-                                datView.setText(fDate + "-" + paddedMonth + "-" + year);
-
                             } else {
+                                fmonth = monthOfYear + "";
+                            }
+                            if (dayOfMonth<=9) {
+                                fDate = "0" + dayOfMonth;
+                            } else {
+                                fDate = dayOfMonth + "";
+                            }
 
-                                fmonth = "0" + monthOfYear;
-                                month = Integer.parseInt(fmonth) + 1;
-                                String paddedMonth = String.format("%02d", month);
-                                datView.setText(dayOfMonth + "-" + paddedMonth + "-" + year);
+
+                            month = Integer.parseInt(fmonth) + 1;
+
+                            String paddedMonth = String.format("%02d", month);
+                            datView.setText(year + "-" + paddedMonth + "-" + fDate);
+
+
+                            if (datView.getTag().toString().equalsIgnoreCase("start")) {
+                                startDate = datView.getText().toString();
+                            } else {
+                                endDate = datView.getText().toString();
                             }
 
                         } catch (Exception e) {
@@ -160,8 +170,29 @@ public class DownloadTradeReport extends BaseActivity {
     }
 
 
-
     private void requestForReport() {
+
+        if(startDate.length()==0)
+        {
+            alertDialogs.alertDialog(DownloadTradeReport.this, getResources().getString(R.string.Response), "Select Start Date", getResources().getString(R.string.ok), "", new DialogCallBacks() {
+                @Override
+                public void getDialogEvent(String buttonPressed) {
+
+                }
+            });
+            return;
+        }
+        if(endDate.length()==0)
+        {
+
+            alertDialogs.alertDialog(DownloadTradeReport.this, getResources().getString(R.string.Response), "Select End Date", getResources().getString(R.string.ok), "", new DialogCallBacks() {
+                @Override
+                public void getDialogEvent(String buttonPressed) {
+
+                }
+            });
+            return;
+        }
 
         Map<String, String> m = new HashMap<>();
         m.put("token", savePreferences.reterivePreference(DownloadTradeReport.this, DefaultConstants.token) + "");
@@ -169,13 +200,18 @@ public class DownloadTradeReport extends BaseActivity {
         m.put("Version", getAppVersion() + "");
         m.put("PlatForm", "Android");
         m.put("Timestamp", System.currentTimeMillis() + "");
-        m.put("type", reportType);
+        m.put("type", "exchange");
+        m.put("start_date", startDate);
+        m.put("end_date", endDate);
         System.out.println("Data====" + m);
+
 
         Map<String, String> headerMap = new HashMap<>();
         headerMap.put("X-API-KEY", UtilClass.xApiKey);
+        headerMap.put("Rtoken",getNewRToken() + "");
 
-        new ServerHandler().sendToServer(DownloadTradeReport.this, getApiUrl() + "transactions-history", m, 0, headerMap, 20000, R.layout.progressbar, new CallBack() {
+        https://instfx.com/download-report
+        new ServerHandler().sendToServer(DownloadTradeReport.this, getApiUrl() + "download-report", m, 0, headerMap, 20000, R.layout.progressbar, new CallBack() {
             @Override
             public void getRespone(String dta, ArrayList<Object> respons) {
                 try {
@@ -201,7 +237,7 @@ public class DownloadTradeReport extends BaseActivity {
         });
     }
 
-    }
+}
 
 
 
