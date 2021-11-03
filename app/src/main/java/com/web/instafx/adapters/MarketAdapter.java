@@ -118,7 +118,7 @@ public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.MyViewHold
             if(change.contains("+"))
             {
                 holder.txt_price.setTextColor(ira1.getResources().getColor(R.color.greencolor));
-                holder.rr_change.setBackgroundResource(R.drawable.orrange_drawable);
+                holder.rr_change.setBackgroundResource(R.drawable.green_drawable);
                 holder.img_arrow.setRotation(270);
 
             }
@@ -134,7 +134,7 @@ public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.MyViewHold
             {
 
                 holder.txt_price.setTextColor(ira1.getResources().getColor(R.color.greencolor));
-                holder.rr_change.setBackgroundResource(R.drawable.orrange_drawable);
+                holder.rr_change.setBackgroundResource(R.drawable.green_drawable);
                 holder.img_arrow.setRotation(270);
 
             }
