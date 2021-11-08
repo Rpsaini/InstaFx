@@ -487,7 +487,7 @@ public class PairDetailView extends BaseActivity
                 buyTV.setTextColor(getResources().getColor(R.color.text_black_color));
 
                 sell_topBar.setVisibility(View.GONE);
-                sell_LL.setBackgroundResource(R.drawable.ic_disellect_buy_sell);
+               // sell_LL.setBackgroundResource(R.drawable.ic_disellect_buy_sell);
                 sellTV.setTextColor(getResources().getColor(R.color.text_hint_color));
 
                 buy_topBar.setVisibility(View.VISIBLE);
@@ -532,7 +532,7 @@ public class PairDetailView extends BaseActivity
                 buy_topBar.setVisibility(View.INVISIBLE);
                 sell_topBar.setVisibility(View.VISIBLE);
                 sell_topBar.setBackgroundResource(R.drawable.ic_select_sell);
-                bindingbuyLL.setBackgroundResource(R.drawable.ic_disellect_buy_sell);
+               // bindingbuyLL.setBackgroundResource(R.drawable.ic_disellect_buy_sell);
                 buyTV.setTextColor(getResources().getColor(R.color.text_hint_color));
                 lowest_priceTV.setText(getResources().getString(R.string.highest_pri));
                 lowest_priceTV.setTextColor(getResources().getColor(R.color.darkRed));

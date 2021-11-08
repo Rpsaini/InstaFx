@@ -129,6 +129,7 @@
                 ></fontspackageForTextView.Regular>
 
             <fontpackageforEdittext.Regular
+
                 android:id="@+id/txt_email"
                 android:paddingLeft="5dp"
                 android:layout_marginTop="5dp"
@@ -156,6 +157,7 @@
                 ></fontspackageForTextView.Regular>
 
             <fontpackageforEdittext.Regular
+                android:maxLength="10"
                 android:id="@+id/txt_phonenumber"
                 android:paddingLeft="5dp"
                 android:layout_marginTop="5dp"
@@ -319,6 +321,7 @@
                     android:textColor="@color/black"></fontspackageForTextView.Regular>
 
                 <fontspackageForTextView.Regular
+                    android:visibility="gone"
                     android:id="@+id/privacyPolicy"
                     android:textSize="10dp"
                     android:layout_width="match_parent"

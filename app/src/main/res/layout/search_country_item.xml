@@ -37,7 +37,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size"></fontspackageForTextView.Regular>
 
-            <CheckBox
+            <RadioButton
                 android:id="@+id/selectCountryCB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

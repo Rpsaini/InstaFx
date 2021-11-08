@@ -93,6 +93,16 @@ public class BaseActivity extends AppCompatActivity {
 
         return "0";
     }
+    public int getAppVersionCode() {
+        try {
+            PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+            return pInfo.versionCode;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return 0;
+    }
     public String pasteClipboardData()
     {
         ClipboardManager manager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);

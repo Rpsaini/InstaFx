@@ -8,6 +8,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,7 +28,7 @@ public class SelectCategorySubCategoryAdapter extends RecyclerView.Adapter<Selec
     private JSONArray datAr;
     private AppCompatActivity pActivity;
     private String imageUrl="";
-    private  CheckBox commonChekBox;
+    private  RadioButton commonChekBox;
     private String type="";
 
     public SelectCategorySubCategoryAdapter(JSONArray ar, AppCompatActivity paActiviity) {
@@ -46,7 +47,7 @@ public class SelectCategorySubCategoryAdapter extends RecyclerView.Adapter<Selec
         LinearLayout ll_best_restaurant;
         ImageView category_image;
         TextView category_name;
-        CheckBox chk_selectcategory;
+        RadioButton chk_selectcategory;
 
         public MyViewHolder(View view) {
             super(view);
@@ -56,8 +57,6 @@ public class SelectCategorySubCategoryAdapter extends RecyclerView.Adapter<Selec
             category_image = view.findViewById(R.id.category_image);
             category_name = view.findViewById(R.id.category_name);
             chk_selectcategory = view.findViewById(R.id.chk_selectcategory);
-
-
 
         }
     }

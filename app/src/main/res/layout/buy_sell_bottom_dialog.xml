@@ -27,21 +27,23 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/buy_topBar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_select_buy" />
+
 
             <fontspackageForTextView.Regular
                 android:id="@+id/buyTV"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="58dp"
                 android:gravity="center"
                 android:text="@string/buy"
                 android:textColor="@color/text_black_color"
                 android:textSize="@dimen/title_text_size"
                 android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/buy_topBar"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                app:srcCompat="@drawable/ic_select_buy" />
 
         </LinearLayout>
 
@@ -50,25 +52,28 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/ic_disellect_buy_sell"
+
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/sell_topBar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="invisible"
-                app:srcCompat="@drawable/ic_select_sell" />
+            <!--            android:background="@drawable/ic_disellect_buy_sell"-->
+
 
             <fontspackageForTextView.Regular
                 android:id="@+id/sellTV"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="58dp"
                 android:gravity="center"
                 android:text="@string/sell"
                 android:textColor="@color/text_hint_color"
                 android:textSize="@dimen/title_text_size"
                 android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/sell_topBar"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_select_sell" />
         </LinearLayout>
     </LinearLayout>
 

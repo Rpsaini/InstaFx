@@ -62,12 +62,12 @@
             ></fontspackageForTextView.Regular>
 
 
-        <CheckBox
+        <RadioButton
             android:layout_width="0dp"
             android:layout_weight=".12"
             android:layout_height="wrap_content"
             android:id="@+id/chk_selectcategory"
-            ></CheckBox>
+            ></RadioButton>
 
 
     </LinearLayout>

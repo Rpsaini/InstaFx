@@ -210,7 +210,7 @@ public class QuickBuyFragment extends Fragment {
                     buy_topBar.setBackgroundResource(R.drawable.ic_select_buy);
                     bindingbuyLL.setBackgroundColor(getResources().getColor(R.color.white));
                     sell_topBar.setVisibility(View.GONE);
-                    sell_LL.setBackgroundResource(R.drawable.ic_disellect_buy_sell);
+                   // sell_LL.setBackgroundResource(R.drawable.ic_disellect_buy_sell);
                     buy_topBar.setVisibility(View.VISIBLE);
                     bindingbuyLL.setVisibility(View.VISIBLE);
                     buyBTCBT.setBackgroundTintList(ContextCompat.getColorStateList(mainActivity, R.color.greencolor));
@@ -233,7 +233,7 @@ public class QuickBuyFragment extends Fragment {
                     buy_topBar.setVisibility(View.INVISIBLE);
                     sell_topBar.setVisibility(View.VISIBLE);
                     sell_topBar.setBackgroundResource(R.drawable.ic_select_sell);
-                    bindingbuyLL.setBackgroundResource(R.drawable.ic_disellect_buy_sell);
+                   // bindingbuyLL.setBackgroundResource(R.drawable.ic_disellect_buy_sell);
                     buyBTCBT.setText("Sell " + mainPair);
                     buyBTCBT.setBackgroundTintList(ContextCompat.getColorStateList(mainActivity, R.color.darkRed));
                     clearFields();

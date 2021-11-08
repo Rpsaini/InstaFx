@@ -9,6 +9,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,7 +35,7 @@ public class SelectStateAdapter extends RecyclerView.Adapter<SelectStateAdapter.
         TextView txt_Name;
         ImageView img_countryIcon;
         LinearLayout ll_market_order_list_row;
-        CheckBox selectCountryCB;
+        RadioButton selectCountryCB;
 
         public MyViewHolder(View view)
         {

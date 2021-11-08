@@ -12,15 +12,19 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/toolbar"
         android:background="@color/purple_700"
+        app:tabIndicatorColor="@color/green"
+
+        app:tabSelectedTextColor="@color/white"
         app:tabTextColor="@color/white_20"
         android:minHeight="?attr/actionBarSize"
-        app:tabTextAppearance="@style/MyPairedTabLayoutStyle"
-        app:tabSelectedTextColor="@color/white"
+        app:tabTextAppearance="@style/MyTabLayoutStyle"
         android:stateListAnimator="@null"
-        app:tabRippleColor="@color/greencolor"/>
+        app:tabRippleColor="@color/white"
+
+        />
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"

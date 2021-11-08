@@ -113,8 +113,40 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
         initView();
         setOnClickListener();
         actions();
+        setData();
     }
+    private void setData()
+    {
+        try {
 
+            firstNameET=findViewById(R.id.firstNameET);
+            middleNameET=findViewById(R.id.middleNameET);
+            lastNameET=findViewById(R.id.lastNameET);
+
+            JSONObject data=new JSONObject(savePreferences.reterivePreference(this, DefaultConstants.login_detail).toString());
+
+
+            String dataSTR=data.getString("name");
+            if(dataSTR.contains(" "))
+            {
+                String ar[]=dataSTR.split(" ");
+                firstNameET.setText(ar[0].trim());
+                lastNameET.setText(ar[1].trim());
+
+            }
+            else
+            {
+                firstNameET.setText(dataSTR);
+            }
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+
+    }
     private void initView() {
         backIc = findViewById(R.id.backIC);
         selectCountryTV=findViewById(R.id.select_countryTV);

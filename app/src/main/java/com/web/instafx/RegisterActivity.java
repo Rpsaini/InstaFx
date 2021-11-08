@@ -95,20 +95,20 @@ public class RegisterActivity extends BaseActivity {
     private void setHtmlCode()
     {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            termsandcondtion.setText(Html.fromHtml("Accept  <u><b>Term of Service</b></u> and ", Html.FROM_HTML_MODE_COMPACT));
+            termsandcondtion.setText(Html.fromHtml("By signup you agree to our <u><b>Term of Service</b></u> ", Html.FROM_HTML_MODE_COMPACT));
 
         } else {
-            termsandcondtion.setText(Html.fromHtml("Accept <u><b>Term of Service</b></u> and "));
+            termsandcondtion.setText(Html.fromHtml("By signup you agree to our <u><b>Term of Service</b></u> "));
 
         }
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            privacyPolicy.setText(Html.fromHtml("<u><b>Privacy Policy</b></u>", Html.FROM_HTML_MODE_COMPACT));
-
-        } else {
-            privacyPolicy.setText(Html.fromHtml("<u><b>Privacy Policy</b></u>"));
-
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+//            privacyPolicy.setText(Html.fromHtml("<u><b>Privacy Policy</b></u>", Html.FROM_HTML_MODE_COMPACT));
+//
+//        } else {
+//            privacyPolicy.setText(Html.fromHtml("<u><b>Privacy Policy</b></u>"));
+//
+//        }
     }
 
     private void actions()
@@ -154,6 +154,7 @@ public class RegisterActivity extends BaseActivity {
 
                         }
                     });
+                    return;
                 }
                 if (validationRule.checkEmptyString(txt_phonenumber) == 0) {
                     alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), getString(R.string.phone_warning), getString(R.string.ok), "", new DialogCallBacks() {
@@ -164,6 +165,16 @@ public class RegisterActivity extends BaseActivity {
                     });
                     return;
                 }
+
+                 if (txt_phonenumber.getText().length() <=9 ) {
+                     alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), getString(R.string.phone_not_valid), getString(R.string.ok), "", new DialogCallBacks() {
+                         @Override
+                         public void getDialogEvent(String buttonPressed) {
+
+                         }
+                     });
+                     return;
+                 }
                 if (validationRule.checkEmptyString(txt_username) == 0) {
                     alertDialogs.alertDialog(RegisterActivity.this, getResources().getString(R.string.app_name), getString(R.string.user_name_warning), getString(R.string.ok), "", new DialogCallBacks() {
                         @Override
@@ -215,7 +226,7 @@ public class RegisterActivity extends BaseActivity {
         termsandcondtion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openExternalUrl(getApiUrl() + "/terms-and-conditions");
+                openExternalUrl(getApiUrl() + "terms");
             }
         });
         privacyPolicy.setOnClickListener(new View.OnClickListener() {

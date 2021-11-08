@@ -126,28 +126,28 @@
     <string name="search_country">Search Country</string>
     <string name="country">Country</string>
     <string name="select_coun">Select country</string>
-    <string name="type">Type</string>
+    <string name="type">Type *</string>
     <string name="personal">personal</string>
     <string name="personal_in">Personal Info</string>
-    <string name="first_name_">First Name*</string>
+    <string name="first_name_">First Name *</string>
     <string name="middle_name">Middle Name</string>
-    <string name="date_of_bir">Date of birth (DD-MM-YYYY)*</string>
+    <string name="date_of_bir">Date of birth (DD-MM-YYYY) *</string>
     <string name="dd_mm_yyyy">DD-MM-YYYY</string>
-    <string name="address_">Address*</string>
+    <string name="address_">Address *</string>
     <string name="address">Address</string>
     <string name="enter_last_">Enter last name</string>
     <string name="enter_city_">Enter City</string>
-    <string name="state_">State*</string>
+    <string name="state_">State *</string>
     <string name="select_stat">Select state</string>
-    <string name="city_">City*</string>
+    <string name="city_">City *</string>
     <string name="select_city">Select city</string>
-    <string name="pin_zip_cod">Pin/Zip Code*</string>
+    <string name="pin_zip_cod">Pin/Zip Code *</string>
     <string name="enter_code">Enter code</string>
 
     <string name="pan_card">Pan card</string>
-    <string name="pan_number_">Pan Number*</string>
+    <string name="pan_number_">Pan Number *</string>
     <string name="enter_pan_n">Enter pan number</string>
-    <string name="re_enter_pa">Re-Enter Pan Number*</string>
+    <string name="re_enter_pa">Re-Enter Pan Number *</string>
     <string name="upload_pan_">Upload Pan Card</string>
     <string name="on_desktop_">On desktop, simple and drop your file in this field. Acceptable formats:JPEG or PNG</string>
 
@@ -159,7 +159,7 @@
     <string name="national_id">National ID</string>
     <string name="aadhaar_num">Aadhaar Number*</string>
     <string name="enter_aadha">Enter Aadhaar number</string>
-    <string name="re_enter_aa">Re-Enter Aadhaar Number*</string>
+    <string name="re_enter_aa">Re-Enter Aadhaar Number *</string>
     <string name="upload_fron">Upload Address Proof(Front)</string>
     <string name="upload_back">Upload Address Proof(Back)</string>
     <string name="upload_self">Upload selfie while holding your Aadhaar Card</string>
@@ -311,11 +311,11 @@
     <string name="bank_name_">Bank Name :</string>
 
     <string name="bank_ifsc">IFSC</string>
-    <string name="bank_account_number">Account Number</string>
-    <string name="bank_account_holdername">Account Holder Name</string>
+    <string name="bank_account_number">Account Number *</string>
+    <string name="bank_account_holdername">Account Holder Name *</string>
     <string name="bankpassbook">Bank Passbook/Cheque Book</string>
-    <string name="btranch_number">Branch Number</string>
-    <string name="confirm_acount">Confirm Account Number</string>
+    <string name="btranch_number">Branch Number *</string>
+    <string name="confirm_acount">Confirm Account Number *</string>
     <string name="scan_qr_code_to_login">Scan Qr Code To Login</string>
 
     <string name="click_for_captcha">Click for CAPTCHA</string>
@@ -419,6 +419,7 @@
     <string name="cofirm_pwd_warning">Confirm password is not valid.</string>
     <string name="password_warning">Enter The Email.</string>
     <string name="phone_warning">Enter The Phone Number.</string>
+    <string name="phone_not_valid">Enter Valid Phone Number.</string>
     <string name="valid_email_warning">Enter Valid Email.</string>
 
 

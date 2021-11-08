@@ -15,8 +15,9 @@ import com.web.instafx.R;
 public class VerifyKycAccountDetailsScreen extends BaseActivity {
 
     public static VerifyKycAccountDetailsScreen mVerifyKycAccountDetailsScreen;
-    private TextView submitVerifyBT=null,review_tv,done_tv;
+    private TextView submitVerifyBT=null,review_tv,done_tv,you_haven_t,please_comp;
     private ImageView backIC=null,submit_line,review_line,withdraw_ic,deposit_inr_ic;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +37,8 @@ public class VerifyKycAccountDetailsScreen extends BaseActivity {
         deposit_inr_ic=findViewById(R.id.deposit_inr_ic);
         withdraw_ic=findViewById(R.id.withdraw_ic);
         backIC=findViewById(R.id.backIC);
+        you_haven_t=findViewById(R.id.you_haven_tv);
+        please_comp=findViewById(R.id.please_comp);
     }
 
     @Override
@@ -46,6 +49,9 @@ public class VerifyKycAccountDetailsScreen extends BaseActivity {
 
     private void changeHeaderLayoutColorByKycStatus(){
       String kycStatus=  savePreferences.reterivePreference(mVerifyKycAccountDetailsScreen, DefaultConstants.kyc_status).toString();
+      kycStatus="0";
+
+
       if(kycStatus.equals("1")){
           submitVerifyBT.setVisibility(View.GONE);
           submit_line.setBackground(getResources().getDrawable(R.drawable.ic_select_line));
@@ -54,6 +60,8 @@ public class VerifyKycAccountDetailsScreen extends BaseActivity {
           done_tv.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_done, 0, 0);
           withdraw_ic.setImageDrawable(getResources().getDrawable(R.drawable.ic_group_428));
           deposit_inr_ic.setImageDrawable(getResources().getDrawable(R.drawable.ic_group_428));
+          you_haven_t.setText("We've received your submitted document and other information for KYC. We'll review your information and if all is in order will approve your identity. Otherwise we will request it again.");
+          please_comp.setText("KYC is under review");
 
       }
       else if(kycStatus.equals("2")){
@@ -66,6 +74,8 @@ public class VerifyKycAccountDetailsScreen extends BaseActivity {
 
           withdraw_ic.setImageDrawable(getResources().getDrawable(R.drawable.ic_group_429));
           deposit_inr_ic.setImageDrawable(getResources().getDrawable(R.drawable.ic_group_429));
+          you_haven_t.setText("Your KYC has been approved");
+          please_comp.setText("Approved");
 
       }
       else if(kycStatus.equals("3")){
@@ -76,6 +86,11 @@ public class VerifyKycAccountDetailsScreen extends BaseActivity {
           done_tv.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_done, 0, 0);
           withdraw_ic.setImageDrawable(getResources().getDrawable(R.drawable.ic_group_428));
           deposit_inr_ic.setImageDrawable(getResources().getDrawable(R.drawable.ic_group_428));
+
+
+          you_haven_t.setText("We're having difficulties verifying your identity. The information you had submitted was unfortunately rejected ");
+          please_comp.setText("Rejected");
+
       }
     }
     private void setOnClickListener(){

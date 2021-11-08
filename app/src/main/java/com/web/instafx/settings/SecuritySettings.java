@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Switch;
 
 import com.web.instafx.BaseActivity;
@@ -15,6 +16,7 @@ import com.web.instafx.R;
 public class SecuritySettings extends BaseActivity {
     String isPasscodeActive;
     Switch switch_apppasscode;
+    private ImageView img_back;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -27,6 +29,7 @@ public class SecuritySettings extends BaseActivity {
     private void init()
     {
          switch_apppasscode =findViewById(R.id.switch_apppasscode);
+         img_back =findViewById(R.id.img_back);
          isPasscodeActive=savePreferences.reterivePreference(SecuritySettings.this, DefaultConstants.isPasscodeActive).toString();
 
          System.out.println("ispasscode==="+isPasscodeActive);
@@ -62,6 +65,13 @@ public class SecuritySettings extends BaseActivity {
                     startActivityForResult(intent, 1001);
                 }
 
+            }
+        });
+
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

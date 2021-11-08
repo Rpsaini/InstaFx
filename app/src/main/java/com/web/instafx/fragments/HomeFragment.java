@@ -181,6 +181,8 @@ public class HomeFragment extends Fragment {
                                     });
                                  }
                                 tablayout();
+
+                                isNewVersionFound(jsonObject.getString("app_version"));
                             }
                             catch (Exception e) {
                                 e.printStackTrace();
@@ -289,6 +291,26 @@ public class HomeFragment extends Fragment {
         super.onResume();
         getDataOfPairs();
     }
+
+
+    private void isNewVersionFound(String appversion)
+    {
+
+        if (mainActivity.getAppVersionCode()!=Double.parseDouble(appversion))
+        {
+            mainActivity.alertDialogs.alertDialog(mainActivity, getResources().getString(R.string.app_name), "Please update app to new version.", "Ok", "", new DialogCallBacks() {
+                @Override
+                public void getDialogEvent(String buttonPressed)
+                {
+                    if(buttonPressed.equalsIgnoreCase("ok")) {
+                        mainActivity.launchPlayStore(mainActivity, mainActivity.getPackageName());
+                    }
+                }
+            });
+        }
+    }
+
+
 
 
 }
