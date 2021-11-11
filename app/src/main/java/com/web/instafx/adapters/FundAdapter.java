@@ -22,6 +22,7 @@ import com.web.instafx.FundHistoryActivity;
 import com.web.instafx.MainActivity;
 import com.web.instafx.R;
 import com.web.instafx.fragments.FundFragment;
+import com.web.instafx.fund_withdrawal.P2PTransfer;
 import com.web.instafx.fund_withdrawal.WithdrawalFundScreen;
 import com.web.instafx.kyc.BalanceFulledetails;
 //import com.web.whatashot.kyc.PersonalDetails;
@@ -154,6 +155,7 @@ public class FundAdapter extends RecyclerView.Adapter<FundAdapter.MyViewHolder> 
         View view = inflater.inflate(R.layout.fund_item_popup_menu, null);
         LinearLayout depositLLItem = view.findViewById(R.id.depositLL);
         LinearLayout withdrawalLLItem = view.findViewById(R.id.withdrawalLL);
+        LinearLayout p2ptransfer = view.findViewById(R.id.p2ptransfer);
 
         popupWindow.setFocusable(true);
         popupWindow.setWidth(WindowManager.LayoutParams.WRAP_CONTENT);
@@ -175,6 +177,16 @@ public class FundAdapter extends RecyclerView.Adapter<FundAdapter.MyViewHolder> 
             public void onClick(View v)
             {
                 Intent intent = new Intent(ira1, BalanceFulledetails.class);
+                intent.putExtra("data", data);
+                ira1.startActivity(intent);
+                popupWindow.dismiss();
+            }
+        });
+
+        p2ptransfer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ira1, P2PTransfer.class);
                 intent.putExtra("data", data);
                 ira1.startActivity(intent);
                 popupWindow.dismiss();

@@ -31,7 +31,6 @@ public class SecuritySettings extends BaseActivity {
          switch_apppasscode =findViewById(R.id.switch_apppasscode);
          img_back =findViewById(R.id.img_back);
          isPasscodeActive=savePreferences.reterivePreference(SecuritySettings.this, DefaultConstants.isPasscodeActive).toString();
-
          if(isPasscodeActive.length()==0)
          {
              isPasscodeActive="off";
@@ -100,6 +99,9 @@ public class SecuritySettings extends BaseActivity {
 
                 }
             }
+
+
+
         }
     }
 }

@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -43,6 +44,7 @@ public class PasscodeSetting extends BaseActivity {
     private RelativeLayout rr_setPin;
     private String MemberId = "";
     private String pinType = "";
+    TextView forgotpasscode;
     private FingerprintManager.AuthenticationCallback authenticationCallback;
 
 
@@ -54,11 +56,14 @@ public class PasscodeSetting extends BaseActivity {
         getSupportActionBar().hide();
         createpin = findViewById(R.id.createpin);
         rr_setPin = findViewById(R.id.rr_setPin);
+        forgotpasscode = findViewById(R.id.forgotpasscode);
 
 
         pinType = getIntent().getStringExtra(DefaultConstants.callfrom).toLowerCase();
         initiateObj();
         init();
+
+
 
     }
 
@@ -72,16 +77,21 @@ public class PasscodeSetting extends BaseActivity {
         keysTextAr.add((TextView) findViewById(R.id.txt_pintwo));
         keysTextAr.add((TextView) findViewById(R.id.txt_pinthree));
         keysTextAr.add((TextView) findViewById(R.id.txt_pinfour));
+        ImageView back =findViewById(R.id.img_back);
 
         for (int x = 0; x < keysTextAr.size(); x++) {
             keysTextAr.get(x).setText("");
         }
-        findViewById(R.id.img_back).setOnClickListener(new View.OnClickListener() {
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
+        if(pinType.equalsIgnoreCase(DefaultConstants.pinVerify))
+        {
+            back.setVisibility(View.GONE);
+        }
 
 
         GridView gridView = findViewById(R.id.grid_restaurantimages);
@@ -97,7 +107,6 @@ public class PasscodeSetting extends BaseActivity {
             gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                     try {
-
                         if (position == 10) {
                             if (itemCount > 0) {
                                 itemCount--;
@@ -248,21 +257,34 @@ public class PasscodeSetting extends BaseActivity {
                         }
 
 
-                        if (itemCount == 4) {
+                        if(itemCount == 4)
+                        {
                             oldPin = keysTextAr.get(0).getText().toString() + keysTextAr.get(1).getText().toString() + keysTextAr.get(2).getText().toString() + keysTextAr.get(3).getText().toString();
+                            String savedPin=savePreferences.reterivePreference(PasscodeSetting.this,DefaultConstants.pinKey).toString();
                             new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    itemCount = 0;
-                                    for (int x = 0; x < keysTextAr.size(); x++) {
-                                        keysTextAr.get(x).setText("");
-                                    }
-//                                    veriFyPin();
-
-                                }
-                            }, 300);
-
-                        }
+                                    @Override
+                                    public void run() {
+                                        itemCount = 0;
+                                        for (int x = 0; x < keysTextAr.size(); x++) {
+                                            keysTextAr.get(x).setText("");
+                                        }
+                                        if(oldPin.equalsIgnoreCase(savedPin))
+                                        {
+                                            finish();
+                                        }
+                                        else
+                                        {
+                                            forgotpasscode.setVisibility(View.VISIBLE);
+                                            forgotpasscode.setOnClickListener(new View.OnClickListener() {
+                                                @Override
+                                                public void onClick(View v) {
+                                                    logout();
+                                                }
+                                            });
+                                        }
+                                       }
+                                }, 300);
+                               }
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -272,7 +294,19 @@ public class PasscodeSetting extends BaseActivity {
         }
     }
 
-//    private void sendToServer()
+    @Override
+    public void onBackPressed()
+    {
+        if(!pinType.equalsIgnoreCase(DefaultConstants.pinVerify)) {
+            super.onBackPressed();
+        }
+    }
+
+
+
+
+
+    //    private void sendToServer()
 //    {
 //        Map<String, String> m = new LinkedHashMap<>();
 //        m.put("MemberId", MemberId);

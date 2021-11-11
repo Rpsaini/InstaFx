@@ -1,10 +1,14 @@
 package com.web.instafx;
 
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -17,6 +21,8 @@ import com.web.instafx.fragments.HomeFragment;
 import com.web.instafx.fragments.QuickBuyFragment;
 import com.web.instafx.orderpackage.MyOrderFragment;
 import com.web.instafx.search_currency.SearchCurrencyScreen;
+import com.web.instafx.settings.PasscodeSetting;
+import com.web.instafx.settings.SecuritySettings;
 import com.web.instafx.settings.SettingProfileScreen;
 import com.web.instafx.utilpackage.UtilClass;
 
@@ -37,6 +43,7 @@ public class MainActivity extends BaseActivity
         MarketFragment();
         bottomNavigation();
         init();
+        showPasscode();
         savePreferences.savePreferencesData(MainActivity.this,"true", UtilClass.isLogin);
       }
 
@@ -150,18 +157,21 @@ public class MainActivity extends BaseActivity
        final TextView txt_quicknuy =findViewById(R.id.txt_quicknuy);
        if(txt_market!=null)
         {
+
            txt_market.setTextColor(getResources().getColor(R.color.black));
-           txt_order.setTextColor(getResources().getColor(R.color.grey_dark));
-           txt_fund.setTextColor(getResources().getColor(R.color.grey_dark));
-            txt_quicknuy.setTextColor(getResources().getColor(R.color.grey_dark));
+            txt_order.setAlpha(.5f);
+            txt_fund.setAlpha(.5f);
+            txt_quicknuy.setAlpha(.5f);
+
+
 
            txt_market.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
-                   txt_market.setTextColor(getResources().getColor(R.color.black));
-                   txt_order.setTextColor(getResources().getColor(R.color.grey_dark));
-                   txt_fund.setTextColor(getResources().getColor(R.color.grey_dark));
-                   txt_quicknuy.setTextColor(getResources().getColor(R.color.grey_dark));
+                   txt_market.setAlpha(1f);
+                   txt_order.setAlpha(.5f);
+                   txt_fund.setAlpha(.5f);
+                   txt_quicknuy.setAlpha(.5f);
                    MarketFragment();
                }
            });
@@ -169,10 +179,10 @@ public class MainActivity extends BaseActivity
            txt_order.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
-                   txt_market.setTextColor(getResources().getColor(R.color.grey_dark));
-                   txt_order.setTextColor(getResources().getColor(R.color.black));
-                   txt_fund.setTextColor(getResources().getColor(R.color.grey_dark));
-                   txt_quicknuy.setTextColor(getResources().getColor(R.color.grey_dark));
+                   txt_market.setAlpha(.5f);
+                   txt_order.setAlpha(1f);
+                   txt_fund.setAlpha(.5f);
+                   txt_quicknuy.setAlpha(.5f);
                    orderFragment();
                }
            });
@@ -180,10 +190,10 @@ public class MainActivity extends BaseActivity
            txt_fund.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
-                   txt_market.setTextColor(getResources().getColor(R.color.grey_dark));
-                   txt_order.setTextColor(getResources().getColor(R.color.grey_dark));
-                   txt_fund.setTextColor(getResources().getColor(R.color.black));
-                   txt_quicknuy.setTextColor(getResources().getColor(R.color.grey_dark));
+                   txt_market.setAlpha(.5f);
+                   txt_order.setAlpha(.5f);
+                   txt_fund.setAlpha(1f);
+                   txt_quicknuy.setAlpha(.5f);
                    fundFragment();
                }
            });
@@ -191,10 +201,10 @@ public class MainActivity extends BaseActivity
             txt_quicknuy.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    txt_market.setTextColor(getResources().getColor(R.color.grey_dark));
-                    txt_order.setTextColor(getResources().getColor(R.color.grey_dark));
-                    txt_fund.setTextColor(getResources().getColor(R.color.grey_dark));
-                    txt_quicknuy.setTextColor(getResources().getColor(R.color.black));
+                    txt_market.setAlpha(.5f);
+                    txt_order.setAlpha(.5f);
+                    txt_fund.setAlpha(.5f);
+                    txt_quicknuy.setAlpha(1f);
                     loadQuickBuyFragment();
                 }
             });
@@ -255,7 +265,25 @@ public class MainActivity extends BaseActivity
             }
 
         }
+    }
 
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+    }
+
+    private void showPasscode()
+    {
+        String isPasscode=savePreferences.reterivePreference(MainActivity.this,DefaultConstants.isPasscodeActive).toString();
+        System.out.println("IS passcode==="+isPasscode);
+        if(isPasscode.equalsIgnoreCase("on"))
+        {
+
+            Intent intent = new Intent(MainActivity.this, PasscodeSetting.class);
+            intent.putExtra(DefaultConstants.callfrom, DefaultConstants.pinVerify);
+            startActivityForResult(intent, 1001);
+        }
     }
 }

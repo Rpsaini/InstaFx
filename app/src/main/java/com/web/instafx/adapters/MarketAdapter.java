@@ -112,6 +112,7 @@ public class MarketAdapter extends RecyclerView.Adapter<MarketAdapter.MyViewHold
             holder.txt_price.setText(object.getString("price"));
 
             holder.txt_volume.setText(object.getString("volume"));
+
             holder.txt_change.setText(change);
 
 

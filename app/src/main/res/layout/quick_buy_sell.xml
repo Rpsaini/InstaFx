@@ -452,7 +452,7 @@
                                    app:layout_constraintTop_toBottomOf="@+id/imageView5"
                                    app:srcCompat="@drawable/ic_vector_29" />
 
-                               <fontspackageForTextView.Regular
+                               <fontspackageForTextView.BoldExtra
                                    android:id="@+id/tv100"
                                    android:layout_width="wrap_content"
                                    android:layout_height="wrap_content"
@@ -465,7 +465,7 @@
                                    app:layout_constraintEnd_toEndOf="parent"
                                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-                               <fontspackageForTextView.Regular
+                               <fontspackageForTextView.BoldExtra
                                    android:id="@+id/tv75"
                                    android:layout_width="wrap_content"
                                    android:layout_height="wrap_content"
@@ -478,7 +478,7 @@
                                    app:layout_constraintEnd_toStartOf="@+id/tv100"
                                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-                               <fontspackageForTextView.Regular
+                               <fontspackageForTextView.BoldExtra
                                    android:id="@+id/tv50"
                                    android:layout_width="wrap_content"
                                    android:layout_height="wrap_content"
@@ -491,7 +491,7 @@
                                    app:layout_constraintEnd_toStartOf="@+id/tv75"
                                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-                               <fontspackageForTextView.Regular
+                               <fontspackageForTextView.BoldExtra
                                    android:id="@+id/tv25"
                                    android:layout_width="wrap_content"
                                    android:layout_height="wrap_content"

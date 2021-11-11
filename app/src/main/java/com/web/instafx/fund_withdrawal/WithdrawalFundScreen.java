@@ -39,6 +39,7 @@ public class WithdrawalFundScreen extends BaseActivity {
     private TextView desTagTV;
     private RelativeLayout desTagRL;
     private EditText desfinalAmountET;
+    private TextView tv_note;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,9 +66,10 @@ public class WithdrawalFundScreen extends BaseActivity {
             desTagTV = findViewById(R.id.desTagTV);
             desTagRL = findViewById(R.id.desTagRL);
             desfinalAmountET = findViewById(R.id.desfinalAmountET);
-
-              //show destination tag
+            tv_note = findViewById(R.id.tv_note);
             JSONObject data = new JSONObject(getIntent().getStringExtra("data"));
+
+            System.out.println("withdrawal full scree===="+data);
 
             availableBal = Double.parseDouble(data.getString("available_balance"));
             symbol = data.getString("symbol");

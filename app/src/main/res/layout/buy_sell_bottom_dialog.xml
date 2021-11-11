@@ -300,6 +300,8 @@
                         app:srcCompat="@drawable/ic_vector_29" />
 
                     <fontpackageforEdittext.Regular
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
                         android:id="@+id/ed_at_price"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -419,6 +421,8 @@
                         app:srcCompat="@drawable/ic_vector_29" />
 
                     <fontpackageforEdittext.Regular
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
                         android:id="@+id/ed_amount"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -454,12 +458,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="15dp"
-                android:text="@string/some_id2"
+                android:text="0.00"
                 android:textColor="@color/text_hint_color"
                 android:textSize="@dimen/text_size"
-                android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/at_price_coinValueCL" />
+
+
+
+
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/at_price_valueCoin2CL"
@@ -546,6 +553,8 @@
                             app:srcCompat="@drawable/ic_vector_29" />
 
                         <fontpackageforEdittext.Regular
+                            android:singleLine="true"
+                            android:imeOptions="actionDone"
                             android:id="@+id/ed_total_amount"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -646,7 +655,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/imageView5"
                             app:srcCompat="@drawable/ic_vector_29" />
 
-                        <fontspackageForTextView.Regular
+                        <fontspackageForTextView.BoldExtra
                             android:id="@+id/tv100"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -659,7 +668,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-                        <fontspackageForTextView.Regular
+                        <fontspackageForTextView.BoldExtra
                             android:id="@+id/tv75"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -672,7 +681,7 @@
                             app:layout_constraintEnd_toStartOf="@+id/tv100"
                             app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-                        <fontspackageForTextView.Regular
+                        <fontspackageForTextView.BoldExtra
                             android:id="@+id/tv50"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -685,7 +694,7 @@
                             app:layout_constraintEnd_toStartOf="@+id/tv75"
                             app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-                        <fontspackageForTextView.Regular
+                        <fontspackageForTextView.BoldExtra
                             android:id="@+id/tv25"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -702,6 +711,9 @@
                     </LinearLayout>
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
             <fontspackageForTextView.Regular
                 android:id="@+id/buyBTCBT"

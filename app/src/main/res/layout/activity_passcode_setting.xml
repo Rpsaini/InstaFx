@@ -16,6 +16,18 @@
         app:tint="@color/black"></ImageView>
 
 
+    <ImageView
+        android:visibility="gone"
+        android:tint="@color/green"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/passcode"
+        ></ImageView>
+
+
 <!--    <ImageView-->
 <!--        android:tint="@color/textcolor"-->
 <!--        android:alpha=".8"-->
@@ -39,8 +51,7 @@
             android:layout_marginBottom="20dp"
             android:id="@+id/createpin"
             android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="25dp"
+            android:textSize="20dp"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:text="@string/set_passcode"
@@ -123,11 +134,11 @@
 
         <TextView
             android:visibility="gone"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="0dp"
+            android:padding="10dp"
             android:id="@+id/forgotpasscode"
             android:gravity="center"
-            android:textColor="@color/skyblue"
+            android:textColor="@color/darkRed"
             android:textSize="15dp"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"

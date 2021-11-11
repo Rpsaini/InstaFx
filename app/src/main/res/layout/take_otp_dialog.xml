@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:layout_alignParentBottom="true"
+    android:id="@+id/ll_animate"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:background="@color/lite_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        >
+    <fontspackageForTextView.Regular
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:background="@color/teal_700"
+        android:text="Verify P2P Transfer"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        ></fontspackageForTextView.Regular>
+
+    <fontspackageForTextView.Regular
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/otp_msg"
+        android:gravity="center"
+        android:textColor="@color/grey_dark"
+        android:textSize="12dp"></fontspackageForTextView.Regular>
+
+
+    <fontspackageForTextView.Regular
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Enter OTP"
+        android:textColor="@color/grey_dark"
+        android:textSize="12dp"></fontspackageForTextView.Regular>
+
+    <fontpackageforEdittext.Regular
+        android:id="@+id/p2p_otp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:maxLength="6"
+        android:background="@drawable/edittext_drawable"
+        android:hint="OTP"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:paddingLeft="5dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey_dark"
+        android:textSize="14dp"></fontpackageforEdittext.Regular>
+
+
+    <TextView
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/p2p_verify"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/orrange_drawable"
+        android:gravity="center"
+        android:text="@string/verify"
+        android:textColor="@color/white"
+        android:textSize="16dp"></TextView>
+    </LinearLayout>
+</RelativeLayout>
+

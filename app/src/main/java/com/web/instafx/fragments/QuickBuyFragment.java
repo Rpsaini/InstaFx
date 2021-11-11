@@ -196,6 +196,7 @@ public class QuickBuyFragment extends Fragment {
             txt_longname.setText("("+data.getString("base_name")+")");
 
             txt_liveprice.setText(buy_price+buy_fiat);
+            txt_liveprice.setTextColor(getResources().getColor(R.color.green));
 
 
             bindingbuyLL.setOnClickListener(new View.OnClickListener() {
@@ -203,6 +204,7 @@ public class QuickBuyFragment extends Fragment {
                 public void onClick(View v)
                 {
                     txt_liveprice.setText(buy_price+buy_fiat);
+                    txt_liveprice.setTextColor(getResources().getColor(R.color.green));
                     str_side = "buy";
                     ed_amount.setHint("0");
                     ed_amount.setText(buyBalancefiat+"");
@@ -224,6 +226,7 @@ public class QuickBuyFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     txt_liveprice.setText(sell_price+buy_fiat);
+                    txt_liveprice.setTextColor(getResources().getColor(R.color.app_red_color));
                     str_side = "sell";
                     ed_amount.setHint("0");
                     ed_amount.setText(sellBalanceMainPair+"");

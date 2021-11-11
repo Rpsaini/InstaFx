@@ -31,6 +31,7 @@ import java.util.Map;
 public class WithdrawInrActivity extends BaseActivity {
     private EditText  txt_amount;
     private double availableBal=0;
+    private  TextView txt_note;
 
     private EditText txt_destinationtag;
     @Override
@@ -43,98 +44,101 @@ public class WithdrawInrActivity extends BaseActivity {
     }
 
     private void init() {
-        txt_amount = findViewById(R.id.txt_amount);
-        ImageView txt_currency_image1 = findViewById(R.id.txt_currency_image1);
-        TextView total_balance1 = findViewById(R.id.total_balance1);
+      try {
 
-        TextView txt_label_destinationtag = findViewById(R.id.txt_label_destinationtag);
-         txt_destinationtag = findViewById(R.id.txt_destinationtag);
+          txt_amount = findViewById(R.id.txt_amount);
+          ImageView txt_currency_image1 = findViewById(R.id.txt_currency_image1);
+          TextView total_balance1 = findViewById(R.id.total_balance1);
+           txt_note = findViewById(R.id.txt_note);
 
-        availableBal = Double.parseDouble(getIntent().getStringExtra("balance"));
-        total_balance1.setText(availableBal + "");
-        showImage(getIntent().getStringExtra("icon"), txt_currency_image1);
+          TextView txt_label_destinationtag = findViewById(R.id.txt_label_destinationtag);
+          txt_destinationtag = findViewById(R.id.txt_destinationtag);
 
-        String symbol = getIntent().getStringExtra("currency");
-        if(symbol.equalsIgnoreCase("INR"))
-        {
-            txt_destinationtag.setVisibility(View.GONE);
-            txt_label_destinationtag.setVisibility(View.GONE);
+          availableBal = Double.parseDouble(getIntent().getStringExtra("balance"));
+          total_balance1.setText(availableBal + "");
+          showImage(getIntent().getStringExtra("icon"), txt_currency_image1);
 
-        }
-        else
-        {
-            txt_destinationtag.setVisibility(View.VISIBLE);
-            txt_label_destinationtag.setVisibility(View.VISIBLE);
+          String symbol = getIntent().getStringExtra("currency");
+          if (symbol.equalsIgnoreCase("INR")) {
+              txt_destinationtag.setVisibility(View.GONE);
+              txt_label_destinationtag.setVisibility(View.GONE);
 
-        }
+          } else {
+              txt_destinationtag.setVisibility(View.VISIBLE);
+              txt_label_destinationtag.setVisibility(View.VISIBLE);
 
+          }
 
-        findViewById(R.id.img_back).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+          JSONObject pairdata = new JSONObject(getIntent().getStringExtra(DefaultConstants.pair_data));
+          System.out.println("Withdrawpair data==="+pairdata);
+
+//          txt_note
 
 
-        TextView submit = findViewById(R.id.submit);
-        if(getIntent().getBooleanExtra("isGoogleAuth", false))
-        {
-            submit.setText("Next");
-        }
-        else {
-            submit.setText("Confirm Withdraw");
-        }
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (validationRule.checkEmptyString(txt_amount) == 0) {
-                    alertDialogs.alertDialog(WithdrawInrActivity.this, getResources().getString(R.string.Response), "Enter withdraw amount.", getResources().getString(R.string.ok), "", new DialogCallBacks() {
-                        @Override
-                        public void getDialogEvent(String buttonPressed) {
-                        }
-                    });
-                    return;
-                }
-
-                if (availableBal < Double.parseDouble(txt_amount.getText().toString())) {
-                    alertDialogs.alertDialog(WithdrawInrActivity.this, getResources().getString(R.string.Response), "Withdraw amount should be less than available amount.", getResources().getString(R.string.ok), "", new DialogCallBacks() {
-                        @Override
-                        public void getDialogEvent(String buttonPressed) {
-                        }
-                    });
-                    return;
-                }
-                if(txt_destinationtag.getVisibility()==View.VISIBLE)
-                {
-                    if(txt_destinationtag.getText().toString().length()<=0)
-                    {
-                        alertDialogs.alertDialog(WithdrawInrActivity.this, getResources().getString(R.string.Response), "Enter destination address", getResources().getString(R.string.ok), "", new DialogCallBacks() {
-                            @Override
-                            public void getDialogEvent(String buttonPressed) {
-                            }
-                        });
-                        return;
-                    }
-                }
+          findViewById(R.id.img_back).setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                  finish();
+              }
+          });
 
 
-                if (getIntent().getBooleanExtra("isGoogleAuth", false))
-                {
-                    Intent intent = new Intent(WithdrawInrActivity.this, GoogleAuthentication.class);
-                    intent.putExtra("currency", symbol);
-                    intent.putExtra("amount", txt_amount.getText().toString());
-                    intent.putExtra("destination_tag", txt_destinationtag.getText().toString());
-                    intent.putExtra("address", "");
-                    startActivityForResult(intent, 1002);
+          TextView submit = findViewById(R.id.submit);
+          if (getIntent().getBooleanExtra("isGoogleAuth", false)) {
+              submit.setText("Next");
+          } else {
+              submit.setText("Confirm Withdraw");
+          }
+          submit.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                  if (validationRule.checkEmptyString(txt_amount) == 0) {
+                      alertDialogs.alertDialog(WithdrawInrActivity.this, getResources().getString(R.string.Response), "Enter withdraw amount.", getResources().getString(R.string.ok), "", new DialogCallBacks() {
+                          @Override
+                          public void getDialogEvent(String buttonPressed) {
+                          }
+                      });
+                      return;
+                  }
 
-                }
-                else
-                {
-                    withdrawWithoutAuth(symbol, txt_amount.getText().toString(),txt_destinationtag.getText().toString());
-                }
-            }
-        });
+                  if (availableBal < Double.parseDouble(txt_amount.getText().toString())) {
+                      alertDialogs.alertDialog(WithdrawInrActivity.this, getResources().getString(R.string.Response), "Withdraw amount should be less than available amount.", getResources().getString(R.string.ok), "", new DialogCallBacks() {
+                          @Override
+                          public void getDialogEvent(String buttonPressed) {
+                          }
+                      });
+                      return;
+                  }
+                  if (txt_destinationtag.getVisibility() == View.VISIBLE) {
+                      if (txt_destinationtag.getText().toString().length() <= 0) {
+                          alertDialogs.alertDialog(WithdrawInrActivity.this, getResources().getString(R.string.Response), "Enter destination address", getResources().getString(R.string.ok), "", new DialogCallBacks() {
+                              @Override
+                              public void getDialogEvent(String buttonPressed) {
+                              }
+                          });
+                          return;
+                      }
+                  }
+
+
+                  if (getIntent().getBooleanExtra("isGoogleAuth", false)) {
+                      Intent intent = new Intent(WithdrawInrActivity.this, GoogleAuthentication.class);
+                      intent.putExtra("currency", symbol);
+                      intent.putExtra("amount", txt_amount.getText().toString());
+                      intent.putExtra("destination_tag", txt_destinationtag.getText().toString());
+                      intent.putExtra("address", "");
+                      startActivityForResult(intent, 1002);
+
+                  } else {
+                      withdrawWithoutAuth(symbol, txt_amount.getText().toString(), txt_destinationtag.getText().toString());
+                  }
+              }
+          });
+      }
+      catch (Exception e)
+      {
+          e.printStackTrace();
+      }
     }
 
     @Override

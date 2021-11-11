@@ -1,5 +1,7 @@
 package com.web.instafx.adapters;
 
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,10 +28,10 @@ public class QuickBuyAdapter extends RecyclerView.Adapter<QuickBuyAdapter.MyView
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView txt_currency_name, tv_buy,txt_currency_price,txt_currency_fullname;
+        TextView txt_currency_name, tv_buy, txt_currency_price, txt_currency_fullname, txt_change;
 
         LinearLayout ll_fund_list_row;
-        ImageView img_currencyicon;
+        ImageView img_currencyicon, img_arrow;
 
 
         public MyViewHolder(View view) {
@@ -40,14 +42,15 @@ public class QuickBuyAdapter extends RecyclerView.Adapter<QuickBuyAdapter.MyView
             img_currencyicon = view.findViewById(R.id.img_currencyicon);
             txt_currency_price = view.findViewById(R.id.txt_currency_price);
             txt_currency_fullname = view.findViewById(R.id.txt_currency_fullname);
+            img_arrow = view.findViewById(R.id.img_arrow);
+            txt_change = view.findViewById(R.id.txt_change);
 
 
         }
     }
 
 
-    public QuickBuyAdapter(JSONArray quickAr, MainActivity mainActivity, QuickBuyFragment fundFragment)
-    {
+    public QuickBuyAdapter(JSONArray quickAr, MainActivity mainActivity, QuickBuyFragment fundFragment) {
         this.quickAr = quickAr;
         this.ira1 = mainActivity;
         this.fundFragment = fundFragment;
@@ -67,32 +70,46 @@ public class QuickBuyAdapter extends RecyclerView.Adapter<QuickBuyAdapter.MyView
 
             JSONObject dataObj = quickAr.getJSONObject(position);
             holder.txt_currency_name.setText(dataObj.getString("base"));
-            holder.txt_currency_price.setText(dataObj.getString("buy_price")+" "+dataObj.getString("term"));
+            holder.txt_currency_price.setText(dataObj.getString("buy_price") + " " + dataObj.getString("term"));
             holder.txt_currency_fullname.setText(dataObj.getString("base_name"));
             showImage(dataObj.getString("icon"), holder.img_currencyicon);
-
-
-
-//                    "pair_id": "62",
-//                    "base": "BTC",
-//                    "term": "USDT",
-//                    "pair_name": "BTC\/USDT",
-//                    "base_balance": "100000.00119999998",
-//                    "term_balance": "999679.1616217206",
-//                    "icon": "https:\/\/whatashot.io\/front\/resources\/img\/currency-icons\/BTC.png"
-            //     	  "buy_price": "57367.4751",
-            //		  "sell_price": "57433.941"
-
-
             holder.tv_buy.setTag(dataObj);
+
+            String change = dataObj.getString("change");
+            System.out.println("Change====" + change);
+            holder.txt_change.setText(change);
+            if (change.contains("+")) {
+                holder.txt_change.setTextColor(ira1.getResources().getColor(R.color.greencolor));
+
+                holder.img_arrow.setRotation(270);
+                holder.img_arrow.setColorFilter(ira1.getResources().getColor(R.color.greencolor),PorterDuff.Mode.SRC_ATOP);
+
+
+            } else if (change.contains("-")) {
+
+                holder.txt_change.setTextColor(ira1.getResources().getColor(R.color.darkRed));
+                holder.img_arrow.setRotation(90);
+                holder.img_arrow.setColorFilter(ira1.getResources().getColor(R.color.darkRed), PorterDuff.Mode.SRC_ATOP);
+
+
+
+            } else {
+
+                holder.txt_change.setTextColor(ira1.getResources().getColor(R.color.greencolor));
+                holder.img_arrow.setRotation(270);
+                holder.img_arrow.setColorFilter(ira1.getResources().getColor(R.color.greencolor),PorterDuff.Mode.SRC_ATOP);
+
+
+            }
+
+
             holder.tv_buy.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     try {
                         JSONObject data = new JSONObject(v.getTag().toString());
                         fundFragment.buysellDialog(data);
-                       }
-                      catch (Exception e) {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }

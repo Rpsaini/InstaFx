@@ -34,7 +34,7 @@ public class ShowFiatCurrencyDepositWithdraw extends BaseActivity {
     private String isKycStatus = "";
     private boolean authenticator = false;
     private RecyclerView recycler_view_bankaddress;
-   private String symbol="";
+    private String symbol="";
    TextView txt_withdrawinr,txt_deposit_inr;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,18 +50,15 @@ public class ShowFiatCurrencyDepositWithdraw extends BaseActivity {
     private void init() {
         try {
             JSONObject dataObj = new JSONObject(getIntent().getStringExtra("data"));
-             symbol = dataObj.getString("symbol");
+            symbol = dataObj.getString("symbol");
             String availableBalance = dataObj.getString("available_balance");
             final String icon = dataObj.getString("icon");
 
             ImageView txt_currency_image = findViewById(R.id.txt_currency_image);
             txt_withdrawinr =findViewById(R.id.txt_withdrawinr);
             txt_deposit_inr = findViewById(R.id.txt_deposit_inr);
-            // TextView txt_withdraw = findViewById(R.id.txt_withdraw);
             TextView txt_title = findViewById(R.id.txt_title);
-
             TextView total_balance = findViewById(R.id.total_balance);
-            // TextView txt_deposit = findViewById(R.id.txt_deposit);
             recycler_view_bankaddress = findViewById(R.id.recycler_view_bankaddress);
             total_balance.setText(availableBalance);
 
@@ -83,6 +80,7 @@ public class ShowFiatCurrencyDepositWithdraw extends BaseActivity {
                 public void onClick(View v) {
                     Intent intent = new Intent(ShowFiatCurrencyDepositWithdraw.this, DepositeInrActivity.class);
                     intent.putExtra(DefaultConstants.symbol,symbol);
+                    intent.putExtra(DefaultConstants.pair_data,dataObj+"");
                     startActivityForResult(intent, 1001);
                 }
             });
@@ -95,6 +93,7 @@ public class ShowFiatCurrencyDepositWithdraw extends BaseActivity {
                     intent.putExtra("currency", symbol);
                     intent.putExtra("balance", availableBalance);
                     intent.putExtra("icon", icon);
+                    intent.putExtra(DefaultConstants.pair_data, dataObj+"");
                     startActivityForResult(intent, 1001);
 
                 }

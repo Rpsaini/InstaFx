@@ -95,35 +95,6 @@ public class FiatCurrenciesAdapter extends RecyclerView.Adapter<FiatCurrenciesAd
                 }
             });
 
-//            holder.ll_fund_list_row.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v)
-//                 {
-//                    try
-//                    {
-//                        JSONObject data = new JSONObject(v.getTag().toString());
-//                        String symbol=data.getString("symbol");
-//                        if(symbol.equalsIgnoreCase("INR"))
-//                         {
-//                            Intent intent = new Intent(ira1, ShowFiatCurrencyDepositWithdraw.class);
-//                            intent.putExtra("data", v.getTag() + "");
-//                            ira1.startActivity(intent);
-//                         }
-//                        else if(symbol.equalsIgnoreCase("USD"))
-//                         {
-//                             ira1.alertDialogs.alertDialog(ira1, ira1.getResources().getString(R.string.Response), "Currently USD Deposit and Withdraw is disabled. ", ira1.getResources().getString(R.string.ok), "", new DialogCallBacks() {
-//                                 @Override
-//                                 public void getDialogEvent(String buttonPressed) {
-//                                 }
-//                             });
-//                         }
-//                      }
-//                    catch (Exception e)
-//                    {
-//                        e.printStackTrace();
-//                    }
-//                }
-//            });
 
             holder.ic_more.setTag(dataObj);
             holder.ic_more.setOnClickListener(new View.OnClickListener() {
@@ -179,7 +150,9 @@ public class FiatCurrenciesAdapter extends RecyclerView.Adapter<FiatCurrenciesAd
             LinearLayout depositLLItem = view.findViewById(R.id.depositLL);
             LinearLayout withdrawalLLItem = view.findViewById(R.id.withdrawalLL);
             TextView depositTV = view.findViewById(R.id.depositTV);
+            LinearLayout p2ptransfer = view.findViewById(R.id.p2ptransfer);
             withdrawalLLItem.setVisibility(View.GONE);
+            p2ptransfer.setVisibility(View.GONE);
 
             popupWindow.setFocusable(true);
             popupWindow.setWidth(WindowManager.LayoutParams.WRAP_CONTENT);
@@ -203,11 +176,7 @@ public class FiatCurrenciesAdapter extends RecyclerView.Adapter<FiatCurrenciesAd
                             Intent intent = new Intent(ira1, ShowFiatCurrencyDepositWithdraw.class);
                             intent.putExtra("data", data + "");
                             ira1.startActivity(intent);
-//                        ira1.alertDialogs.alertDialog(ira1, ira1.getResources().getString(R.string.Response), "Currently "+symbol+" Deposit and Withdraw is disabled. ", ira1.getResources().getString(R.string.ok), "", new DialogCallBacks() {
-//                            @Override
-//                            public void getDialogEvent(String buttonPressed) {
-//                            }
-//                        });
+
                     }
                 } catch (Exception e) {
                     e.printStackTrace();

@@ -33,21 +33,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UnitedExchange"
         android:usesCleartextTraffic="true">
+
+        <activity android:name=".fund_withdrawal.P2PTransfer"
+            android:screenOrientation="portrait"
+            ></activity>
+
         <activity
             android:name=".download_trade_reports.DownloadTradeReport"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.WhatAShot" />
-        <activity android:name=".settings.PasscodeSetting"
-            android:screenOrientation="portrait"
-            ></activity>
-        <activity android:name=".settings.SecuritySettings"
-            android:screenOrientation="portrait"
-            />
+
+        <activity
+            android:name=".settings.PasscodeSetting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".settings.SecuritySettings"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".settings.SettingLanguage"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot"/>
-
+            android:theme="@style/Theme.WhatAShot" />
         <activity
             android:name=".FundHistoryActivity"
             android:screenOrientation="portrait"
@@ -127,7 +132,7 @@
             android:name=".captcha.VerifyCaptcha"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.web.instafx.invite_earn.InviteEarnScreen"
+            android:name=".invite_earn.InviteEarnScreen"
             android:screenOrientation="portrait" />
         <activity
             android:name=".AccountScreen"
@@ -176,6 +181,7 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
@@ -193,7 +199,6 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
 
         <activity
             android:name=".googleauthentication.Verification"
@@ -214,9 +219,6 @@
         <activity
             android:name=".googleauthentication.EnableGoogleAuth"
             android:screenOrientation="portrait" />
-
-
-
     </application>
 
 </manifest>

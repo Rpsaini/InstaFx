@@ -134,8 +134,6 @@ public class HomeFragment extends Fragment {
              obj.put("Rtoken", mainActivity.getNewRToken() + "");
 
 
-
-
              new ServerHandler().sendToServer(mainActivity, mainActivity.getApiUrl() + "get-home-data", m, 0, obj, 20000, R.layout.progressbar, new CallBack() {
                 @Override
                 public void getRespone(String dta, ArrayList<Object> respons) {

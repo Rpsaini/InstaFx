@@ -415,8 +415,6 @@
     <string name="seconds">Seconds</string>
 
 
-
-
     <string name="cofirm_pwd_warning">Confirm password is not valid.</string>
     <string name="password_warning">Enter The Email.</string>
     <string name="phone_warning">Enter The Phone Number.</string>
@@ -433,13 +431,13 @@
 
 
     <string name="sell_txt">SELL</string>
-   <string name="privacy_policy_warning">Please accept terms and privacy policy.</string>
-   <string name="transfer_in_progress">Transfer in Progress...!</string>
-   <string name="success">Success...!</string>
-   <string name="depositdone">Your Payment has been deposited successfully.</string>
-   <string name="depositfailed">Deposit Failed. Please try again.</string>
-   <string name="failed">Failed...!</string>
-   <string name="forgot_passcode">Forgot Passcode</string>
+    <string name="privacy_policy_warning">Please accept terms and privacy policy.</string>
+    <string name="transfer_in_progress">Transfer in Progress...!</string>
+    <string name="success">Success...!</string>
+    <string name="depositdone">Your Payment has been deposited successfully.</string>
+    <string name="depositfailed">Deposit Failed. Please try again.</string>
+    <string name="failed">Failed...!</string>
+    <string name="forgot_passcode">Forgot Passcode</string>
 
     <string name="download_trade_report">Download Trade Report</string>
     <string name="get_your_trading_report_">Get your trading report on your email.</string>

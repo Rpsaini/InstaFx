@@ -36,6 +36,7 @@ import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.web.instafx.fileupload.ApiProduction;
+import com.web.instafx.settings.SecuritySettings;
 import com.web.instafx.utilpackage.UtilClass;
 
 import org.json.JSONObject;
@@ -120,8 +121,8 @@ public class BaseActivity extends AppCompatActivity {
             final int min = 20;
             final int max = 800;
             final int random = new Random().nextInt((max - min) + 1) + min;
-            savePreferences.savePreferencesData(BaseActivity.this,"devicetoken"+random, UtilClass.device_Token);
-            return  "devicetoken"+random;
+            savePreferences.savePreferencesData(BaseActivity.this,"devicetokennew"+random, UtilClass.device_Token);
+            return  "devicetokennew"+random;
 
         }
         else
@@ -397,6 +398,8 @@ public class BaseActivity extends AppCompatActivity {
     {
         savePreferences.savePreferencesData(this, "0",DefaultConstants.login_detail);
         savePreferences.savePreferencesData(BaseActivity.this,"false", UtilClass.isLogin);
+        savePreferences.savePreferencesData(BaseActivity.this,"off", DefaultConstants.isPasscodeActive);
+        savePreferences.savePreferencesData(BaseActivity.this,"", DefaultConstants.pinKey);
         Intent intent = new Intent(BaseActivity.this, SplashScreen.class);
         startActivity(intent);
         finishAffinity();
