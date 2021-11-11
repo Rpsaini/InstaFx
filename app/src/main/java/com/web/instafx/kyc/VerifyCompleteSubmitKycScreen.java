@@ -57,7 +57,7 @@ public class VerifyCompleteSubmitKycScreen extends BaseActivity {
             @Override
             public void onClick(View v) {
                 if (!selectCountryTV.getText().toString().equals(getString(R.string.select_coun))){
-                    Intent intent=new Intent(VerifyCompleteSubmitKycScreen.this,VerifyKycForPersonalInfoScreen.class);
+                    Intent intent=new Intent(VerifyCompleteSubmitKycScreen.this,BasicDetailScreen.class);
                     intent.putExtra("country_name",selectCountryTV.getText().toString());
                     intent.putExtra("kyc_type",select_typeTV.getText().toString());
                     intent.putExtra("_id",countryID);

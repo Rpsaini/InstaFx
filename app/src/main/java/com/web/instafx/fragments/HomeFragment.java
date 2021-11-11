@@ -2,24 +2,25 @@ package com.web.instafx.fragments;
 
 import android.graphics.Color;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
-
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
+
 import com.app.dialogsnpickers.DialogCallBacks;
 import com.app.vollycommunicationlib.CallBack;
 import com.app.vollycommunicationlib.ServerHandler;
+import com.google.android.material.tabs.TabLayout;
 import com.web.instafx.DefaultConstants;
 import com.web.instafx.MainActivity;
 import com.web.instafx.R;
 import com.web.instafx.adapters.CurrencyPagerAdapter;
 import com.web.instafx.adapters.MarketAdapter;
 import com.web.instafx.communication.SocketHandlers;
-import com.google.android.material.tabs.TabLayout;
+import com.web.instafx.utilpackage.SlidingImage_Adapter;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -27,13 +28,15 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import io.socket.emitter.Emitter;
+import me.relex.circleindicator.CircleIndicator;
 
 public class HomeFragment extends Fragment {
     private View view;
     private MainActivity mainActivity;
-
 
     public static Map<String, JSONArray> commonMap = new HashMap<>();
     public static ArrayList<JSONObject> tabsHeaderKeys = new ArrayList<>();
@@ -66,11 +69,9 @@ public class HomeFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
         view = inflater.inflate(R.layout.fragment_home, container, false);
         mainActivity = (MainActivity) getActivity();
         getMarketTickers();
-
         return view;
     }
 
@@ -307,8 +308,4 @@ public class HomeFragment extends Fragment {
             });
         }
     }
-
-
-
-
 }

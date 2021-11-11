@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -11,6 +12,7 @@ import com.web.instafx.R;
 import com.web.instafx.activity_log.ActivityLogScreens;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 
 public class ActivityLogsAdapter extends RecyclerView.Adapter<ActivityLogsAdapter.MyViewHolder> {
@@ -22,7 +24,7 @@ public class ActivityLogsAdapter extends RecyclerView.Adapter<ActivityLogsAdapte
         private ImageView img_currencyicon,selectIC;*/
         private LinearLayout ll_list_row;
         private View line;
-
+        private TextView dateValueTV,ipTV,successTV;
         public MyViewHolder(View view)
         {
             super(view);
@@ -32,6 +34,9 @@ public class ActivityLogsAdapter extends RecyclerView.Adapter<ActivityLogsAdapte
             selectIC = view.findViewById(R.id.selectIC);*/
 
             ll_list_row = view.findViewById(R.id.ll_fund_list_row);
+            dateValueTV = view.findViewById(R.id.dateValueTV);
+            ipTV = view.findViewById(R.id.ipValueTV);
+            successTV = view.findViewById(R.id.activityValueTV);
             line = view.findViewById(R.id.line);
         }
     }
@@ -57,13 +62,18 @@ public class ActivityLogsAdapter extends RecyclerView.Adapter<ActivityLogsAdapte
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
         try
         {
-          /*  JSONObject dataObj = moviesList.getJSONObject(position);
-            dataObj.getString("bank_branch");
-            dataObj.getString("branch_number");
-            dataObj.getString("account_type");
-            dataObj.getString("id");
+          /*
+
+           {"type":"Placed Order",
+           "description":"User company has placed Limit order of volume
+           17 @price 166.35326898 Vide order id 4096500","ip":"13.127.217.37",
+           "date":"2021-11-11 19:58:19"}
 
       */
+            JSONObject dataObj = moviesList.getJSONObject(position);
+            holder.dateValueTV.setText( dataObj.getString("date"));
+            holder.ipTV.setText( dataObj.getString("ip"));
+            holder.successTV.setText( dataObj.getString("type"));
            if (position==9){
                holder.line.setVisibility(View.GONE);
            }
@@ -79,7 +89,7 @@ public class ActivityLogsAdapter extends RecyclerView.Adapter<ActivityLogsAdapte
 
     @Override
     public int getItemCount() {
-        return 10;
+        return moviesList.length();
     }
 
     @Override

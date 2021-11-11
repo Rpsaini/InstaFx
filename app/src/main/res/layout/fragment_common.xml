@@ -6,11 +6,27 @@
     android:orientation="vertical"
     >
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
 
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/banner_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true" />
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="bottom"
+            android:padding="10dip" />
+    </RelativeLayout>
     <include layout="@layout/currency_strip"/>
-
     <include layout="@layout/no_data_found"/>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_market"
         android:layout_width="match_parent"

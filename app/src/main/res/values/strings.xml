@@ -184,7 +184,7 @@
 
 
     <string name="buy_btc">BUY BTC</string>
-    <string name="fee_maker_0">Fee: Maker: 0.2% | Taker: 0.2% | incl. of all applicable taxes</string>
+    <string formatted="false" name="fee_maker_0">Fee: Maker: 0.2% | Taker: 0.2% | incl. of all applicable taxes</string>
     <string name="sell_btc">SELL BTC</string>
     <string name="poly">POLY</string>
 
@@ -380,8 +380,9 @@
     <string name="buy_sell">Buy/Sell</string>
     <string name="trades">Trades</string>
     <string name="my">My</string>
-
-
+    <string name="basic_details">Basic Details</string>
+    <string name="identity_details">Identity Details</string>
+    <string name="bank_details">Bank Details</string>
     <string name="personal_details">Personal Details</string>
     <string name="nationality">Nationality</string>
     <string name="marital_status">Marital status</string>
