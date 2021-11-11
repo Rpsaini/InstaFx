@@ -111,7 +111,8 @@
             android:layout_height="match_parent"
             android:layout_below="@+id/note"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="120dp"></androidx.recyclerview.widget.RecyclerView>
+            android:layout_marginBottom="120dp">
+        </androidx.recyclerview.widget.RecyclerView>
 
 
 
@@ -147,6 +148,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+
+            <fontspackageForTextView.Regular
+                android:textColor="@color/black"
+                android:padding="10dp"
+                android:textSize="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/cash_deposit_not_allowed"></fontspackageForTextView.Regular>
+
+
 
             <fontspackageForTextView.Regular
                 android:layout_marginBottom="10dp"

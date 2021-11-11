@@ -32,7 +32,6 @@ public class SecuritySettings extends BaseActivity {
          img_back =findViewById(R.id.img_back);
          isPasscodeActive=savePreferences.reterivePreference(SecuritySettings.this, DefaultConstants.isPasscodeActive).toString();
 
-         System.out.println("ispasscode==="+isPasscodeActive);
          if(isPasscodeActive.length()==0)
          {
              isPasscodeActive="off";
@@ -49,7 +48,8 @@ public class SecuritySettings extends BaseActivity {
 
         switch_apppasscode.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+             {
                 if (switch_apppasscode.isChecked())
                 {
                     switch_apppasscode.setChecked(false);
@@ -83,14 +83,17 @@ public class SecuritySettings extends BaseActivity {
         {
             if(data!=null)
             {
+                System.out.println("Is passcode==="+isPasscodeActive);
                 if(isPasscodeActive.equalsIgnoreCase("off"))
                 {
+                    isPasscodeActive="on";
                     switch_apppasscode.setChecked(true);
                     savePreferences.savePreferencesData(SecuritySettings.this,"on",DefaultConstants.isPasscodeActive);
                     savePreferences.savePreferencesData(SecuritySettings.this,data.getStringExtra("data"),DefaultConstants.pinKey);
                 }
                 else if(isPasscodeActive.equalsIgnoreCase("on"))
                 {
+                    isPasscodeActive="off";
                     switch_apppasscode.setChecked(false);
                     savePreferences.savePreferencesData(SecuritySettings.this,"off",DefaultConstants.isPasscodeActive);
                     savePreferences.savePreferencesData(SecuritySettings.this,"",DefaultConstants.pinKey);

@@ -44,7 +44,6 @@ public class PasscodeSetting extends BaseActivity {
     private String MemberId = "";
     private String pinType = "";
     private FingerprintManager.AuthenticationCallback authenticationCallback;
-//    private String  isPasscodeActive="";
 
 
     @Override
@@ -52,21 +51,21 @@ public class PasscodeSetting extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_passcode_setting);
 
-         getSupportActionBar().hide();
+        getSupportActionBar().hide();
         createpin = findViewById(R.id.createpin);
         rr_setPin = findViewById(R.id.rr_setPin);
 
 
-        pinType=getIntent().getStringExtra(DefaultConstants.callfrom).toLowerCase();
+        pinType = getIntent().getStringExtra(DefaultConstants.callfrom).toLowerCase();
         initiateObj();
         init();
 
-       }
+    }
 
 
     int itemCount = 0;
-    private void init()
-      {
+
+    private void init() {
         itemCount = 0;
         final ArrayList<TextView> keysTextAr = new ArrayList<>();
         keysTextAr.add((TextView) findViewById(R.id.txt_pinone));
@@ -94,8 +93,7 @@ public class PasscodeSetting extends BaseActivity {
         keysAr.add(R.drawable.delete);
 
         gridView.setAdapter(new KeyBoardAdapter(this, keysAr));
-        if(pinType.equalsIgnoreCase(DefaultConstants.pinSetup))
-          {
+        if (pinType.equalsIgnoreCase(DefaultConstants.pinSetup)) {
             gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                     try {
@@ -129,17 +127,15 @@ public class PasscodeSetting extends BaseActivity {
                                 }, 500);
 
                             }
-                        }
-                        else if (attemptCount == 1) {
+                        } else if (attemptCount == 1) {
                             if (itemCount == 4) {
                                 attemptCount = 2;
 
                                 newPin = keysTextAr.get(0).getText().toString() + keysTextAr.get(1).getText().toString() + keysTextAr.get(2).getText().toString() + keysTextAr.get(3).getText().toString();
-                                if (oldPin.equalsIgnoreCase(newPin))
-                                {
-                                    Intent intent=new Intent();
-                                    intent.putExtra("data",newPin);
-                                    setResult(RESULT_OK,intent);
+                                if (oldPin.equalsIgnoreCase(newPin)) {
+                                    Intent intent = new Intent();
+                                    intent.putExtra("data", newPin);
+                                    setResult(RESULT_OK, intent);
                                     finish();
 
                                 } else {
@@ -173,74 +169,65 @@ public class PasscodeSetting extends BaseActivity {
 
                 }
             });
-        }
-         else if(pinType.equalsIgnoreCase(DefaultConstants.pinreset))
-          {
-              createpin.setText("Enter Passcode");
-              gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                  public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                      try {
+        } else if (pinType.equalsIgnoreCase(DefaultConstants.pinreset)) {
+            createpin.setText("Enter Passcode");
+            gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                    try {
 
-                          if (position == 10) {
-                              if (itemCount > 0) {
-                                  itemCount--;
-                                  TextView textView = keysTextAr.get(itemCount);
-                                  textView.setText("");
-                              }
+                        if (position == 10) {
+                            if (itemCount > 0) {
+                                itemCount--;
+                                TextView textView = keysTextAr.get(itemCount);
+                                textView.setText("");
+                            }
 
-                          } else {
-                              TextView textView = keysTextAr.get(itemCount);
-                              textView.setText(keysAr.get(position) + "");
-                              itemCount++;
-                          }
+                        } else {
+                            TextView textView = keysTextAr.get(itemCount);
+                            textView.setText(keysAr.get(position) + "");
+                            itemCount++;
+                        }
 
-                          if (attemptCount == 0) {
-                              if (itemCount == 4) {
+                        if (attemptCount == 0) {
+                            if (itemCount == 4) {
 
-                                  attemptCount = 1;
-                                  createpin.setText("Enter Passcode");
-                                  oldPin = keysTextAr.get(0).getText().toString() + keysTextAr.get(1).getText().toString() + keysTextAr.get(2).getText().toString() + keysTextAr.get(3).getText().toString();
+                                attemptCount = 1;
+                                createpin.setText("Enter Passcode");
+                                oldPin = keysTextAr.get(0).getText().toString() + keysTextAr.get(1).getText().toString() + keysTextAr.get(2).getText().toString() + keysTextAr.get(3).getText().toString();
 
-                                  String savedPassCode=savePreferences.reterivePreference(PasscodeSetting.this,DefaultConstants.pinKey).toString();
+                                String savedPassCode = savePreferences.reterivePreference(PasscodeSetting.this, DefaultConstants.pinKey).toString();
 
-                                  if(savedPassCode.equalsIgnoreCase(oldPin))
-                                  {
-                                      Intent intent=new Intent();
-                                      intent.putExtra("data",oldPin);
-                                      setResult(RESULT_OK,intent);
-                                      finish();
-                                  }
-                                  else
-                                  {
-                                      alertDialogs.alertDialog(PasscodeSetting.this, getResources().getString(R.string.app_name), "Entered Passcode is invalid", "Ok", "", new DialogCallBacks() {
-                                          @Override
-                                          public void getDialogEvent(String buttonPressed) {
+                                if (savedPassCode.equalsIgnoreCase(oldPin)) {
+                                    Intent intent = new Intent();
+                                    intent.putExtra("data", oldPin);
+                                    setResult(RESULT_OK, intent);
+                                    finish();
+                                } else {
+                                    alertDialogs.alertDialog(PasscodeSetting.this, getResources().getString(R.string.app_name), "Entered Passcode is invalid", "Ok", "", new DialogCallBacks() {
+                                        @Override
+                                        public void getDialogEvent(String buttonPressed) {
 
-                                          }
-                                      });
-                                      itemCount = 0;
-                                      attemptCount=0;
-                                      for (int x = 0; x < keysTextAr.size(); x++) {
-                                          keysTextAr.get(x).setText("");
-                                      }
-                                  }
+                                        }
+                                    });
+                                    itemCount = 0;
+                                    attemptCount = 0;
+                                    for (int x = 0; x < keysTextAr.size(); x++) {
+                                        keysTextAr.get(x).setText("");
+                                    }
+                                }
 
-                              }
-                          }
+                            }
+                        }
 
 
-                      } catch (Exception e) {
-                          e.printStackTrace();
-                      }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
 
-                  }
-              });
+                }
+            });
 
-          }
-
-
-        else if (pinType.equalsIgnoreCase(DefaultConstants.pinVerify))
-        {
+        } else if (pinType.equalsIgnoreCase(DefaultConstants.pinVerify)) {
             createpin.setText("Enter " + getResources().getString(R.string.app_name) + " Passcode");
             gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 public void onItemClick(AdapterView<?> parent, View v, int position, long id) {

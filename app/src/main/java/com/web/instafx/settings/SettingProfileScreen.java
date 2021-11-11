@@ -35,6 +35,7 @@ public class SettingProfileScreen extends BaseActivity {
     private Dialog mobRegDialog;
     private Dialog mobRegOtpDialog;
     private Dialog mobRegSuccessDialog;
+    private TextView usernameValueTV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,7 @@ public class SettingProfileScreen extends BaseActivity {
         backIC =findViewById(R.id.backIC);
         verify_kyc_layout=findViewById(R.id.verify_kyc_layout);
         rr_security=findViewById(R.id.rr_security);
+        usernameValueTV=findViewById(R.id.usernameValueTV);
     }
 
     private void setOnClickListener(){
@@ -283,6 +285,11 @@ public class SettingProfileScreen extends BaseActivity {
             nameValueTV.setText(data.getString("name"));
             emailValueTV.setText(data.getString("email"));
             mobileValueTV.setText(data.getString("mobile"));
+            if(data.has("username"))
+            {
+                usernameValueTV.setText(data.getString("username"));
+            }
+
         }
         catch (Exception e)
         {
