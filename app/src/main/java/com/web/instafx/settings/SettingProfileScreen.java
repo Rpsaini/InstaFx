@@ -23,11 +23,12 @@ import com.web.instafx.currency_preferences.CurrencyPreferencesScreen;
 import com.web.instafx.download_trade_reports.DownloadTradeReport;
 import com.web.instafx.kyc.VerifyKycAccountDetailsScreen;
 import com.web.instafx.payment_option.PaymentOptionsScreen;
-import com.web.instafx.two_factor_auth.TwoFactorAuthScreen;
 
 import org.json.JSONObject;
 
 import com.web.instafx.invite_earn.InviteEarnScreen;
+
+import com.web.instafx.staking.StakingScreen;
 
 public class SettingProfileScreen extends BaseActivity {
     private ImageView backIC=null;
@@ -79,6 +80,13 @@ public class SettingProfileScreen extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(SettingProfileScreen.this, DownloadTradeReport.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.staking_layout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(SettingProfileScreen.this, StakingScreen.class);
                 startActivity(intent);
             }
         });

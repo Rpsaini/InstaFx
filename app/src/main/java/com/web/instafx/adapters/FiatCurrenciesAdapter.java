@@ -162,7 +162,7 @@ public class FiatCurrenciesAdapter extends RecyclerView.Adapter<FiatCurrenciesAd
             JSONObject data = new JSONObject(dataStr);
             String symbol = data.getString("symbol");
             depositTV.setText("Deposit/Withdraw "+symbol);
-           depositLLItem.setOnClickListener(new View.OnClickListener() {
+            depositLLItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try

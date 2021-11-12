@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="bottom"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rr_main_buysell">
+
+    <LinearLayout
+        android:background="@color/white_20"
+        android:id="@+id/ll_buysell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:padding="0dp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+
+            android:layout_marginTop="0dp"
+            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:background="@color/teal_700"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <fontspackageForTextView.BoldMedium
+                android:id="@+id/titleTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/cgb_staking"
+                app:textAllCaps="true"
+                android:textColor="@color/greencolor"
+                android:gravity="center"
+                android:textSize="18dp"
+                >
+
+            </fontspackageForTextView.BoldMedium>
+
+
+
+        </LinearLayout>
+
+
+
+
+        <ImageView
+            app:tint="@color/white"
+            android:id="@+id/closeBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="-50dp"
+            android:padding="10dp"
+            android:layout_gravity="end|center"
+            android:src="@drawable/close_ic"/>
+
+
+        <View
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_height=".5dp"
+            android:layout_width="120dp"
+            android:background="@color/grey_dark"
+            android:layout_gravity="right"
+            ></View>
+
+
+
+        <LinearLayout
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <fontspackageForTextView.BoldMedium
+                android:id="@+id/currentPriceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Current price 1CGB = 0.07060 USDT"
+                app:textAllCaps="true"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/hintTextColor"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="18dp"
+                >
+
+            </fontspackageForTextView.BoldMedium>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@drawable/light_gray_drawable">
+                <fontspackageForTextView.BoldExtra
+                    android:id="@+id/txt_choosePriceValueTV"
+                    android:textAllCaps="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/left_side_border_white_drawable"
+                    android:text="$100-$499-365 Days(4%)"
+                    android:gravity="center|start"
+                    android:textSize="14dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:drawableEnd="@drawable/ic_dropdown"></fontspackageForTextView.BoldExtra>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@drawable/light_gray_drawable">
+                <fontpackageforEdittext.Regular
+                    android:id="@+id/ed_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/left_side_border_white_drawable"
+                    android:hint="@string/amount_hint_txt"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:textColor="@color/dark_blue"
+                    android:textColorHint="@color/grey_dark"
+
+                    android:textCursorDrawable="@drawable/cursur_drawable"
+                    android:textSize="15dp"></fontpackageforEdittext.Regular>
+            </LinearLayout>
+            <fontspackageForTextView.Regular
+                android:id="@+id/feesTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You need to stake 0.00 CGB"
+                app:textAllCaps="true"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/greencolor"
+                android:gravity="center"
+                android:textSize="14dp"
+                />
+
+         <LinearLayout
+             android:id="@+id/confirmCancleLayout"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_margin="20dp"
+             android:orientation="horizontal">
+             <fontspackageForTextView.Regular
+                 android:id="@+id/confirmTV"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/confirm_txt"
+                 app:textAllCaps="true"
+                 android:background="@drawable/green_drawable"
+                 android:layout_marginTop="5dp"
+                 android:textColor="@color/white"
+                 android:gravity="center"
+                 android:padding="10dp"
+                 android:textSize="14dp"
+                 />
+             <fontspackageForTextView.Regular
+                 android:id="@+id/txt_cancelTV"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/cancel"
+                 android:padding="10dp"
+                 android:background="@drawable/red_drawable"
+                 app:textAllCaps="true"
+                 android:layout_marginStart="5dp"
+                 android:layout_marginTop="5dp"
+                 android:textColor="@color/white"
+                 android:gravity="center"
+                 android:textSize="14dp"
+                 />
+         </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

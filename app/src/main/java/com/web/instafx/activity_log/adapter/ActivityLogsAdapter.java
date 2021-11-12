@@ -28,10 +28,11 @@ public class ActivityLogsAdapter extends RecyclerView.Adapter<ActivityLogsAdapte
         public MyViewHolder(View view)
         {
             super(view);
-           /* txt_currency_name = view.findViewById(R.id.txt_currency_name);
+           /*
+            txt_currency_name = view.findViewById(R.id.txt_currency_name);
             img_currencyicon = view.findViewById(R.id.img_currencyicon);
-
-            selectIC = view.findViewById(R.id.selectIC);*/
+            selectIC = view.findViewById(R.id.selectIC);
+            */
 
             ll_list_row = view.findViewById(R.id.ll_fund_list_row);
             dateValueTV = view.findViewById(R.id.dateValueTV);

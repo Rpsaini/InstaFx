@@ -414,7 +414,6 @@
 
             </RelativeLayout>
             <RelativeLayout
-
                 android:id="@+id/download_trade_report_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -436,6 +435,35 @@
                     android:layout_marginStart="20dp"
                     android:textAllCaps="true"
                     android:text="@string/download_trade_report"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="@dimen/title_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="visible"
+                android:id="@+id/staking_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="0dp"
+                android:background="@drawable/setting_profile_rectangle_1"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <fontspackageForTextView.Regular
+                    android:id="@+id/stacking_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/stacking"
+                    app:textAllCaps="true"
                     android:textColor="@color/text_black_color"
                     android:textSize="@dimen/title_text_size"
                     app:layout_constraintStart_toStartOf="parent"
@@ -470,6 +498,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/invite_earn_layout"
                 android:layout_width="match_parent"
@@ -498,6 +527,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/privacyPolicy_layout"
                 android:layout_width="match_parent"

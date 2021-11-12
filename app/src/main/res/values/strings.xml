@@ -78,7 +78,10 @@
     <string name="google_recaptch">Google Recaptcha</string>
     <string name="pleas_cros">Please cross-check the destination address. withdrawals to Smart Contract Addresses, payments or participation in ICOs/Airdraps are not supported and will be lost forever. Withdrawal requests cannot be cancelled after submission.</string>
     <string name="please_depo">Please deposit only BTC to this address. If you deposit any other coins, it will be lost forever.</string>
-
+    <string name="stacking">Staking</string>
+    <string name="automatic_cgb_staking">Automatic CGB Staking</string>
+    <string name="cgb_staking">CGB Staking</string>
+    <string name="cgb_stake">Stake CGB</string>
     <string name="veriry_acco">Verify Account</string>
     <string name="security">Security</string>
     <string name="welcome_txt">Welcome</string>
@@ -108,8 +111,12 @@
     <string name="address_back_image_warning">Select Address Back Image.</string>
 
     <string name="account_holder_name_">Account Holder Name: </string>
-
-
+    <string name="total_cgb_stake">Total CGB Staked </string>
+    <string name="total_inr_worth">Total INR Worth </string>
+    <string name="monthly_interest">Monthly Interest:5%</string>
+    <string name="total_inr_">Total INR Worth</string>
+    <string name="total_profit_">Total Profit</string>
+    <string name="staking_days_">Staking Days:</string>
     <string name="account_hoder_name_warning">Enter Account Holder Name.</string>
     <string name="bank_name_warning">Enter Bank Name.</string>
 
