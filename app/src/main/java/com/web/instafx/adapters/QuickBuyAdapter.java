@@ -76,7 +76,6 @@ public class QuickBuyAdapter extends RecyclerView.Adapter<QuickBuyAdapter.MyView
             holder.tv_buy.setTag(dataObj);
 
             String change = dataObj.getString("change");
-            System.out.println("Change====" + change);
             holder.txt_change.setText(change);
             if (change.contains("+")) {
                 holder.txt_change.setTextColor(ira1.getResources().getColor(R.color.greencolor));

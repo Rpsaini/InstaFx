@@ -218,7 +218,12 @@ public class DownloadTradeReport extends BaseActivity {
 
                     JSONObject obj = new JSONObject(dta);
                     if (obj.getBoolean("status")) {
-
+                        alertDialogs.alertDialog(DownloadTradeReport.this, getResources().getString(R.string.Response), obj.getString("msg"), getResources().getString(R.string.ok), "", new DialogCallBacks() {
+                            @Override
+                            public void getDialogEvent(String buttonPressed) {
+                                unauthorizedAccess(obj);
+                            }
+                        });
 
                     } else {
                         alertDialogs.alertDialog(DownloadTradeReport.this, getResources().getString(R.string.Response), obj.getString("msg"), getResources().getString(R.string.ok), "", new DialogCallBacks() {
