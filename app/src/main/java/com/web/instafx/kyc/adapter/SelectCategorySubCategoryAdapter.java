@@ -19,6 +19,7 @@ import com.web.instafx.R;
 import com.web.instafx.kyc.BasicDetailScreen;
 import com.web.instafx.kyc.VerifyCompleteSubmitKycScreen;
 import com.web.instafx.kyc.VerifyKycForPersonalInfoScreen;
+import com.web.instafx.staking.StakingScreen;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -184,6 +185,37 @@ public class SelectCategorySubCategoryAdapter extends RecyclerView.Adapter<Selec
                             commonChekBox = holder.chk_selectcategory;
                             ((BasicDetailScreen) pActivity).setKycType(type);
 
+                        }
+                        catch(Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+
+            }
+            catch (Exception e){
+                e.printStackTrace();
+            }
+
+        }
+        if(pActivity instanceof StakingScreen)
+        {
+            try {
+                JSONObject object = (JSONObject) datAr.get(position);
+                String type = object.getString("name");
+                holder.category_name.setText(type);
+                holder.category_image.setVisibility(View.GONE);
+                holder.chk_selectcategory.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                        try
+                        {
+                            if (commonChekBox != null) {
+                                commonChekBox.setChecked(false);
+                            }
+                            commonChekBox = holder.chk_selectcategory;
+                            ((StakingScreen) pActivity).cgb_item_id=object.getString("id");
+                            ((StakingScreen) pActivity).setKycType(type);
                         }
                         catch(Exception e) {
                             e.printStackTrace();

@@ -80,7 +80,10 @@
     <string name="please_depo">Please deposit only BTC to this address. If you deposit any other coins, it will be lost forever.</string>
     <string name="stacking">Staking</string>
     <string name="automatic_cgb_staking">Automatic CGB Staking</string>
+    <string name="sr_no">SR.NO</string>
+    <string name="staked_for">Staked For</string>
     <string name="cgb_staking">CGB Staking</string>
+    <string name="staked_coin">Staked Coins</string>
     <string name="cgb_stake">Stake CGB</string>
     <string name="veriry_acco">Verify Account</string>
     <string name="security">Security</string>
@@ -113,10 +116,10 @@
     <string name="account_holder_name_">Account Holder Name: </string>
     <string name="total_cgb_stake">Total CGB Staked </string>
     <string name="total_inr_worth">Total INR Worth </string>
-    <string name="monthly_interest">Monthly Interest:5%</string>
+    <string name="monthly_interest">Monthly Interest</string>
     <string name="total_inr_">Total INR Worth</string>
     <string name="total_profit_">Total Profit</string>
-    <string name="staking_days_">Staking Days:</string>
+    <string name="staking_days_">Staking Days</string>
     <string name="account_hoder_name_warning">Enter Account Holder Name.</string>
     <string name="bank_name_warning">Enter Bank Name.</string>
 
