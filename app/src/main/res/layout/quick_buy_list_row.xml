@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:id="@+id/ll_fund_list_row"
@@ -30,14 +31,12 @@
                 android:layout_gravity="center"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
+                    android:orientation="horizontal">
             <fontspackageForTextView.BoldMedium
                 android:paddingStart="10dp"
                 android:id="@+id/txt_currency_name"
@@ -112,7 +111,7 @@
                                 android:layout_marginLeft="5dp"
                                 android:rotation="270"
                                 android:src="@drawable/rightarrow"
-                                android:tint="@color/green"></ImageView>
+                                app:tint="@color/green"></ImageView>
 
                             <fontspackageForTextView.Regular
                                 android:id="@+id/txt_change"

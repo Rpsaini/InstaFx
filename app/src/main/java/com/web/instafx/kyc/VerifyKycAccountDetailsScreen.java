@@ -49,7 +49,7 @@ public class VerifyKycAccountDetailsScreen extends BaseActivity {
 
     private void changeHeaderLayoutColorByKycStatus(){
       String kycStatus=  savePreferences.reterivePreference(mVerifyKycAccountDetailsScreen, DefaultConstants.kyc_status).toString();
-      kycStatus="0";
+
 
 
       if(kycStatus.equals("1")){
