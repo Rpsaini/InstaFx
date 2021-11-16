@@ -26,6 +26,8 @@
             android:textColor="@color/black"
             >
         </TextView>
+
+
 <!--        <ImageView-->
 <!--            android:translationY="-50dp"-->
 <!--            android:layout_centerInParent="true"-->

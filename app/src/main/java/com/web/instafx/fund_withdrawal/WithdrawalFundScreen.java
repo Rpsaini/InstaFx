@@ -69,6 +69,10 @@ public class WithdrawalFundScreen extends BaseActivity {
             tv_note = findViewById(R.id.tv_note);
             JSONObject data = new JSONObject(getIntent().getStringExtra("data"));
 
+
+
+
+
             System.out.println("withdrawal full scree===="+data);
 
             availableBal = Double.parseDouble(data.getString("available_balance"));
@@ -92,6 +96,8 @@ public class WithdrawalFundScreen extends BaseActivity {
                 desTagRL.setVisibility(View.VISIBLE);
 
             }
+            tv_note.setText("Minimum withdrawal : "+data.getString("minimum_withdraw")+" "+symbol);
+            tv_note.setVisibility(View.VISIBLE);
 
 
         } catch (Exception e) {

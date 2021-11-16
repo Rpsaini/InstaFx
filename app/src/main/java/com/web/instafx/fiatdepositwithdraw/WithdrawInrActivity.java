@@ -72,8 +72,9 @@ public class WithdrawInrActivity extends BaseActivity {
           JSONObject pairdata = new JSONObject(getIntent().getStringExtra(DefaultConstants.pair_data));
           System.out.println("Withdrawpair data==="+pairdata);
 
-//          txt_note
 
+
+          txt_note.setText("Minimum Withdraw : "+pairdata.getString("minimum_withdraw")+" "+pairdata.getString("symbol"));
 
           findViewById(R.id.img_back).setOnClickListener(new View.OnClickListener() {
               @Override
