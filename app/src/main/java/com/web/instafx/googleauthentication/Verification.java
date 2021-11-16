@@ -73,18 +73,20 @@ public class Verification extends BaseActivity {
 
 
                 if(validationRule.checkEmptyString(ed_emailverificationcode)==0)
-                { alertDialogs.alertDialog(Verification.this, getResources().getString(R.string.app_name), "Enter Email Verification code.", "Ok", "", new DialogCallBacks() {
+                 {
+                  alertDialogs.alertDialog(Verification.this, getResources().getString(R.string.app_name), "Enter Email Verification code.", "Ok", "", new DialogCallBacks() {
                     @Override
-                    public void getDialogEvent(String buttonPressed) {
+                    public void getDialogEvent(String buttonPressed)
+                    {
 
                     }
-                });
-                return;
-
+                  });
+                 return;
                 }
 
                 if(validationRule.checkEmptyString(ed_googlecode)==0)
-                { alertDialogs.alertDialog(Verification.this, getResources().getString(R.string.app_name), "Enter Google Verification Code.", "Ok", "", new DialogCallBacks() {
+                {
+                    alertDialogs.alertDialog(Verification.this, getResources().getString(R.string.app_name), "Enter Google Verification Code.", "Ok", "", new DialogCallBacks() {
                     @Override
                     public void getDialogEvent(String buttonPressed) {
 

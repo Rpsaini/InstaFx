@@ -121,6 +121,7 @@ public class DepositByRazorPayFrg extends Fragment  {
         final Checkout co = new Checkout();
 //        co.setKeyID("rzp_test_xjp3GjvvlvvUIQ");
         co.setKeyID("rzp_live_wUEnsGRTSxmmvr");
+        co.setImage(R.mipmap.ic_launcher);
 
 
         try {

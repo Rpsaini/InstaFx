@@ -46,8 +46,6 @@ public class FiatCurrenciesAdapter extends RecyclerView.Adapter<FiatCurrenciesAd
 
         public MyViewHolder(View view) {
             super(view);
-
-
             txt_currency_name = view.findViewById(R.id.txt_currency_name);
             tv_balance = view.findViewById(R.id.tv_balance);
             ll_fund_list_row = view.findViewById(R.id.ll_fund_list_row);

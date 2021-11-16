@@ -360,8 +360,7 @@ public class P2PTransfer extends BaseActivity {
 
                     JSONObject jsonObject = new JSONObject(dta);
                     if (jsonObject.getBoolean("status"))
-                    {
-
+                       {
                         if(jsonObject.has("token"))
                         {
                             savePreferences.savePreferencesData(P2PTransfer.this, jsonObject.getString("token"), DefaultConstants.token);

@@ -23,7 +23,7 @@
     <string name="hide_zeorbalance">Hide Zero Balances</string>
     <string name="converttowrx">Convert To InstaFX</string>
     <string name="please_pay_attention">PLEASE PAY ATTENTION! THE COIN YOU SELECTED IS:</string>
-    <string name="cash_deposit_not_allowed">Cash </string>
+    <string name="cash_deposit_not_allowed">Kindly note cash deposit services is not available at this moment. Please use net banking for the deposits. </string>
     <string name="passwordrule">Please, use atleast 1 uppercase, 1 lowercase , 1 special character, 1 numeric &amp; atleast upto 8 characters</string>
 
     <string-array name="orderType">

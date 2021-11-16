@@ -98,7 +98,8 @@ public class HomeFragment extends Fragment {
     }
 
     void tablayout() {
-        if (tabLayout != null) {
+        if (tabLayout != null)
+        {
             adapter = new CurrencyPagerAdapter(getActivity().getSupportFragmentManager(), tabLayout.getTabCount());
             viewPager.setAdapter(adapter);
             viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));

@@ -44,22 +44,20 @@ private ArrayList<JSONObject> cryptoeAr=new ArrayList<>();
 
    public FundFragment()
       {
-      }
 
+      }
     public static FundFragment newInstance(String param1, String param2)
     {
         FundFragment fragment = new FundFragment();
         Bundle args = new Bundle();
-
         fragment.setArguments(args);
         return fragment;
     }
-
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState)
+       {
         super.onCreate(savedInstanceState);
-
-    }
+       }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -96,7 +94,6 @@ private ArrayList<JSONObject> cryptoeAr=new ArrayList<>();
                         {
                             filterFiat.add(jsonObject);
                         }
-
                     }
 
                     //=================
@@ -204,6 +201,9 @@ private ArrayList<JSONObject> cryptoeAr=new ArrayList<>();
                             txt_totalbalance.setText((obj.getString("sum_available_bal")));
                             txt_total_fund_value.setText(obj.getString("sum_available_bal")+"INR");
                             JSONArray balances=obj.getJSONArray("balances");
+
+
+
 
                             for(int x=0;x<balances.length();x++)
                             {

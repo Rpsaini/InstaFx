@@ -77,16 +77,12 @@ public class EnableGoogleAuth extends BaseActivity {
             }
         });
 
-
-
         findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-
-
 
     }
 
