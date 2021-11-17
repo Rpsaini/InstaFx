@@ -153,7 +153,7 @@
             android:nestedScrollingEnabled="true"
             android:scrollbarThumbVertical="@android:color/transparent"
             android:id="@+id/grid_restaurantimages"
-            android:numColumns="4"
+            android:numColumns="3"
             android:gravity="center"
             android:stretchMode="columnWidth"
             android:layout_width="fill_parent"

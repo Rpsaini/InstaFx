@@ -36,7 +36,6 @@ import java.util.Map;
 import me.anwarshahriar.calligrapher.Calligrapher;
 
 public class PasscodeSetting extends BaseActivity {
-
     private String oldPin = "", newPin = "";
     private TextView createpin;
     private int attemptCount = 0;

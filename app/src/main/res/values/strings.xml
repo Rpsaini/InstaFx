@@ -465,5 +465,6 @@
     <string name="_ledger_history">-Ledger History</string>
     <string name="_airdrops_and_">-Airdrops and other distribution</string>
     <string name="request_trading_report">Request Trading Report</string>
+    <string name="delete">Delete</string>
 
 </resources>
