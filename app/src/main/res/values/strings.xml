@@ -113,6 +113,9 @@
     <string name="address_front_image_warning">Select Address Front Image.</string>
     <string name="address_back_image_warning">Select Address Back Image.</string>
 
+    <string name="total_worth">Total Worth </string>
+
+
     <string name="account_holder_name_">Account Holder Name: </string>
     <string name="total_cgb_stake">Total CGB Staked </string>
     <string name="total_inr_worth">Total INR Worth </string>
@@ -154,8 +157,9 @@
     <string name="select_city">Select city</string>
     <string name="pin_zip_cod">Pin/Zip Code *</string>
     <string name="enter_code">Enter code</string>
+    <string name="pan_details">Pan Details</string>
 
-    <string name="pan_card">Pan card</string>
+    <string name="pan_card">Pan Card</string>
     <string name="pan_number_">Pan Number *</string>
     <string name="enter_pan_n">Enter pan number</string>
     <string name="re_enter_pa">Re-Enter Pan Number *</string>
@@ -467,4 +471,11 @@
     <string name="request_trading_report">Request Trading Report</string>
     <string name="delete">Delete</string>
 
+    <string name="promotional_page">Promotional Page</string>
+    <string name="buy_bitcoin">Buy Bitcoin</string>
+    <string name="kyc_status">Kyc Status</string>
+    <string name="watchlist">Watchlist</string>
+    <string name="explore_currencies">Explore Currencies</string>
+    <string name="popular_currencies">Popular Currencies</string>
+    <string name="track_your_">Track your favourite coins by adding \n them to your watchlist</string>
 </resources>
