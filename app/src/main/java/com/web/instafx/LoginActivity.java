@@ -16,7 +16,8 @@ import android.widget.TextView;
 import com.app.dialogsnpickers.DialogCallBacks;
 import com.app.vollycommunicationlib.CallBack;
 import com.app.vollycommunicationlib.ServerHandler;
-import com.web.instafx.forgot_pwd.ForgotPassword;
+import com.web.instafx.googleauthentication.TwoVerificationActivity;
+import com.web.instafx.googleauthentication.Verification;
 import com.web.instafx.utilpackage.UtilClass;
 
 import org.json.JSONObject;
@@ -30,7 +31,7 @@ import java.util.Map;
 public class LoginActivity extends BaseActivity {
 
     private EditText publicKey, sceretKey;
-    private TextView txt_register,forgotPwdTV;
+    private TextView txt_register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +54,6 @@ public class LoginActivity extends BaseActivity {
         publicKey = findViewById(R.id.login_username);
         sceretKey = findViewById(R.id.login_password);
         txt_register = findViewById(R.id.txt_register);
-        forgotPwdTV = findViewById(R.id.forgotPwdTV);
         final ImageView scanqrcode = findViewById(R.id.scanqrcode);
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,15 +102,32 @@ public class LoginActivity extends BaseActivity {
                                 System.out.println("Login===="+dta);
                                 JSONObject obj = new JSONObject(dta);
                                 if (obj.getBoolean("status")) {
-                                    try {
+                                    try
+                                       {
                                         System.out.println("Login===="+obj);
+
+                                        savePreferences.savePreferencesData(LoginActivity.this,obj.getString("is_auth_enable"),DefaultConstants.ga_active);
                                         savePreferences.savePreferencesData(LoginActivity.this, obj.getString("token"), DefaultConstants.token);
                                         savePreferences.savePreferencesData(LoginActivity.this, obj.getString("r_token"), DefaultConstants.r_token);
-                                        Intent intent = new Intent(LoginActivity.this, VerifyOtp.class);
-                                        intent.putExtra("url","verify-login-otp");
-                                        startActivity(intent);
 
-                                    } catch (Exception e) {
+                                           if(obj.getString("is_auth_enable").equalsIgnoreCase("true"))
+                                           {
+//                                               Intent intent = new Intent(LoginActivity.this, TwoVerificationActivity.class);
+//                                               startActivity(intent);
+
+                                               Intent intent = new Intent(LoginActivity.this, VerifyOtp.class);
+                                               intent.putExtra("url","verify-login-otp");
+                                               startActivity(intent);
+                                           }
+                                           else
+                                           {
+                                               Intent intent = new Intent(LoginActivity.this, VerifyOtp.class);
+                                               intent.putExtra("url","verify-login-otp");
+                                               startActivity(intent);
+                                           }
+
+
+                                       } catch (Exception e) {
                                         e.printStackTrace();
                                     }
 
@@ -147,17 +164,14 @@ public class LoginActivity extends BaseActivity {
             }
         });
 
-        txt_register.setOnClickListener(v -> {
-            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-            startActivity(intent);
-        });
-        forgotPwdTV.setOnClickListener(new View.OnClickListener() {
+        txt_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, ForgotPassword.class);
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
+
 
         findViewById(R.id.get_keys).setOnClickListener(new View.OnClickListener() {
             @Override

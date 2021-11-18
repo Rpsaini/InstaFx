@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.app.dialogsnpickers.DialogCallBacks;
 import com.app.vollycommunicationlib.CallBack;
@@ -13,6 +14,8 @@ import com.web.instafx.BaseActivity;
 import com.web.instafx.DefaultConstants;
 import com.web.instafx.MainActivity;
 import com.web.instafx.R;
+import com.web.instafx.staking.StakingScreen;
+import com.web.instafx.utilpackage.UtilClass;
 
 import org.json.JSONObject;
 
@@ -40,8 +43,6 @@ public class Verification extends BaseActivity {
         TextView txt_pastekey=findViewById(R.id.txt_pastekey);
         TextView txt_email=findViewById(R.id.txt_email);
 
-       //todo txt_email.setText("Code will send to an "+getRestParamsName(DefaultConstants.email)+" address");
-
         findViewById(R.id.txt_send_email_code).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -53,7 +54,7 @@ public class Verification extends BaseActivity {
         findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                goback();
             }
         });
 
@@ -92,10 +93,9 @@ public class Verification extends BaseActivity {
 
                     }
                 });
-                    return;
+               return;
 
                 }
-
                 completeGoogleVerification();
             }
         });
@@ -105,13 +105,18 @@ public class Verification extends BaseActivity {
     {
         try {
             final Map<String, String> m = new HashMap<>();
+            m.put("token", savePreferences.reterivePreference(this, DefaultConstants.token) + "");
+            m.put("Version", getAppVersion());
+            m.put("PlatForm", "android");
+            m.put("Timestamp", System.currentTimeMillis() + "");
+            m.put("DeviceToken", getDeviceToken() + "");
+            m.put("status", getIntent().getStringExtra(DefaultConstants.status));
+            System.out.println("Before==otp=="+m);
 
-            //todo m.put("user_id", getRestParamsName(DefaultConstants.user_id));
+            Map<String, String> headerMap = new HashMap<>();
+            headerMap.put("X-API-KEY", UtilClass.xApiKey);
 
-            final Map<String, String> obj = new HashMap<>();
-            obj.put("token", savePreferences.reterivePreference(Verification.this, DefaultConstants.token) + "");
-
-            serverHandler.sendToServer(Verification.this, getApiUrl() + "send-ga-code", m, 0, obj, 20000, R.layout.progressbar, new CallBack() {
+            serverHandler.sendToServer(Verification.this, getApiUrl() + "generate-auth-otp", m, 0, headerMap, 20000, R.layout.progressbar, new CallBack() {
                 @Override
                 public void getRespone(String dta, ArrayList<Object> respons) {
                     try {
@@ -119,15 +124,21 @@ public class Verification extends BaseActivity {
                         System.out.println("Backup key==="+jsonObject);
                         if (jsonObject.getBoolean("status")) {
 
-                            alertDialogs.alertDialog(Verification.this, getResources().getString(R.string.app_name), jsonObject.getString("msg"), "Ok", "", new DialogCallBacks() {
-                                @Override
-                                public void getDialogEvent(String buttonPressed)
-                                {
 
-                                }
-                            });
+                            if(jsonObject.has("token"))
+                            {
+                                savePreferences.savePreferencesData(Verification.this, jsonObject.getString("token"), DefaultConstants.token);
+                                savePreferences.savePreferencesData(Verification.this, jsonObject.getString("r_token"), DefaultConstants.r_token);
+                            }
 
-
+                            Toast.makeText(Verification.this,jsonObject.getString("msg"),Toast.LENGTH_LONG).show();
+//                            alertDialogs.alertDialog(Verification.this, getResources().getString(R.string.app_name), jsonObject.getString("msg"), "Ok", "", new DialogCallBacks() {
+//                                @Override
+//                                public void getDialogEvent(String buttonPressed)
+//                                {
+//
+//                                }
+//                            });
                         }
                         else
                         {
@@ -155,68 +166,105 @@ public class Verification extends BaseActivity {
     { try
         {
             final Map<String, String> m = new HashMap<>();
-//  Todo          m.put("user_id", getRestParamsName(DefaultConstants.user_id));
-            m.put("google_code", ed_googlecode.getText().toString());
-            m.put("email_code", ed_emailverificationcode.getText().toString());
-            m.put("google_secret_key", getIntent().getStringExtra(DefaultConstants.google_sceret_code));
+            m.put("token", savePreferences.reterivePreference(this, DefaultConstants.token) + "");
+            m.put("Version", getAppVersion());
+            m.put("PlatForm", "android");
+            m.put("Timestamp", System.currentTimeMillis() + "");
+            if(getIntent().getStringExtra(DefaultConstants.status).equalsIgnoreCase("1")) {
+                m.put("secret", getIntent().getStringExtra(DefaultConstants.google_sceret_code));
+            }
+            else
+            {
+                m.put("secret", "");
+            }
+            m.put("code", ed_googlecode.getText()+"");
             m.put("status", getIntent().getStringExtra(DefaultConstants.status));
+            m.put("otp", ed_emailverificationcode.getText()+"");
+            m.put("DeviceToken", getDeviceToken() + "");
 
 
 
-            System.out.println("Before to verify==="+m);
-            final Map<String, String> obj = new HashMap<>();
-            obj.put("token", savePreferences.reterivePreference(Verification.this, DefaultConstants.token) + "");
+            System.out.println("Before to send==="+m);
+            Map<String, String> headerMap = new HashMap<>();
+            headerMap.put("X-API-KEY", UtilClass.xApiKey);
 
-            serverHandler.sendToServer(Verification.this, getApiUrl() + "complete-google-authentication", m, 0, obj, 20000, R.layout.progressbar, new CallBack() {
+            serverHandler.sendToServer(Verification.this, getApiUrl() + "update-authenticator-settings", m, 0, headerMap, 20000, R.layout.progressbar, new CallBack() {
                 @Override
                 public void getRespone(String dta, ArrayList<Object> respons)
                 {
-                    try {
+                    try
+                       {
                         JSONObject jsonObject = new JSONObject(dta);
                         System.out.println("Backup key==="+jsonObject);
-                        if (jsonObject.getBoolean("status")) {
-
-                           //updateGaStatus();
-
-                            if(jsonObject.has("userdata")) {
-                                savePreferences.savePreferencesData(Verification.this, jsonObject.getString("userdata") + "", DefaultConstants.login_detail);
-                            }
-                            if(getIntent().getStringExtra(DefaultConstants.status).equalsIgnoreCase("1"))//from setup
+                        if(jsonObject.getBoolean("status"))
+                        {
+                            if(jsonObject.has("token"))
                             {
-                                alertDialogs.alertDialog(Verification.this, getResources().getString(R.string.app_name), jsonObject.getString("message"), "Ok", "", new DialogCallBacks() {
-                                    @Override
-                                    public void getDialogEvent(String buttonPressed) {
-
-                                        Intent intent=new Intent();
-                                        intent.putExtra("data","setup");
-                                        setResult(RESULT_OK,intent);
-                                        finish();
-                                    }
-                                });
+                                savePreferences.savePreferencesData(Verification.this, jsonObject.getString("token"), DefaultConstants.token);
+                                savePreferences.savePreferencesData(Verification.this, jsonObject.getString("r_token"), DefaultConstants.r_token);
                             }
-                            else if(getIntent().getStringExtra(DefaultConstants.status).equalsIgnoreCase("2"))//from verification
+
+                            System.out.println("Gaactive===="+getIntent().getStringExtra(DefaultConstants.status));
+                            if(getIntent().getStringExtra(DefaultConstants.status).equalsIgnoreCase("1"))
                             {
-
-                                Intent intent = new Intent(Verification.this, MainActivity.class);
-                                startActivity(intent);
-                                finish();
+                                savePreferences.savePreferencesData(Verification.this, "true", DefaultConstants.ga_active);
                             }
-                            else if(getIntent().getStringExtra(DefaultConstants.status).equalsIgnoreCase("3"))//from swap
+                            else
                             {
-
-                                Intent intent=new Intent();
-                                intent.putExtra("data","swap");
-                                setResult(RESULT_OK,intent);
-                                finish();
+                                savePreferences.savePreferencesData(Verification.this, "false", DefaultConstants.ga_active);
                             }
-                            else if(getIntent().getStringExtra(DefaultConstants.status).equalsIgnoreCase("4"))//from send
-                            {
 
-                                Intent intent=new Intent();
-                                intent.putExtra("data","send");
-                                setResult(RESULT_OK,intent);
-                                finish();
-                            }
+                            alertDialogs.alertDialog(Verification.this, getResources().getString(R.string.app_name), jsonObject.getString("msg"), "Ok", "", new DialogCallBacks() {
+                                @Override
+                                public void getDialogEvent(String buttonPressed)
+                                {
+                                    goback();
+                                }
+                            });
+
+
+
+
+//                            if(jsonObject.has("userdata"))
+//                            {
+//                                savePreferences.savePreferencesData(Verification.this, jsonObject.getString("userdata") + "", DefaultConstants.login_detail);
+//                            }
+//                            if(getIntent().getStringExtra(DefaultConstants.status).equalsIgnoreCase("1"))//from setup
+//                            {
+//                                alertDialogs.alertDialog(Verification.this, getResources().getString(R.string.app_name), jsonObject.getString("message"), "Ok", "", new DialogCallBacks() {
+//                                    @Override
+//                                    public void getDialogEvent(String buttonPressed) {
+//
+//                                        Intent intent=new Intent();
+//                                        intent.putExtra("data","setup");
+//                                        setResult(RESULT_OK,intent);
+//                                        finish();
+//                                    }
+//                                });
+//                            }
+//                            else if(getIntent().getStringExtra(DefaultConstants.status).equalsIgnoreCase("2"))//from verification
+//                            {
+//
+//                                Intent intent = new Intent(Verification.this, MainActivity.class);
+//                                startActivity(intent);
+//                                finish();
+//                            }
+//                            else if(getIntent().getStringExtra(DefaultConstants.status).equalsIgnoreCase("3"))//from swap
+//                            {
+//
+//                                Intent intent=new Intent();
+//                                intent.putExtra("data","swap");
+//                                setResult(RESULT_OK,intent);
+//                                finish();
+//                            }
+//                            else if(getIntent().getStringExtra(DefaultConstants.status).equalsIgnoreCase("4"))//from send
+//                            {
+//
+//                                Intent intent=new Intent();
+//                                intent.putExtra("data","send");
+//                                setResult(RESULT_OK,intent);
+//                                finish();
+//                            }
 
                         }
                         else
@@ -243,7 +291,22 @@ public class Verification extends BaseActivity {
     public void onBackPressed() {
 //        super.onBackPressed();
         finish();
+
     }
+
+private void goback()
+{
+    Intent intent = new Intent();
+    if(getIntent().getStringExtra(DefaultConstants.status).equalsIgnoreCase("true")) {
+        intent.putExtra("data", "setup");
+    }
+    else
+    {
+        intent.putExtra("data", "remove");
+    }
+    setResult(RESULT_OK, intent);
+    finish();
+}
 
 
 }

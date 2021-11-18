@@ -76,7 +76,6 @@
 
 
     <RelativeLayout
-        android:visibility="gone"
         android:id="@+id/rr_two_factor_auth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

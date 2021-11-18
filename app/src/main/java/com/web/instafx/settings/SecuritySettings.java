@@ -12,6 +12,7 @@ import android.widget.Switch;
 import com.web.instafx.BaseActivity;
 import com.web.instafx.DefaultConstants;
 import com.web.instafx.R;
+import com.web.instafx.googleauthentication.EnableGoogleAuth;
 
 public class SecuritySettings extends BaseActivity {
     String isPasscodeActive;
@@ -61,11 +62,14 @@ public class SecuritySettings extends BaseActivity {
                     switch_apppasscode.setChecked(true);
                     Intent intent = new Intent(SecuritySettings.this, PasscodeSetting.class);
                     intent.putExtra(DefaultConstants.callfrom, DefaultConstants.pinreset);
-                    startActivityForResult(intent, 1001);
+                    startActivityForResult(intent, 1002);
                 }
 
             }
         });
+
+       // 18002100018
+         //01726480799
 
         img_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,12 +77,22 @@ public class SecuritySettings extends BaseActivity {
                 finish();
             }
         });
+
+        findViewById(R.id.rr_two_factor_auth).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(SecuritySettings.this, EnableGoogleAuth.class);
+                intent.putExtra(DefaultConstants.callfrom, DefaultConstants.twofa);
+                startActivityForResult(intent, 1001);
+            }
+        });
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode==1001)
+        if(requestCode==1002)
         {
             if(data!=null)
             {
