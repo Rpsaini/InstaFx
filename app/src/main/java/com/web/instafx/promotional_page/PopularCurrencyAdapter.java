@@ -85,7 +85,7 @@ public class PopularCurrencyAdapter extends RecyclerView.Adapter<PopularCurrency
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+/////
     }
 
     private void setTextViewDrawableColor(TextView textView, int color) {

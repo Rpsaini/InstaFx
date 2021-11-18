@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/drawable/edittext_bottom_drawable.xml" value="0.2046875" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/drawable/ic_eye.xml" value="0.16354166666666667" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/drawable/ic_hide_password.xml" value="0.16354166666666667" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/drawable/ic_lock.xml" value="0.1453125" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/drawable/ic_otp.xml" value="0.2046875" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/activity_account_screen.xml" value="0.15579710144927536" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/activity_balance_fulledetails.xml" value="0.22" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/activity_enter_o_t_p.xml" value="0.1" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/activity_forgot_password.xml" value="0.25" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/activity_log_screen.xml" value="0.15579710144927536" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/activity_login2.xml" value="0.25" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/activity_withdraw_money.xml" value="0.33" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/deposti_coin_dialog.xml" value="0.25" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/forgot_password_screen.xml" value="0.1421875" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/popular_currency_items.xml" value="0.25" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/promotinal_screen.xml" value="0.27344782034346105" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/recover_password.xml" value="0.25" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/setting_profile_screen.xml" value="0.25" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/slidingimages_layout.xml" value="0.1515625" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/verify_complete_kyc_screen.xml" value="0.13177083333333334" />
+        <entry key="..\:/git_vsmarts_project/instafx/instafx/app/src/main/res/layout/verify_submit_account_screen.xml" value="0.13177083333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>
