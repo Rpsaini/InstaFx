@@ -28,6 +28,7 @@ import org.json.JSONObject;
 
 import com.web.instafx.invite_earn.InviteEarnScreen;
 
+import com.web.instafx.promotional_page.PromotionalScreen;
 import com.web.instafx.staking.StakingScreen;
 
 public class SettingProfileScreen extends BaseActivity {
@@ -74,6 +75,13 @@ public class SettingProfileScreen extends BaseActivity {
             @Override
             public void onClick(View v) {
                // showMobileRegDialog();
+            }
+        });
+        findViewById(R.id.home_layout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(SettingProfileScreen.this, PromotionalScreen.class);
+                startActivity(intent);
             }
         });
         findViewById(R.id.download_trade_report_layout).setOnClickListener(new View.OnClickListener() {

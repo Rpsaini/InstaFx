@@ -20,9 +20,12 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
+import android.text.InputType;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.app.dialogsnpickers.AlertDialogs;
@@ -72,7 +75,19 @@ public class BaseActivity extends AppCompatActivity {
         animationForViews = new AnimationForViews();
         changestatusBarColor(0);
      }
-
+    public void hideShowPassword(int x, EditText editText, ImageView imageView)
+    {
+        if(x==1)
+        {
+            editText.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);//show
+            imageView.setImageResource(R.drawable.ic_eye);
+        }
+        else
+        {
+            editText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+            imageView.setImageResource(R.drawable.ic_hide_password);
+        }
+    }
 
 
     public void changestatusBarColor(int type) {

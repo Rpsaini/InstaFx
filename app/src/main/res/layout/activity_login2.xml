@@ -129,6 +129,15 @@
              android:textColor="@color/white"
              android:textSize="16dp"></TextView>
 
+         <fontspackageForTextView.BoldMedium
+             android:id="@+id/forgotPwdTV"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp"
+             android:gravity="center"
+             android:text="@string/forgot_password"
+             android:textColor="@color/black"
+             android:textSize="@dimen/text_size"></fontspackageForTextView.BoldMedium>
 
          <TextView
              android:id="@+id/get_keys"

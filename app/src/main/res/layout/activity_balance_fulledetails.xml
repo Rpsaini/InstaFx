@@ -152,7 +152,7 @@
 
     <fontspackageForTextView.Regular
         android:gravity="center"
-       android:visibility="gone"
+        android:visibility="gone"
         android:id="@+id/txt_destinationtag"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"

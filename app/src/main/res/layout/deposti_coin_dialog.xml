@@ -112,10 +112,24 @@
                     android:layout_marginEnd="10dp"
                     app:srcCompat="@drawable/ic_copy" />
             </RelativeLayout>
+
            <LinearLayout
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:orientation="vertical">
+               <fontspackageForTextView.Regular
+                   android:gravity="center"
+                   android:visibility="gone"
+                   android:id="@+id/txt_destinationtag"
+                   android:layout_marginTop="10dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Destination Tag : "
+                   android:layout_marginRight="20dp"
+                   android:layout_marginLeft="20dp"
+                   android:textColor="@color/black"
+                   android:textSize="@dimen/text_size"></fontspackageForTextView.Regular>
+
                <ImageView
                    android:id="@+id/alertIC"
                    android:layout_width="wrap_content"

@@ -32,6 +32,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UnitedExchange"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".promotional_page.PromotionalScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.WhatAShot" />
+        <activity
+            android:name=".forgot_pwd.ForgotPassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.WhatAShot" />
+        <activity
+            android:name=".forgot_pwd.RecoverPassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.WhatAShot" />
+        <activity
+            android:name=".forgot_pwd.EnterOTP"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.WhatAShot" />
 
         <activity android:name=".fund_withdrawal.P2PTransfer"
             android:screenOrientation="portrait"
