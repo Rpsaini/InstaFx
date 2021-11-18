@@ -1,0 +1,44 @@
+<changelist name="Uncommitted_changes_before_Update_at_11_15_2021_6_10_PM_[Default_Changelist]" date="1636980035778" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_15_2021_6_10_PM_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 11/15/2021 6:10 PM [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/6.5/fileHashes/fileHashes.lock" />
+    <option name="AFTER_PATH" value=".gradle/6.5/fileHashes/fileHashes.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_15_2021_6_10_PM_[Default_Changelist]/fileHashes.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/6.5/javaCompile/javaCompile.lock" />
+    <option name="AFTER_PATH" value=".gradle/6.5/javaCompile/javaCompile.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_15_2021_6_10_PM_[Default_Changelist]/javaCompile.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/6.5/executionHistory/executionHistory.lock" />
+    <option name="AFTER_PATH" value=".gradle/6.5/executionHistory/executionHistory.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_15_2021_6_10_PM_[Default_Changelist]/executionHistory.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <option name="AFTER_PATH" value=".gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_15_2021_6_10_PM_[Default_Changelist]/buildOutputCleanup.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/6.5/fileHashes/fileHashes.bin" />
+    <option name="AFTER_PATH" value=".gradle/6.5/fileHashes/fileHashes.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_15_2021_6_10_PM_[Default_Changelist]/fileHashes.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/6.5/javaCompile/taskHistory.bin" />
+    <option name="AFTER_PATH" value=".gradle/6.5/javaCompile/taskHistory.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_15_2021_6_10_PM_[Default_Changelist]/taskHistory.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/6.5/executionHistory/executionHistory.bin" />
+    <option name="AFTER_PATH" value=".gradle/6.5/executionHistory/executionHistory.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_15_2021_6_10_PM_[Default_Changelist]/executionHistory.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/6.5/javaCompile/classAnalysis.bin" />
+    <option name="AFTER_PATH" value=".gradle/6.5/javaCompile/classAnalysis.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_15_2021_6_10_PM_[Default_Changelist]/classAnalysis.bin" />
+  </binary>
+</changelist>

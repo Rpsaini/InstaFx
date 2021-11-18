@@ -32,16 +32,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UnitedExchange"
         android:usesCleartextTraffic="true">
-
-        <activity android:name=".fund_withdrawal.P2PTransfer"
+        <activity android:name=".googleauthentication.TwoVerificationActivity"
             android:screenOrientation="portrait"
             ></activity>
-
+        <activity
+            android:name=".fund_withdrawal.P2PTransfer"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".download_trade_reports.DownloadTradeReport"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.WhatAShot" />
-
         <activity
             android:name=".settings.PasscodeSetting"
             android:screenOrientation="portrait" />
@@ -68,17 +68,14 @@
             android:name=".kyc.SelectStateScreen"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.WhatAShot" />
-
         <activity
             android:name=".kyc.BankDetailScreen"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.WhatAShot" />
-
         <activity
             android:name=".kyc.BasicDetailScreen"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.WhatAShot" />
-
         <activity
             android:name=".kyc.IdentityDetailScreen"
             android:screenOrientation="portrait"

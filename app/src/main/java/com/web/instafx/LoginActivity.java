@@ -16,6 +16,8 @@ import android.widget.TextView;
 import com.app.dialogsnpickers.DialogCallBacks;
 import com.app.vollycommunicationlib.CallBack;
 import com.app.vollycommunicationlib.ServerHandler;
+import com.web.instafx.googleauthentication.TwoVerificationActivity;
+import com.web.instafx.googleauthentication.Verification;
 import com.web.instafx.utilpackage.UtilClass;
 
 import org.json.JSONObject;
@@ -100,28 +102,32 @@ public class LoginActivity extends BaseActivity {
                                 System.out.println("Login===="+dta);
                                 JSONObject obj = new JSONObject(dta);
                                 if (obj.getBoolean("status")) {
-                                    try {
-
+                                    try
+                                       {
                                         System.out.println("Login===="+obj);
+
+                                        savePreferences.savePreferencesData(LoginActivity.this,obj.getString("is_auth_enable"),DefaultConstants.ga_active);
                                         savePreferences.savePreferencesData(LoginActivity.this, obj.getString("token"), DefaultConstants.token);
                                         savePreferences.savePreferencesData(LoginActivity.this, obj.getString("r_token"), DefaultConstants.r_token);
-                                        Intent intent = new Intent(LoginActivity.this, VerifyOtp.class);
-                                        intent.putExtra("url","verify-login-otp");
-                                        startActivity(intent);
-                                        //no need to very is_active otp because login process is different
-//                                        savePreferences.savePreferencesData(LoginActivity.this, obj.getString("token"), DefaultConstants.token);
-//                                        savePreferences.savePreferencesData(LoginActivity.this, obj.getString("r_token"), DefaultConstants.r_token);
-//
-//                                        savePreferences.savePreferencesData(LoginActivity.this, sceretKey.getText().toString(), UtilClass.publickey);
-//                                        savePreferences.savePreferencesData(LoginActivity.this, publicKey.getText().toString(), UtilClass.secretkey);
-//                                        savePreferences.savePreferencesData(LoginActivity.this, obj+"", DefaultConstants.login_detail);
-//
-//                                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-//                                        startActivity(intent);
-//                                        finish();
+
+                                           if(obj.getString("is_auth_enable").equalsIgnoreCase("true"))
+                                           {
+//                                               Intent intent = new Intent(LoginActivity.this, TwoVerificationActivity.class);
+//                                               startActivity(intent);
+
+                                               Intent intent = new Intent(LoginActivity.this, VerifyOtp.class);
+                                               intent.putExtra("url","verify-login-otp");
+                                               startActivity(intent);
+                                           }
+                                           else
+                                           {
+                                               Intent intent = new Intent(LoginActivity.this, VerifyOtp.class);
+                                               intent.putExtra("url","verify-login-otp");
+                                               startActivity(intent);
+                                           }
 
 
-                                    } catch (Exception e) {
+                                       } catch (Exception e) {
                                         e.printStackTrace();
                                     }
 

@@ -7,6 +7,7 @@ import android.view.View;
 import androidx.annotation.Nullable;
 
 import com.web.instafx.BaseActivity;
+import com.web.instafx.DefaultConstants;
 import com.web.instafx.R;
 import com.web.instafx.googleauthentication.googleauthslider.GoogleAuthSliderPageAdapter;
 
@@ -30,6 +31,7 @@ public class DownloadAndInstall extends BaseActivity {
             public void onClick(View v) {
                 openExternalUrls("https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2");
                 Intent intent=new Intent(DownloadAndInstall.this,BackUpKey.class);
+                intent.putExtra(DefaultConstants.status,getIntent().getStringExtra(DefaultConstants.status));
                 startActivityForResult(intent,1001);
             }
         });
