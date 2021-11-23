@@ -50,6 +50,7 @@ public class ShowFiatCurrencyDepositWithdraw extends BaseActivity {
     private void init() {
         try {
             JSONObject dataObj = new JSONObject(getIntent().getStringExtra("data"));
+
             symbol = dataObj.getString("symbol");
             String availableBalance = dataObj.getString("available_balance");
             final String icon = dataObj.getString("icon");

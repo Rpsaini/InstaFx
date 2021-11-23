@@ -8,39 +8,7 @@
     android:background="@color/white"
     tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/app_header_bar"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/header_bar_color"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/backIC"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="?attr/actionModeCloseDrawable"
-            app:tint="@color/white" />
-
-        <fontspackageForTextView.Regular
-            android:id="@+id/tvTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/promotional_page"
-            android:textColor="@color/white"
-            android:textSize="@dimen/action_bar_title_text_size"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -100,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="5dp"
                     android:layout_weight="1"
-                    android:background="@drawable/blue_drawable_bg"
+                    android:background="@drawable/orrange_drawable"
                     android:gravity="center"
                     android:padding="10dp"
                     android:text="@string/buy_bitcoin"
@@ -117,7 +85,7 @@
                     android:gravity="center"
                     android:padding="10dp"
                     android:text="@string/deposit_inr"
-                    android:textColor="@color/skyblue"
+                    android:textColor="@color/orragne"
                     android:textSize="@dimen/large_title_text_size" />
 
             </LinearLayout>
@@ -229,40 +197,32 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
+
+
+
+            <com.smarteist.autoimageslider.SliderView
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:id="@+id/image_slider"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="20dp"
-                android:visibility="visible">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/skyblue"
-                    android:visibility="visible">
-
-                    <androidx.viewpager.widget.ViewPager
-                        android:id="@+id/banner_pager"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentTop="true"
-                        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
-                    <me.relex.circleindicator.CircleIndicator
-                        android:id="@+id/indicator"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        android:gravity="bottom"
-                        android:padding="10dip"
-                        app:ci_height="10dp"
-                        app:ci_margin="4dp"
-                        app:ci_width="10dp" />
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
+                android:layout_height="140dp"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="0dp"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="1"
+                app:sliderStartAutoCycle="true" />
 
             <fontspackageForTextView.Regular
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -305,7 +265,7 @@
                         android:gravity="center"
                         android:padding="10dp"
                         android:text="@string/explore_currencies"
-                        android:textColor="@color/skyblue"
+                        android:textColor="@color/orragne"
                         android:textSize="@dimen/large_title_text_size" />
 
                 </LinearLayout>
@@ -322,41 +282,28 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/popular_currenciesRV"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp" />
-            <androidx.cardview.widget.CardView
+            <com.smarteist.autoimageslider.SliderView
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:id="@+id/image_slider_bootom"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:visibility="visible">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/skyblue"
-                    android:visibility="visible">
-
-                    <androidx.viewpager.widget.ViewPager
-                        android:id="@+id/bottom_banner_pager"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentTop="true" />
-
-                    <me.relex.circleindicator.CircleIndicator
-                        android:id="@+id/bottom_indicator"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        android:gravity="bottom"
-                        android:padding="10dip"
-                        app:ci_height="10dp"
-                        app:ci_margin="4dp"
-                        app:ci_width="10dp" />
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
+                android:layout_height="140dp"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="0dp"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="1"
+                app:sliderStartAutoCycle="true" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

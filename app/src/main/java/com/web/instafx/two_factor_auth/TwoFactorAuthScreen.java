@@ -21,12 +21,14 @@ public class TwoFactorAuthScreen extends BaseActivity {
         setOnClickListener();
     }
 
-    private void initView(){
+    private void initView()
+      {
         backIC=findViewById(R.id.backIC);
         authenticatAppIV=findViewById(R.id.authenticatAppIV);
-    }
+      }
 
-    private void setOnClickListener(){
+    private void setOnClickListener()
+      {
         backIC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

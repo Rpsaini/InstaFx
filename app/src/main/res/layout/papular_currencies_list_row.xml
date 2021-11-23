@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/border_five"
+    android:layout_height="120dp">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+
+        >
+
+    <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <fontspackageForTextView.Regular
+            android:id="@+id/txt_currencyname"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="BTC"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            ></fontspackageForTextView.Regular>
+        <fontspackageForTextView.Regular
+            android:id="@+id/txt_currencyname_fiat"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="/USDT"
+            android:textSize="13dp"
+            android:alpha=".5"
+            android:textColor="@color/black"
+            ></fontspackageForTextView.Regular>
+
+
+
+        <fontspackageForTextView.BoldMedium
+            android:id="@+id/txt_change"
+            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="+2.00%"
+            android:textSize="12dp"
+            android:textColor="@color/green"
+            >
+        </fontspackageForTextView.BoldMedium>
+
+
+
+
+    </LinearLayout>
+
+    <fontspackageForTextView.BoldMedium
+        android:layout_marginTop="5dp"
+        android:id="@+id/txt_curreny_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:text="00000.00"
+        android:gravity="center"
+        android:textColor="@color/green"
+        ></fontspackageForTextView.BoldMedium>
+
+    <fontspackageForTextView.Regular
+        android:layout_marginTop="5dp"
+        android:id="@+id/txt_currency_fiat_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:text="$0000"
+        android:gravity="center"
+        android:textColor="@color/grey_dark"
+        ></fontspackageForTextView.Regular>
+    </LinearLayout>
+</RelativeLayout>

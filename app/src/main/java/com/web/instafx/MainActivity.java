@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.web.instafx.fragments.FundFragment;
 import com.web.instafx.fragments.HomeFragment;
+import com.web.instafx.fragments.PromotionalFrg;
 import com.web.instafx.fragments.QuickBuyFragment;
 import com.web.instafx.orderpackage.MyOrderFragment;
 import com.web.instafx.search_currency.SearchCurrencyScreen;
@@ -33,6 +34,8 @@ public class MainActivity extends BaseActivity
 
     private String quickBuy="quick",fundFrg="fund",home="home",order="order";
     private QuickBuyFragment activefragment;
+
+    private TextView txt_promotoion,txt_market,txt_order,txt_fund,txt_quicknuy;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -40,8 +43,9 @@ public class MainActivity extends BaseActivity
         setContentView(R.layout.activity_main);
         initiateObj();
         getSupportActionBar().hide();
-        MarketFragment();
         bottomNavigation();
+        promotionalPage();
+
         init();
         showPasscode();
         savePreferences.savePreferencesData(MainActivity.this,"true", UtilClass.isLogin);
@@ -56,10 +60,6 @@ public class MainActivity extends BaseActivity
             }
         });
 
-
-
-
-
         findViewById(R.id.profileIC).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -71,9 +71,28 @@ public class MainActivity extends BaseActivity
 
     }
 
-    private void MarketFragment()
-    {
 
+
+    private void promotionalPage()
+    {
+        txt_promotoion.setAlpha(1f);
+        txt_market.setAlpha(.5f);
+        txt_order.setAlpha(.5f);
+        txt_fund.setAlpha(.5f);
+        txt_quicknuy.setAlpha(.5f);
+        PromotionalFrg promotionalFrg = new PromotionalFrg();
+        Bundle args = new Bundle();
+        promotionalFrg.setArguments(args);
+        replaceMainFragment(promotionalFrg,home);
+    }
+
+    public void MarketFragment()
+    {
+        txt_promotoion.setAlpha(.5f);
+        txt_market.setAlpha(1f);
+        txt_order.setAlpha(.5f);
+        txt_fund.setAlpha(.5f);
+        txt_quicknuy.setAlpha(.5f);
         HomeFragment homeFragment = new HomeFragment();
         Bundle args = new Bundle();
         homeFragment.setArguments(args);
@@ -82,6 +101,11 @@ public class MainActivity extends BaseActivity
 
     private void orderFragment()
     {
+        txt_promotoion.setAlpha(.5f);
+        txt_market.setAlpha(.5f);
+        txt_order.setAlpha(1f);
+        txt_fund.setAlpha(.5f);
+        txt_quicknuy.setAlpha(.5f);
         MyOrderFragment myOrderFrg = new MyOrderFragment();
         Bundle args = new Bundle();
         args.putString(DefaultConstants.CurrencyName,"");
@@ -91,6 +115,11 @@ public class MainActivity extends BaseActivity
 
     private void fundFragment()
     {
+        txt_promotoion.setAlpha(.5f);
+        txt_market.setAlpha(.5f);
+        txt_order.setAlpha(.5f);
+        txt_fund.setAlpha(1f);
+        txt_quicknuy.setAlpha(.5f);
         FundFragment fundFragment = new FundFragment();
         Bundle args = new Bundle();
         fundFragment.setArguments(args);
@@ -150,28 +179,34 @@ public class MainActivity extends BaseActivity
 
 
     private void bottomNavigation()
-    {
-       final TextView txt_market =findViewById(R.id.txt_market);
-       final TextView txt_order =findViewById(R.id.text_order);
-       final TextView txt_fund =findViewById(R.id.txt_fund);
-       final TextView txt_quicknuy =findViewById(R.id.txt_quicknuy);
-       if(txt_market!=null)
-        {
+      {
+        txt_promotoion =findViewById(R.id.txt_promotoion);
+        txt_market =findViewById(R.id.txt_market);
+        txt_order =findViewById(R.id.text_order);
+        txt_fund =findViewById(R.id.txt_fund);
+        txt_quicknuy =findViewById(R.id.txt_quicknuy);
 
-           txt_market.setTextColor(getResources().getColor(R.color.black));
+
+            txt_promotoion.setTextColor(getResources().getColor(R.color.black));
+            txt_market.setAlpha(.5f);
             txt_order.setAlpha(.5f);
             txt_fund.setAlpha(.5f);
             txt_quicknuy.setAlpha(.5f);
 
 
+            txt_promotoion.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    promotionalPage();
+                }
+            });
+
 
            txt_market.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
-                   txt_market.setAlpha(1f);
-                   txt_order.setAlpha(.5f);
-                   txt_fund.setAlpha(.5f);
-                   txt_quicknuy.setAlpha(.5f);
+
                    MarketFragment();
                }
            });
@@ -179,10 +214,7 @@ public class MainActivity extends BaseActivity
            txt_order.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
-                   txt_market.setAlpha(.5f);
-                   txt_order.setAlpha(1f);
-                   txt_fund.setAlpha(.5f);
-                   txt_quicknuy.setAlpha(.5f);
+
                    orderFragment();
                }
            });
@@ -190,10 +222,7 @@ public class MainActivity extends BaseActivity
            txt_fund.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
-                   txt_market.setAlpha(.5f);
-                   txt_order.setAlpha(.5f);
-                   txt_fund.setAlpha(1f);
-                   txt_quicknuy.setAlpha(.5f);
+
                    fundFragment();
                }
            });
@@ -201,6 +230,7 @@ public class MainActivity extends BaseActivity
             txt_quicknuy.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    txt_promotoion.setAlpha(.5f);
                     txt_market.setAlpha(.5f);
                     txt_order.setAlpha(.5f);
                     txt_fund.setAlpha(.5f);
@@ -211,7 +241,7 @@ public class MainActivity extends BaseActivity
 
        }
 
-    }
+
 
 
 

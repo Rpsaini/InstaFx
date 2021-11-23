@@ -29,11 +29,11 @@ public class EnableGoogleAuth extends BaseActivity {
 
     private void init()
     {
-        String googleSecretCode=getRestParamsName(DefaultConstants.google_sceret_code);
-        String ga_active=getRestParamsName(DefaultConstants.ga_active);
+        String ga_active=savePreferences.reterivePreference(EnableGoogleAuth.this,DefaultConstants.ga_active).toString();//getRestParamsName(DefaultConstants.google_sceret_code);
         SwitchMaterial aSwitch =findViewById(R.id.google_switch);
 
-        if(ga_active.equalsIgnoreCase("0"))
+        System.out.println("is ga==="+ga_active);
+        if(ga_active.length()==0||ga_active.equalsIgnoreCase("false"))
         {
             aSwitch.setChecked(false);
         }
@@ -41,37 +41,23 @@ public class EnableGoogleAuth extends BaseActivity {
         {
             aSwitch.setChecked(true);
         }
-        aSwitch.setOnClickListener(new View.OnClickListener() {
+        aSwitch.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v) {
 
                 System.out.println("is check==="+aSwitch.isChecked());
                 if(aSwitch.isChecked())
                 {
-                    //if(!googleSecretCode.equalsIgnoreCase("false"))
-                    if(googleSecretCode.length()>5)
-                    {
-                        Intent intent=new Intent(EnableGoogleAuth.this,Verification.class);
-                        intent.putExtra(DefaultConstants.google_sceret_code,googleSecretCode);
-                        intent.putExtra(DefaultConstants.status,"1");
-                        startActivityForResult(intent,1001);
-
-                    }
-                    else
-                    {
-                        Intent intent=new Intent(EnableGoogleAuth.this,DownloadAndInstall.class);
-                        startActivityForResult(intent,1001);
-                    }
+                    Intent intent=new Intent(EnableGoogleAuth.this,DownloadAndInstall.class);
+                    intent.putExtra(DefaultConstants.status,"1");
+                    startActivityForResult(intent,1001);
                 }
                 else
                 {
-                    if(googleSecretCode.length()>5)
-                    {
-                        Intent intent=new Intent(EnableGoogleAuth.this,Verification.class);
-                        intent.putExtra(DefaultConstants.google_sceret_code,googleSecretCode);
-                        intent.putExtra(DefaultConstants.status,"1");
-                        startActivityForResult(intent,1001);
-                    }
+                    Intent intent=new Intent(EnableGoogleAuth.this,Verification.class);
+                    intent.putExtra(DefaultConstants.status,"0");
+                    startActivityForResult(intent,1001);
                 }
 
             }
@@ -89,6 +75,9 @@ public class EnableGoogleAuth extends BaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+        System.out.println("Data back----"+requestCode+"==="+resultCode);
+
         if(data!=null)
         {
             if(requestCode==1001)

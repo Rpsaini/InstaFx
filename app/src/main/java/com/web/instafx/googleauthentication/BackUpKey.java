@@ -12,6 +12,7 @@ import com.app.vollycommunicationlib.CallBack;
 import com.web.instafx.BaseActivity;
 import com.web.instafx.DefaultConstants;
 import com.web.instafx.R;
+import com.web.instafx.utilpackage.UtilClass;
 
 import org.json.JSONObject;
 
@@ -42,7 +43,7 @@ public class BackUpKey extends BaseActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(BackUpKey.this,PasteBackupKey.class);
                 intent.putExtra(DefaultConstants.google_sceret_code,txt_backupkey.getText().toString());
-                intent.putExtra(DefaultConstants.status,"1");
+                intent.putExtra(DefaultConstants.status,getIntent().getStringExtra(DefaultConstants.status));
                 startActivityForResult(intent,1001);
             }
         });
@@ -66,18 +67,41 @@ public class BackUpKey extends BaseActivity {
     {
         try {
             final Map<String, String> m = new HashMap<>();
-//          m.put("user_id", getRestParamsName(DefaultConstants.user_id));
-            final Map<String, String> obj = new HashMap<>();
-            obj.put("token", savePreferences.reterivePreference(BackUpKey.this, DefaultConstants.token) + "");
 
-            serverHandler.sendToServer(BackUpKey.this, getApiUrl() + "get-google-secret-key", m, 0, obj, 20000, R.layout.progressbar, new CallBack() {
+            m.put("token",savePreferences.reterivePreference(BackUpKey.this, DefaultConstants.token)+"");
+            m.put("DeviceToken",getDeviceToken()+"");
+            m.put("Version",getDeviceToken()+"");
+            m.put("PlatForm","Android");
+            m.put("Timestamp",System.currentTimeMillis()+"");
+
+            Map<String,String> headerMap=new HashMap<>();
+            headerMap.put("X-API-KEY", UtilClass.xApiKey);
+            headerMap.put("Rtoken", getNewRToken()+"");
+
+            System.out.println("data===="+getApiUrl() + "get-authenticator-info"+"===="+m+"==="+headerMap);
+
+
+            serverHandler.sendToServer(BackUpKey.this, getApiUrl() + "get-authenticator-info", m, 0, headerMap, 20000, R.layout.progressbar, new CallBack() {
                 @Override
                 public void getRespone(String dta, ArrayList<Object> respons) {
                     try {
                         JSONObject jsonObject = new JSONObject(dta);
                         System.out.println("Backup key==="+jsonObject);
-                        if (jsonObject.getBoolean("status")) {
-                            txt_backupkey.setText(jsonObject.getString("google_secret_key"));
+                        if(jsonObject.getBoolean("status"))
+                        {
+
+                            jsonObject.getString("qr_code_url");
+                            jsonObject.getBoolean("is_active");//true/false
+
+                            txt_backupkey.setText(jsonObject.getString("secret_key"));
+
+                            if(jsonObject.has("token"))
+                            {
+                                savePreferences.savePreferencesData(BackUpKey.this, jsonObject.getString("token"), DefaultConstants.token);
+                                savePreferences.savePreferencesData(BackUpKey.this, jsonObject.getString("r_token"), DefaultConstants.r_token);
+                            }
+
+
                         }
                     } catch (Exception e) {
                         e.printStackTrace();

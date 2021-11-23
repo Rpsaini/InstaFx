@@ -386,7 +386,6 @@
             </RelativeLayout>
 
             <RelativeLayout
-
                 android:id="@+id/two_factor_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -406,7 +405,8 @@
                     android:layout_alignParentStart="true"
                     android:layout_centerInParent="true"
                     android:layout_marginStart="20dp"
-                    android:text="@string/two_factor_"
+                    android:textAllCaps="true"
+                    android:text="@string/security"
                     android:textColor="@color/text_black_color"
                     android:textSize="@dimen/title_text_size"
                     app:layout_constraintStart_toStartOf="parent"

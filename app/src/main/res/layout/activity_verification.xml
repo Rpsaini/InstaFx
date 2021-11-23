@@ -46,6 +46,7 @@
             >
 
             <fontspackageForTextView.Regular
+
                 android:id="@+id/txt_email"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -64,6 +65,7 @@
 
             <RelativeLayout
 
+
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
@@ -74,6 +76,7 @@
                 >
 
                 <fontpackageforEdittext.Regular
+                    android:inputType="number"
                     android:id="@+id/ed_emailverificationcode"
                     android:background="@android:color/transparent"
                     android:singleLine="true"
@@ -142,6 +145,7 @@
                 >
 
                 <fontpackageforEdittext.Regular
+                    android:inputType="number"
                     android:id="@+id/ed_googlecode"
                     android:background="@android:color/transparent"
                     android:singleLine="true"

@@ -68,7 +68,22 @@
                 android:layout_height="60dp"
                 android:layout_width="match_parent"
                 android:layout_alignParentBottom="true"
-                android:weightSum="4">
+                android:weightSum="5">
+
+                <fontspackageForTextView.Regular
+                    android:id="@+id/txt_promotoion"
+                    android:drawablePadding="1dp"
+                    android:layout_gravity="center"
+                    android:drawableTop="@drawable/home"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/home"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textSize="12dp"
+                    ></fontspackageForTextView.Regular>
+
 
                 <fontspackageForTextView.Regular
                     android:id="@+id/txt_quicknuy"
