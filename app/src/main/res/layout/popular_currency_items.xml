@@ -1,43 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="120dp"
-    android:layout_height="150dp"
+    android:layout_width="180dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_deposit"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginEnd="10dp">
+    android:layout_marginRight="10dp">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:visibility="visible"
-        android:layout_marginRight="10dp"
-        app:cardElevation="10dp"
-        app:cardCornerRadius="5dp">
+        app:cardBackgroundColor="@android:color/white"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:id="@+id/stripIV"
-                    android:layout_width="120dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/ic_baseline_turned_in_24"
-                    app:tint="@color/greyColor"
-                    android:layout_gravity="center"
-                    android:rotation="-90"/>
-                <fontspackageForTextView.Regular
-                    android:id="@+id/stipTitleTV"
-                    android:layout_width="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/time"
-                    android:layout_gravity="center"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/grey_dark"
-                    android:gravity="center"
-                    ></fontspackageForTextView.Regular>
-            </FrameLayout>
 
+            <fontspackageForTextView.Regular
+                android:id="@+id/favouriteTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/ic_strip_bg"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="5dp"
+                android:text="Most Watched"
+                android:textColor="@color/grey_dark"></fontspackageForTextView.Regular>
+            <ImageView
+                android:id="@+id/currencyIC"
+                android:layout_marginTop="10dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_btc"/>
+            <fontspackageForTextView.Regular
+                android:id="@+id/currencyTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="BTC"
+                android:textColor="@color/black"></fontspackageForTextView.Regular>
+            <fontspackageForTextView.Regular
+                android:id="@+id/amountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="@string/some_id"
+                android:layout_gravity="center"
+                android:textColor="@color/black"></fontspackageForTextView.Regular>
+
+            <fontspackageForTextView.Regular
+                android:id="@+id/percentTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:text="0.00%"
+                android:layout_gravity="center"
+                android:drawableStart="@drawable/ic_baseline_arrow_drop_up_24"
+                app:drawableTint="@color/greencolor"
+                android:textColor="@color/greencolor"
+                android:layout_marginBottom="10dp"></fontspackageForTextView.Regular>
 
 
         </LinearLayout>

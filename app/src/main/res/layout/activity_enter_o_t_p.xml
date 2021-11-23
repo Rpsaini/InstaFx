@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/RRsignuptoplayout">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/app_header_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backIC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="?attr/actionModeCloseDrawable"
+            app:tint="@color/grey_dark" />
+
+        <fontspackageForTextView.Regular
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password_"
+            android:textColor="@color/black"
+            android:textSize="@dimen/action_bar_title_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_top"
+        android:id="@+id/ll_sec"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/logo_black" />
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/ic_otp" />
+
+
+        <fontspackageForTextView.BoldMedium
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/enter_otp"
+            android:textStyle="bold"
+
+            ></fontspackageForTextView.BoldMedium>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/please_enter_otp"
+            android:gravity="center"
+            ></TextView>
+
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/txt_securely"
+            android:layout_width="280dp"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+            <fontpackageforEdittext.BoldExtra
+                android:imeOptions="actionDone"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:background="@drawable/edittext_bottom_drawable"
+                android:id="@+id/txt_otpone"
+                android:layout_marginEnd="5dp"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:text=""
+                android:gravity="center"
+                android:textColor="@color/black"
+                ></fontpackageforEdittext.BoldExtra>
+
+            <fontpackageforEdittext.BoldExtra
+                android:imeOptions="actionDone"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:background="@drawable/edittext_bottom_drawable"
+                android:id="@+id/txt_otptwo"
+                android:layout_marginEnd="5dp"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:text=""
+                android:gravity="center"
+                android:textColor="@color/black"
+                ></fontpackageforEdittext.BoldExtra>
+
+
+            <fontpackageforEdittext.BoldExtra
+                android:imeOptions="actionDone"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:background="@drawable/edittext_bottom_drawable"
+                android:id="@+id/txt_otpthree"
+                android:layout_marginEnd="5dp"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.25"                android:text=""
+                android:gravity="center"
+                android:textColor="@color/black"
+                ></fontpackageforEdittext.BoldExtra>
+
+
+            <fontpackageforEdittext.BoldExtra
+                android:imeOptions="actionDone"
+                android:inputType="numberPassword"
+                android:maxLength="1"
+                android:background="@drawable/edittext_bottom_drawable"
+                android:id="@+id/txt_otpfour"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:layout_marginEnd="5dp"
+                android:text=""
+                android:gravity="center"
+                android:textColor="@color/black"
+                ></fontpackageforEdittext.BoldExtra>
+
+        </LinearLayout>
+
+        <fontspackageForTextView.Regular
+            android:id="@+id/tv_submit"
+            android:background="@drawable/orrange_drawable"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="@string/next" />
+
+
+        <TextView
+            android:id="@+id/txt_resendOtp"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/resend_otp"
+            android:gravity="center"
+            android:textColor="@color/black"></TextView>
+    </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

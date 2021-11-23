@@ -73,6 +73,7 @@ public class ActivityLogScreens extends BaseActivity {
             m.put("page", page);
             Map<String, String> headerMap = new HashMap<>();
             headerMap.put("X-API-KEY", UtilClass.xApiKey);
+            Log.e("OrderDetails","request param::"+m);
 
             new ServerHandler().sendToServer(ActivityLogScreens.this, getApiUrl() + "get-all-activities", m, 0, headerMap, 20000, R.layout.progressbar, new CallBack() {
                 @Override

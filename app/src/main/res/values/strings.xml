@@ -30,14 +30,22 @@
         <item>Market</item>
         <item>Limit</item>
     </string-array>
-
+    <string name="entervalidemail">Enter valid Email.</string>
+    <string name="invalidOtp">Entered OTP is invalid</string>
+    <string name="Invalid">Invalid</string>
+    <string name="enter_otp">OTP</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_old_password">Enter old Password</string>
+    <string name="enter_conf_password">Enter Confirm Password</string>
+    <string name="password_invalid">Confirm Password does not matched</string>
     <string name="converttowrx_text">Convert To WRX</string>
-
-
+    <string name="forgot_password">Forgot your password?</string>
+    <string name="forgot_password_">Forgot Password</string>
+    <string name="recover_password">Recover Password</string>
     <string name="loin_txt">Login</string>
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
-
+    <string name="enteryouremail">Please enter your registered email</string>
     <string name="commission">Commission</string>
     <string name="email">Email</string>
     <string name="phoneNumber">Phone Number</string>
@@ -46,6 +54,8 @@
     <string name="password">Password</string>
     <string name="copy">Copy</string>
     <string name="cancel">Cancel</string>
+    <string name="new_password">New Password</string>
+    <string name="enter_your_new_password">Please enter your new password</string>
     <string name="confirm">Confirm Password</string>
     <string name="public_key">Public Key</string>
     <string name="secret_key">Secret Key</string>
@@ -72,6 +82,7 @@
     <string name="dont_recieve_otp">Don`t receive OTP</string>
     <string name="resend">Resend</string>
     <string name="verify">Verify</string>
+    <string name="resend_otp">Resend OTP</string>
     <string name="please_enter_otp">Please enter OTP</string>
     <string name="verification">Verification</string>
     <string name="verify_captcha">Verify captcha</string>
@@ -245,6 +256,7 @@
     <string name="currency">Currency</string>
     <string name="sponsor_code">Sponsor Code</string>
     <string name="currency_pr">CURRENCY PREFERENCE</string>
+    <string name="home">Home</string>
     <string name="verify_kyc">VERIFY KYC</string>
     <string name="payment_opt">PAYMENT OPTIONS</string>
     <string name="two_factor_">TWO FACTOR AUTHENTICATION</string>

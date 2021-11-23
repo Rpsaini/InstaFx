@@ -49,6 +49,10 @@
             android:name=".settings.SecuritySettings"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".promotional_page.PromotionalScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.WhatAShot" />
+        <activity
             android:name=".staking.StakingScreen"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.WhatAShot" />
