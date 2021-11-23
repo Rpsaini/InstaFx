@@ -112,12 +112,12 @@ public class LoginActivity extends BaseActivity {
 
                                            if(obj.getString("is_auth_enable").equalsIgnoreCase("true"))
                                            {
-//                                               Intent intent = new Intent(LoginActivity.this, TwoVerificationActivity.class);
-//                                               startActivity(intent);
-
-                                               Intent intent = new Intent(LoginActivity.this, VerifyOtp.class);
-                                               intent.putExtra("url","verify-login-otp");
+                                               Intent intent = new Intent(LoginActivity.this, TwoVerificationActivity.class);
                                                startActivity(intent);
+
+//                                               Intent intent = new Intent(LoginActivity.this, VerifyOtp.class);
+//                                               intent.putExtra("url","verify-login-otp");
+//                                               startActivity(intent);
                                            }
                                            else
                                            {

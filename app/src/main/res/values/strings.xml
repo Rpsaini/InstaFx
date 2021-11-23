@@ -256,7 +256,7 @@
     <string name="currency">Currency</string>
     <string name="sponsor_code">Sponsor Code</string>
     <string name="currency_pr">CURRENCY PREFERENCE</string>
-    <string name="home">Home</string>
+
     <string name="verify_kyc">VERIFY KYC</string>
     <string name="payment_opt">PAYMENT OPTIONS</string>
     <string name="two_factor_">TWO FACTOR AUTHENTICATION</string>
