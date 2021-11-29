@@ -77,28 +77,21 @@ public class QuickBuyAdapter extends RecyclerView.Adapter<QuickBuyAdapter.MyView
 
             String change = dataObj.getString("change");
             holder.txt_change.setText(change);
-            if (change.contains("+")) {
+            if (change.contains("+"))
+              {
                 holder.txt_change.setTextColor(ira1.getResources().getColor(R.color.greencolor));
-
                 holder.img_arrow.setRotation(270);
                 holder.img_arrow.setColorFilter(ira1.getResources().getColor(R.color.greencolor),PorterDuff.Mode.SRC_ATOP);
-
-
-            } else if (change.contains("-")) {
-
+              }
+            else if (change.contains("-")) {
                 holder.txt_change.setTextColor(ira1.getResources().getColor(R.color.darkRed));
                 holder.img_arrow.setRotation(90);
                 holder.img_arrow.setColorFilter(ira1.getResources().getColor(R.color.darkRed), PorterDuff.Mode.SRC_ATOP);
-
-
-
             } else {
 
                 holder.txt_change.setTextColor(ira1.getResources().getColor(R.color.greencolor));
                 holder.img_arrow.setRotation(270);
                 holder.img_arrow.setColorFilter(ira1.getResources().getColor(R.color.greencolor),PorterDuff.Mode.SRC_ATOP);
-
-
             }
 
 

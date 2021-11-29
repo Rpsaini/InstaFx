@@ -904,7 +904,7 @@ public class PairDetailView extends BaseActivity {
 
     }
 
-    ConstraintLayout constraint_buysell;
+    RelativeLayout constraint_buysell;
    private TextView   feeTxt;
     public void buysellDialog() {
         try {
@@ -924,10 +924,15 @@ public class PairDetailView extends BaseActivity {
             typeAr.add("Limit");//2
 //            typeAr.add("Stop Limit");//3
             feeTxt.setText("Fee : "+buy_fee);
+
+
             ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, typeAr);
             spinnerArrayAdapter.setDropDownViewResource(android.R.layout
                     .simple_spinner_dropdown_item);
             spiinerOrderType.setAdapter(spinnerArrayAdapter);
+
+
+
 
             spiinerOrderType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
@@ -950,6 +955,14 @@ public class PairDetailView extends BaseActivity {
                 @Override
                 public void onNothingSelected(AdapterView<?> parent) {
 
+                }
+            });
+
+
+            buySellDialog.findViewById(R.id.constraint_buysell).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    downSourceDestinationView(constraint_buysell, buySellDialog);
                 }
             });
 

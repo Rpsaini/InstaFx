@@ -62,7 +62,7 @@ public class SecuritySettings extends BaseActivity {
                     switch_apppasscode.setChecked(true);
                     Intent intent = new Intent(SecuritySettings.this, PasscodeSetting.class);
                     intent.putExtra(DefaultConstants.callfrom, DefaultConstants.pinreset);
-                    startActivityForResult(intent, 1002);
+                    startActivityForResult(intent, 1001);
                 }
 
             }
@@ -92,7 +92,9 @@ public class SecuritySettings extends BaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode==1002)
+
+        System.out.println("DaTA BACK===="+requestCode);
+        if(requestCode==1001)
         {
             if(data!=null)
             {

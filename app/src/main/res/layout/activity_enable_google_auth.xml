@@ -56,7 +56,7 @@
         android:textSize="16dp"
         android:textColor="@color/greyColor"
         android:gravity="center"
-        android:text="The Google Authenticator  app protect your account and withdrawals and SatWallet app account "
+        android:text="The Google Authenticator  app protect your account and withdrawals and InstaFx app account "
         ></fontspackageForTextView.Regular>
 
 

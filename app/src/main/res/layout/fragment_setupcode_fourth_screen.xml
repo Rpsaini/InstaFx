@@ -35,7 +35,7 @@
             android:textColor="@color/black"
             android:textSize="15dp"
             android:gravity="center|left"
-            android:text="You need to add Satwallet Account in Google Authenticator app and manually enter the 16-digit key. "
+            android:text="You need to add InstaFx Account in Google Authenticator app and manually enter the 16-digit key. "
             ></fontspackageForTextView.Regular>
 
         <ImageView

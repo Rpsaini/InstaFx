@@ -33,17 +33,20 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/LoginActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/settings/SettingProfileScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/settings/SettingProfileScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/adapters/QuickBuyAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/adapters/QuickBuyAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/fragments/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/fragments/HomeFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/pairdetailfragments/PairDetailView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/pairdetailfragments/PairDetailView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/settings/SecuritySettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/settings/SecuritySettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_enable_google_auth.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_enable_google_auth.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/buy_sell_bottom_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/buy_sell_bottom_dialog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_set_up_code_first_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_set_up_code_first_screen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_setup_code_secound_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_setup_code_secound_screen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_setup_code_third_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_setup_code_third_screen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_setupcode_fourth_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_setupcode_fourth_screen.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,22 +185,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="273" y="121" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1637651551287" />
-    <state width="1323" height="482" key="GridCell.Tab.0.bottom" timestamp="1637655415984">
+    <state width="1323" height="482" key="GridCell.Tab.0.bottom" timestamp="1638167207930">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="482" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1637655415984" />
-    <state width="1323" height="482" key="GridCell.Tab.0.center" timestamp="1637655415984">
+    <state width="1323" height="482" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1638167207930" />
+    <state width="1323" height="482" key="GridCell.Tab.0.center" timestamp="1638167207929">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="482" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1637655415984" />
-    <state width="1323" height="482" key="GridCell.Tab.0.left" timestamp="1637655415984">
+    <state width="1323" height="482" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1638167207929" />
+    <state width="1323" height="482" key="GridCell.Tab.0.left" timestamp="1638167207929">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="482" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1637655415984" />
-    <state width="1323" height="482" key="GridCell.Tab.0.right" timestamp="1637655415984">
+    <state width="1323" height="482" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1638167207929" />
+    <state width="1323" height="482" key="GridCell.Tab.0.right" timestamp="1638167207930">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="482" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1637655415984" />
+    <state width="1323" height="482" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1638167207930" />
     <state x="314" y="125" key="MultipleFileMergeDialog" timestamp="1637654556686">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -210,13 +213,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="492" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1637654526653" />
-    <state x="389" y="97" width="587" height="534" key="find.popup" timestamp="1637651280541">
+    <state x="389" y="97" width="587" height="534" key="find.popup" timestamp="1638166986217">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="389" y="97" width="587" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1637651280541" />
+    <state x="389" y="97" width="587" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1638166986217" />
     <state x="494" y="155" key="git4idea.merge.GitMergeDialog" timestamp="1637244726123">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="494" y="155" key="git4idea.merge.GitMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1637244726123" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1638166882247">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1638166882247" />
   </component>
 </project>

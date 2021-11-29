@@ -169,7 +169,9 @@ public class HomeFragment extends Fragment {
                                      commonMap.put(pairName, jsonObject.getJSONArray(pairName));
 
                                  }
-                                if(mainActivity.getAppVersion().equalsIgnoreCase(appversion))
+
+
+                                if((double)mainActivity.getAppVersionCode()!=Double.parseDouble(appversion))
                                   {
                                     mainActivity.alertDialogs.alertDialog(mainActivity, getResources().getString(R.string.app_name), "Please update app to new version.", "Ok", "", new DialogCallBacks() {
                                         @Override
