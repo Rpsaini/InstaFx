@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.app.dialogsnpickers.DialogCallBacks;
 import com.app.vollycommunicationlib.CallBack;
 import com.app.vollycommunicationlib.ServerHandler;
+import com.web.instafx.forgot_pwd.ForgotPassword;
 import com.web.instafx.googleauthentication.TwoVerificationActivity;
 import com.web.instafx.googleauthentication.Verification;
 import com.web.instafx.utilpackage.UtilClass;
@@ -42,11 +43,20 @@ public class LoginActivity extends BaseActivity {
         init();
     }
 
+
     private void init() {
         findViewById(R.id.login_back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+        findViewById(R.id.forgotPwdTV).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(LoginActivity.this, ForgotPassword.class);
+                startActivity(intent);
             }
         });
 

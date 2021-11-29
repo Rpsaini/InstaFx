@@ -48,18 +48,17 @@ import me.relex.circleindicator.CircleIndicator;
 
 
 public class PromotionalFrg extends Fragment {
-
     private View view;
     private MainActivity mainActivity;
     private TextView total_worthTV;
     private TextView review_tv, done_tv, buy_bitCoinTV,depositInrTV;
     private ImageView submit_line, review_line;
-
     public PromotionalFrg() {
         // Required empty public constructor
     }
 
-    public static PromotionalFrg newInstance(String param1, String param2) {
+    public static PromotionalFrg newInstance(String param1, String param2)
+    {
         PromotionalFrg fragment = new PromotionalFrg();
         return fragment;
     }
@@ -83,8 +82,6 @@ public class PromotionalFrg extends Fragment {
 
     private void init() {
         total_worthTV = view.findViewById(R.id.total_worthTV);
-
-
         review_tv = view.findViewById(R.id.review_tv);
         done_tv = view.findViewById(R.id.done_tv);
         submit_line = view.findViewById(R.id.submit_line);
@@ -97,9 +94,7 @@ public class PromotionalFrg extends Fragment {
                 mainActivity.MarketFragment();
             }
         });
-
-
-    }
+      }
 
 
     private void getPromotions() {
@@ -107,7 +102,6 @@ public class PromotionalFrg extends Fragment {
         m.put("token", mainActivity.savePreferences.reterivePreference(mainActivity, DefaultConstants.token) + "");
         m.put("DeviceToken", mainActivity.getDeviceToken() + "");
         m.put("currency", "INR");
-
         final Map<String, String> obj = new HashMap<>();
         obj.put("X-API-KEY", mainActivity.getXapiKey());
         obj.put("Rtoken", mainActivity.getNewRToken() + "");
@@ -129,7 +123,7 @@ public class PromotionalFrg extends Fragment {
 
                             JSONArray popular_currency = jsonObject.getJSONArray("popular_currency");
                             String kyc_status = jsonObject.getString("kyc_status");
-//                            JSONObject balance_data = jsonObject.getJSONObject("balance_data");
+//                          JSONObject balance_data = jsonObject.getJSONObject("balance_data");
                             JSONObject pair_data = jsonObject.getJSONObject("pair_data");
                             JSONObject balances = jsonObject.getJSONObject("balances");
                             JSONArray top_banner = jsonObject.getJSONArray("top_banner");

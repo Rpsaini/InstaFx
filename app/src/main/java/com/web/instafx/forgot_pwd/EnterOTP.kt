@@ -33,6 +33,7 @@ class EnterOTP : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_enter_o_t_p)
+        supportActionBar?.hide()
         RRsignuptoplayout = findViewById(R.id.RRsignuptoplayout);
         tv_submit = findViewById(R.id.tv_submit);
         txt_resendOtp = findViewById(R.id.txt_resendOtp);

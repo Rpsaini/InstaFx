@@ -238,6 +238,22 @@
         <activity
             android:name=".googleauthentication.EnableGoogleAuth"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".forgot_pwd.ForgotPassword"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".forgot_pwd.EnterOTP"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".forgot_pwd.RecoverPassword"
+            android:screenOrientation="portrait" />
+
+
+
+
     </application>
 
 </manifest>

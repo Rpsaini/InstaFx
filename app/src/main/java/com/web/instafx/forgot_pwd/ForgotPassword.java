@@ -30,6 +30,7 @@ public class ForgotPassword extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
+        getSupportActionBar().hide();
         initiateObj();
         init();
 
@@ -43,6 +44,13 @@ public class ForgotPassword extends BaseActivity {
             @Override
             public void onClick(View v) {
                 hideKeyboard(ForgotPassword.this);
+            }
+        });
+
+        findViewById(R.id.backIC).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 
