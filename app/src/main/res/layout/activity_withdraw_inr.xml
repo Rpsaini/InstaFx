@@ -127,7 +127,7 @@
                 android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Address"
+                android:text="Destination Tag"
                 android:textColor="@color/grey_dark"
                 android:textSize="12dp"
                 ></fontspackageForTextView.Regular>
@@ -135,6 +135,36 @@
             <fontpackageforEdittext.Regular
                 android:visibility="gone"
                 android:id="@+id/txt_destinationtag"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/edittext_drawable"
+                android:hint="Enter Destination tag"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:imeOptions="actionDone"
+                android:textColorHint="@color/grey_dark"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                ></fontpackageforEdittext.Regular>
+
+
+
+            <fontspackageForTextView.Regular
+                android:visibility="gone"
+                android:id="@+id/txt_label_address"
+                android:layout_marginTop="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textColor="@color/grey_dark"
+                android:textSize="12dp"
+                ></fontspackageForTextView.Regular>
+
+            <fontpackageforEdittext.Regular
+                android:visibility="gone"
+                android:id="@+id/txt_address"
                 android:paddingLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
@@ -148,9 +178,6 @@
                 android:textColor="@color/black"
                 android:textSize="14dp"
                 ></fontpackageforEdittext.Regular>
-
-
-
 
 
 

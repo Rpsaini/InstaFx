@@ -183,6 +183,8 @@
                 android:textColor="@color/grey_dark"
                 android:textSize="12dp"></fontspackageForTextView.Regular>
 
+
+
             <fontpackageforEdittext.Regular
                 android:id="@+id/txt_username"
                 android:paddingLeft="5dp"
@@ -201,7 +203,6 @@
 
 
 
-
             <fontspackageForTextView.Regular
                 android:layout_marginTop="25dp"
                 android:layout_width="wrap_content"
@@ -211,6 +212,10 @@
                 android:textSize="12dp"
                 ></fontspackageForTextView.Regular>
 
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                >
             <fontpackageforEdittext.Regular
                 android:id="@+id/txt_password"
                 android:paddingLeft="5dp"
@@ -228,7 +233,17 @@
                 android:textSize="14dp"
                 ></fontpackageforEdittext.Regular>
 
-
+                  <ImageView
+                    android:id="@+id/hideshow_password"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:paddingRight="10dp"
+                    android:src="@drawable/ic_eye"
+                    android:tint="@color/grey_dark"
+                    ></ImageView>
+            </RelativeLayout>
             <fontspackageForTextView.Regular
                 android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"
@@ -250,6 +265,10 @@
                 android:textSize="12dp"
                 ></fontspackageForTextView.Regular>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
             <fontpackageforEdittext.Regular
                 android:id="@+id/txt_conf_password"
                 android:paddingLeft="5dp"
@@ -266,7 +285,19 @@
                 android:textColor="@color/black"
                 android:textSize="14dp"
                 ></fontpackageforEdittext.Regular>
+    <ImageView
+                    android:id="@+id/hideshow_password_conf"
+                    android:layout_width="30dp"
+                     android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:paddingRight="10dp"
+                    android:src="@drawable/ic_eye"
+                    android:tint="@color/grey_dark"
+                    ></ImageView>
 
+
+</RelativeLayout>
 
 
             <fontspackageForTextView.Regular
@@ -316,7 +347,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:textSize="10dp"
+                    android:textSize="12dp"
                     android:text="@string/by_continuing_"
                     android:textColor="@color/black"></fontspackageForTextView.Regular>
 

@@ -38,6 +38,7 @@ private TextView txt_totalbalance;
 private int pagecount=1;
 private Switch txt_switch;
 private TextView txt_total_fund_value;
+public String authenticator;
 
 private ArrayList<JSONObject> fiatCurrencyAr=new ArrayList<>();
 private ArrayList<JSONObject> cryptoeAr=new ArrayList<>();
@@ -192,6 +193,7 @@ private ArrayList<JSONObject> cryptoeAr=new ArrayList<>();
                     if (obj.getBoolean("status")) {
                         try
                         {
+                            authenticator=obj.getString("authenticator");
                             if(obj.has("token"))
                             {
                                 mainActivity.savePreferences.savePreferencesData(mainActivity,obj.getString("token"),DefaultConstants.token);

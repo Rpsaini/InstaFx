@@ -83,7 +83,7 @@ public class MainActivity extends BaseActivity
         PromotionalFrg promotionalFrg = new PromotionalFrg();
         Bundle args = new Bundle();
         promotionalFrg.setArguments(args);
-        replaceMainFragment(promotionalFrg,home);
+        replaceMainFragment(promotionalFrg,"promotion");
     }
 
     public void MarketFragment()

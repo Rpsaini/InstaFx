@@ -118,8 +118,7 @@ public class TwoVerificationActivity extends BaseActivity {
             obj.put("X-API-KEY", getXapiKey());
             obj.put("Rtoken", getNewRToken()+"");
 
-            System.out.println("Request param===="+m);
-            System.out.println("Header Request param===="+obj+"=="+getApiUrl() +"verify-google-auth");
+
 
             serverHandler.sendToServer(this, getApiUrl() +"verify-google-auth", m, 0, obj, 20000, R.layout.progressbar, new CallBack() {
                 @Override

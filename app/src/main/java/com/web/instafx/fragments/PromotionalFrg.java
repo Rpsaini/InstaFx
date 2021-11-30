@@ -106,7 +106,6 @@ public class PromotionalFrg extends Fragment {
         obj.put("X-API-KEY", mainActivity.getXapiKey());
         obj.put("Rtoken", mainActivity.getNewRToken() + "");
 
-
         new ServerHandler().sendToServer(mainActivity, mainActivity.getApiUrl() + "get-promotions", m, 0, obj, 20000, R.layout.progressbar, new CallBack() {
             @Override
             public void getRespone(String dta, ArrayList<Object> respons) {
@@ -116,7 +115,8 @@ public class PromotionalFrg extends Fragment {
                     if (jsonObject.getBoolean("status")) {
                         try {
 
-                            if (jsonObject.has("token")) {
+                            if(jsonObject.has("token"))
+                            {
                                 mainActivity.savePreferences.savePreferencesData(mainActivity, jsonObject.getString("token"), DefaultConstants.token);
                                 mainActivity.savePreferences.savePreferencesData(mainActivity, jsonObject.getString("r_token"), DefaultConstants.r_token);
                             }

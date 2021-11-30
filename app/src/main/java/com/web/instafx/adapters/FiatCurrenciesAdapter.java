@@ -86,7 +86,8 @@ public class FiatCurrenciesAdapter extends RecyclerView.Adapter<FiatCurrenciesAd
             holder.ll_fund_list_row.setTag(dataObj);
             holder.ll_fund_list_row.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
+                public void onClick(View v)
+                {
                     Intent intent=new Intent(ira1, FundHistoryActivity.class);
                     intent.putExtra("data",v.getTag()+"");
                     ira1.startActivity(intent);

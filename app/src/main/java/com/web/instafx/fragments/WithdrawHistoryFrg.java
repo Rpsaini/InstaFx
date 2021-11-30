@@ -48,7 +48,13 @@ public class WithdrawHistoryFrg extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         try {
             view=inflater.inflate(R.layout.fragment_withdraw_history_frg, container, false);
-            init(new JSONArray(getArguments().getString("w_fund")));
+            JSONArray dataAr=new JSONArray(getArguments().getString("w_fund"));
+            ArrayList<JSONObject> historyArray=new ArrayList<>();
+            for(int x=0;x<dataAr.length();x++)
+            {
+                historyArray.add(dataAr.getJSONObject(x));
+            }
+            init(historyArray);
 
         }
         catch (Exception e)
@@ -60,18 +66,20 @@ public class WithdrawHistoryFrg extends Fragment {
         return view;
     }
 
-    private void init(JSONArray dataAr)
+    private void init(ArrayList<JSONObject> dataAr)
     {
         RecyclerView recycler_view_market = view.findViewById(R.id.transaction_history_recycler);
         RelativeLayout relativeLayout = view.findViewById(R.id.rr_nodata_view);
 
-        if (dataAr.length() <=0) {
+        if (dataAr.size() <=0) {
             relativeLayout.setVisibility(View.VISIBLE);
             recycler_view_market.setVisibility(View.GONE);
         } else {
             relativeLayout.setVisibility(View.GONE);
             recycler_view_market.setVisibility(View.VISIBLE);
         }
+
+
 
         TransactionHistoryAdapter mAdapter = new TransactionHistoryAdapter(dataAr, (FundHistoryActivity)getActivity(),"withdraw");
         LinearLayoutManager horizontalLayoutManagaer = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);

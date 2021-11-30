@@ -26,6 +26,7 @@ import java.util.ArrayList;
     public static String destinationtag="destinationtag";
     public static String currency_id="currency_id";
     public static String twofa="twofa";
+    public static String isGoogleAuth="isGoogleAuth";
     public static  ArrayList<JSONObject> open_orders=new ArrayList<>(),orders_history=new ArrayList<>();
 
 

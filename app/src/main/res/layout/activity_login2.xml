@@ -101,12 +101,17 @@
              android:textColor="@color/grey_dark"
              android:textSize="12dp"></fontspackageForTextView.Regular>
 
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             >
          <fontpackageforEdittext.Regular
+             android:background="@drawable/edittext_drawable"
              android:id="@+id/login_password"
              android:layout_width="match_parent"
              android:layout_height="45dp"
              android:layout_marginTop="5dp"
-             android:background="@drawable/edittext_drawable"
              android:hint="@string/password"
              android:imeOptions="actionDone"
              android:inputType="textPassword"
@@ -117,7 +122,20 @@
              android:textColorHint="@color/grey_dark"
              android:textSize="14dp"></fontpackageforEdittext.Regular>
 
-         <!--      S3ROT51Bn9VNjOK0fuEB-->
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:id="@+id/hideshow_password"
+
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:paddingRight="10dp"
+                android:src="@drawable/ic_eye"
+                android:tint="@color/grey_dark"
+                ></ImageView>
+
+
+         </RelativeLayout>
          <TextView
              android:id="@+id/login_btn"
              android:layout_width="match_parent"

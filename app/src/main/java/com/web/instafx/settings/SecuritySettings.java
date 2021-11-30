@@ -84,7 +84,7 @@ public class SecuritySettings extends BaseActivity {
             {
                 Intent intent = new Intent(SecuritySettings.this, EnableGoogleAuth.class);
                 intent.putExtra(DefaultConstants.callfrom, DefaultConstants.twofa);
-                startActivityForResult(intent, 1001);
+                startActivityForResult(intent, 1002);
             }
         });
     }

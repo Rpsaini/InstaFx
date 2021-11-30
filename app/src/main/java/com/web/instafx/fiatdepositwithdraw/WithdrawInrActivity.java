@@ -33,7 +33,7 @@ public class WithdrawInrActivity extends BaseActivity {
     private double availableBal=0;
     private  TextView txt_note;
 
-    private EditText txt_destinationtag;
+    private EditText txt_destinationtag,txt_address;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,20 +53,37 @@ public class WithdrawInrActivity extends BaseActivity {
 
           TextView txt_label_destinationtag = findViewById(R.id.txt_label_destinationtag);
           txt_destinationtag = findViewById(R.id.txt_destinationtag);
+          TextView  txt_label_address = findViewById(R.id.txt_label_address);
+           txt_address = findViewById(R.id.txt_address);
+
+
+
+
 
           availableBal = Double.parseDouble(getIntent().getStringExtra("balance"));
           total_balance1.setText(availableBal + "");
           showImage(getIntent().getStringExtra("icon"), txt_currency_image1);
 
           String symbol = getIntent().getStringExtra("currency");
-          if (symbol.equalsIgnoreCase("INR")) {
+          if (symbol.equalsIgnoreCase("INR"))
+          {
               txt_destinationtag.setVisibility(View.GONE);
               txt_label_destinationtag.setVisibility(View.GONE);
+              txt_address.setVisibility(View.GONE);
+              txt_label_address.setVisibility(View.GONE);
 
-          } else {
+          }
+          else if(symbol.equalsIgnoreCase("XRP")||symbol.equalsIgnoreCase("BNB"))
+          {
               txt_destinationtag.setVisibility(View.VISIBLE);
               txt_label_destinationtag.setVisibility(View.VISIBLE);
-
+              txt_address.setVisibility(View.VISIBLE);
+              txt_label_address.setVisibility(View.VISIBLE);
+          }
+          else
+          {
+              txt_label_address.setVisibility(View.VISIBLE);
+              txt_address.setVisibility(View.VISIBLE);
           }
 
           JSONObject pairdata = new JSONObject(getIntent().getStringExtra(DefaultConstants.pair_data));
@@ -112,7 +129,18 @@ public class WithdrawInrActivity extends BaseActivity {
                   }
                   if (txt_destinationtag.getVisibility() == View.VISIBLE) {
                       if (txt_destinationtag.getText().toString().length() <= 0) {
-                          alertDialogs.alertDialog(WithdrawInrActivity.this, getResources().getString(R.string.Response), "Enter destination address", getResources().getString(R.string.ok), "", new DialogCallBacks() {
+                          alertDialogs.alertDialog(WithdrawInrActivity.this, getResources().getString(R.string.Response), "Enter destination Tag", getResources().getString(R.string.ok), "", new DialogCallBacks() {
+                              @Override
+                              public void getDialogEvent(String buttonPressed) {
+                              }
+                          });
+                          return;
+                      }
+                  }
+
+                  if (txt_address.getVisibility() == View.VISIBLE) {
+                      if (txt_address.getText().toString().length() <= 0) {
+                          alertDialogs.alertDialog(WithdrawInrActivity.this, getResources().getString(R.string.Response), "Enter address", getResources().getString(R.string.ok), "", new DialogCallBacks() {
                               @Override
                               public void getDialogEvent(String buttonPressed) {
                               }
@@ -122,16 +150,19 @@ public class WithdrawInrActivity extends BaseActivity {
                   }
 
 
-                  if (getIntent().getBooleanExtra("isGoogleAuth", false)) {
+
+                  if (getIntent().getBooleanExtra("isGoogleAuth", false))
+                   {
                       Intent intent = new Intent(WithdrawInrActivity.this, GoogleAuthentication.class);
                       intent.putExtra("currency", symbol);
                       intent.putExtra("amount", txt_amount.getText().toString());
                       intent.putExtra("destination_tag", txt_destinationtag.getText().toString());
-                      intent.putExtra("address", "");
+                      intent.putExtra("address", txt_address.getText().toString());
+                      intent.putExtra(DefaultConstants.callfrom,"fiat");
                       startActivityForResult(intent, 1002);
 
-                  } else {
-                      withdrawWithoutAuth(symbol, txt_amount.getText().toString(), txt_destinationtag.getText().toString());
+                   } else {
+                      withdrawWithoutAuth(symbol, txt_amount.getText().toString(), txt_destinationtag.getText().toString(),txt_address.getText().toString());
                   }
               }
           });
@@ -163,7 +194,7 @@ public class WithdrawInrActivity extends BaseActivity {
     }
 
 
-    private void withdrawWithoutAuth(String symbol, String amount,String address)
+    private void withdrawWithoutAuth(String symbol, String amount,String destinationTag,String address)
     {
         Map<String, String> map = new HashMap<>();
         map.put("token", savePreferences.reterivePreference(WithdrawInrActivity.this, DefaultConstants.token) + "");

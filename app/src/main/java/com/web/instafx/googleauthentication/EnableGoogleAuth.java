@@ -46,7 +46,7 @@ public class EnableGoogleAuth extends BaseActivity {
             @Override
             public void onClick(View v) {
 
-                System.out.println("is check==="+aSwitch.isChecked());
+
                 if(aSwitch.isChecked())
                 {
                     Intent intent=new Intent(EnableGoogleAuth.this,DownloadAndInstall.class);

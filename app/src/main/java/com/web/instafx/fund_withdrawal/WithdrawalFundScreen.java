@@ -17,6 +17,7 @@ import com.web.instafx.BaseActivity;
 import com.web.instafx.DefaultConstants;
 import com.web.instafx.R;
 import com.web.instafx.ScanQrCode;
+import com.web.instafx.kyc.GoogleAuthentication;
 
 import org.json.JSONObject;
 
@@ -40,6 +41,8 @@ public class WithdrawalFundScreen extends BaseActivity {
     private RelativeLayout desTagRL;
     private EditText desfinalAmountET;
     private TextView tv_note;
+    private String authenticator;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,17 +73,12 @@ public class WithdrawalFundScreen extends BaseActivity {
             JSONObject data = new JSONObject(getIntent().getStringExtra("data"));
 
 
-
-
-
-            System.out.println("withdrawal full scree===="+data);
-
             availableBal = Double.parseDouble(data.getString("available_balance"));
             symbol = data.getString("symbol");
 
-
             fee = Double.parseDouble(data.getString("fee"));
             fee_type = data.getString("fee_type");
+            authenticator = getIntent().getStringExtra("authenticator");
 
             tvTitle.setText(getResources().getString(R.string.withdraw) + " " + symbol);
             BTCAmountTV.setText("Enter " + symbol);
@@ -100,12 +98,17 @@ public class WithdrawalFundScreen extends BaseActivity {
             tv_note.setVisibility(View.VISIBLE);
 
 
+
+
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private void setOnClickListener() {
+    private void setOnClickListener()
+    {
         backIC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,7 +116,7 @@ public class WithdrawalFundScreen extends BaseActivity {
             }
         });
 
-        proceedBT.setOnClickListener(new View.OnClickListener() {
+     proceedBT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (validationRule.checkEmptyString(destinationAddressET) == 0) {
@@ -152,15 +155,19 @@ public class WithdrawalFundScreen extends BaseActivity {
                     }
                 }
 
-                Intent intent = new Intent(WithdrawalFundScreen.this, ConfirmWithdrawalFundScreen.class);
-                intent.putExtra(DefaultConstants.destinationAddressET, destinationAddressET.getText().toString());
-                intent.putExtra(DefaultConstants.currenyAmount, BTCAmountET.getText().toString());
-                intent.putExtra(DefaultConstants.feeapplicable, fee + "");
-                intent.putExtra(DefaultConstants.total, finalAmountET.getText().toString());
-                intent.putExtra(DefaultConstants.remarks, remarksET.getText().toString());
-                intent.putExtra(DefaultConstants.symbol, symbol);
-                intent.putExtra(DefaultConstants.destinationtag, desfinalAmountET.getText().toString());
-                startActivityForResult(intent, 1003);
+
+                    Intent intent = new Intent(WithdrawalFundScreen.this, ConfirmWithdrawalFundScreen.class);
+                    intent.putExtra(DefaultConstants.destinationAddressET, destinationAddressET.getText().toString());
+                    intent.putExtra(DefaultConstants.currenyAmount, BTCAmountET.getText().toString());
+                    intent.putExtra(DefaultConstants.feeapplicable, fee + "");
+                    intent.putExtra(DefaultConstants.total, finalAmountET.getText().toString());
+                    intent.putExtra(DefaultConstants.remarks, remarksET.getText().toString());
+                    intent.putExtra(DefaultConstants.symbol, symbol);
+                    intent.putExtra(DefaultConstants.destinationtag, desfinalAmountET.getText().toString());
+                    intent.putExtra(DefaultConstants.isGoogleAuth, authenticator);
+                    startActivityForResult(intent, 1003);
+
+
 
 
             }

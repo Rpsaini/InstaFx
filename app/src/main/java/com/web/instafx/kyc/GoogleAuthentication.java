@@ -12,6 +12,7 @@ import com.app.vollycommunicationlib.ServerHandler;
 import com.web.instafx.BaseActivity;
 import com.web.instafx.DefaultConstants;
 import com.web.instafx.R;
+import com.web.instafx.fund_withdrawal.ConfirmWithdrawalFundScreen;
 import com.web.instafx.utilpackage.UtilClass;
 
 import org.json.JSONObject;
@@ -39,7 +40,6 @@ public class GoogleAuthentication extends BaseActivity {
             }
         });
         EditText ed_google_code = findViewById(R.id.ed_google_code);
-
         TextView login_submit = findViewById(R.id.login_submit);
         login_submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,15 +53,20 @@ public class GoogleAuthentication extends BaseActivity {
                     return;
                 }
 
-                withdrawWithAuth(ed_google_code.getText().toString());
-
+                if(getIntent().getStringExtra("callfrom").equalsIgnoreCase("fiat"))
+                {
+                    withdrawWithAuth(ed_google_code.getText().toString());
+                }
+                else
+                {
+                    withdrawWithAuth(ed_google_code.getText().toString());
+                }
             }
             });
-
-    }
+      }
 
     private void withdrawWithAuth(String auth)
-    {
+        {
         Map<String, String> map = new HashMap<>();
         map.put("token", savePreferences.reterivePreference(GoogleAuthentication.this, DefaultConstants.token) + "");
         map.put("currency", getIntent().getStringExtra("currency"));

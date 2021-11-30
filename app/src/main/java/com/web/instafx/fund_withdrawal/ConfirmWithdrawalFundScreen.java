@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+
 import com.app.dialogsnpickers.DialogCallBacks;
 import com.app.dialogsnpickers.SimpleDialog;
 import com.app.vollycommunicationlib.CallBack;
@@ -17,6 +19,7 @@ import com.app.vollycommunicationlib.ServerHandler;
 import com.web.instafx.BaseActivity;
 import com.web.instafx.DefaultConstants;
 import com.web.instafx.R;
+import com.web.instafx.kyc.GoogleAuthentication;
 import com.web.instafx.utilpackage.UtilClass;
 
 import org.json.JSONObject;
@@ -32,6 +35,7 @@ public class ConfirmWithdrawalFundScreen extends BaseActivity
     private Dialog confirmDialog;
     String destinationAddressET,currenyAmount,feeapplicable,total,remarks,symbol;
     private String destinationTag="";
+    private String authenticator="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +58,7 @@ public class ConfirmWithdrawalFundScreen extends BaseActivity
          total=getIntent().getStringExtra(DefaultConstants.total);
          remarks=getIntent().getStringExtra(DefaultConstants.remarks);
          symbol=getIntent().getStringExtra(DefaultConstants.symbol);
+        authenticator=getIntent().getStringExtra(DefaultConstants.isGoogleAuth);
 
         TextView destinationAddressValueTV=findViewById(R.id.destinationAddressValueTV);
         TextView BTCAmountValueTV=findViewById(R.id.BTCAmountValueTV);
@@ -97,14 +102,45 @@ public class ConfirmWithdrawalFundScreen extends BaseActivity
 
         confirmBT.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                withdrawWithoutAuth();
+            public void onClick(View v)
+            {
+                Map<String, String> map = new HashMap<>();
+                map.put("token", savePreferences.reterivePreference(ConfirmWithdrawalFundScreen.this, DefaultConstants.token) + "");
+                map.put("currency", symbol);
+                map.put("amount", currenyAmount);
+                map.put("address", destinationAddressET);
+                if(destinationTag.length()>0) {
+                    map.put("destination_tag", destinationTag);
+                }
+                map.put("DeviceToken", getDeviceToken());
+
+                Map<String, String> headerMap = new HashMap<>();
+                headerMap.put("X-API-KEY", UtilClass.xApiKey);
+                headerMap.put("Rtoken", getNewRToken() + "");
+
+                if(authenticator.equalsIgnoreCase("true"))
+                {
+                    Intent intent=new Intent(ConfirmWithdrawalFundScreen.this, GoogleAuthentication.class);
+                    intent.putExtra("destination_tag",destinationTag);
+                    intent.putExtra("currency",symbol);
+                    intent.putExtra("amount",currenyAmount);
+                    intent.putExtra("address",destinationAddressET);
+                    intent.putExtra(DefaultConstants.callfrom,"normal");
+                    startActivityForResult(intent,1001);
+
+                }
+                else
+                {
+                    withdrawWithoutAuth(map,headerMap);
+                }
+
             }
         });
     }
     private void confirmWithdrawFundDialog(String message) {
         try
-        { SimpleDialog simpleDialog = new SimpleDialog();
+        {
+             SimpleDialog simpleDialog = new SimpleDialog();
             confirmDialog = simpleDialog.simpleDailog(this, R.layout.confirm_dialog, new ColorDrawable(getResources().getColor(R.color.translucent_black)), WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT, false);
 
             TextView txtConfirm = confirmDialog.findViewById(R.id.txtConfirm);
@@ -131,38 +167,20 @@ public class ConfirmWithdrawalFundScreen extends BaseActivity
     }
 
 
-    private void withdrawWithoutAuth()
+    private void withdrawWithoutAuth(Map<String,String> map,Map<String,String> headerMap)
     {
-        Map<String, String> map = new HashMap<>();
-        map.put("token", savePreferences.reterivePreference(this, DefaultConstants.token) + "");
-        map.put("currency", symbol);
-        map.put("amount", currenyAmount);
-        map.put("address", destinationAddressET);
-        if(destinationTag.length()>0) {
-            map.put("destination_tag", destinationTag);
-        }
-        map.put("DeviceToken", getDeviceToken());
-
-        Map<String, String> headerMap = new HashMap<>();
-        headerMap.put("X-API-KEY", UtilClass.xApiKey);
-        headerMap.put("Rtoken", getNewRToken() + "");
-
         System.out.println("Before to send====>>"+map);
-
-
         new ServerHandler().sendToServer(ConfirmWithdrawalFundScreen.this, getApiUrl() + "proceed-withdraw", map, 0, headerMap, 20000, R.layout.progressbar, new CallBack() {
             @Override
             public void getRespone(String dta, ArrayList<Object> respons) {
                 try {
 
                     JSONObject obj = new JSONObject(dta);
-
                     if (obj.getBoolean("status"))
                     {
-
-                                confirmWithdrawFundDialog(obj.getString("msg"));
-
-                    } else {
+                       confirmWithdrawFundDialog(obj.getString("msg"));
+                    }
+                    else {
                         alertDialogs.alertDialog(ConfirmWithdrawalFundScreen.this, getResources().getString(R.string.Response), obj.getString("msg"), getResources().getString(R.string.ok), "", new DialogCallBacks() {
                             @Override
                             public void getDialogEvent(String buttonPressed) {
@@ -183,5 +201,20 @@ public class ConfirmWithdrawalFundScreen extends BaseActivity
     public void onBackPressed() {
         super.onBackPressed();
         finish();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(data!=null)
+        {
+            if(requestCode==1001)
+            {
+                Intent intent=new Intent();
+                intent.putExtra("data","");
+                setResult(RESULT_OK,intent);
+                finish();
+            }
+        }
     }
 }

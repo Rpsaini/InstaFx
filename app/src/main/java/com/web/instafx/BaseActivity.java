@@ -8,6 +8,7 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.InputType;
+import android.text.method.PasswordTransformationMethod;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -39,6 +41,7 @@ import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.web.instafx.fileupload.ApiProduction;
+import com.web.instafx.googleauthentication.EnableGoogleAuth;
 import com.web.instafx.settings.SecuritySettings;
 import com.web.instafx.utilpackage.UtilClass;
 
@@ -411,10 +414,13 @@ public class BaseActivity extends AppCompatActivity {
 
     public void logout()
     {
+        getSharedPreferences(getResources().getString(R.string.app_name), 0).edit().clear().commit();
+
         savePreferences.savePreferencesData(this, "0",DefaultConstants.login_detail);
         savePreferences.savePreferencesData(BaseActivity.this,"false", UtilClass.isLogin);
         savePreferences.savePreferencesData(BaseActivity.this,"off", DefaultConstants.isPasscodeActive);
         savePreferences.savePreferencesData(BaseActivity.this,"", DefaultConstants.pinKey);
+        savePreferences.savePreferencesData(BaseActivity.this,"false",DefaultConstants.ga_active);
         Intent intent = new Intent(BaseActivity.this, SplashScreen.class);
         startActivity(intent);
         finishAffinity();
@@ -437,6 +443,19 @@ public class BaseActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+    }
+
+    public void showHidePassword(boolean isShow,EditText editText)
+    {
+        if(isShow)
+        {
+            editText.setTransformationMethod(null);
+        }
+        else
+        {
+            editText.setTransformationMethod(new PasswordTransformationMethod());
+
+        }
     }
 
 

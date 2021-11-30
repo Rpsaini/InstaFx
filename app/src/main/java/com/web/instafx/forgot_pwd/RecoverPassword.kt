@@ -22,6 +22,7 @@ class RecoverPassword : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.recover_password)
+        supportActionBar?.hide();
         initiateObj()
         init();
         toolBarInit();

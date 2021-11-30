@@ -41,26 +41,12 @@ public class LoginActivity extends BaseActivity {
         initiateObj();
         getSupportActionBar().hide();
         init();
+        actions();
     }
 
 
-    private void init() {
-        findViewById(R.id.login_back).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-
-        findViewById(R.id.forgotPwdTV).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(LoginActivity.this, ForgotPassword.class);
-                startActivity(intent);
-            }
-        });
-
-        TextView loginBtn = findViewById(R.id.login_btn);
+    private void init()
+    {   TextView loginBtn = findViewById(R.id.login_btn);
         publicKey = findViewById(R.id.login_username);
         sceretKey = findViewById(R.id.login_password);
         txt_register = findViewById(R.id.txt_register);
@@ -243,5 +229,44 @@ public class LoginActivity extends BaseActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         redirectAndGotonext();
+    }
+
+    private void actions()
+    {
+        findViewById(R.id.login_back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        findViewById(R.id.forgotPwdTV).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(LoginActivity.this, ForgotPassword.class);
+                startActivity(intent);
+            }
+        });
+        ImageView hideshow_password=findViewById(R.id.hideshow_password);
+        hideshow_password.setTag("0");
+        hideshow_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                if(hideshow_password.getTag().toString().equalsIgnoreCase("0"))
+                {
+
+                    showHidePassword(true,sceretKey);
+                    hideshow_password.setImageResource(R.drawable.ic_hide_password);
+                    hideshow_password.setTag("1");
+                }
+                else
+                {
+                    hideshow_password.setImageResource(R.drawable.ic_eye);
+                    showHidePassword(false,sceretKey);
+                    hideshow_password.setTag("0");
+                }
+            }
+        });
     }
 }

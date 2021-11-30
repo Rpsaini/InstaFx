@@ -243,6 +243,53 @@ public class RegisterActivity extends BaseActivity {
         });
 
 
+        ImageView hideshow_password=findViewById(R.id.hideshow_password);
+        hideshow_password.setTag("0");
+        hideshow_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                if(hideshow_password.getTag().toString().equalsIgnoreCase("0"))
+                {
+
+                    showHidePassword(true,txt_password);
+                    hideshow_password.setImageResource(R.drawable.ic_hide_password);
+                    hideshow_password.setTag("1");
+                }
+                else
+                {
+                    hideshow_password.setImageResource(R.drawable.ic_eye);
+                    showHidePassword(false,txt_password);
+                    hideshow_password.setTag("0");
+                }
+            }
+        });
+
+        ImageView hideshow_password_conf=findViewById(R.id.hideshow_password_conf);
+        hideshow_password_conf.setTag("0");
+        hideshow_password_conf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                if(hideshow_password_conf.getTag().toString().equalsIgnoreCase("0"))
+                {
+
+                    showHidePassword(true,txt_conf_password);
+                    hideshow_password_conf.setImageResource(R.drawable.ic_hide_password);
+                    hideshow_password_conf.setTag("1");
+                }
+                else
+                {
+                    hideshow_password_conf.setImageResource(R.drawable.ic_eye);
+                    showHidePassword(false,txt_conf_password);
+                    hideshow_password_conf.setTag("0");
+                }
+            }
+        });
+
+
+
+
 
 //todo for testing check_captcha.setOnClickListener(new View.OnClickListener() {
 //            @Override

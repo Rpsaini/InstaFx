@@ -47,7 +47,13 @@ public class DepositHistoryFragment extends Fragment {
     {
         try {
             view = inflater.inflate(R.layout.fragment_transaction_history, container, false);
-            init(new JSONArray(getArguments().getString("d_fund")));
+            JSONArray dataAr=new JSONArray(getArguments().getString("d_fund"));
+            ArrayList<JSONObject> historyArray=new ArrayList<>();
+            for(int x=0;x<dataAr.length();x++)
+            {
+                historyArray.add(dataAr.getJSONObject(x));
+            }
+            init(historyArray);
         }
         catch (Exception e)
         {
@@ -58,12 +64,12 @@ public class DepositHistoryFragment extends Fragment {
     }
 
 
-    private void init(JSONArray dataAr)
+    private void init(ArrayList<JSONObject> dataAr)
     {
         RecyclerView recycler_view_market = view.findViewById(R.id.transaction_history_recycler);
         RelativeLayout relativeLayout = view.findViewById(R.id.rr_nodata_view);
 
-        if (dataAr.length() <=0) {
+        if (dataAr.size() <=0) {
             relativeLayout.setVisibility(View.VISIBLE);
             recycler_view_market.setVisibility(View.GONE);
         } else {
