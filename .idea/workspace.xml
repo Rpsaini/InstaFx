@@ -39,45 +39,27 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_Rpsaini_ReteroFitCommunication_1_0_7_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/InstaFX.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/InstaFX.app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_2021_1_32_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_2021_1_32_PM__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/BaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/BaseActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/DefaultConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/DefaultConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/LoginActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/RegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/RegisterActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/VerifyOtp.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/VerifyOtp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/adapters/FiatCurrenciesAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/adapters/FiatCurrenciesAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/adapters/FundAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/adapters/FundAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/adapters/TransactionHistoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/adapters/TransactionHistoryAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/fiatdepositwithdraw/WithdrawInrActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/fiatdepositwithdraw/WithdrawInrActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/forgot_pwd/RecoverPassword.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/forgot_pwd/RecoverPassword.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/fragments/DepositHistoryFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/fragments/DepositHistoryFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/fragments/FundFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/fragments/FundFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/fragments/PromotionalFrg.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/fragments/PromotionalFrg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/fragments/WithdrawHistoryFrg.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/fragments/WithdrawHistoryFrg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/fund_withdrawal/ConfirmWithdrawalFundScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/fund_withdrawal/ConfirmWithdrawalFundScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/fund_withdrawal/WithdrawalFundScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/fund_withdrawal/WithdrawalFundScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/googleauthentication/EnableGoogleAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/googleauthentication/EnableGoogleAuth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/googleauthentication/TwoVerificationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/googleauthentication/TwoVerificationActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/kyc/GoogleAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/kyc/GoogleAuthentication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/settings/SecuritySettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/settings/SecuritySettings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_enter_o_t_p.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_enter_o_t_p.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_forgot_password.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_forgot_password.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_two_verification.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_two_verification.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_verification.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_verification.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_withdraw_inr.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_withdraw_inr.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/recover_password.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/recover_password.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/register_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/register_activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/transaction_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/transaction_history.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/release/instafx3nov.aab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/SplashScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/SplashScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/deposit/DepositByRazorPayFrg.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/deposit/DepositByRazorPayFrg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/settings/SettingProfileScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/web/instafx/settings/SettingProfileScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/setting_profile_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/setting_profile_screen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[42006c2cc87e35b3]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -91,19 +73,27 @@
       </list>
     </option>
   </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="EXPORT_PRIVATE_KEY" value="false" />
+    <option name="KEY_STORE_PATH" value="E:\Bakupall projects\Instafx\instafx   keystore\instafx.jks" />
+    <option name="KEY_ALIAS" value="instafx" />
+  </component>
   <component name="ProjectId" id="215wl3eqVx3sMuqPL2H62kKBMBm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="BundleExportedModule" value="InstaFX.app" />
+    <property name="ExportApk.ApkPath" value="D:\InstaFx\app" />
+    <property name="ExportApk.BuildVariants" value="release" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/web/instafx/imageslider" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -112,8 +102,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\InstaFx\app\src\main\java\com\web\instafx\imageslider" />
       <recent name="D:\InstaFx\app\src\main\res\drawable" />
+      <recent name="D:\InstaFx\app\src\main\java\com\web\instafx\imageslider" />
     </key>
   </component>
   <component name="RunManager">
@@ -216,22 +206,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="273" y="121" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1637651551287" />
-    <state width="1323" height="469" key="GridCell.Tab.0.bottom" timestamp="1638275369517">
+    <state x="522" y="119" key="FileChooserDialogImpl" timestamp="1638278024860">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="469" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1638275369517" />
-    <state width="1323" height="469" key="GridCell.Tab.0.center" timestamp="1638275369517">
+    <state x="522" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1638278024860" />
+    <state width="1323" height="469" key="GridCell.Tab.0.bottom" timestamp="1638785219824">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="469" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1638275369517" />
-    <state width="1323" height="469" key="GridCell.Tab.0.left" timestamp="1638275369517">
+    <state width="1323" height="469" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1638785219824" />
+    <state width="1323" height="469" key="GridCell.Tab.0.center" timestamp="1638785219824">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="469" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1638275369517" />
-    <state width="1323" height="469" key="GridCell.Tab.0.right" timestamp="1638275369517">
+    <state width="1323" height="469" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1638785219824" />
+    <state width="1323" height="469" key="GridCell.Tab.0.left" timestamp="1638785219824">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="469" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1638275369517" />
+    <state width="1323" height="469" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1638785219824" />
+    <state width="1323" height="469" key="GridCell.Tab.0.right" timestamp="1638785219824">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="469" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1638785219824" />
     <state x="314" y="125" key="MultipleFileMergeDialog" timestamp="1637654556686">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -244,10 +238,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="492" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1637654526653" />
-    <state x="389" y="97" width="923" height="534" key="find.popup" timestamp="1638275880656">
+    <state x="389" y="97" width="923" height="534" key="find.popup" timestamp="1638789561898">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="389" y="97" width="923" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1638275880656" />
+    <state x="389" y="97" width="923" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1638789561898" />
     <state x="494" y="155" key="git4idea.merge.GitMergeDialog" timestamp="1637244726123">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

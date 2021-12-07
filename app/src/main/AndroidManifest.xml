@@ -30,7 +30,7 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/Theme.UnitedExchange"
+        android:theme="@style/Theme.instafx"
         android:usesCleartextTraffic="true">
         <activity android:name=".googleauthentication.TwoVerificationActivity"
             android:screenOrientation="portrait"
@@ -41,7 +41,7 @@
         <activity
             android:name=".download_trade_reports.DownloadTradeReport"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".settings.PasscodeSetting"
             android:screenOrientation="portrait" />
@@ -51,87 +51,87 @@
         <activity
             android:name=".promotional_page.PromotionalScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".staking.StakingScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".settings.SettingLanguage"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".FundHistoryActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".order_details.OrderDetailsScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".kyc.SelectStateScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".kyc.BankDetailScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".kyc.BasicDetailScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".kyc.IdentityDetailScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".kyc.SelectCountryScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".search_currency.SearchCurrencyScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".payment_option.PaymentOptionsScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".activity_log.ActivityLogScreens"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".two_factor_auth.TwoFactorAuthScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".currency_preferences.CurrencyPreferencesScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".settings.SettingProfileScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".fund_withdrawal.WithdrawalFundScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".fund_withdrawal.ConfirmWithdrawalFundScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".kyc.VerifyKycForPersonalInfoScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".kyc.VerifyCompleteSubmitKycScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".kyc.VerifyKycAccountDetailsScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.WhatAShot" />
+            android:theme="@style/Theme.instafx" />
         <activity
             android:name=".GetKeysActivity"
             android:screenOrientation="portrait" />

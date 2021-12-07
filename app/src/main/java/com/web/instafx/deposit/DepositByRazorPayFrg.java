@@ -242,7 +242,8 @@ public class DepositByRazorPayFrg extends Fragment  {
                 System.out.println("Response ==="+dta);
                 try {
                     JSONObject obj = new JSONObject(dta);
-                    if (obj.getBoolean("status")) {
+                    if (obj.getBoolean("status"))
+                     {
                         if(type.equalsIgnoreCase("1"))
                         {
                             showErrorDialog(type,obj.getString("msg"));

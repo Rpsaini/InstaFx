@@ -43,6 +43,7 @@ public class SettingProfileScreen extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.setting_profile_screen);
+        getSupportActionBar().hide();
         initiateObj();
         initView();
         setOnClickListener();

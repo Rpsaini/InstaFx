@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
+import androidx.appcompat.app.AppCompatDelegate;
+
 import com.web.instafx.communication.SocketHandlers;
 import com.web.instafx.utilpackage.UtilClass;
 
@@ -13,6 +15,7 @@ public class SplashScreen extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         setContentView(R.layout.activity_splash_screen);
         getSupportActionBar().hide();
         initiateObj();
