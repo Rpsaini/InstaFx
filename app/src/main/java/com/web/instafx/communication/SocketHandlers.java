@@ -9,7 +9,7 @@ public class SocketHandlers {
     public void createConnection() {
            try
            {
-            socket = IO.socket("https://instfx.com:2053/");
+            socket = IO.socket("https://socket.instfx.com:2053/");
             socket.connect();
             socket.on(Socket.EVENT_CONNECT,new Emitter.Listener() {
                 @Override
