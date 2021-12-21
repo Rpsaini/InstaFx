@@ -1,6 +1,5 @@
 package com.web.instafx.communication;
 
-
 import io.socket.client.IO;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
@@ -10,7 +9,7 @@ public class SocketHandlers {
     public void createConnection() {
            try
            {
-            socket = IO.socket("https://socket.instfx.com:2053/");
+            socket = IO.socket("https://instfx.com:2053/");
             socket.connect();
             socket.on(Socket.EVENT_CONNECT,new Emitter.Listener() {
                 @Override
@@ -41,7 +40,7 @@ public class SocketHandlers {
                             System.out.println("socket disconnected " + args);
                         }
                     });
-//                    .on(Socket.EVENT_RECONNECTING, new Emitter.Listener() {
+//                .on(Socket.EVENT_RECONNECTING, new Emitter.Listener() {
 //                @Override
 //                public void call(Object... args) {
 //
