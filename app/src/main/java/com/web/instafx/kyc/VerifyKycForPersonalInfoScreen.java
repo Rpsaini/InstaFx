@@ -108,6 +108,7 @@ public class VerifyKycForPersonalInfoScreen extends BaseActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.verify_profile_details_screen);
+        getSupportActionBar().hide();
         mVerifyKycForPersonalInfoScreen=this;
         initiateObj();
         initView();

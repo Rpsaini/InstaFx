@@ -53,6 +53,7 @@ public class BasicDetailScreen extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.basic_details_screen);
+        getSupportActionBar().hide();
         mBasicDetailScreen=this;
         initiateObj();
         initView();

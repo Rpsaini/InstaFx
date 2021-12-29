@@ -50,6 +50,7 @@ public class SelectStateScreen extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.select_country_screen);
+        getSupportActionBar().hide();
         mSelectCountryScreen=this;
         initiateObj();
         initView();

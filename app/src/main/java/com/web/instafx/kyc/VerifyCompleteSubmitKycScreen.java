@@ -35,6 +35,7 @@ public class VerifyCompleteSubmitKycScreen extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.verify_complete_kyc_screen);
         mVerifyCompleteSubmitKycScreen=this;
+        getSupportActionBar().hide();
         initiateObj();
         initView();
         setOnClickListener();

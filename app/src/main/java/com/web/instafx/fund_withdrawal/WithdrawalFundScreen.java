@@ -48,6 +48,7 @@ public class WithdrawalFundScreen extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.withdraw_screen);
+        getSupportActionBar().hide();
         initiateObj();
         init();
         setOnClickListener();

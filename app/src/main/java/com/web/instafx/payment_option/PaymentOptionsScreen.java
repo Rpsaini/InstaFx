@@ -22,6 +22,7 @@ public class PaymentOptionsScreen extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.payment_option_screen);
+        getSupportActionBar().hide();
         initView();
         setViewPagerAdapter();
         setOnClickListener();

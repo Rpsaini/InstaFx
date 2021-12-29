@@ -153,7 +153,6 @@ public class HomeFragment extends Fragment {
                         initView();
                         if(jsonObject.getBoolean("status")) {
                             try {
-                                mainActivity.savePreferences.savePreferencesData(mainActivity, jsonObject.getString("kyc_status"), DefaultConstants.kyc_status);
 
                                 String appversion = jsonObject.getString("app_version");
                                 if(jsonObject.has("token"))

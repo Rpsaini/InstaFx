@@ -94,6 +94,7 @@ public class BankDetailScreen extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bank_details_screen);
+        getSupportActionBar().hide();
         mBankDetailScreen=this;
         initiateObj();
         initView();
@@ -669,8 +670,8 @@ public class BankDetailScreen extends BaseActivity {
                                     BasicDetailScreen.mBasicDetailScreen.finish();
                                     IdentityDetailScreen.mIdentityDetailScreen.finish();
                                     BankDetailScreen.mBankDetailScreen.finish();
-                                    VerifyKycAccountDetailsScreen.mVerifyKycAccountDetailsScreen.finish();
-                                    VerifyKycAccountDetailsScreen.mVerifyKycAccountDetailsScreen.finish();
+                                   // VerifyKycAccountDetailsScreen.mVerifyKycAccountDetailsScreen.finish();
+                                    VerifyCompleteSubmitKycScreen.mVerifyCompleteSubmitKycScreen.finish();
                                 }
                             });
 

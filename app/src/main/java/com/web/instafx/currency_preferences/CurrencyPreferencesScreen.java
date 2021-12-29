@@ -23,7 +23,7 @@ public class CurrencyPreferencesScreen extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.currency_preferences_screen);
-
+        getSupportActionBar().hide();
         initView();
         setAdapterData();
         setOnClickListener();

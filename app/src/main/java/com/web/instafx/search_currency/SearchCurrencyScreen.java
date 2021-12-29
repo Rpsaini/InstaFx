@@ -40,6 +40,7 @@ public class SearchCurrencyScreen extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_currency_screen);
+        getSupportActionBar().hide();
         initView();
         setAdapterData();
         setOnClickListener();

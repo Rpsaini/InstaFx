@@ -5,6 +5,9 @@
       <map>
         <entry key="..\:/git_vsmarts_project/instafx/app/src/main/res/drawable-v24/camera_surface_view_border.xml" value="0.1390625" />
         <entry key="..\:/git_vsmarts_project/instafx/app/src/main/res/layout/activity_scan_qr_code.xml" value="0.18" />
+        <entry key="..\:/git_vsmarts_project/instafxNew/InstaFx/app/src/main/res/layout/activity_main.xml" value="0.11503623188405797" />
+        <entry key="..\:/git_vsmarts_project/instafxNew/InstaFx/app/src/main/res/layout/verify_complete_kyc_screen.xml" value="0.25" />
+        <entry key="..\:/git_vsmarts_project/instafxNew/InstaFx/app/src/main/res/layout/verify_submit_account_screen.xml" value="0.18" />
       </map>
     </option>
   </component>
