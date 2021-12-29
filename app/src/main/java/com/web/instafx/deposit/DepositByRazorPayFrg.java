@@ -113,8 +113,6 @@ public class DepositByRazorPayFrg extends Fragment  {
     }
 
     public void startPayment() {
-
-
         /*
           You need to pass current activity in order to let Razorpay create CheckoutActivity
          */
@@ -122,8 +120,6 @@ public class DepositByRazorPayFrg extends Fragment  {
 //        co.setKeyID("rzp_test_xjp3GjvvlvvUIQ");
         co.setKeyID("rzp_live_wUEnsGRTSxmmvr");
         co.setImage(R.mipmap.ic_launcher);
-
-
         try {
 
             JSONObject data = new JSONObject(depositeInrActivity.savePreferences.reterivePreference(depositeInrActivity, DefaultConstants.login_detail).toString());
@@ -132,9 +128,16 @@ public class DepositByRazorPayFrg extends Fragment  {
             options.put("description", ed_remarks.getText().toString());
             options.put("send_sms_hash", true);
             options.put("allow_rotation", true);
-            //You can omit the image option to fetch the image from dashboard
+           // options.put("upi_link", true);
+           // types
+           //You can omit the image option to fetch the image from dashboard
             options.put("image", "https://s3.amazonaws.com/rzp-mobile/images/rzp.png");
             options.put("currency", "INR");
+           /*
+            options.put("types", "upi_qr");
+            options.put("fixed_amount", 1);
+            options.put("payment_amount", Double.parseDouble(ed_amount.getText().toString()) * 100);
+           */
             options.put("amount", Double.parseDouble(ed_amount.getText().toString()) * 100);
             JSONObject preFill = new JSONObject();
             preFill.put("email", data.getString("email"));

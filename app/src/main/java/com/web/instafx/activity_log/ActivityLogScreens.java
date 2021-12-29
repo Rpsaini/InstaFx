@@ -82,8 +82,10 @@ public class ActivityLogScreens extends BaseActivity {
                         Log.e("OrderDetails","OrderDetails::"+dta);
 
 
- /*                     {"type":"Placed Order","description":"User company has placed Limit order of volume 17 @price 166.35326898 Vide order id 4096500","ip":"13.127.217.37","date":"2021-11-11 19:58:19"}
-                                */
+                /*
+                    {"type":"Placed Order","description":"User company has placed Limit order of volume 17 @price 166.35326898 Vide order id 4096500","ip":"13.127.217.37","date":"2021-11-11 19:58:19"}
+
+                 */
 
                         JSONObject obj = new JSONObject(dta);
                         if (obj.getBoolean("status")) {

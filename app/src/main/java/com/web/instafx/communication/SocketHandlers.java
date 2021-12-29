@@ -1,6 +1,5 @@
 package com.web.instafx.communication;
 
-
 import io.socket.client.IO;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
@@ -41,7 +40,7 @@ public class SocketHandlers {
                             System.out.println("socket disconnected " + args);
                         }
                     });
-//                    .on(Socket.EVENT_RECONNECTING, new Emitter.Listener() {
+//                .on(Socket.EVENT_RECONNECTING, new Emitter.Listener() {
 //                @Override
 //                public void call(Object... args) {
 //
