@@ -425,7 +425,7 @@ public class BaseActivity extends AppCompatActivity {
         startActivity(intent);
         finishAffinity();
 
-        
+
 
     }
 
