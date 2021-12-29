@@ -34,6 +34,7 @@ public class DownloadTradeReport extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.download_trade_report);
+        getSupportActionBar().hide();
         initiateObj();
         initView();
         setOnClickListener();

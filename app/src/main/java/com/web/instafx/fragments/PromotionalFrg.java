@@ -123,12 +123,14 @@ public class PromotionalFrg extends Fragment {
 
                             JSONArray popular_currency = jsonObject.getJSONArray("popular_currency");
                             String kyc_status = jsonObject.getString("kyc_status");
+                            mainActivity.savePreferences.savePreferencesData(mainActivity, jsonObject.getString("kyc_status"), DefaultConstants.kyc_status);
+
 //                          JSONObject balance_data = jsonObject.getJSONObject("balance_data");
                             JSONObject pair_data = jsonObject.getJSONObject("pair_data");
                             JSONObject balances = jsonObject.getJSONObject("balances");
                             JSONArray top_banner = jsonObject.getJSONArray("top_banner");
                             JSONArray bottom_banner = jsonObject.getJSONArray("bottom_banner");
-                            JSONObject banks = jsonObject.getJSONObject("banks");
+                           //JSONObject banks = jsonObject.getJSONObject("banks");
                             total_worthTV.setText(jsonObject.getString("balance") + "INR");
 
                             setKycStatus(kyc_status);

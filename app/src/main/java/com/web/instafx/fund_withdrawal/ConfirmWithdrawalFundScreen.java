@@ -41,6 +41,7 @@ public class ConfirmWithdrawalFundScreen extends BaseActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.witdraw_confrim_screen);
+        getSupportActionBar().hide();
         initiateObj();
         initView();
         setOnClickListener();

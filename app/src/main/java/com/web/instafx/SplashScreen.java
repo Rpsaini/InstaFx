@@ -16,11 +16,11 @@ public class SplashScreen extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState)
       {
         super.onCreate(savedInstanceState);
-<<<<<<< HEAD
+/*<<<<<<< HEAD
      //   AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
 =======
         //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
->>>>>>> e305b0496bc7b0a6182abfd063da8589791fe9c0
+>>>>>>> e305b0496bc7b0a6182abfd063da8589791fe9c0*/
         setContentView(R.layout.activity_splash_screen);
         getSupportActionBar().hide();
         initiateObj();

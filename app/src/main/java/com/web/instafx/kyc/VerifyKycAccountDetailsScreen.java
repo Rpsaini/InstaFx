@@ -2,6 +2,7 @@ package com.web.instafx.kyc;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,6 +24,7 @@ public class VerifyKycAccountDetailsScreen extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.verify_submit_account_screen);
         mVerifyKycAccountDetailsScreen=this;
+        getSupportActionBar().hide();
         initiateObj();
         initView();
         setOnClickListener();
@@ -50,7 +52,7 @@ public class VerifyKycAccountDetailsScreen extends BaseActivity {
     private void changeHeaderLayoutColorByKycStatus(){
       String kycStatus=  savePreferences.reterivePreference(mVerifyKycAccountDetailsScreen, DefaultConstants.kyc_status).toString();
 
-
+        Log.e("KYC_STATUS","KYC_STATUS::"+kycStatus);
 
       if(kycStatus.equals("1")){
           submitVerifyBT.setVisibility(View.GONE);

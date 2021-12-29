@@ -14,6 +14,7 @@ public class SettingLanguage extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.language_setting_screen);
+        getSupportActionBar().hide();
         initiateObj();
         initView();
         setOnClickListener();

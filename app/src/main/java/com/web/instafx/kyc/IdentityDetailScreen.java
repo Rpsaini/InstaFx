@@ -89,6 +89,7 @@ public class IdentityDetailScreen extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.identiy_details_screen);
+        getSupportActionBar().hide();
         mIdentityDetailScreen=this;
         initiateObj();
         initView();

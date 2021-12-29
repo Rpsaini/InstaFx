@@ -29,6 +29,7 @@ public class OrderDetailsScreen extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.order_details_screen);
+        getSupportActionBar().hide();
         initiateObj();
         initView();
         setOnClickListener();
