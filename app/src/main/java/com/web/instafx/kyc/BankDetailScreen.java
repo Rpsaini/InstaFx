@@ -626,7 +626,7 @@ public class BankDetailScreen extends BaseActivity {
 
         m.put("accountholdername", ed_bank_account_holder_name.getText().toString());
         m.put("bank_account_number", ed_bank_account_number.getText().toString());
-        m.put("bank_name", ed_bank_account_number.getText().toString());
+        m.put("bank_name", ed_bank_name.getText().toString());
         m.put("branch", ed_bank_branch.getText().toString());
         m.put("iban", ed_bank_ifsc_code.getText().toString());
 
