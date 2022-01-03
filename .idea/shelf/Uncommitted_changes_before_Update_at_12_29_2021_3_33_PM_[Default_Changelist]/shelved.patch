@@ -1,0 +1,228 @@
+Index: .idea/libraries/Gradle__com_amitshekhar_android_android_networking_1_0_2_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__com_amitshekhar_android_android_networking_1_0_2_aar.xml	(revision 10f4eb6949b820e0b585a1560e36e45ecd8193a5)
++++ .idea/libraries/Gradle__com_amitshekhar_android_android_networking_1_0_2_aar.xml	(revision 10f4eb6949b820e0b585a1560e36e45ecd8193a5)
+@@ -1,24 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Gradle: com.amitshekhar.android:android-networking:1.0.2@aar">
+-    <CLASSES>
+-<<<<<<< HEAD
+-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2898773e74c78398d6f36ffa9740c8b1/jetified-android-networking-1.0.2/jars/classes.jar!/" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2898773e74c78398d6f36ffa9740c8b1/jetified-android-networking-1.0.2/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2898773e74c78398d6f36ffa9740c8b1/jetified-android-networking-1.0.2/AndroidManifest.xml" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2084cd0d7c89fabb7a1b35668e0a4cc4/jetified-android-networking-1.0.2/AndroidManifest.xml" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2084cd0d7c89fabb7a1b35668e0a4cc4/jetified-android-networking-1.0.2/res" />
+-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2084cd0d7c89fabb7a1b35668e0a4cc4/jetified-android-networking-1.0.2/jars/classes.jar!/" />
+-=======
+-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1a48152cddef22a47daea97b592dfbc3/jetified-android-networking-1.0.2/jars/classes.jar!/" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1a48152cddef22a47daea97b592dfbc3/jetified-android-networking-1.0.2/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1a48152cddef22a47daea97b592dfbc3/jetified-android-networking-1.0.2/AndroidManifest.xml" />
+->>>>>>> e305b0496bc7b0a6182abfd063da8589791fe9c0
+-    </CLASSES>
+-    <JAVADOC>
+-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amitshekhar.android/android-networking/1.0.2/866743b4b91a1e598595ed7dd365add8d38f94be/android-networking-1.0.2-javadoc.jar!/" />
+-    </JAVADOC>
+-    <SOURCES>
+-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amitshekhar.android/android-networking/1.0.2/45745c4b3c155243f77a7431f200ca60106a27e4/android-networking-1.0.2-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__com_android_volley_volley_1_1_1_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__com_android_volley_volley_1_1_1_aar.xml	(revision 10f4eb6949b820e0b585a1560e36e45ecd8193a5)
++++ .idea/libraries/Gradle__com_android_volley_volley_1_1_1_aar.xml	(revision 10f4eb6949b820e0b585a1560e36e45ecd8193a5)
+@@ -1,24 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Gradle: com.android.volley:volley:1.1.1@aar">
+-    <CLASSES>
+-<<<<<<< HEAD
+-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b19c10a2b3389376639d987e605a3ae0/jetified-volley-1.1.1/jars/classes.jar!/" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b19c10a2b3389376639d987e605a3ae0/jetified-volley-1.1.1/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b19c10a2b3389376639d987e605a3ae0/jetified-volley-1.1.1/AndroidManifest.xml" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/99f34da47590e93fc0b320be683e948f/jetified-volley-1.1.1/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/99f34da47590e93fc0b320be683e948f/jetified-volley-1.1.1/AndroidManifest.xml" />
+-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/99f34da47590e93fc0b320be683e948f/jetified-volley-1.1.1/jars/classes.jar!/" />
+-=======
+-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/376a0a6607ffadce4f4ddc40d188dce4/jetified-volley-1.1.1/jars/classes.jar!/" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/376a0a6607ffadce4f4ddc40d188dce4/jetified-volley-1.1.1/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/376a0a6607ffadce4f4ddc40d188dce4/jetified-volley-1.1.1/AndroidManifest.xml" />
+->>>>>>> e305b0496bc7b0a6182abfd063da8589791fe9c0
+-    </CLASSES>
+-    <JAVADOC>
+-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.volley/volley/1.1.1/4dab8aeeac8192fb8b6d7f9186b7357d94808049/volley-1.1.1-javadoc.jar!/" />
+-    </JAVADOC>
+-    <SOURCES>
+-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.volley/volley/1.1.1/3fb00d0da53c4e9f35a519da6e22bc2de7463816/volley-1.1.1-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__com_github_Rpsaini_ReteroFitCommunication_1_0_7_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__com_github_Rpsaini_ReteroFitCommunication_1_0_7_aar.xml	(revision 10f4eb6949b820e0b585a1560e36e45ecd8193a5)
++++ .idea/libraries/Gradle__com_github_Rpsaini_ReteroFitCommunication_1_0_7_aar.xml	(revision 10f4eb6949b820e0b585a1560e36e45ecd8193a5)
+@@ -1,13 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Gradle: com.github.rpsaini:ReteroFitCommunication:1.0.7@aar">
+-    <CLASSES>
+-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/adbd14d5f9ce0bef0e56f13e93a73aab/jetified-ReteroFitCommunication-1.0.7/jars/classes.jar!/" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/adbd14d5f9ce0bef0e56f13e93a73aab/jetified-ReteroFitCommunication-1.0.7/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/adbd14d5f9ce0bef0e56f13e93a73aab/jetified-ReteroFitCommunication-1.0.7/AndroidManifest.xml" />
+-    </CLASSES>
+-    <JAVADOC />
+-    <SOURCES>
+-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Rpsaini/ReteroFitCommunication/1.0.7/bbf466e84ff0a79db5b5aefe74b49cf08da92f7b/ReteroFitCommunication-1.0.7-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__com_tencent_tbs_tbssdk_sdk_43939_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__com_tencent_tbs_tbssdk_sdk_43939_aar.xml	(revision 10f4eb6949b820e0b585a1560e36e45ecd8193a5)
++++ .idea/libraries/Gradle__com_tencent_tbs_tbssdk_sdk_43939_aar.xml	(revision 10f4eb6949b820e0b585a1560e36e45ecd8193a5)
+@@ -1,27 +0,0 @@
+-<component name="libraryTable">
+-  <library name="Gradle: com.tencent.tbs.tbssdk:sdk:43939@aar">
+-    <CLASSES>
+-<<<<<<< HEAD
+-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/80f11010814406ff2cd8b7d6129b39f9/jetified-sdk-43939/jars/classes.jar!/" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/80f11010814406ff2cd8b7d6129b39f9/jetified-sdk-43939/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/80f11010814406ff2cd8b7d6129b39f9/jetified-sdk-43939/AndroidManifest.xml" />
+-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/80f11010814406ff2cd8b7d6129b39f9/jetified-sdk-43939/jars/libs/tbs_sdk_thirdapp_v4.3.0.39_43939_sharewithdownloadwithfile_withoutGame_obfs_20200713_223411.jar!/" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b7068219344fc9bd9531b129ece9bcbf/jetified-sdk-43939/res" />
+-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b7068219344fc9bd9531b129ece9bcbf/jetified-sdk-43939/jars/libs/tbs_sdk_thirdapp_v4.3.0.39_43939_sharewithdownloadwithfile_withoutGame_obfs_20200713_223411.jar!/" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b7068219344fc9bd9531b129ece9bcbf/jetified-sdk-43939/AndroidManifest.xml" />
+-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b7068219344fc9bd9531b129ece9bcbf/jetified-sdk-43939/jars/classes.jar!/" />
+-=======
+-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7b1d000dd5e32061a485aaffa6fd10de/jetified-sdk-43939/jars/classes.jar!/" />
+-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7b1d000dd5e32061a485aaffa6fd10de/jetified-sdk-43939/jars/libs/tbs_sdk_thirdapp_v4.3.0.39_43939_sharewithdownloadwithfile_withoutGame_obfs_20200713_223411.jar!/" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7b1d000dd5e32061a485aaffa6fd10de/jetified-sdk-43939/res" />
+-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7b1d000dd5e32061a485aaffa6fd10de/jetified-sdk-43939/AndroidManifest.xml" />
+->>>>>>> e305b0496bc7b0a6182abfd063da8589791fe9c0
+-    </CLASSES>
+-    <JAVADOC>
+-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tencent.tbs.tbssdk/sdk/43939/28fbc0599891a52ba98d0ee0d06e25557aed009d/sdk-43939-javadoc.jar!/" />
+-    </JAVADOC>
+-    <SOURCES>
+-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tencent.tbs.tbssdk/sdk/43939/35ef2ba7751e53843842a4012adf3869117e3d67/sdk-43939-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <bytecodeTargetLevel target=\"11\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/compiler.xml	(revision 10f4eb6949b820e0b585a1560e36e45ecd8193a5)
++++ .idea/compiler.xml	(date 1640772010491)
+@@ -1,6 +1,8 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="CompilerConfiguration">
+-    <bytecodeTargetLevel target="11" />
++    <bytecodeTargetLevel target="11">
++      <module name="InstaFx.InstaFX.app" target="1.8" />
++    </bytecodeTargetLevel>
+   </component>
+ </project>
+\ No newline at end of file
+Index: local.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>## This file must *NOT* be checked into Version Control Systems,\r\n# as it contains information specific to your local configuration.\r\n#\r\n# Location of the SDK. This is only used by Gradle.\r\n# For customization when using a Version Control System, please read the\r\n# header note.\r\n#Tue Dec 07 11:30:19 IST 2021\r\nsdk.dir=C\\:\\\\Users\\\\Dell\\\\AppData\\\\Local\\\\Android\\\\Sdk\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- local.properties	(revision 10f4eb6949b820e0b585a1560e36e45ecd8193a5)
++++ local.properties	(date 1640772010511)
+@@ -4,5 +4,5 @@
+ # Location of the SDK. This is only used by Gradle.
+ # For customization when using a Version Control System, please read the
+ # header note.
+-#Tue Dec 07 11:30:19 IST 2021
+-sdk.dir=C\:\\Users\\Dell\\AppData\\Local\\Android\\Sdk
++#Wed Dec 29 15:28:27 IST 2021
++sdk.dir=C\:\\Users\\HP\\AppData\\Local\\Android\\Sdk
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectModuleManager\">\r\n    <modules>\r\n      <module fileurl=\"file://$PROJECT_DIR$/.idea/modules/InstaFX.iml\" filepath=\"$PROJECT_DIR$/.idea/modules/InstaFX.iml\" />\r\n      <module fileurl=\"file://$PROJECT_DIR$/.idea/modules/app/InstaFX.app.iml\" filepath=\"$PROJECT_DIR$/.idea/modules/app/InstaFX.app.iml\" />\r\n    </modules>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(revision 10f4eb6949b820e0b585a1560e36e45ecd8193a5)
++++ .idea/modules.xml	(date 1640772010503)
+@@ -4,6 +4,7 @@
+     <modules>
+       <module fileurl="file://$PROJECT_DIR$/.idea/modules/InstaFX.iml" filepath="$PROJECT_DIR$/.idea/modules/InstaFX.iml" />
+       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/InstaFX.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/InstaFX.app.iml" />
++      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/InstaFx.InstaFX.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/InstaFx.InstaFX.app.iml" />
+     </modules>
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"testRunner\" value=\"GRADLE\" />\r\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"gradleJvm\" value=\"11\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n            <option value=\"$PROJECT_DIR$/app\" />\r\n          </set>\r\n        </option>\r\n        <option name=\"resolveModulePerSourceSet\" value=\"false\" />\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/gradle.xml	(revision 10f4eb6949b820e0b585a1560e36e45ecd8193a5)
++++ .idea/gradle.xml	(date 1640772010492)
+@@ -4,7 +4,7 @@
+   <component name="GradleSettings">
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
+-        <option name="testRunner" value="GRADLE" />
++        <option name="testRunner" value="PLATFORM" />
+         <option name="distributionType" value="DEFAULT_WRAPPED" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+         <option name="gradleJvm" value="11" />
+@@ -15,6 +15,7 @@
+           </set>
+         </option>
+         <option name="resolveModulePerSourceSet" value="false" />
++        <option name="useQualifiedModuleNames" value="true" />
+       </GradleProjectSettings>
+     </option>
+   </component>
+Index: .idea/modules/InstaFX.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module external.linked.project.id=\"InstaFX\" external.linked.project.path=\"$MODULE_DIR$/../..\" external.root.project.path=\"$MODULE_DIR$/../..\" external.system.id=\"GRADLE\" external.system.module.group=\"\" external.system.module.version=\"unspecified\" type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"FacetManager\">\r\n    <facet type=\"java-gradle\" name=\"Java-Gradle\">\r\n      <configuration>\r\n        <option name=\"BUILDABLE\" value=\"false\" />\r\n      </configuration>\r\n    </facet>\r\n  </component>\r\n  <component name=\"NewModuleRootManager\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$/../..\">\r\n      <excludeFolder url=\"file://$MODULE_DIR$/../../.gradle\" />\r\n      <excludeFolder url=\"file://$MODULE_DIR$/../../build\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules/InstaFX.iml	(revision 10f4eb6949b820e0b585a1560e36e45ecd8193a5)
++++ .idea/modules/InstaFX.iml	(date 1640772010504)
+@@ -3,11 +3,12 @@
+   <component name="FacetManager">
+     <facet type="java-gradle" name="Java-Gradle">
+       <configuration>
++        <option name="BUILD_FOLDER_PATH" value="$MODULE_DIR$/../../build" />
+         <option name="BUILDABLE" value="false" />
+       </configuration>
+     </facet>
+   </component>
+-  <component name="NewModuleRootManager">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
+     <exclude-output />
+     <content url="file://$MODULE_DIR$/../..">
+       <excludeFolder url="file://$MODULE_DIR$/../../.gradle" />

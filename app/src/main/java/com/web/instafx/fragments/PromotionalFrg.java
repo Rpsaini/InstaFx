@@ -73,11 +73,17 @@ public class PromotionalFrg extends Fragment {
         view = inflater.inflate(R.layout.fragment_promotional_frg, container, false);
         mainActivity = (MainActivity) getActivity();
 
-        getPromotions();
+
         init();
         sliderImageTop();
         sliderImageBottom();
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        getPromotions();
     }
 
     private void init() {
